@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>{{ title }}</title>
 	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
 
-<h1>Raymond Camden's Blog</h1>
+<header>
+	<a href="/">{{ site.title }}</a> ~ <a href="">About</a> ~ <a href="">Speaking</a> ~
+	<a href="">Subscribe</a> ~ <a href="">Contact</a> ~ <a href="">Search</a>
+</header>
 
+<main>
 {{ content }}
+</main>
 
+	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/lazysizes.min.js" async=""></script>
 </body>
 </html>

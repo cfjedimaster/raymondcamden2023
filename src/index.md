@@ -3,8 +3,6 @@ title: Raymond Camden
 layout: main
 ---
 
-<h2>Home Page</h2>
-
 {% assign posts = collections.posts | reverse %}
 
 {% for post in posts limit:10 %}
