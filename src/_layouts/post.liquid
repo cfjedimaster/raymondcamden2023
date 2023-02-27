@@ -2,7 +2,16 @@
 layout: main
 ---
 
-<img src="{{site.image_root}}{{banner_image}}" alt="{{ title}}" class="imgcenter">
-<h2>{{title}}</h2>
+<div class="postMeta">
+	Written on <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %e, %Y" }}</time>
+	{% assign age = page.date | ageInDays %}
+    {% assign twoyears = 365 | times: 2 %}
+    {% if age > twoyears %}
+	<span class="oldPost">(This post is more than 2 years old.)</span>
+	{% endif %}
+</div>
+<h2 class="postTitle">{{title}}</h2>
+
+<img src="{{site.image_root}}{{banner_image}}" alt="{{ title }}" class="imgcenter">
 
 {{ content }}
