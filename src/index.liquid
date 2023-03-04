@@ -1,0 +1,47 @@
+---
+title: Raymond Camden
+layout: page
+---
+
+{% assign posts = collections.posts | reverse %}
+
+<div id="post-list">
+
+{% for post in posts limit:10 %}
+
+  <div class="post-preview">
+    <h1>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+		{% excerpt post %}
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i> 
+		<em> 
+		{{ post.date | date: "%B %e, %Y" }}
+		</em>
+
+		<i class="far fa-folder-open fa-fw"></i>
+		<span>
+		{% assign ctList = post | catTagList %}
+		{% for ct in ctList %}
+			<a href="{{ct.url}}">{{ct.name}}</a>{%- unless forloop.last -%},{%- endunless %}
+		{% endfor %}
+        </span>
+      </div>
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+{% endfor %}
+
+</div> <!-- #post-list -->

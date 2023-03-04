@@ -1,0 +1,63 @@
+<!--
+  The Side Bar
+-->
+
+<div id="sidebar" class="d-flex flex-column align-items-end">
+  <div class="profile-wrapper text-center">
+    <div id="avatar">
+      <a href="/" class="mx-auto">
+          <img src="{{ site.avatar }}" alt="avatar" onerror="this.style.display='none'">
+      </a>
+    </div>
+
+    <div class="site-title">
+      <a href="/">{{ site.title }}</a>
+    </div>
+    <div class="site-subtitle font-italic">{{ site.tagline }}</div>
+
+  </div><!-- .profile-wrapper -->
+
+  <ul class="w-100">
+
+    <!-- home -->
+    <li class="nav-item{% if layout == 'home' %}{{ " active" }}{% endif %}">
+      <a href="/" class="nav-link">
+        <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
+        <span>HOME</span>
+      </a>
+    </li>
+    <!-- the real tabs -->
+    {% for tab in site.tabs %}
+    <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+      <a href="{{ tab.path }}" class="nav-link">
+        <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
+        <span>{{ tab.name | upcase }}</span>
+      </a>
+    </li> <!-- .nav-item -->
+    {% endfor %}
+
+  </ul> <!-- ul.nav.flex-column -->
+
+  <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
+
+    {% unless site.theme_mode %}
+      <button class="mode-toggle btn" aria-label="Switch Mode">
+        <i class="fas fa-adjust"></i>
+      </button>
+
+      {% if site.contact.size > 0 %}
+        <span class="icon-border"></span>
+      {% endif %}
+    {% endunless %}
+
+    {% for entry in site.contact %}
+
+		<a href="{{ entry.url }}" aria-label="{{ entry.type }}">
+		<i class="{{ entry.icon }}"></i>
+		</a>
+
+    {% endfor %}
+
+  </div> <!-- .sidebar-bottom -->
+
+</div><!-- #sidebar -->

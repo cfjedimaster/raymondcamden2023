@@ -1,0 +1,26 @@
+<!--
+  JS selector for site.
+-->
+
+
+{% if page.layout == 'home'
+    or page.layout == 'categories'
+    or page.layout == 'post'
+    or page.layout == 'page' %}
+  {% assign type = page.layout %}
+{% elsif page.layout == 'archives'
+    or page.layout == 'category'
+    or page.layout == 'tag' %}
+  {% assign type = "misc" %}
+{% else %}
+  {% assign type = "commons" %}
+{% endif %}
+
+{% capture script %}/assets/js/dist/{{ type }}.min.js{% endcapture %}
+<script defer src="{{ script }}"></script>
+
+
+<!-- commons -->
+
+<script src="{{ site.bootstrap.js }}"></script>
+

@@ -1,4 +1,48 @@
 {
 	"title":"Raymond Camden",
-	"image_root":"https://static.raymondcamden.com"
+	"image_root":"https://static.raymondcamden.com",
+	"full_url":"https://www.raymondcamden.com/",
+	"avatar":"/assets/img/avatar.jpg",
+	"tagline":"Code, developer relations, and cats",
+	"cdns": [
+		{
+			"url":"https://fonts.googleapis.com"
+		},
+		{
+			"url":"https://fonts.gstatic.com",
+			"args":"crossorigin"
+		},
+		{
+			"url":"https://cdn.jsdelivr.net"
+		}
+	],
+	"webfonts": "https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap",
+	"bootstrap": {
+		"css":"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css",
+		"js":"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+	},
+	"fontawesome":{
+		"css": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css"
+	},
+	"jquery": {
+		"js":"https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"
+	},
+	"toc":true,
+	"bootstrap-toc": {
+		"css": "https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css",
+		"js": "https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"
+	},
+	"tabs":[
+		{ "name": "About", "path":"/about"},
+		{ "name": "Speaking", "path":"/speaking"},
+		{ "name": "Contact", "path":"/contact"}
+
+	],
+	"contact":[
+		{"type":"github", "icon":"fab fa-github", "url":"https://github.com/cfjedimaster" },
+		{"type":"matodon", "icon":"fab fa-mastodon", "url":"https://mastodon.social/@raymondcamden" },
+		{"type":"rss", "icon":"fas fa-rss", "url":"/feed.xml" }
+	]
+
+
 }
