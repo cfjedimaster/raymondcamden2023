@@ -1,6 +1,6 @@
 const { getPosts } = require('./config/collections/index.js');
 const { extractExcerpt } = require('./config/shortcodes/index.js');
-const { ageInDays, catTagList, myEscape } = require('./config/filters/index.js');
+const { ageInDays, catTagList, myEscape, my_xml_escape } = require('./config/filters/index.js');
 
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
@@ -19,6 +19,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter('ageInDays', ageInDays);
 	eleventyConfig.addFilter('catTagList', catTagList);
 	eleventyConfig.addFilter('myEscape', myEscape);
+	eleventyConfig.addFilter('my_xml_escape', my_xml_escape);
 
 	/*
 	Specifically for auto link headers.

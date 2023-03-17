@@ -1,9 +1,7 @@
 ---
 title: About
-layout: main
+layout: page
 ---
-
-## About
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet purus gravida quis blandit turpis cursus in. Metus vulputate eu scelerisque felis. Magna fringilla urna porttitor rhoncus dolor purus non. Bibendum est ultricies integer quis. Vulputate enim nulla aliquet porttitor lacus. Malesuada proin libero nunc consequat interdum varius. Nunc congue nisi vitae suscipit tellus mauris a diam. Semper eget duis at tellus at urna condimentum mattis pellentesque. Faucibus turpis in eu mi bibendum. Vitae suscipit tellus mauris a diam.
 

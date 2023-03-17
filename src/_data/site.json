@@ -1,7 +1,7 @@
 {
 	"title":"Raymond Camden",
 	"image_root":"https://static.raymondcamden.com",
-	"full_url":"https://www.raymondcamden.com/",
+	"full_url":"https://www.raymondcamden.com",
 	"avatar":"/assets/img/avatar.jpg",
 	"tagline":"Code, developer relations, and cats",
 	"cdns": [

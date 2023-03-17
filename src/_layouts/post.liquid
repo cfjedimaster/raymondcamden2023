@@ -1,6 +1,6 @@
 ---
 layout: page
-refactor: true
+post: true
 panel_includes:
   - toc
 tail_includes:
@@ -10,16 +10,13 @@ tail_includes:
 ---
 
 {% comment %}
-<img src="{{site.image_root}}{{banner_image}}" alt="{{ title }}" class="imgcenter">
-
+The use of post:true above helps the fact that in the Liquid theme,you were able to check the
+ORIGINAL layout, not the current one, so this flags to page.liquid that I'm a post.
 {% endcomment %}
 
-<h1 data-toc-skip>{{ title }}</h1>
-
 <div class="post-meta text-muted">
-    <!-- published date -->
     <span>
-		Posted {{ date | date: "%B %e, %Y" }}
+		Posted <em>{{ date | date: "%B %e, %Y" }}</em>
 		{% assign age = page.date | ageInDays %}
 		{% assign twoyears = 365 | times: 2 %}
 		{% if age > twoyears %}
@@ -47,10 +44,10 @@ tail_includes:
 <div class="post-tail-wrapper text-muted">
 
   <!-- categories -->
-  {% if page.categories.size > 0 %}
+  {% if categories.size > 0 %}
   <div class="post-meta mb-3">
     <i class="far fa-folder-open fa-fw mr-1"></i>
-    {% for category in page.categories %}
+    {% for category in categories %}
       <a href='{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/'>{{ category }}</a>
       {%- unless forloop.last -%}, {%- endunless -%}
     {% endfor %}
@@ -58,10 +55,10 @@ tail_includes:
   {% endif %}
 
   <!-- tags -->
-  {% if page.tags.size > 0 %}
+  {% if tags.size > 0 %}
   <div class="post-tags">
     <i class="fa fa-tags fa-fw mr-1"></i>
-      {% for tag in page.tags %}
+      {% for tag in tags %}
       <a href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/"
           class="post-tag no-text-decoration" >
         {{- tag -}}

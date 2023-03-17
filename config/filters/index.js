@@ -12,6 +12,18 @@ const myEscape = s => {
     return s.replace(/ /g, '+');
 };
 
+const my_xml_escape = s => {
+    if(!s) return;
+    return s.replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&apos;')
+      .replace(/\n/g, '')
+      .replace(/data-src/g,'src');
+
+}
+
 const catTagList = p => {
 	let result = [];
     for(let i=0; i<p.data.categories.length; i++) {
@@ -31,5 +43,5 @@ const catTagList = p => {
 }
 
 module.exports = {
-	ageInDays, myEscape, catTagList
+	ageInDays, myEscape, catTagList, my_xml_escape
 };

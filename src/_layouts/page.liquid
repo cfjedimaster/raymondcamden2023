@@ -8,27 +8,16 @@ layout: main
   <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4">
     <div class="post pl-1 pr-1 pl-md-2 pr-md-2">
 
-    {% capture _content %}
-      {% if layout.refactor or page.layout == 'page' %}
-        {% include refactor-content.html content=content %}
-      {% else %}
-        {{ content }}
-      {% endif %}
-    {% endcapture %}
-
-    {% if page.layout == 'page' or page.collection == 'tabs' %}
-      {% assign tab_key = page.title | downcase %}
-      {% assign title = site.data.locales[site.lang].tabs[tab_key] | default: page.title %}
       <h1 class="dynamic-title">
         {{ title }}
       </h1>
+      {% if post == true %}
+      {{ content }}
+      {% else %}
       <div class="post-content">
-        {{ _content }}
+        {{ content }}
       </div>
-    {% else %}
-      {{ _content }}
-    {% endif %}
-
+      {% endif %}
     </div>
   </div> <!-- #core-wrapper -->
 
