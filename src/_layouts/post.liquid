@@ -1,77 +1,106 @@
 ---
-layout: page
-post: true
-panel_includes:
-  - toc
-tail_includes:
-  - related-posts
-  - post-nav
-  - comments
+layout: default
+body_class: post-template
 ---
 
-{% comment %}
-The use of post:true above helps the fact that in the Liquid theme,you were able to check the
-ORIGINAL layout, not the current one, so this flags to page.liquid that I'm a post.
-{% endcomment %}
+<main id="main" class="site-main">
 
-<div class="post-meta text-muted">
-    <span>
-		Posted <em>{{ date | date: "%B %e, %Y" }}</em>
-		{% assign age = page.date | ageInDays %}
-		{% assign twoyears = 365 | times: 2 %}
-		{% if age > twoyears %}
-		<span class="oldPost">(This post is more than 2 years old.)</span>
+	<article class="post post-full inner">
+
+		<header class="post-header">
+			<div class="post-meta">
+				<time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %e, %Y" }}</time>
+				{% assign age = page.date | ageInDays %}
+                {% assign twoyears = 365 | times: 2 %}
+                {% if age > twoyears %}
+				<span class="oldPost">(This post is more than 2 years old.)</span>
+				{% endif %}
+			</div><!-- .post-meta -->
+			<h1 class="post-title underline">{{title}}</h1>
+			<div class="post-tags">
+				{% comment %}
+				Can't use nice filter here as we don't have access to an object that has 
+				the current page. 
+				{% endcomment %}
+
+				{% for cat in categories %}
+					<a href="/categories/{{ cat | downcase | myEscape}}">{{cat}}</a>
+				{% endfor %}
+				{% for tag in tags %}
+					<a href="/tags/{{ tag | myEscape}}">{{tag}}</a>
+				{% endfor %}
+			</div>
+		</header><!-- .post-header -->
+
+        {% if banner_image %}
+		<div class="post-thumbnail">
+			{% comment %}
+			<img src="{{ "https://static.raymondcamden.com" | append: banner_image }}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title | my_xml_escape}}{% endif %}">
+			{% endcomment %}
+			{% comment %}
+			
+			<img
+				sizes="(max-width: 650px) 100px, 650px"
+				srcset="{{ banner }} 650w, 
+				https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_200/{{ banner }} 100w"
+				src="{{ banner }}"
+				alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title | my_xml_escape}}{% endif %}"
+			/>
+			{% endcomment %}
+
+			{% assign banner = "https://static.raymondcamden.com" | append: banner_image %}
+			<picture>
+				<source media="(max-width: 799px)" srcset="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_300/{{ banner }}">
+				<source media="(max-width: 800px)" srcset="{{ banner }}">
+				<img src="{{banner}}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title | my_xml_escape}}{% endif %}">
+			</picture>
+			
+		</div>
 		{% endif %}
-    </span>
 
 
-  {% if banner_image %}
-    {% capture src %}src="https://static.raymondcamden.com{{ banner_image }}"{% endcapture %}
-	{% capture class %}class="preview-img"{% endcapture %}
-    {% capture alt %}alt="{{ title | default: "Preview Image" }}"{% endcapture %}
+		<div class="post-content">
+			{{content}}
+		</div><!-- .post-content -->
 
-    <div class="mt-3 mb-3">
-      <img {{ src }} {{ class }} {{ alt }} width="100%">
-    </div>
-  {% endif %}
+		<footer class="post-footer">
+			<p class="post-share">
+				<span class="post-share-title">Share:</span>
+				<a target="_blank" href="https://twitter.com/intent/tweet?text={{ title | my_xml_escape }}&amp;url={{ site.url }}{{ page.url }}" rel="noopener">Twitter</a>
+				<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&amp;t={{ title | my_xml_escape }}" rel="noopener">Facebook</a>
+				<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}&amp;title={{title | my_xml_escape}}&amp;source={{site.title | my_xml_escape}}" rel="noopener">LinkedIn</a>
+			</p>
+		</footer><!-- .post-footer -->
 
-</div> <!-- .post-meta -->
+		<div class="author-box">
+			<div class="author-info">
+				<h3>Support this Content!</h3>
+				<p>
+				If you like this content, please consider supporting me. You can become a <a href="https://www.patreon.com/raymondcamden">Patron</a>,
+				visit my <a href="http://www.amazon.com/gp/registry/wishlist/2TCL1D08EZEYE/ref=cm_wl_rlist_go_v?">Amazon wishlist</a>, 
+				or <a href="https://www.buymeacoffee.com/raymondcamden">buy me a coffee</a>! Any support helps!
+				</p>
+				<p>
+				Want to get a copy of every new post? Use the form below to sign up for my newsletter.
+				</p>
+				<p id="subStatus"></p>
+				<form data-members-form="subscribe" class="subscribe-form">
+				<div class="form-group">
+				<input data-members-email class="subscribe-email" type="email" name="email" placeholder="Your email address" id="subEmail"/>
+				<button class="button" type="submit" id="subButton">
+				<span class="button-content">Subscribe</span>
+				</button>
+				</div>
+				</form><!-- subscribe-form -->
+			</div><!-- .author-info -->
+		</div><!-- .author-box -->
 
-<div class="post-content">
-  {{ content }}
-</div>
+		{% include 'webmentions' %}
+        {% include 'mydisqus' %}
 
-<div class="post-tail-wrapper text-muted">
+	</article><!-- .post -->
 
-  <!-- categories -->
-  {% if categories.size > 0 %}
-  <div class="post-meta mb-3">
-    <i class="far fa-folder-open fa-fw mr-1"></i>
-    {% for category in categories %}
-      <a href='{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/'>{{ category }}</a>
-      {%- unless forloop.last -%}, {%- endunless -%}
-    {% endfor %}
-  </div>
-  {% endif %}
 
-  <!-- tags -->
-  {% if tags.size > 0 %}
-  <div class="post-tags">
-    <i class="fa fa-tags fa-fw mr-1"></i>
-      {% for tag in tags %}
-      <a href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/"
-          class="post-tag no-text-decoration" >
-        {{- tag -}}
-      </a>
-      {% endfor %}
-  </div>
-  {% endif %}
 
-  <div class="post-tail-bottom
-    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
 
-    {% include "post-sharing.liquid" %}
-
-  </div><!-- .post-tail-bottom -->
-
-</div><!-- div.post-tail-wrapper -->
+</main><!-- .site-main -->

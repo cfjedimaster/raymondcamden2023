@@ -1,0 +1,19 @@
+[build]
+	functions = ".functions"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  # optional, deploy the lighthouse report to a path under your site
+  [plugins.inputs]
+    output_path = "reports/lighthouse.html"
+
+[[headers]]
+  for = "/.well-known/webfinger"
+  [headers.values]
+    content-type="application/jrd+json; charset=UTF-8"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    content-type="text/xml; charset=UTF-8"

@@ -1,0 +1,62 @@
+---
+layout: page
+title: Subscribe for Updates
+---
+
+<p>
+Want to be informed when I post new articles? If you've got an RSS reader you can 
+subscribe to my <a href="/feed.xml">feed</a>. If you would rather get an email, simply enter your
+email address below. You will get an email once a day when new posts have been released. 
+I may also send additional notes from time to time as well. And of course, you can 
+unsubscribe any time. 
+</p>
+
+<form data-members-form="subscribe" class="subscribe-form">
+
+<div id="app" class="form-group">
+	<label for="subscribe-email" class="screen-reader-text">Your email address</label>
+	<input type="email" class="subscribe-email" placeholder="Your email address" id="emailField"> 
+	<button class="button" type="button" id="subscribeButton">Subscribe</button>
+	</div>
+</form>
+<p style="font-weight: bold" id="statusP">
+</p>
+
+<script>
+const SUBSCRIBE_API = '/api/newsletter-signup?email=';
+
+let $emailField, $subscribeButton, $statusP;
+
+const init = () => {
+	$emailField = document.querySelector('#emailField');
+	$subscribeButton = document.querySelector('#subscribeButton');
+	$statusP = document.querySelector('#statusP');
+
+	$subscribeButton.addEventListener('click', doSubscribe, false);
+}
+
+const doSubscribe = () => {
+	if($emailField.value === '') return;
+	$subscribeButton.setAttribute('disabled', 'disabled');
+	$statusP.innerText = 'Attempting to subscribe you...';
+	fetch(SUBSCRIBE_API + $emailField.value)
+	.then(res => {
+		return res.json()
+	})
+	.then(res => {
+		console.log('status',res.status);
+		if(res.status === 'subscribed') {
+			$statusP.innerText = 'You have been subscribed!';
+		} else if(res.status === 400) {
+			$statusP.innerText = `There was an error: ${res.detail}`;
+		}
+		$subscribeButton.removeAttribute('disabled');
+	})
+	.catch(e => {
+		console.log('error result', e);
+	});
+
+}
+
+document.addEventListener('DOMContentLoaded', init, false);
+</script>

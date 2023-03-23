@@ -1,39 +1,25 @@
 ---
-layout: main
+layout: default
 ---
 
-<div class="row">
+<main id="main" class="site-main">
 
-  <!-- core -->
-  <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4">
-    <div class="post pl-1 pr-1 pl-md-2 pr-md-2">
+	<article class="page post-full inner">
 
-      <h1 class="dynamic-title">
-        {{ title }}
-      </h1>
-      {% if post == true %}
-      {{ content }}
-      {% else %}
-      <div class="post-content">
-        {{ content }}
-      </div>
-      {% endif %}
-    </div>
-  </div> <!-- #core-wrapper -->
+		<header class="post-header">
+			<h1 class="post-title underline">{{title}}</h1>
+		</header><!-- .post-header -->
 
-  <!-- panel -->
-  <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
+		{% if banner_image %}
+		<div class="post-thumbnail">
+            <img src="{{ "https://static.raymondcamden.com" | append: banner_image }}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title }}{% endif %}">
+		</div>
+		{% endif %}
 
-    <div class="access">
-      {% include "update-list.liquid" %}
-    </div>
+		<div class="post-content">
+			{{content}}
+		</div><!-- .post-content -->
 
-	{% comment %}
-    {% for _include in layout.panel_includes %}
-      {% assign _include_path = _include | append: '.html' %}
-      {% include {{ _include_path }} %}
-    {% endfor %}
-	{% endcomment %}
-  </div>
+	</article><!-- .post -->
 
-</div>
+</main><!-- .site-main -->

@@ -1,0 +1,74 @@
+---
+body_class: home-template
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+    <title>{% if renderData.title %}{{ renderData.title | titlecase }}{% elsif title %}{{ title }}{% else %}{{ site.title }}{% endif %}</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://img.buymeacoffee.com; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src 'self' https:;font-src https://fonts.gstatic.com; connect-src https: ws://localhost:8888 http://localhost:8888; frame-src https:; media-src *">
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />   
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i%7CKarla:400,400i,700,700i" rel="preload" as="style">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i%7CKarla:400,400i,700,700i" rel="stylesheet" media="print" onload="this.media='all'">
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+    <meta name="description" content="{% if description %}{{ description | my_xml_escape }}{% else %}{{ site.description | my_xml_escape }}{% endif %}">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{% if renderData.title %}{{ renderData.title | my_xml_escape }}{% elsif title %}{{ title | my_xml_escape}}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:creator" content="@raymondcamden" />    
+    <meta name="twitter:site" content="@raymondcamden" />    
+    <meta name="og:title" content="{% if renderData.title %}{{ renderData.title | my_xml_escape }}{% elsif title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="og:url" content="{{ page.url | prepend: site.url }}" />
+    <meta name="og:type" content="blog" />
+
+    {% if description %}
+    <meta name="twitter:description" content="{{description | my_xml_escape  }}" />
+    <meta name="og:description" content="{{ description | my_xml_escape }}" />
+    {% else %}
+    <meta name="twitter:description" content="{{site.description}}" />
+    <meta name="og:description" content="{{ site.description }}" />
+    {% endif %}
+
+    {% if banner_image %}
+    <meta name="twitter:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
+    <meta name="og:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
+    {% endif %}
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1d1d1d">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.url }}">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | prepend: site.url }}">
+    <link rel="webmention" href="https://webmention.io/www.raymondcamden.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/www.raymondcamden.com/xmlrpc" />
+    
+    <script data-goatcounter="https://raymondcamden.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+
+<body class="{{body_class}}">
+	<div id="page" class="site">
+		{% include 'header' %}
+		<div id="content" class="site-content">
+			{{content}}
+			<!-- The tag below includes the theme footer - partials/footer.hbs -->
+
+		{% include 'footer' %}
+
+		</div>
+	</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/prism.js"></script>
+    <script src="/js/lazysizes.min.js" async=""></script>
+</body>
+</html>

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Speaking Engagements
+description: All about Raymond Camden
+banner_image: /images/banners/raypgday2.jpg
 ---
 
 
