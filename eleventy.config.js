@@ -5,6 +5,7 @@ const { ageInDays, catTagList, myEscape, my_xml_escape, titlecase, toTitle, post
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const eleventySass = require('eleventy-sass');
+const xmlFiltersPlugin = require('eleventy-xml-plugin');
 
 module.exports = function(eleventyConfig) {
 
@@ -29,6 +30,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter('postCategories', postCategories);
 	eleventyConfig.addFilter('postTags', postTags);
 
+	// Plugins:
+	eleventyConfig.addPlugin(xmlFiltersPlugin);
+
 	/*
 	Specifically for auto link headers.
 	https://rhianvanesch.com/posts/2021/02/09/adding-heading-anchor-links-to-an-eleventy-site/
@@ -50,7 +54,6 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.setLibrary("md", markdownLib);
 
-	eleventyConfig.addPlugin(eleventySass);
 	
 	return {
 		dir: {

@@ -1,0 +1,130 @@
+---
+layout: page
+title: Search
+description: Search this Site
+---
+
+<style>
+[x-cloak] { display: none !important; }
+</style>
+
+{% raw %}
+<div x-data="app" x-cloak>
+	<form data-members-form="subscribe" class="subscribe-form">
+		<div class="form-group">
+			<input x-model="search" class="subscribe-email" type="search"> 
+			<button @click.prevent="doSearch" class="button" x-text="searching?'Searching...':'Search'"></button>
+		</div>
+	</form>
+
+	<template x-if="noResults">
+		<p>
+		Sorry, but there were no results.
+		</p>
+	</template>
+
+	<template x-if="numResults > 1">
+	<p>
+	There were <span x-text="numResults"></span> total results for this search.
+	</p>
+	</template>
+
+	<template x-if="numResults == 1">
+	<p>
+	There was one total result for this search.
+	</p>
+	</template>
+
+	<template x-if="numResults > 0">
+		<template x-for="(result,idx) in results" :key="idx">
+		<p>
+		<span x-text="idx+1"></span>) <a :href="result.url" @click="track(result.url, result.objectID, idx+1)" x-text="result.title"></a><br/>
+		Published: <span x-text="result.date"></span><br/>
+		Excerpt: <span x-html="result._snippetResult.content.value"></span>
+		</p>
+		</template>
+	</template>
+
+</div>
+{% endraw %}
+
+<p>
+ <img src="/images/algolia.webp" title="Search by Algolia">
+</p>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script>
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.6.3";
+
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+
+// Initialize library
+aa('init', {
+	appId: 'WFABFE7Z9Q',
+	apiKey: 'd1c88c3f98648a69f11cdd9d5a87de08'
+});
+</script>
+
+<script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('app', () => ({
+		search:'',
+		searching:false,
+		algolia_client:null,
+		algolia_index:null,
+		results:null,
+		numResults:0,
+    	noResults:false, 
+		queryID:null,
+		init() {
+			this.client = algoliasearch('WFABFE7Z9Q', 'd1c88c3f98648a69f11cdd9d5a87de08');
+			this.index = this.client.initIndex('raymondcamden');
+			// support url param search
+			let qp = new URLSearchParams(window.location.search);
+			let search = qp.get('search');
+			if(search) {
+				this.search = search;
+				this.doSearch();
+			}
+		},
+		async doSearch() {
+			this.results = null;
+			if(this.search === '') return;
+			this.searching = true;
+			this.noResults = false;
+			console.log('search for '+this.search);
+			let resultsRaw = await this.index.search(this.search,{
+				attributesToRetrieve:['title', 'url','date'],
+				attributesToSnippet:['content'],
+				hitsPerPage: 50,
+				clickAnalytics:true
+			});
+			//console.log('results', resultsRaw);
+
+			let options = { year: 'numeric', month: 'long', day: 'numeric' };
+			let formatter = new Intl.DateTimeFormat('en-US',options);
+			resultsRaw.hits.forEach(h => {
+				h.date = formatter.format(new Date(h.date));
+			});
+			this.results = resultsRaw.hits;
+			this.numResults = resultsRaw.nbHits;
+			this.searching = false;
+			this.noResults = this.results.length === 0;
+			this.queryID = resultsRaw.queryID;
+		},
+		track(url,id, pos) {			
+			aa('clickedObjectIDsAfterSearch', {
+				eventName: 'click_on_search_page',
+				index: 'raymondcamden',
+				queryID: this.queryID,
+				objectIDs:[id],
+				positions:[pos]
+			});
+		}
+	}))
+})
+</script>
