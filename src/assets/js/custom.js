@@ -279,7 +279,7 @@ async function getWebmentions(url) {
 }
 
 function doSubscriptionForm() {
-    const SUBSCRIBE_API = '/.netlify/functions/newsletter-signup?email=';
+    const SUBSCRIBE_API = '/api/newsletter-signup?email=';
     const subEmail = document.querySelector('#subEmail');
     const subButton = document.querySelector('#subButton');
     const subStatus = document.querySelector('#subStatus');
