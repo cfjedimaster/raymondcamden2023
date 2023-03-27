@@ -5,13 +5,22 @@ const { ageInDays, algExcerpt, catTagList, fixcattag, getByCategory, myEscape, m
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
+const htmlmin = require('eleventy-xml-plugin');
 
 module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy({'src/assets/css/*.css':'css'});
 	eleventyConfig.addPassthroughCopy({'src/assets/js':'js'});
 	eleventyConfig.addPassthroughCopy({'src/assets/images':'images'});
-	eleventyConfig.addPassthroughCopy('src/manifest.json');
+
+	// These assets need to go to root
+	eleventyConfig.addPassthroughCopy({'src/assets/manifest.json':'manifest.json'});
+	eleventyConfig.addPassthroughCopy({'src/assets/service-worker.js':'service-worker.js'});
+	eleventyConfig.addPassthroughCopy({'src/assets/favicon.png':'favicon.png'});
+	eleventyConfig.addPassthroughCopy({'src/assets/favicon_large.png':'favicon_large.png'});
+	eleventyConfig.addPassthroughCopy({'src/assets/favicon.ico':'favicon.ico'});
+	eleventyConfig.addPassthroughCopy({'src/assets/apple-touch-icon.png':'apple-touch-icon.png'});
+
 	eleventyConfig.addPassthroughCopy('src/_redirects');
 
 	eleventyConfig.addCollection('categories', categories);
@@ -55,9 +64,21 @@ module.exports = function(eleventyConfig) {
 		markdownItAnchorOptions
 	);
 
-	eleventyConfig.setLibrary("md", markdownLib);
+	eleventyConfig.setLibrary('md', markdownLib);
 
-	
+	eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
+		if(process.env.CI && outputPath.endsWith('.html')) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true
+			});
+			return minified;
+		}
+
+		return content;
+	});
+
 	return {
 		dir: {
 			input:'src',

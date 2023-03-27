@@ -19,10 +19,10 @@ body_class: home-template
 
     <meta name="description" content="{% if description %}{{ description | my_xml_escape }}{% else %}{{ site.description | my_xml_escape }}{% endif %}">
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{% if renderData.title %}{{ renderData.title | my_xml_escape }}{% elsif title %}{{ title | my_xml_escape}}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:title" content="{% if title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:creator" content="@raymondcamden" />    
     <meta name="twitter:site" content="@raymondcamden" />    
-    <meta name="og:title" content="{% if renderData.title %}{{ renderData.title | my_xml_escape }}{% elsif title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="og:title" content="{% if title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="og:url" content="{{ page.url | prepend: site.url }}" />
     <meta name="og:type" content="blog" />
 
