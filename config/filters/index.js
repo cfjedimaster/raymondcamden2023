@@ -6,6 +6,53 @@ const ageInDays = d => {
 	return day_diff;
 }
 
+const algExcerpt = text => {
+  //first remove code
+  text = text.replace(/<code class="language-.*?">.*?<\/code>/sg, '');
+  //now remove html tags
+  text = text.replace(/<.*?>/g, '');
+  //now limit to 5k
+  return text.substring(0,5000);
+};
+
+const catTagList = p => {
+	let result = [];
+  for(let i=0; i<p.data.categories.length; i++) {
+    result.push({
+      name: p.data.categories[i],
+      url: '/categories/'+myEscape(p.data.categories[i])
+    });
+  }
+  for(let i=0; i<p.data.tags.length; i++) {
+    result.push({
+      name: p.data.tags[i],
+      url: '/tags/'+myEscape(p.data.tags[i])
+    });
+  }
+
+  return result;
+}
+
+const fixcattag = str => {
+  if(!str) return;
+  if(str === 'coldfusion') return 'ColdFusion';
+  if(str === 'javascript') return 'JavaScript';
+  if(str === 'jquery') return 'jQuery';
+  if(str === 'pdf services') return 'PDF Services';
+  return str;
+};
+
+const getByCategory = (posts, cat) => {
+  let results = [];
+
+  // handle case issues I'm having
+  cat = cat.toLowerCase();
+  for(let post of posts) {
+    if(post.data.categories.indexOf(cat) >= 0) results.push(post);
+  }
+  return results.reverse();
+};
+
 const myEscape = s => {
     return s.replace(/ /g, '+');
 };
@@ -22,23 +69,7 @@ const my_xml_escape = s => {
 
 }
 
-const catTagList = p => {
-	let result = [];
-    for(let i=0; i<p.data.categories.length; i++) {
-      result.push({
-        name: p.data.categories[i],
-        url: '/categories/'+myEscape(p.data.categories[i])
-      });
-    }
-    for(let i=0; i<p.data.tags.length; i++) {
-      result.push({
-        name: p.data.tags[i],
-        url: '/tags/'+myEscape(p.data.tags[i])
-      });
-    }
 
-    return result;
-}
 
 const titlecase = str => {
   if(!str) return;
@@ -95,5 +126,5 @@ const postTags = collections => {
 
 
 module.exports = {
-	ageInDays, myEscape, catTagList, my_xml_escape, titlecase, toTitle, postCategories
+	ageInDays, algExcerpt, fixcattag, getByCategory, myEscape, catTagList, my_xml_escape, titlecase, toTitle, postCategories
 };

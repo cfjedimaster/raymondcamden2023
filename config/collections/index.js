@@ -1,3 +1,17 @@
+const categories = collection => {
+
+	let cats = new Set();
+	let posts = collection.getFilteredByGlob("./src/posts/**/*.md");
+
+	for(let i=0;i<posts.length;i++) {
+		for(let x=0;x<posts[i].data.categories.length;x++) {
+			cats.add(posts[i].data.categories[x].toLowerCase());
+		}
+	}
+
+		return Array.from(cats).sort();
+};
+
 const getPosts = collection => {
 	let posts = collection.getFilteredByGlob("./src/posts/**/*.md");
 
@@ -14,5 +28,5 @@ const getPosts = collection => {
 
 
 module.exports = {
-	getPosts
+	categories, getPosts
 };

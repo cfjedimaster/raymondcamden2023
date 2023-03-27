@@ -1,0 +1,28 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - posts
+        - categories
+permalink: "tags/{{ tag | myEscape }}/"
+layout: page
+eleventyComputed:
+    title: "{{ tag | titlecase}} ({{ collections[tag] | size }} Posts)"
+---
+
+{% assign posts = collections[tag] | reverse %}
+
+{% comment %}
+We do some mods for some tags based on their names
+{% endcomment %}
+{% assign tagname = tag | fixcattag %}
+
+<ul class="archive-posts-list">
+    {% for post in posts %}
+    <li><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent
+        Link to {{ site.baseurl }}{{ post.url }}">{{ post.data.title }}</a> <span class="archive-meta"> — <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time></span></li>
+    {% endfor %}
+</ul>

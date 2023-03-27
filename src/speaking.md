@@ -16,9 +16,15 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://reg.adobe.com/flow/adobe/as23/sessions/page/catalog/session/1661982238829001DliT">Make Documents Work Harder: Better Viewing, Better Insights</a><br>
-Adobe Summit 2023<br/>
-Las Vegas, March 19-23, 2023
+<a href="https://events.geekle.us/api/">How NOT to API</a><br/>
+API Forum 2023<br/>
+Online, June 13-14, 2023
+</p>
+
+<p>
+<a href="https://events.geekle.us/js23/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
+JavaScript Global Summit'23<br/>
+Online, September 19-20, 2023
 </p>
 
 <!--
@@ -32,6 +38,12 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://reg.adobe.com/flow/adobe/as23/sessions/page/catalog/session/1661982238829001DliT">Make Documents Work Harder: Better Viewing, Better Insights</a><br>
+Adobe Summit 2023<br/>
+Las Vegas, March 19-23, 2023
+</p>
+
 <p>
 <a href="https://cfe.dev/events/the-jam-2023/">Web Components the Eleventy Way</a><br>
 The Jam.dev 2023<br/>

@@ -1,10 +1,9 @@
-const { getPosts } = require('./config/collections/index.js');
+const { categories, getPosts } = require('./config/collections/index.js');
 const { extractExcerpt, hasAnyComments, commentInclude } = require('./config/shortcodes/index.js');
-const { ageInDays, catTagList, myEscape, my_xml_escape, titlecase, toTitle, postCategories, postTags } = require('./config/filters/index.js');
+const { ageInDays, algExcerpt, catTagList, fixcattag, getByCategory, myEscape, my_xml_escape, titlecase, toTitle, postCategories, postTags } = require('./config/filters/index.js');
 
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-const eleventySass = require('eleventy-sass');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 
 module.exports = function(eleventyConfig) {
@@ -15,6 +14,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src/manifest.json');
 	eleventyConfig.addPassthroughCopy('src/_redirects');
 
+	eleventyConfig.addCollection('categories', categories);
 	eleventyConfig.addCollection('posts', getPosts);
 
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
@@ -22,7 +22,10 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode('commentInclude', commentInclude);
 
 	eleventyConfig.addFilter('ageInDays', ageInDays);
+	eleventyConfig.addFilter('algExcerpt', algExcerpt);
 	eleventyConfig.addFilter('catTagList', catTagList);
+	eleventyConfig.addFilter('fixcattag', fixcattag);
+	eleventyConfig.addFilter('getByCategory', getByCategory);
 	eleventyConfig.addFilter('myEscape', myEscape);
 	eleventyConfig.addFilter('my_xml_escape', my_xml_escape);
 	eleventyConfig.addFilter('titlecase', titlecase);

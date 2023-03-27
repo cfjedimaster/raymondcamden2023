@@ -1,0 +1,315 @@
+---
+layout: page
+title: Stats
+templateEngineOverride: false
+permalink: /stats/index.html
+---
+
+<style>
+[v-cloak] {display: none}
+
+table tr td:first-child {
+    min-width: 300px;
+}
+
+select.cattagYear {
+    width: 100px;
+    float: right;
+}
+</style>
+
+<div id="app" v-cloak="" markdown="0">
+	<table>
+		<tr>
+			<td width="30%">Total Posts:</td>
+			<td width="70%">{{totalPosts | number}}</td>
+		</tr>
+		<tr>
+		<td>First Post:</td>
+		<td>
+		    <a :href="firstPost.url">{{firstPost.title}}</a> published {{firstPost.age}} on {{firstPost.date}}
+		</td>
+		</tr>
+		<tr>
+		<td>Last Post:</td>
+		<td>
+    		<a :href="lastPost.url">{{lastPost.title}}</a> published {{lastPost.age}} on {{lastPost.date}}
+		</td>
+		</tr>
+		<tr>
+		<td>Total Words Written:</td>
+		<td>{{totalWords | number}}</td>
+		</tr>
+		<tr>
+		<td>Average Words per Post:</td>
+		<td>{{avgWords | number}}</td>
+		</tr>
+        <tr>
+        <td>Current Build Status:</td>
+        <td>{{ buildStatus }}</td>
+        </tr>
+        <tr v-if="buildPublished">
+            <td>Build Time:</td>
+            <td>{{ buildTime }}</td>
+        </tr>
+	</table>
+
+    <h3>Posts Per Week (Last 8 Weeks)</h3>
+    <table>
+        <tr>
+            <td>Week</td>
+            <td>Posts</td>
+        </tr>
+        <tr v-for="week in weekData">
+            <td>{{week.sunday | date}}-{{week.saturday | date}}</td>
+            <td>{{week.hits}}</td>
+        </tr>
+    </table>
+    
+    <h3>Posts Per Year</h3>
+    <table>
+        <tr>
+            <td>Year</td>
+            <td>Number of Posts</td>
+        </tr>
+        <tr v-for="year in sortedYears">
+            <td>{{year}}</td>
+            <td>{{years[year] | number}}</td>
+        </tr>
+    </table>
+
+    <h3>Posts Per Category</h3>
+    <table>
+        <tr>
+            <td>Category</td>
+            <td>Number of Posts</td>
+        </tr>
+        <tr v-for="cat in sortedCats">
+            <td><a :href="'/categories/'+cat.link">{{cat.name}}</a></td>
+            <td>{{cat.size | number}}</td>
+        </tr>
+    </table>
+
+    <h3>Posts Per Tag</h3>
+    <table>
+        <tr>
+            <td>Tag</td>
+            <td>Number of Posts</td>
+        </tr>
+        <tr v-for="tag in sortedTags">
+            <td><a :href="'/tags/'+tag.link">{{tag.name}}</a></td>
+            <td>{{tag.size | number}}</td>
+        </tr>
+    </table>
+
+    <h3>Combined Categories/Tags Stats Per Year</h3>
+    <select v-if="cattagYears" v-model="selectedCatTagYear" class="cattagYear">
+        <option v-for="year in cattagYears" :value="year">{{ year }}</option>
+    </select>
+    <table v-if="selectedCatTagYear">
+        <tr>
+            <td>Category/Tag</td>
+            <td>Number of Posts</td>
+        </tr>
+
+        <tr v-for="item in sortedCatTagStats">
+            <td>{{item.name}}</td>
+            <td>{{item.size | number}}</td>
+        </tr>
+    </table>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+
+Vue.filter('number', s =>  {
+  if(!window.Intl) return s;
+  return new Intl.NumberFormat().format(s);
+});
+
+
+Vue.filter('date', s =>  {
+  if(!window.Intl) return s;
+  return new Intl.DateTimeFormat('en-US', { dateStyle:'short'}).format(s);
+});
+
+new Vue({
+	el:'#app',
+	data:{
+		totalPosts:0,
+		firstPost:{
+			title:"",
+			date:"",
+			url:""
+		},
+		lastPost:{
+			title:"",
+			date:"",
+			url:""
+		},
+		totalWords:0,
+		avgWords:0,
+        years:{},
+        cats:[], 
+        tags:[],
+        weekData:[],
+        buildStatus:'',
+        buildPublished:false,
+        buildTime:'',
+        postViewsRSS:[],
+        catTagYearData:null,
+        selectedCatTagYear:null,
+        cattagYears:[]
+	},
+	created:async function() {
+
+        let data = await fetch('/stats.json');
+        let res = await data.json();
+
+        this.totalPosts = res.totalPosts;
+        
+        this.firstPost = {
+            title:res.firstPost.title,
+            date:this.$options.filters.date(new Date(res.firstPost.published)),
+            url:res.firstPost.url,
+            age:moment(res.firstPost.published).fromNow()
+        };
+
+        this.lastPost = {
+            title:res.lastPost.title,
+            date:this.$options.filters.date(new Date(res.lastPost.published)),
+            url:res.lastPost.url,
+            age:moment(res.lastPost.published).fromNow()
+        };
+
+        this.totalWords = res.totalWords;
+        this.avgWords = res.averageWordsPerPost.toFixed();
+
+        let dates = res.dates.split(',');
+        // process res.dates on the client site
+        dates.forEach(d => {
+            let year = new Date(d).getFullYear();
+            if(!this.years[year]) Vue.set(this.years,year,0);
+            Vue.set(this.years,year, this.years[year]+1);
+        });
+
+        this.cats = res.postsPerCategory.map(c => {
+            c.link = c.name.replace(/ /g, '+');
+            return c;
+        });
+        this.tags = res.postsPerTag.map(t => {
+            t.link = t.name.replace(/ /g, '+');
+            return t;
+        });;
+
+        //generate 8 weeks of weeks
+        let weekData = generateWeekData();
+        // get the earliest day
+        let earliest = weekData[weekData.length-1].sunday;
+        // loop from last date until a post is before earliest
+        let curr = dates.length-1;
+        let thisDate = new Date(dates[curr]);
+        while(thisDate && thisDate.getTime() > earliest.getTime()) {
+            // loop over our weeks and if im inside, hits++
+            weekData.forEach(w => {
+                if(w.sunday.getTime() < thisDate.getTime() && thisDate.getTime() < w.saturday.getTime()) w.hits++;
+            });
+
+            thisDate = new Date(dates[--curr]);
+        }
+        //copy it over now that we're done with it, don't like this I think
+        this.weekData = weekData;
+
+        // new work to show build status
+        let buildReq = await fetch('/.netlify/functions/deploy-status');
+        let buildData = await buildReq.json();
+        if(buildData.state === 'ready') {
+            this.buildStatus = 'Published';
+            this.buildTime = buildData.published_at;
+            this.buildPublished = true;
+        } else this.buildStatus = buildData.state;
+
+        for(let y in res.yearCatTagStats) {
+            this.cattagYears.push(y);
+        }
+
+        this.catTagYearData = res.yearCatTagStats;
+
+        // new rss thing
+        /*
+        let rss = await (await fetch('/jsonfeed/index.json')).json();
+        for(item of rss.items) {
+            let url = item.id.replace('https://','');
+            let views = (await (await fetch(`/api/getPageViews?path=${url}`)).json()).views;
+            this.postViewsRSS.push({
+                url:item.id,
+                title:item.title,
+                views
+            })
+        }
+        */
+
+	},
+    computed:{
+        sortedCats:function() {
+            return this.cats.sort((a,b) => {
+                if(a.name < b.name) return -1;
+                if(a.name > b.name) return 1;
+                return 0;
+            });
+        },
+        sortedTags:function() {
+            return this.tags.sort((a,b) => {
+                if(a.name < b.name) return -1;
+                if(a.name > b.name) return 1;
+                return 0;
+            });
+        },
+        sortedYears:function() {
+            return Object.keys(this.years).sort();
+        },
+        sortedCatTagStats() {
+            let stats = this.catTagYearData[this.selectedCatTagYear];
+            // convert object of keys to an array
+            let result = [];
+            for(let key in stats) {
+                result.push({name:key, size: stats[key]});
+            }
+
+            return result.sort((a,b) => {
+                if(a.name < b.name) return -1;
+                if(a.name > b.name) return 1;            
+            });
+        }
+    }
+});
+
+/*
+I just create an array where [0].start is the Sunday of last week, [0].end is the Saturday.
+I generate 8 of these with 0 being last week, 1 the week before, and so forth. 
+My solution uses code from: https://stackoverflow.com/a/13682133/52160
+Also https://stackoverflow.com/a/13682065/52160
+*/
+function generateWeekData() {
+    let weeks = [];
+    for(let i=0;i<8;i++) {
+
+        let d = new Date();
+
+        // set to Monday of this week
+        d.setDate(d.getDate() - (d.getDay() + 6) % 7);
+
+        // set to previous Monday
+        d.setDate(d.getDate() - (7*(i+1)));
+
+        // create new date of day before
+        let sunday = new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1);
+        let saturday = new Date(sunday.getFullYear(), sunday.getMonth(), sunday.getDate()+6);
+
+        weeks.push({sunday, saturday, hits:0});
+    }
+    return weeks;
+}
+</script>
