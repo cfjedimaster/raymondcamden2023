@@ -1,3 +1,6 @@
+let Parser = require('rss-parser');
+let parser = new Parser();
+
 const fs = require('fs');
 const excerptMinimumLength = 140;
 const excerptSeparator = '<!--more-->';
@@ -77,6 +80,13 @@ const commentInclude = (e, old) => {
     return getCommentText(e,old);
 }
 
+const lastToot = async (instance, user) => {
+	let rssFeedURL = `https://${instance}/users/${user}.rss`;
+	let feed = await parser.parseURL(rssFeedURL);
+	return feed.items[0].guid.split('/').pop();
+}
+
 module.exports = {
-	extractExcerpt, hasAnyComments, commentInclude
+	extractExcerpt, hasAnyComments, commentInclude, lastToot
 };
+
