@@ -5,7 +5,7 @@ const { ageInDays, algExcerpt, catTagList, fixcattag, getByCategory, myEscape, m
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
-const htmlmin = require('eleventy-xml-plugin');
+const htmlmin = require('html-minifier');
 
 module.exports = function(eleventyConfig) {
 
