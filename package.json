@@ -4,7 +4,6 @@
   "description": "",
   "main": "eleventy.config.js",
   "scripts": {
-    "dev2": "eleventy --quiet --serve",
     "dev": "netlify dev -c \"eleventy --serve --quiet\""
   },
   "repository": {

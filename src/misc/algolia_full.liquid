@@ -1,10 +1,15 @@
 ---
-permalink: /algolia_new.json
+permalink: /algolia.json
 ---
+
+{% comment %}
+Currently, algolia_new is a short feed used by my deploy succeeded function to add recent articles. 
+I'm doing some work on search and need an Algolia specific index for EVERYTHING, and I believe I need to fix the date.
+{% endcomment %}
 
 {% assign posts = collections.posts | reverse %}
 [
-{% for post in posts limit:5 %}
+{% for post in posts %}
 	{
 		"title": {{post.data.title | json }},
 		"date":"{{ post.date }}",
