@@ -22,6 +22,7 @@
     "@11ty/eleventy-fetch": "^4.0.0",
     "algoliasearch": "^4.16.0",
     "axios": "^1.3.4",
+    "dotenv": "^16.0.3",
     "eleventy-xml-plugin": "^0.1.0",
     "html-minifier": "^4.0.0",
     "md5": "^2.3.0",

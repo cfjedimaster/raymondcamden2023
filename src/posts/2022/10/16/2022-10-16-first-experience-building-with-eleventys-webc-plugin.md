@@ -3,7 +3,7 @@ layout: post
 title: "First Experience Building with Eleventy's WebC Plugin"
 date: "2022-10-16T18:00:00"
 categories: ["development","jamstack"]
-tags: ["javascript","web components","adobe","pdf services","eleventy"]
+tags: ["javascript","web components","eleventy"]
 banner_image: /images/banners/orangejuice.jpg
 permalink: /2022/10/16/first-experience-building-with-eleventys-webc-plugin
 description: My first attempt working with Eleventy's new Web Component plugin
