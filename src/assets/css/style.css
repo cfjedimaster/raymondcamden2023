@@ -25,6 +25,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -78,7 +79,7 @@ template {
 
 a {
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
 }
 
 a:focus {
@@ -1193,7 +1194,7 @@ img {
   background: #1d1d1d;
   bottom: 0;
   box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
   position: absolute;
   right: -100%;
   top: 0;
@@ -1229,7 +1230,7 @@ img {
 .site-nav-wrap {
   height: 100%;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
   position: relative;
 }
 
@@ -1287,7 +1288,7 @@ a[href$="/rss/"] svg {
   .site-header-wrap {
     height: 100%;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
     position: relative;
   }
 
