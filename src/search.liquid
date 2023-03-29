@@ -57,6 +57,9 @@ description: Search this Site
 <script>
 var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@1.6.3";
 
+const appId = '0FJBPN4K5D';
+const apiKey = '8f741f50b983176875b65e252402b140';
+
 !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
 (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
 i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
@@ -64,12 +67,10 @@ i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
 
 // Initialize library
 aa('init', {
-	appId: 'WFABFE7Z9Q',
-	apiKey: 'd1c88c3f98648a69f11cdd9d5a87de08'
+	appId,
+	apiKey
 });
-</script>
 
-<script>
 document.addEventListener('alpine:init', () => {
     Alpine.data('app', () => ({
 		search:'',
@@ -81,7 +82,7 @@ document.addEventListener('alpine:init', () => {
     	noResults:false, 
 		queryID:null,
 		init() {
-			this.client = algoliasearch('WFABFE7Z9Q', 'd1c88c3f98648a69f11cdd9d5a87de08');
+			this.client = algoliasearch(appId, apiKey);
 			this.index = this.client.initIndex('raymondcamden');
 			// support url param search
 			let qp = new URLSearchParams(window.location.search);

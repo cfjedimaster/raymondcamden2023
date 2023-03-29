@@ -50,7 +50,7 @@ This *worked*, but I wanted to see if I could use the new directives instead. I 
 </svg>{% endraw %}
 ```
 
-You'll notice that both width and height now are dynamic and will use 199 each foir a default. Next, I made the `text` element only show up if the `text` attribute was passed. You'll notice though that `viewbox` wasn't updated. 
+You'll notice that both width and height now are dynamic and will use 199 each for a default. Next, I made the `text` element only show up if the `text` attribute was passed. You'll notice though that `viewbox` wasn't updated. 
 
 So... I had a quandary. I knew I could turn `viewbox` into a JavaScript expression, but I wasn't sure how to "embed" a check for undefined variables. I first tried the [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) which sounded like it would work, but it doesn't support a variable that's not declared. 
 
