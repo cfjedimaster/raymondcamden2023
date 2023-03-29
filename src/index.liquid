@@ -13,6 +13,9 @@ layout: default
     {% endif %}
 
     {% for post in posts limit:3 %}
+
+        {% assign img = "https://res.cloudinary.com/raymondcamden/image/fetch/f_auto/https://static.raymondcamden.com" | append: post.data.banner_image %}
+
         {% if forloop.first %}
         <div id="featured-posts" class="featured-posts">
         {% endif %}
@@ -21,7 +24,7 @@ layout: default
                 <div class="post-inside">
                     <a href="{{post.url}}" class="post-thumbnail">
                         <img 
-                        src="{{ "https://static.raymondcamden.com" | append: post.data.banner_image }}"
+                        src="{{ img }}"
                         alt="{% if post.data.banner_image_alt %}{{ post.data.banner_image_alt }}{% else %}{{ post.data.title }} {% endif %}" width="900"></a>                        
                     <header class="post-header">
                         <div class="post-meta">
