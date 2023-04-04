@@ -11,7 +11,7 @@ description: A look at another new WebC feature - looping
 
 Last week I took a look at [updates to WebC support](https://www.raymondcamden.com/2023/03/28/webc-updates-in-eleventy) in Eleventy, specifically if/else support. In that last update, looping support was added as well so I thought I'd build a quick little demo showing it in action. As usual, I ended up finding another new feature/change to WebC so it was good practice at WebC in general. Here's what I came up with. 
 
-For my demo, I decided to build a simple WebC component for a lightbox image gallery. I've made use of [Parvus](https://github.com/deoostfrees/Parvus) before and it's a nice, and pretty simple, library for lightbox UI. Once you have the JavaScript and CSS loaded in your page, you can use by doing two things. 
+For my demo, I decided to build a simple WebC component for a lightbox image gallery. I've made use of [Parvus](https://github.com/deoostfrees/Parvus) before and it's a nice, and pretty simple, library for lightbox UI. Once you have the JavaScript and CSS loaded on your page, you can use them by doing two things. 
 
 First, wrap your thumbnails with links to the full-size image, and ensure you use the `lightbox` class:
 
@@ -27,7 +27,7 @@ Then you just need one line of code:
 const prvs = new Parvus();
 ```
 
-Obviously you can get more complex with it, but in general, it's fairly simple to use. Here's how I built a WebC wrapper for it. I began by creating a `_data` file named `images.json`:
+Obviously, you can get more complex with it, but in general, it's fairly simple to use. Here's how I built a WebC wrapper for it. I began by creating a `_data` file named `images.json`:
 
 ```js
 [
@@ -134,7 +134,7 @@ When loading bundled assets, you now use a shortcode, `getBundle`, to inject the
 
 That's really all there is to it. I still feel like I'm struggling a bit with WebC. As I've said before, not because of anything *wrong* with it, but it's definitely been a bit of a struggle to grok it. I hope these examples are helping others as much as they are helping me. If you would like the full source code, you can find it here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/webc_lightbox>
 
-I also set up a Glitch if you want to see this in action yours: <https://glitch.com/edit/#!/webc-for-demo> Let me know what you think!
+I also set up a Glitch if you want to see this in action yourself: <https://glitch.com/edit/#!/webc-for-demo> Let me know what you think!
 
 p.s. You may notice I used an odd URL in my sample images, specifically the `?.png` part at the end. This is not a requirement of the placeholder service I used, but something Parvus required. When it sees an image URL that doesn't end in a "regular" extension it doesn't consider it to be a real image. I'm filing a bug report on that now. 
 
