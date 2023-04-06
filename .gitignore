@@ -8,3 +8,5 @@ _site
 
 .eleventyignore
 .cache
+
+scripts/.env
