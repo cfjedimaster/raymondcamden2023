@@ -27,7 +27,7 @@ You know, I miss the tree. It was pretty terrible. I mean, really beautiful, for
 
 So yes, that's a bit crazy at times. But there's something interesting about it. If you [reload the site](https://www.brightspiral.com/) you'll see new random generated stories and I could spend *quite* a bit of time seeing what it does. 
 
-I first becamse of aware of this library when I discovered [@dragonhoards](https://twitter.com/dragonhoards] on Twitter. This is a bit that makes use of the library. Here's an example tweet that's both interesting and horifying at the same time:
+I first became of aware of this library when I discovered [@dragonhoards](https://twitter.com/dragonhoards) on Twitter. This is a bit that makes use of the library. Here's an example tweet that's both interesting and horifying at the same time:
 
 <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">A magical dragon lives by an enchanted lake. She estimates her hoard, which consists of a heap of memoirs, a group of pies, and an unknowable amount of corpses. She is exhausted.</p>&mdash; Dragon Hoards (@dragonhoards) <a href="https://twitter.com/dragonhoards/status/1261003706507628544?ref_src=twsrc%5Etfw">May 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
