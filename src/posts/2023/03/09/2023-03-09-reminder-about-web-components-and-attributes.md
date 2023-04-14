@@ -51,7 +51,7 @@ The good (?) news is that this is completely expected and easily (for the most p
 
 The first part is simple:
 
-``js
+```js
 static get observedAttributes() { return ['title'] };
 ```
 
