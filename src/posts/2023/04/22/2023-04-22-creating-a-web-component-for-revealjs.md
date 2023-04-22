@@ -231,7 +231,7 @@ I've updated the code to look for `height` and `width` now and default both. Whe
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-There are still things I'd tweak here. I'd definitely add support for changing the height and width. Reveal itself also supports recognizing changes to it's size. One note - I did do a quick test with 2 presentations on the page, and it worked, but it only shows one theme which I believe there is no workaround as Reveal expects only one theme CSS. It may be possible, but I'm not sure. 
+There are still things I'd tweak here. I'd definitely add support for changing the height and width. Reveal itself also supports recognizing changes to its size. One note - I did do a quick test with 2 presentations on the page, and it worked, but it only shows one theme which I believe there is no workaround as Reveal expects only one theme CSS. It may be possible, but I'm not sure. 
 
 ## Next Version?
 
