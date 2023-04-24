@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating a Web Component for Reveal.js (Followup)"
+title: "Creating a Web Component for Reveal.js (Follow-up)"
 date: "2023-04-24T18:00:00"
 categories: ["development"]
 tags: ["web components"]
