@@ -9,7 +9,7 @@ permalink: /2023/04/24/creating-a-web-component-for-revealjs-followup
 description: A followup to my previous proof of concept web component for Reveal.js.
 ---
 
-This weekend I [blogged](https://www.raymondcamden.com/2023/04/22/creating-a-web-component-for-revealjs) about a web component experiment wrapping the excellent [Reveal.js](https://revealjs.com/) presentation library. In that post, I created a component to wrap `<section`>` tags that represented individual slides. I mentioned that I wanted to follow up on this and create a "child" component to represent slides. Here's what I did - including my first version which failed for a pretty obvious reason.
+This weekend I [blogged](https://www.raymondcamden.com/2023/04/22/creating-a-web-component-for-revealjs) about a web component experiment wrapping the excellent [Reveal.js](https://revealjs.com/) presentation library. In that post, I created a component to wrap `<section>` tags that represented individual slides. I mentioned that I wanted to follow up on this and create a "child" component to represent slides. Here's what I did - including my first version which failed for a pretty obvious reason.
 
 ## Version One - That I Did Wrong on Purpose to Test My Readers - Honest.
 
