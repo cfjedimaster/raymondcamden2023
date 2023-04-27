@@ -15,7 +15,7 @@ Today's article is something that's been kicking around in my head for a few mon
 <img data-src="https://static.raymondcamden.com/images/2021/05/vu1.jpg" alt="Demo layout of application, list of items with filters" class="lazyload imgborder imgcenter">
 </p>
 
-There's a list of items which consists of people, cats, and a dog. Each item has a name and type. On top there are filters for the name and type. If you enter any text, the items that match the name (ignoring case) will be shown. If you select one or more of the types, only those matching will be shown.
+There's a list of items that consists of people, cats, and a dog. Each item has a name and type. On top there are filters for the name and type. If you enter any text, the items that match the name (ignoring case) will be shown. If you select one or more of the types, only those matching will be shown.
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2021/05/vu2.jpg" alt="Items filtered by name and type" class="lazyload imgborder imgcenter">
