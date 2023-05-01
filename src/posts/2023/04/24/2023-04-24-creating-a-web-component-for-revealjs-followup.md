@@ -67,13 +67,13 @@ I then edited my HTML to add one on top:
 I intentionally just added one because I figured the other slides would continue to work as before. However, the result was broken:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/04/reveal1.jpg" alt="Both slides being shown at once" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/04/reveal1.jpg" alt="Both slides being shown at once" class="imgborder imgcenter" loading="lazy">
 </p>
 
 I've been using Reveal for a long time, and typically when this happens it means I made a typo somewhere in my HTML. So I did what any good web developer should do - <s>run to StackOverflow</s>open up my devtools. When I did, I saw this:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/04/reveal2.jpg" alt="Devtools DOM tree" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/04/reveal2.jpg" alt="Devtools DOM tree" class="imgborder imgcenter" loading="lazy">
 </p>
 
 In case that's a bit hard to read, it's basically showing this:
