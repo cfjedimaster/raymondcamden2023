@@ -11,7 +11,7 @@ description: A look at Amazon IVS and integrating it into a Jamstack site
 
 Last week I had the distinct pleasure of being on my buddy Todd Sharp's live stream, Streaming on Streaming. You can watch the recording of that session here:
 
-<iframe src="https://player.twitch.tv/?video=1811192764&parent=raymondcamden.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620" style="margin:auto;display:block"></iframe>
+<iframe src="https://player.twitch.tv/?video=1811192764&parent=www.raymondcamden.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620" style="margin:auto;display:block"></iframe>
 
 Todd is the principal developer advocate for Amazon Interactive Video Service (IVS), or, more simply, a way of taking the *incredible* power of the Twitch platform and putting it in your hands. [IVS](https://aws.amazon.com/pm/ivs/) gives you:
 
