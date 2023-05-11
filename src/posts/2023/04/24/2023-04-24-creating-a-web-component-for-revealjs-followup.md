@@ -134,7 +134,7 @@ For my web component, I thought it would be cool to allow you to use all of the 
 </reveal-slide>	
 ```
 
-To support this, I checked the `attributes` property of my web component instance. For reach I find, I simply prefix it with `data-`. N
+To support this, I checked the `attributes` property of my web component instance. For reach I find, I simply prefix it with `data-`. 
 
 ```js
 for(let i=0; i<this.attributes.length; i++) {
