@@ -1,0 +1,100 @@
+---
+layout: page
+title: Now
+description: 
+body_class: page-template
+---
+
+<h3>What I'm Listening To</h3>
+
+<p>
+Here's my latest tracks from Spotify (pretty much the only way I listen to music)...
+</p>
+
+<div class="tracks">
+</div>
+
+<h3>What I'm Watching</h3>
+
+<p>
+Ok, this is just movies, but here's what I've seen recently...
+</p>
+
+<div class="films">
+{% for film in letterboxd_films %}
+	<div class="film">
+	<a href="{{ film.link }}" target="_new"><img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_216/{{ film.image }}"></a>
+	<a href="{{ film.link }}" target="_new">{{ film.name }}</a>
+	</div>
+{% endfor %}
+</div>
+
+<style>
+.tracks, .films {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+}
+
+.track, .film {
+	border-style:solid;
+	border-width:thin;
+	padding: 10px; 
+}
+</style>
+
+<script>
+// Endpoint to get my tracks
+var TRACKS_API = 'https://eos6dxqdanfnilh.m.pipedream.net/';
+
+document.addEventListener('DOMContentLoaded', init, false);
+
+async function init() {
+
+	let tracks = await getTracks();
+	// while we get 20, limit to 18 as we're doing rows of 3
+	tracks = tracks.slice(0, 18);
+
+	console.log(tracks);
+	let s = '';
+	tracks.forEach(t => {
+
+		let artists = t.artists.map(a => a.name).join(', ');
+
+		let html = `
+<div class="track">
+<a href="${t.href}" target="_new"><img src="${t.images[1].url}"></a>
+<a href="${t.href}" target="_new">"${t.name}"</a> by ${artists}
+</div>
+		`;
+		s += html;
+
+	});
+
+	document.querySelector('.tracks').innerHTML = s;
+	
+}
+
+async function getTracks() {
+	/*
+	I hit the TRACKS_API, but also cache - not that I think people will be hitting this much.
+	I'll cache for 10 minutes. 
+	*/
+	let cache = sessionStorage.getItem('tracks');
+	if(cache) {
+		let cachedData = JSON.parse(cache);
+		if(cachedData.tracks && cachedData.timestamp) {
+			let now = new Date();
+			let diff = (now.valueOf() - cachedData.timestamp) / (1000 * 60);
+			console.log('age in minutes is', diff);
+			if(cache < 10) return cachedData.tracks;
+		}
+	} 
+
+	let resp = await fetch(TRACKS_API);
+	let data = await resp.json();
+	// cache it!
+	cache = { tracks: data, timestamp:Date.now() };
+	sessionStorage.setItem('tracks', JSON.stringify(cache));
+	return data;
+}
+</script>
