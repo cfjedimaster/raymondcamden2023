@@ -221,3 +221,12 @@ As I said, I could do more with this, but I think it's pretty cool to start off 
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+## Resources
+
+While researching this post, I came across some great articles that were helpful:
+
+* [Web Components Can Now Be Native Form Elements](https://javascript.plainenglish.io/web-components-can-now-be-native-form-elements-107c7a93386) by Danny Moerkerke
+* [ElementInternals and Form-Associated Custom Elements](https://webkit.org/blog/13711/elementinternals-and-form-associated-custom-elements/) by Ryosuke Niwa
+* [More capable form controls](https://web.dev/more-capable-form-controls/) by Arthur Evans
+
