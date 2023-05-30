@@ -21,13 +21,27 @@ Ok, this is just movies, but here's what I've seen recently...
 </p>
 
 <div class="films">
-{% for film in letterboxd_films %}
+{% for film in letterboxd_films limit:9 %}
 	<div class="film">
 	<a href="{{ film.link }}" target="_new"><img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_216/{{ film.image }}"></a>
 	<a href="{{ film.link }}" target="_new">{{ film.name }}</a>
 	</div>
 {% endfor %}
 </div>
+
+<h3>My Latest Beers</h3>
+
+<p>
+I've been an <a href="https://untappd.com">Untappd</a> user for over a decade and while I'm drinking less beer lately (I've 
+only started to drink wine in the last few years), I thought it would be cool to share my latest checkins. I only (typically) 
+record *new* beers I've tried.
+</p>
+
+<ul>
+{% for beer in untappd_beers limit:10 %}
+<li><strong>{{ beer.name }}</strong> brewed by {{ beer.brewery }}. This is a {{ beer.style }} I gave {{ beer.rating }} stars out of 5.</li>
+{% endfor %}
+</ul>
 
 <style>
 .tracks, .films {
