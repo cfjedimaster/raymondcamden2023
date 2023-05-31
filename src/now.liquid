@@ -5,6 +5,98 @@ description:
 body_class: page-template
 ---
 
+<h3>What I'm Reading</h3>
+
+<!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
+<style type="text/css" media="screen">
+.gr_custom_container_1685561384 {
+/* customize your Goodreads widget container here*/
+border: 1px solid gray;
+border-radius:10px;
+padding: 10px 5px 10px 5px;
+background-color: #FFFFFF;
+color: #000000;
+
+}
+.gr_custom_header_1685561384 {
+/* customize your Goodreads header here*/
+border-bottom: 1px solid gray;
+width: 100%;
+margin-bottom: 5px;
+text-align: center;
+font-size: 150%
+}
+.gr_custom_each_container_1685561384 {
+/* customize each individual book container here */
+width: 100%;
+clear: both;
+margin-bottom: 10px;
+overflow: auto;
+padding-bottom: 4px;
+border-bottom: 1px solid #aaa;
+}
+.gr_custom_book_container_1685561384 {
+/* customize your book covers here */
+overflow: hidden;
+height: 160px;
+float: left;
+margin-right: 4px;
+width: 98px;
+}
+.gr_custom_author_1685561384 {
+/* customize your author names here */
+font-size: 10px;
+}
+.gr_custom_tags_1685561384 {
+/* customize your tags here */
+font-size: 10px;
+color: gray;
+}
+.gr_custom_rating_1685561384 {
+/* customize your rating stars here */
+float: right;
+}
+</style>
+
+<div id="gr_custom_widget_1685561384">
+<div class="gr_custom_container_1685561384">
+<h2 class="gr_custom_header_1685561384">
+<a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/7962326-raymond?shelf=currently-reading&amp;utm_medium=api&amp;utm_source=custom_widget">Currently Reading</a>
+</h2>
+<div class="gr_custom_each_container_1685561384">
+<div class="gr_custom_book_container_1685561384">
+<a title="Ruin and Rising (The Shadow and Bone Trilogy, #3)" rel="nofollow" href="https://www.goodreads.com/review/show/5507928130?utm_medium=api&amp;utm_source=custom_widget"><img alt="Ruin and Rising" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1392398530l/14061957._SX98_.jpg" /></a>
+</div>
+<div class="gr_custom_title_1685561384">
+<a rel="nofollow" href="https://www.goodreads.com/review/show/5507928130?utm_medium=api&amp;utm_source=custom_widget">Ruin and Rising</a>
+</div>
+<div class="gr_custom_author_1685561384">
+by <a rel="nofollow" href="https://www.goodreads.com/author/show/4575289.Leigh_Bardugo">Leigh Bardugo</a>
+</div>
+</div>
+<div class="gr_custom_each_container_1685561384">
+<div class="gr_custom_book_container_1685561384">
+<a title="Neuromancer (Sprawl, #1)" rel="nofollow" href="https://www.goodreads.com/review/show/5510021857?utm_medium=api&amp;utm_source=custom_widget"><img alt="Neuromancer" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1554437249l/6088007._SX98_.jpg" /></a>
+</div>
+<div class="gr_custom_title_1685561384">
+<a rel="nofollow" href="https://www.goodreads.com/review/show/5510021857?utm_medium=api&amp;utm_source=custom_widget">Neuromancer</a>
+</div>
+<div class="gr_custom_author_1685561384">
+by <a rel="nofollow" href="https://www.goodreads.com/author/show/9226.William_Gibson">William Gibson</a>
+</div>
+</div>
+<br style="clear: both"/>
+<center>
+<a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
+</center>
+<noscript>
+Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Raymond, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
+</noscript>
+</div>
+
+</div>
+<script src="https://www.goodreads.com/review/custom_widget/7962326.Currently%20Reading?cover_position=left&cover_size=medium&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1685561384&widget_text_color=000000&widget_title_size=large&widget_width=full" type="text/javascript" charset="utf-8"></script>
+
 <h3>What I'm Listening To</h3>
 
 <p>
@@ -12,6 +104,7 @@ Here's my latest tracks from Spotify (pretty much the only way I listen to music
 </p>
 
 <div class="tracks">
+<i>Loading...</i>
 </div>
 
 <h3>What I'm Watching</h3>
@@ -68,7 +161,6 @@ async function init() {
 	// while we get 20, limit to 18 as we're doing rows of 3
 	tracks = tracks.slice(0, 18);
 
-	console.log(tracks);
 	let s = '';
 	tracks.forEach(t => {
 
