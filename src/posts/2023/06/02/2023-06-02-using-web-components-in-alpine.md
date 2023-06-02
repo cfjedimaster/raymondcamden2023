@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using Web Components in Alpine"
+title: "Using Web Components in Alpine.js"
 date: "2023-06-02T18:00:00"
 categories: ["javascript"]
 tags: ["alpinejs","web components"]
