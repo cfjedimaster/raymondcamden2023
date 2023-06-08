@@ -11,6 +11,8 @@ description: An example of using exported Goodreads data in an Eleventy site.
 
 I've been a [Goodreads](https://www.goodreads.com/) user for a few years now, and much like how I use other 'tracking' services, I'm not there for other folks' reading lists or recommendations, but instead, as a way to track what I've read. I especially like looking back over the past year and being reminded of the books I really enjoyed. Recently, myself and others were talking on Mastodon about how to work with this kind of data, other services, and so forth. Goodreads does not have an API unfortunately (it used to, but it shut it down) but they do let you export your data. I decided to take a look at this and see if (and how) it could be used in Eleventy. Here's what I found.
 
+<strong>Edit on June 8, 2023: Be sure to see my update [here](/2023/06/08/using-goodreads-data-in-eleventy-update).</strong>
+
 ## Getting your Goodreads data
 
 So, according to this [web page](https://help.goodreads.com/s/article/How-do-I-get-a-copy-of-my-data-from-Goodreads), you can request a copy of your data at any time. I followed the directions there and was presented with a cheerful warning that it could take up to <strong>thirty days</strong> for my request to be processed. 
