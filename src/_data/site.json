@@ -5,6 +5,7 @@
 	"navigation": [
 		{"text":"Home", "url":"/"},
 		{"text":"About","url":"/about/"},
+		{"text":"Now","url":"/now/"},
 		{"text":"Speaking","url":"/speaking/"},
 		{"text":"Subscribe","url":"/subscribe/"},
 		{"text":"Contact","url":"/contact/"},
