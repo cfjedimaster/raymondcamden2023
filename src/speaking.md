@@ -16,18 +16,6 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://www.meetup.com/net-user-group-of-bc/events/293540789/">Roll Your Own HTML with Web Components</a><br/>
-.Net User Group of BC<br/>
-Online, May 30, 2023
-</p>
-
-<p>
-<a href="https://events.geekle.us/api/">How NOT to API</a><br/>
-API Forum 2023<br/>
-Online, June 13-14, 2023
-</p>
-
-<p>
 <a href="https://hopin.com/events/adobe-developer-partner-days-2023/registration">Getting started with Creative Cloud Automation Services</a><br/>
 Developer & Partner Days 2023<br/>
 Online, June 27-28, 2023
@@ -50,6 +38,18 @@ Here are my past events, most recent first, in a nice scrollable list no one wil
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://www.meetup.com/net-user-group-of-bc/events/293540789/">Roll Your Own HTML with Web Components</a><br/>
+.Net User Group of BC<br/>
+Online, May 30, 2023
+</p>
+
+<p>
+<a href="https://events.geekle.us/api/">How NOT to API</a><br/>
+API Forum 2023<br/>
+Online, June 13-14, 2023
+</p>
+
 <p>
 <a href="https://reg.adobe.com/flow/adobe/as23/sessions/page/catalog/session/1661982238829001DliT">Make Documents Work Harder: Better Viewing, Better Insights</a><br>
 Adobe Summit 2023<br/>
