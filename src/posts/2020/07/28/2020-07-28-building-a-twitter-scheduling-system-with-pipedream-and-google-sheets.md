@@ -9,7 +9,7 @@ permalink: /2020/07/28/building-a-twitter-scheduling-system-with-pipedream-and-g
 description: How I used Pipedream to connect Google Sheets to Pipedream
 ---
 
-A few months ago, I [blogged](https://www.raymondcamden.com/2020/04/27/building-a-google-sheets-twitter-bot-with-pipedream) about how I used [Pipedream](https://pipedream.com) and Google Sheets to create a Twitter bot. The idea was simple - read a sheet - select a random row - and use that as the source of a new Tweet. I was thinking about this recently and how useful Google Sheets can be as a "light weight CMS" and figured out another interesting use case - Twitter scheduling.
+A few months ago, I [blogged](https://www.raymondcamden.com/2020/04/27/building-a-google-sheets-twitter-bot-with-pipedream) about how I used [Pipedream](https://pipedream.com?via=raymond) and Google Sheets to create a Twitter bot. The idea was simple - read a sheet - select a random row - and use that as the source of a new Tweet. I was thinking about this recently and how useful Google Sheets can be as a "light weight CMS" and figured out another interesting use case - Twitter scheduling.
 
 So let me be clear that I know that Twitter already lets you schedule tweets. So does Tweetdeck, my preferred way of using Twitter. But I wanted to investigate how a different workflow could be used. Google Sheets provide a simple Excel-like editing experience that may be more friendly to non-developers. Also, maybe the user wants to work on a Tweet for next week, but edit it before then to make changes. To be honest, I'm not even sure if this makes sense, but I gave it a shot and I can share the results below.
 

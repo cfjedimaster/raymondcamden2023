@@ -27,7 +27,7 @@ Commenting on the friends FB post along with others, we were sharing different p
 
 The idea was simple - all of these services support, at minimum, a height and width. So give a request to my service for a sized images, I could dynamically pick a service and craft the proper URL. I'd then simply re-direct.
 
-I fired up a new [Pipedream](https://www.pipedream.com) workflow with a HTTP trigger. Next, I created a step that would handle getting query parameters from the URL for height and width. I could have used path parameters instead but this was a quick hack.
+I fired up a new [Pipedream](https://www.pipedream.com?via=raymond) workflow with a HTTP trigger. Next, I created a step that would handle getting query parameters from the URL for height and width. I could have used path parameters instead but this was a quick hack.
 
 ```js
 async (event, steps) => {

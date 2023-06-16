@@ -234,7 +234,7 @@ async function sendEmail(body, subject, from, to) {
 }
 ```
 
-I start off creating a `body` string that includes the bits I care about. I wrote a `toMinutes` function that pretty much mimics how Netlify itself renders build durations. I then pass this off to SendGrid to handle the mail. One thing I wish Netlify has that [Pipedream](https://pipedream.com) does is a simple way to "mail the owner". Ie I would love to do:
+I start off creating a `body` string that includes the bits I care about. I wrote a `toMinutes` function that pretty much mimics how Netlify itself renders build durations. I then pass this off to SendGrid to handle the mail. One thing I wish Netlify has that [Pipedream](https://pipedream.com?via=raymond) does is a simple way to "mail the owner". Ie I would love to do:
 
 ```js
 $mail(body);

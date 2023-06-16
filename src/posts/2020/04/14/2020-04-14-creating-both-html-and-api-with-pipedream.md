@@ -9,7 +9,7 @@ permalink: /2020/04/14/creating-both-html-and-api-with-pipedream
 description: Serving both HTML and data with a Pipedream workflow
 ---
 
-First off, I apologize up front about the title. You don't "Create API", you create "an API". No one cares probably but it's bugging me and I can't think of a better alternative. Hopefully I will before I finish the post. (Spoiler, he didn't.) Yesterday I was hanging out in the <a href="https://pipedream.com/community">Pipedream Slack</a> when I asked the team how a person would support running both an API  on Pipedream as well as the HTML in front of it. 
+First off, I apologize up front about the title. You don't "Create API", you create "an API". No one cares probably but it's bugging me and I can't think of a better alternative. Hopefully I will before I finish the post. (Spoiler, he didn't.) Yesterday I was hanging out in the <a href="https://pipedream.com/community?via=raymond">Pipedream Slack</a> when I asked the team how a person would support running both an API  on Pipedream as well as the HTML in front of it. 
 
 So imagine you've built an incredibly complex API to do, well, who cares. To do something. Doesn't matter but here's my workflow as an API: <https://enk542004vp3drh.m.pipedream.net/?name=ray> Change the `name` value and your response changes.
 
@@ -60,7 +60,7 @@ All this does is call the Pipedream hosted API with input and render it. I then 
 
 That works just fine. 
 
-2) Host the HTML with Pipedream. Pipedream workflows can return HTML, even dynamic HTML. Consider this [workflow](https://pipedream.com/@dylburger/respond-with-html-p_V9C2Kp/edit):
+2) Host the HTML with Pipedream. Pipedream workflows can return HTML, even dynamic HTML. Consider this [workflow](https://pipedream.com/@dylburger/respond-with-html-p_V9C2Kp/edit?via=raymond):
 
 ```js
 async (event, steps) => {
@@ -106,13 +106,13 @@ This works, but honestly feels a bit wasteful.
 
 3) Support both HTML and data in one workflow. A final option to consider is having one workflow support both the HTML as well as the data itself. Your workflow code has access to the entire HTTP request. You've already seen me use the query string, but you can also check the path (/foo) as well as any request headers and form data. So in theory you could do something like, "if the request content type is for html, return it, if it's for json, return data". 
 
-This [workflow](https://pipedream.com/@dylburger/generate-an-rss-feed-from-http-post-requests-retrieve-via-get-request-p_n1CrQG/edit) shows an example where if a request is POST, data is added, and if it's GET, HTML is returned. We can build our own version that has these steps:
+This [workflow](https://pipedream.com/@dylburger/generate-an-rss-feed-from-http-post-requests-retrieve-via-get-request-p_n1CrQG/edit?via=raymond) shows an example where if a request is POST, data is added, and if it's GET, HTML is returned. We can build our own version that has these steps:
 
 * Start with an HTML trigger to give us a URL
 * If method is GET, return the HTML string.
 * If method is POST, assume it's an API call.
   
-I built a [workflow](https://pipedream.com/@raymondcamden/html-api-demo-p_RRCdjB/edit) that does this. It has 3 steps, with the first one just being the HTTP trigger. The second step handles GET:
+I built a [workflow](https://pipedream.com/@raymondcamden/html-api-demo-p_RRCdjB/edit?via=raymond) that does this. It has 3 steps, with the first one just being the HTTP trigger. The second step handles GET:
 
 ```js
 async (event, steps) => {
@@ -164,7 +164,7 @@ async (event, steps) => {
 }
 ```
 
-It's virtually equal to my initial logic (which I don't ever shared) except it now looks for POST data instead of a query string value. I encourage you to check out the [workflow](https://pipedream.com/@raymondcamden/html-api-demo-p_RRCdjB/edit) for the complete code. You can run the demo here: <https://enek3dg6pwsn2od.m.pipedream.net/>
+It's virtually equal to my initial logic (which I don't ever shared) except it now looks for POST data instead of a query string value. I encourage you to check out the [workflow](https://pipedream.com/@raymondcamden/html-api-demo-p_RRCdjB/edit?via=raymond) for the complete code. You can run the demo here: <https://enek3dg6pwsn2od.m.pipedream.net/>
 
 ### My Recommendation
 

@@ -7,7 +7,7 @@ permalink: /bots/index.html
 ---
 
 <p>
-I've been enjoying building bots for Mastodon (via <a href="https://pipedream.com">Pipedream</a>) and therefore 
+I've been enjoying building bots for Mastodon (via <a href="https://pipedream.com?via=raymond">Pipedream</a>) and therefore 
 I built this page to help me actually remember what I've built. For each of the bots you'll see their 
 most recent toot at the time I built the site. Just click on the username to follow or see more.
 </p>

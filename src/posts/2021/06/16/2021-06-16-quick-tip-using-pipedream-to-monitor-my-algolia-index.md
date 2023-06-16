@@ -17,7 +17,7 @@ Last year (sometimes that surprises me, time has been so weird with COVID) I wro
 
 Except when I tried [searching](https://www.raymondcamden.com/search) for something yesterday and nothing worked. I hopped on over to the Algolia dashboard and saw my index was empty again. I went over to the Netlify dashboard, fired off another build, and couldn't recreate the issue. Last time it was a race condition so one test obviously wasn't enough, but *something* is up. 
 
-Unfortunately, a full Netlify build is ten plus minutes so rerunning that a bunch of times wasn't an option. It was also the end of the day and frankly I was just done. I decided to try something else. I went over to [Pipedream](https://pipedream.com) and built a "monitor" script. My workflow runs once a day and then uses a bit of Node:
+Unfortunately, a full Netlify build is ten plus minutes so rerunning that a bunch of times wasn't an option. It was also the end of the day and frankly I was just done. I decided to try something else. I went over to [Pipedream](https://pipedream.com?via=raymond) and built a "monitor" script. My workflow runs once a day and then uses a bit of Node:
 
 ```js
 async (event, steps, auths) => {

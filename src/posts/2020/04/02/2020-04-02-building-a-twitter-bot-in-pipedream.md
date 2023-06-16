@@ -9,7 +9,7 @@ permalink: /2020/04/02/building-a-twitter-bot-in-pipedream
 description: Building a Twitter Bot in the Pipedream platform
 ---
 
-A few days ago I [posted](https://www.raymondcamden.com/2020/03/28/a-look-at-pipedream) about the [Pipedream](https://pipedream.com/) platform and I've had a chance now to play with it a bit more and I'm even more impressed with it now then when I started. I decided to build (yet another) Twitter bot that shares random information. This time it's [@randomgijoe](https://twitter.com/randomgijoe), a bot that shares random GI Joe characters from the "RAH" ("Real American Hero") universe. Here's an example:
+A few days ago I [posted](https://www.raymondcamden.com/2020/03/28/a-look-at-pipedream) about the [Pipedream](https://pipedream.com/?via=raymond) platform and I've had a chance now to play with it a bit more and I'm even more impressed with it now then when I started. I decided to build (yet another) Twitter bot that shares random information. This time it's [@randomgijoe](https://twitter.com/randomgijoe), a bot that shares random GI Joe characters from the "RAH" ("Real American Hero") universe. Here's an example:
 
 <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Name: Voltar<br>Speciality: Field commander<br>Link: <a href="https://t.co/1Igpw6t1fL">https://t.co/1Igpw6t1fL</a> <a href="https://t.co/Y0PJyppFnO">pic.twitter.com/Y0PJyppFnO</a></p>&mdash; randomjoe (@randomgijoe) <a href="https://twitter.com/randomgijoe/status/1245515657103446016?ref_src=twsrc%5Etfw">April 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -236,4 +236,4 @@ The output of this will be an ID value that can then be used to generate the twe
 
 And that's it. I apologize if I sound like I'm repeating myself, but I freaking love that most of my work was in creating my text and using the wikia API. The actual "now tweet this at a schedule" part was trivial. And heck, if I wanted to change this to a daily email, or even a SMS message, I can reuse my step in another workflow. I love it! 
 
-You can look at the entire Pipedream workflow here: <https://pipedream.com/@raymondcamden/random-gi-joe-p_jmCpWe>. Notice the "COPY" button top of the workflow and if you want, click it to fork the code and play with it yourself!
+You can look at the entire Pipedream workflow here: <https://pipedream.com/@raymondcamden/random-gi-joe-p_jmCpWe?via=raymond>. Notice the "COPY" button top of the workflow and if you want, click it to fork the code and play with it yourself!

@@ -9,7 +9,7 @@ permalink: /2020/04/04/using-state-in-pipedream-workflows
 description: Using checkpoint in Pipedream to remember values
 ---
 
-I've been playing a lot with [Pipedream](https://pipedream.com/) lately and have been enjoying the heck out of it. If you didn't see it, my [last post](https://www.raymondcamden.com/2020/04/02/building-a-twitter-bot-in-pipedream) described how to build a simple Twitter bot using the platform. Today I want to demonstrate something else with Pipedream, a feature that is pretty simple but incredibly useful - [managing state](https://docs.pipedream.com/workflows/steps/code/#managing-state). 
+I've been playing a lot with [Pipedream](https://pipedream.com/?via=raymond) lately and have been enjoying the heck out of it. If you didn't see it, my [last post](https://www.raymondcamden.com/2020/04/02/building-a-twitter-bot-in-pipedream) described how to build a simple Twitter bot using the platform. Today I want to demonstrate something else with Pipedream, a feature that is pretty simple but incredibly useful - [managing state](https://docs.pipedream.com/workflows/steps/code/#managing-state?via=raymond). 
 
 Many times when working with serverless functions, it would be convenient to store information. Perhaps a simple cache or even just the time the function last run. There's a huge variety of data storage systems out there with easy to use APIs, but if your needs are *really* small, then they may seem like overkill.
 
@@ -108,7 +108,7 @@ There's two mods here. One is to see if we have any tweets at all. We may not. I
 
 Finally, I need to store the ID of the last tweet (first in the array). Notice that I'm using an object for my value. I did that for two reasons. One, I didn't realize Pipedream let you store *just* a value. Secondly, I decided I may enhance this workflow in the future and store more values. That's me pretending I'm forward thinking and smart (spoiler, I'm not). 
 
-And that's it. If you want to see the full workflow, and copy it to your own account, just hop over here: <https://pipedream.com/@raymondcamden/email-me-new-tweets-improved-p_LQCOlq/>. Thanks again to the folks at Pipedream for answering about 200 emails I sent in the last 48 hours on this and other topics!
+And that's it. If you want to see the full workflow, and copy it to your own account, just hop over here: <https://pipedream.com/@raymondcamden/email-me-new-tweets-improved-p_LQCOlq/?via=raymond>. Thanks again to the folks at Pipedream for answering about 200 emails I sent in the last 48 hours on this and other topics!
 
 p.s. Ok, way up top I mentioned I had a note about the Twitter API. While the API is generally easy to use, I had trouble getting this exact logic right. I think I did, but I'm not 100% sure. That's not really a Pipedream concern, but I just wanted to be honest about my own uncertainty!
 

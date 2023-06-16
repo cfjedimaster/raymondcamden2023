@@ -9,9 +9,9 @@ permalink: /2020/03/28/a-look-at-pipedream
 description: A look at building workflows, simply and serverless, with Pipedream
 ---
 
-Every now and then folks will reach out to me to share interesting tech/sites/etc that they would like my opinion on. I like this as it gives me a chance to learn something new and a lot of times it leads to blog posts that I can share with my audience. Nearly a year ago the folks at [Pipedream](https://pipedream.com/) reached out to me and - unfortunately - I never really got a chance to look into their product. Friday I was about to hit the Archive button as it was the oldest email in my inbox and sometimes you just have to let go. (It feels great to do that sometimes.) Instead, I clicked around a bit and I've got to say - I am incredibly happy I did so. Pipedream is a really neat product and something I absolutely want to tell other people about. 
+Every now and then folks will reach out to me to share interesting tech/sites/etc that they would like my opinion on. I like this as it gives me a chance to learn something new and a lot of times it leads to blog posts that I can share with my audience. Nearly a year ago the folks at [Pipedream](https://pipedream.com/?via=raymond) reached out to me and - unfortunately - I never really got a chance to look into their product. Friday I was about to hit the Archive button as it was the oldest email in my inbox and sometimes you just have to let go. (It feels great to do that sometimes.) Instead, I clicked around a bit and I've got to say - I am incredibly happy I did so. Pipedream is a really neat product and something I absolutely want to tell other people about. 
 
-Pipedream describes itself as an "integration platform built for developers." It focuses on what it calls workflow that are run on their platform at no cost. (As their [pricing](https://docs.pipedream.com/pricing/) page says though in the future they may offer additional features on a paid tier.) 
+Pipedream describes itself as an "integration platform built for developers." It focuses on what it calls workflow that are run on their platform at no cost. (As their [pricing](https://docs.pipedream.com/pricing/?via=raymond) page says though in the future they may offer additional features on a paid tier.) 
 
 Workflows are - essentially - pieces of logic that you put together in a linear fashion. Your workflow will execute step by step. This isn't anything new. I know Lambda supports steps as does Azure Functions. For me, my experience with this type of setup was with OpenWhisk sequences. It was one of my favorite aspects of OpenWhisk as it made it incredibly easy to set up complex applications by piecing together different bits of logic. A lot of times I'd take parts that were pre-built and simply stick a bit of custom logic in the middle. Pipedream reminds me a lot of this.
 
@@ -83,8 +83,8 @@ This is really useful for debugging. I'll also note that you can use console.log
 
 <img data-src="https://static.raymondcamden.com/images/2020/03/p13.png" alt="email" class="lazyload imgborder imgcenter">
 
-As I said, it's easy to copy and reuse workflows. You can find mine [here](https://pipedream.com/@raymondcamden/email-me-da-kittahs-p_MOCMdZ/edit) but I'd suggest the [nicer one](https://pipedream.com/@dylan/email-me-new-tweets-p_RRCaqW/edit) by Dylan.
+As I said, it's easy to copy and reuse workflows. You can find mine [here](https://pipedream.com/@raymondcamden/email-me-da-kittahs-p_MOCMdZ/edit?via=raymond) but I'd suggest the [nicer one](https://pipedream.com/@dylan/email-me-new-tweets-p_RRCaqW/edit?via=raymond) by Dylan.
 
-Definitely give it a shot. There's other features I didn't mention, so check their [docs](https://docs.pipedream.com/) for more or wait because I've got a few ideas for more blog posts next week. :)
+Definitely give it a shot. There's other features I didn't mention, so check their [docs](https://docs.pipedream.com/?via=raymond) for more or wait because I've got a few ideas for more blog posts next week. :)
 
 <i>Header photo by <a href="https://unsplash.com/@spacexuan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Crytal Kwok</a> on Unsplash</i>

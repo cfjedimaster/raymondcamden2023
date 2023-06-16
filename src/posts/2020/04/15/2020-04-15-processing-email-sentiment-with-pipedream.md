@@ -9,7 +9,7 @@ permalink: /2020/04/15/processing-email-sentiment-with-pipedream
 description: A sentiment analysis workflow example with Pipedream
 ---
 
-Ok, a quick spoiler. Today's [Pipedream](https://pipedream.com) post isn't really that interesting by itself, 
+Ok, a quick spoiler. Today's [Pipedream](https://pipedream.com?via=raymond) post isn't really that interesting by itself, 
 but I wanted a way to highlight a couple of cool features while working on an example that I hope folks will enjoy. I've done blog posts in the past about text sentiment analysis. I.e., what is a person talking about and what moods/emotions/etc are being used. In the past I've used IBM's Watson APIs for this and I've also used Microsoft's. Both have pretty darn cool APIs, but I thought I'd try something else, the npm [Sentiment](https://www.npmjs.com/package/sentiment) module.
 
 This is an entirely opensource, Node-based text analysis tool that looks at input and looks specifically for positive and negative words. It supports multiple languages as well as the ability to customize what's positive or negative. 

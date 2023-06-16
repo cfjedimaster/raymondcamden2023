@@ -9,7 +9,7 @@ permalink: /2021/01/03/building-generic-workflows-in-pipedream
 description: How to build generic workflows in Pipedream that are better for sharing.
 ---
 
-I've been a huge fan of [Pipedream](https://pipedream.com) since I first started using it. It's ease of use, flexibility, and just overall approach to rapidly creating workflows has really resonated with me as a developer. One of the more interesting
+I've been a huge fan of [Pipedream](https://pipedream.com?via=raymond) since I first started using it. It's ease of use, flexibility, and just overall approach to rapidly creating workflows has really resonated with me as a developer. One of the more interesting
 aspects of Pipedream is that when someone shares a workflow with you, you can copy that workflow to your own account and then modify it for your own use. I was thinking of this over the holiday break and wanted to take a look at how I could build a workflow *specifically* for sharing with others, i.e. something that doesn't really do anything by itself but would be a good starting point for others. I had some fun with this project and thought I'd share what I discovered.
 
 Let me begin by describing what I created. I began with a simple idea - fire off a process when the temperature gets too cold. So for example, "if the temperature is below 32 degrees, message me so I know to cover my plants." I was originally going to just build that as a proof of concept, but I began thinking about how to make this more generic. What if the workflow was defined more abstractly:

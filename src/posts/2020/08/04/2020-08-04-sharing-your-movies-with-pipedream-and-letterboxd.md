@@ -30,7 +30,7 @@ While we all know what RSS looks like (ok, maybe it's just me), Letterboxd has q
 </item>
 ```		
 
-Everything with the `letterboxd:` prefix is a namespaced set of data that they've added to provide more information to the feed. Looking at this, and the blog entry I shared earlier, it occurred to me that it would be easy to build an integration between this and [Pipedream](https://pipedream.com). I got this working and you can see it below. 
+Everything with the `letterboxd:` prefix is a namespaced set of data that they've added to provide more information to the feed. Looking at this, and the blog entry I shared earlier, it occurred to me that it would be easy to build an integration between this and [Pipedream](https://pipedream.com?via=raymond). I got this working and you can see it below. 
 
 
 <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">I just watched John Mulaney: Kid Gorgeous at Radio City and rated it a 4.0. See my <br>review at <a href="https://t.co/4sPdaLTFeJ">https://t.co/4sPdaLTFeJ</a>.</p>&mdash; moonpicbot (@moonpicbot) <a href="https://twitter.com/moonpicbot/status/1290761974893219842?ref_src=twsrc%5Etfw">August 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
