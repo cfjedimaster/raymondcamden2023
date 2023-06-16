@@ -9,7 +9,7 @@ permalink: /2022/02/22/testing-out-the-new-pipedream-to-get-trance-releases
 description: How I built a workflow in Pipedream to alert me of new Spotify releases
 ---
 
-Readers of my blog will know I'm a huge [Pipedream](https://pipedream.com) fan. I've been [blogging](https://www.raymondcamden.com/tags/pipedream) about them since I discovered them and find a way to use them for so many things now it's my natural "first stop" when I want to build a new service. 
+Readers of my blog will know I'm a huge [Pipedream](https://pipedream.com?via=raymond) fan. I've been [blogging](https://www.raymondcamden.com/tags/pipedream) about them since I discovered them and find a way to use them for so many things now it's my natural "first stop" when I want to build a new service. 
 
 Recently, Pipedream released a *major* overhaul to their workflow editor. This is not quite 100% complete yet, and still not the default (you can choose to edit in "v1" or "v2" versions), but it's *damn* impressive. 
 

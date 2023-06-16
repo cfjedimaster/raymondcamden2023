@@ -48,7 +48,7 @@ The [docs](https://developer.twitter.com/en/docs/twitter-api/tweets/search/intro
 
 Also, for [rate limits](https://developer.twitter.com/en/docs/twitter-api/rate-limits), an app has a limit of 450 requests per 15-minute window. For users, it's 180. I made the judgment call to go with an app to keep things simpler. I also figured that if this blog post "takes off", I'd still probably be way under the rate limit so I'm not too concerned, but keep that in mind if you build your own version of this. 
 
-I created the app via Twitter's [developer console](https://developer.twitter.com/en/portal/dashboard), which has gotten *really* good over the past few years. With the app created, I then went to [Pipedream](https://pipedream.com).
+I created the app via Twitter's [developer console](https://developer.twitter.com/en/portal/dashboard), which has gotten *really* good over the past few years. With the app created, I then went to [Pipedream](https://pipedream.com?via=raymond).
 
 Pipedream has excellent support for working with Twitter APIs, and I've built *way* too many Twitter bots with them. However, normally I've used their support based on a particular account. So by that I mean - I set up my bot to post on a schedule, and the action to send a tweet is based on the bot's account. In this case, I wanted to use Twitter APIs based on my Twitter app, and for that, you use a different action - "Twitter Developer App":
 

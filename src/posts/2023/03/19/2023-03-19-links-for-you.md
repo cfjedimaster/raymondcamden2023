@@ -13,7 +13,7 @@ Hello friends, tomorrow I'm heading out to Vegas for [Adobe Summit](https://summ
 
 ## Automating your Mastodon profile with Pipedream.com
 
-Here's a [great article](https://stefanbohacek.com/blog/automating-your-mastodon-profile-with-pipedream-com/) that talks about using one of my favorite services, [Pipedream](https://pipedream.com) to automate the updating of a Mastodon profile. I really like Mastodon and the flexibility of its API is pretty great. I've been focused on writing bots, but I love how Stefan uses it to update his profile instead. Check out his [article](https://stefanbohacek.com/blog/automating-your-mastodon-profile-with-pipedream-com/) and see for yourself.
+Here's a [great article](https://stefanbohacek.com/blog/automating-your-mastodon-profile-with-pipedream-com/) that talks about using one of my favorite services, [Pipedream](https://pipedream.com?via=raymond) to automate the updating of a Mastodon profile. I really like Mastodon and the flexibility of its API is pretty great. I've been focused on writing bots, but I love how Stefan uses it to update his profile instead. Check out his [article](https://stefanbohacek.com/blog/automating-your-mastodon-profile-with-pipedream-com/) and see for yourself.
 
 ## WebComponent * 2
 

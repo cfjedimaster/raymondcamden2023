@@ -9,7 +9,7 @@ permalink: /2022/11/01/integrating-cloudinary-notifications-with-pipedream
 description: Using Cloudinary's notification webhooks with the Pipedream service
 ---
 
-As I continue my journey into learning the awesomeness of the [Cloudinary](https://cloudinary.com) platform, today I decided to take a look at their [notifications](https://cloudinary.com/documentation/notifications) support. Cloudinary lets you specify a webhook URL that will be hit on different types of events. I whipped up a quick example of using this with [Pipedream](https://pipedream.com), my favorite service for processing webhooks. Here's how I did it.
+As I continue my journey into learning the awesomeness of the [Cloudinary](https://cloudinary.com) platform, today I decided to take a look at their [notifications](https://cloudinary.com/documentation/notifications) support. Cloudinary lets you specify a webhook URL that will be hit on different types of events. I whipped up a quick example of using this with [Pipedream](https://pipedream.com?via=raymond), my favorite service for processing webhooks. Here's how I did it.
 
 ## Setting Up the URL
 

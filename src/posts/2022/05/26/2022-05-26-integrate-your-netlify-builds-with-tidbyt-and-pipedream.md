@@ -43,7 +43,7 @@ Netlify takes between two to four minutes when building my site, so this way I c
 
 ## The Pipedream Workflow
 
-The main part of the process is a [Pipedream](https://pipedream.com) workflow that uses an HTTP trigger. Essentially a simple serverless endpoint. Outside of the trigger is one code step. Now, here's where things got a bit complex. I knew I needed to generate an image with text. While I've done some work with Node libraries in the past to read and manipulate images, it's been a while since I had to use one. I also ran into an issue where the NPM modules I found didn't work well on Pipedream.
+The main part of the process is a [Pipedream](https://pipedream.com?via=raymond) workflow that uses an HTTP trigger. Essentially a simple serverless endpoint. Outside of the trigger is one code step. Now, here's where things got a bit complex. I knew I needed to generate an image with text. While I've done some work with Node libraries in the past to read and manipulate images, it's been a while since I had to use one. I also ran into an issue where the NPM modules I found didn't work well on Pipedream.
 
 At first, I thought about using a placeholder image service. Many of them let you define an image with text on it, already centered, and while I struggled a bit, I did get something working there. 
 

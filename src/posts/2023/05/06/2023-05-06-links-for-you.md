@@ -20,7 +20,7 @@ Here's something you don't hear often - a cool new web API only available in Saf
 
 ## Transcribing Voice to Text with Summarization and More
 
-This is an *incredibly* detailed tutorial by Thomas Frank covering a workflow that transcribes voice notes, summarizes them with ChatGPT, and posts to Notion. His tutorial has both intensive written instructions as well as a great video. Even better, he uses one of my favorite services, [Pipedream](https://pipedream.com), as well. Check it out here: [How to Take Perfect Notes with Your Voice Using ChatGPT and Notion](https://thomasjfrank.com/how-to-transcribe-audio-to-text-with-chatgpt-and-notion/)
+This is an *incredibly* detailed tutorial by Thomas Frank covering a workflow that transcribes voice notes, summarizes them with ChatGPT, and posts to Notion. His tutorial has both intensive written instructions as well as a great video. Even better, he uses one of my favorite services, [Pipedream](https://pipedream.com?via=raymond), as well. Check it out here: [How to Take Perfect Notes with Your Voice Using ChatGPT and Notion](https://thomasjfrank.com/how-to-transcribe-audio-to-text-with-chatgpt-and-notion/)
 
 ## 2023 State of Web Components
 

@@ -11,7 +11,7 @@ description: A few links for your Sunday...
 
 As I've said a few times now (and sorry regular readers, I'm probably repeating this too often), I plan on sharing more short-form blog posts of stuff that I also share on Twitter. Yesterday I shared a few good links in a thread and I thought it would be a perfect kind of thing to share here with my subscribers. As always, I'd love your feedback, both good and bad, if you like this kind of content!
 
-The first link I'll share involves one of my favorite services, [Pipedream](https://pipedream.com), and another I'm becoming a huge fan of, [Algolia](https://algolia.com). In this post, Dylan Piece of Pipedream shares how to automate Algolia site crawling: [Trigger an Algolia Crawler to reindex on Github Repository Releases](https://pipedream.com/blog/reindex-algolia-on-github-releases/)
+The first link I'll share involves one of my favorite services, [Pipedream](https://pipedream.com?via=raymond), and another I'm becoming a huge fan of, [Algolia](https://algolia.com). In this post, Dylan Piece of Pipedream shares how to automate Algolia site crawling: [Trigger an Algolia Crawler to reindex on Github Repository Releases](https://pipedream.com/blog/reindex-algolia-on-github-releases/)
 
 As an FYI, I covered Algolia site indexing a few days ago: [Working with Algolia's Crawler](https://www.raymondcamden.com/2022/03/04/working-with-algolias-crawler)
 

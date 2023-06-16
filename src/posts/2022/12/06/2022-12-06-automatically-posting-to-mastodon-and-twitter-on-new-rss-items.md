@@ -9,7 +9,7 @@ permalink: /2022/12/06/automatically-posting-to-mastodon-and-twitter-on-new-rss-
 description: A look at using Pipedream to automatically tweet/toot new items from an RSS feed
 ---
 
-I promise I won't be making *every* upcoming post about Mastodon, but as I realized I was pretty much limiting my Twitter use to posting about my new blogs, I figured why not automate that so I don't have to even open Twitter? And I'm automating the post to Twitter, why not do the same for Mastodon? As always, I look to [Pipedream](https://pipedream.com) first when building integrations like this, and not surprisingly, the entire automation took roughly ten minutes. Here's how I built it.
+I promise I won't be making *every* upcoming post about Mastodon, but as I realized I was pretty much limiting my Twitter use to posting about my new blogs, I figured why not automate that so I don't have to even open Twitter? And I'm automating the post to Twitter, why not do the same for Mastodon? As always, I look to [Pipedream](https://pipedream.com?via=raymond) first when building integrations like this, and not surprisingly, the entire automation took roughly ten minutes. Here's how I built it.
 
 ## Step One - the Trigger
 

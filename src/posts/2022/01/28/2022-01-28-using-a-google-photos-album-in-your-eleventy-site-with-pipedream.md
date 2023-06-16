@@ -19,7 +19,7 @@ So, how does it work?
 
 ## The Serverless Endpoint
 
-The first step was to get a list of images for a Google Photos album. I created a [Pipedream](https://pipedream.com) workflow that uses Google's API to fetch an album passed to the Pipedream workflow in the query string. It's two main steps. The first gets the album based on the query string value.
+The first step was to get a list of images for a Google Photos album. I created a [Pipedream](https://pipedream.com?via=raymond) workflow that uses Google's API to fetch an album passed to the Pipedream workflow in the query string. It's two main steps. The first gets the album based on the query string value.
 
 ```js
 async (event, steps, auths) => {

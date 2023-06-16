@@ -114,7 +114,7 @@ A while ago when I moved to different areas of tech, that was no longer the case
 
 Up until a few months ago, my main strategy was to write a tweet about the article and then create a "ICYMI" version scheduled for one week later. I found that the repeat tweet later tended to get some traction and was a nice way to get folks back to older content.
 
-I then ditched the scheduled tweet and went with an automated method where I used [Pipedream](https://pipedream.com) to post to both Twitter and Mastodon. That was in effect for a whole month I think before Muskman decided to kill off free Twitter API access so now my workflow only posts to Mastodon. I manually write a tweet, because even though I think Twitter is days away from completely crashing, I've got a good size audience there and it's worth the effort. (Basically, I just copy and paste the toot.)
+I then ditched the scheduled tweet and went with an automated method where I used [Pipedream](https://pipedream.com?via=raymond) to post to both Twitter and Mastodon. That was in effect for a whole month I think before Muskman decided to kill off free Twitter API access so now my workflow only posts to Mastodon. I manually write a tweet, because even though I think Twitter is days away from completely crashing, I've got a good size audience there and it's worth the effort. (Basically, I just copy and paste the toot.)
 
 More recently I've also done the following:
 

@@ -9,7 +9,7 @@ permalink: /2022/03/17/hosting-an-alexa-skill-on-pipedream
 description: Steps needed to run an Alexa skill on the Pipedream platform
 ---
 
-I've been a big fan of the [Amazon Alexa developer](https://developer.amazon.com/en-US/alexa/alexa-skills-kit/start) experience for a few years now. I haven't done any active skill (what they call apps) in a while, but I thought I'd take a quick look at what's required to host a skill on [Pipedream](https://pipedream.com). While this won't be a "How to build an Alexa skill" post, I will share a bit of background information about the process, because honestly it's pretty dang cool.
+I've been a big fan of the [Amazon Alexa developer](https://developer.amazon.com/en-US/alexa/alexa-skills-kit/start) experience for a few years now. I haven't done any active skill (what they call apps) in a while, but I thought I'd take a quick look at what's required to host a skill on [Pipedream](https://pipedream.com?via=raymond). While this won't be a "How to build an Alexa skill" post, I will share a bit of background information about the process, because honestly it's pretty dang cool.
 
 ## Alexa Skills - The 60 Second Overview
 

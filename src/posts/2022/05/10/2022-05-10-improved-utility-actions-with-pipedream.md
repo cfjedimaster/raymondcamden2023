@@ -9,7 +9,7 @@ permalink: /2022/05/10/improved-utility-actions-with-pipedream
 description: A look at new built-in functionality for better workflows
 ---
 
-If you can't tell, I'm a huge fan of [Pipedream](https://pipedream.com), but it isn't the only service of its kind out there. If anything, I like Pipedream even more as it's opened my eyes to alternatives out there and has made me appreciate the "low-code/no-code" space even more. In particular, I'm really enjoying digging into [Microsoft Power Automate](https://flow.microsoft.com/) and it's got me thinking about what could be brought over into Pipedream. 
+If you can't tell, I'm a huge fan of [Pipedream](https://pipedream.com?via=raymond), but it isn't the only service of its kind out there. If anything, I like Pipedream even more as it's opened my eyes to alternatives out there and has made me appreciate the "low-code/no-code" space even more. In particular, I'm really enjoying digging into [Microsoft Power Automate](https://flow.microsoft.com/) and it's got me thinking about what could be brought over into Pipedream. 
 
 One place that Power Automate does a really good job of is providing logical actions for controlling the flow and execution of your workflows. So for example, if you have some weird custom logic that dictates if a workflow should end, you can define this without writing any code. That's certainly been possible in Pipedream as well, but typically via a short code-based step. I don't mind that, but one of the things I had hoped for were more 'utility' type actions that would let us define such things without code. 
 

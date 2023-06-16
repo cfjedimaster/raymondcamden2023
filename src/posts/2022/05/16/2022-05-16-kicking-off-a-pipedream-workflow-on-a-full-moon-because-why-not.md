@@ -9,7 +9,7 @@ permalink: /2022/05/16/kicking-off-a-pipedream-workflow-on-a-full-moon-because-w
 description: An example of how flexible Pipedream is - you can tie workflows to astronomical events!
 ---
 
-File this under "You probably will never need it but...", did you know that [Pipedream](https://pipedream.com) is flexible to the point of allowing you to define *truly* customized ways to kick off workflows? How flexible? What about the ability to fire workflows on a full moon?
+File this under "You probably will never need it but...", did you know that [Pipedream](https://pipedream.com?via=raymond) is flexible to the point of allowing you to define *truly* customized ways to kick off workflows? How flexible? What about the ability to fire workflows on a full moon?
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2022/05/moon1.jpg" alt="Email about a full moon" class="lazyload imgborder imgcenter">

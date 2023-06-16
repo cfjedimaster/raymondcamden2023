@@ -25,7 +25,7 @@ This is the "new and improved" process and frankly, it's still somewhat stupid. 
 
 When I complained about how silly and obtuse this process seemed, [Cory Birdsong](https://twitter.com/cbirdsong) responded that he created a second Twitter account just to handle posting his Switch screenshots. And this got me thinking.
 
-I knew [Pipedream](https://pipedream.com) had super-simple support for executing workflows when a Twitter account posted a new tweet. Could I automate the process of taking my screenshots and making them available in the cloud?
+I knew [Pipedream](https://pipedream.com?via=raymond) had super-simple support for executing workflows when a Twitter account posted a new tweet. Could I automate the process of taking my screenshots and making them available in the cloud?
 
 <p>
 <img data-src="https://static.raymondcamden.com/images/2022/04/switch2.jpg" alt="Let's A-Go!" class="lazyload imgborder imgcenter">

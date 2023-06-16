@@ -9,7 +9,7 @@ permalink: /2022/04/19/watching-rss-feeds-for-keywords-in-pipedream
 description: Using the Pipedream service to check RSS feeds for matching keywords
 ---
 
-Back in the day, I used to run a website called rssWatcher. (If you want, you can read the [original launch announcement](https://www.raymondcamden.com/2004/08/24/92BEC44C-EA53-0E16-020AB91C2FD36FB7) from 2004.) The idea was simple. You would sign up, then create a list of RSS feeds and corresponding keywords. The service would check this on a schedule and let you know when a match was found. I built this in ColdFusion and I honestly don't remember when I shut it down, but it was in my mind recently and thought I'd take a stab at building a simple version of this on my favorite service, [Pipedream](https://pipedream.com). Here's how I did it.
+Back in the day, I used to run a website called rssWatcher. (If you want, you can read the [original launch announcement](https://www.raymondcamden.com/2004/08/24/92BEC44C-EA53-0E16-020AB91C2FD36FB7) from 2004.) The idea was simple. You would sign up, then create a list of RSS feeds and corresponding keywords. The service would check this on a schedule and let you know when a match was found. I built this in ColdFusion and I honestly don't remember when I shut it down, but it was in my mind recently and thought I'd take a stab at building a simple version of this on my favorite service, [Pipedream](https://pipedream.com?via=raymond). Here's how I did it.
 
 ## Step One - The Schedule
 

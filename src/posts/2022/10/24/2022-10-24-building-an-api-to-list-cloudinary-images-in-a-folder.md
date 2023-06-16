@@ -9,7 +9,7 @@ permalink: /2022/10/24/building-an-api-to-list-cloudinary-images-in-a-folder
 description: How I built a simple API version of a Cloudinary folder
 ---
 
-I was preparing to work on a Cloudinary and Apline post when I realized I needed something before I could build that demo - a list of images in a [Cloudinary](https://cloudinary.com/) folder. While this is directly supported by their SDKs and REST APIs, I needed something that could be used in a public-facing web application. So with that in mind, I turned to [Pipedream](https://pipedream.com) to build a serverless endpoint. Here's how I did it.
+I was preparing to work on a Cloudinary and Apline post when I realized I needed something before I could build that demo - a list of images in a [Cloudinary](https://cloudinary.com/) folder. While this is directly supported by their SDKs and REST APIs, I needed something that could be used in a public-facing web application. So with that in mind, I turned to [Pipedream](https://pipedream.com?via=raymond) to build a serverless endpoint. Here's how I did it.
 
 Before I start talking about code, I began by logging into my Cloudinary account, going into my Media Library, and creating a new folder named `cats`. In there, I dragged and dropped a few cat pictures from my personal collection. (Do not ask how many of these I have.)
 

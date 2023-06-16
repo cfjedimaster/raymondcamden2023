@@ -13,7 +13,7 @@ It's been a little while since I've shared a links post, and while I usually sav
 
 ## Learn to Use Pipedream
 
-Readers here know I'm a huge fan of [Pipedream](https://pipedream.com) (you can see my posts on it [here](https://www.raymondcamden.com/tags/pipedream)). Recently they released [Pipedream University](https://pipedream.com/university), a set of free online lessons that cover how to get started building workflows. If you've been looking to give it a try, this is a great way to learn what you'll need. 
+Readers here know I'm a huge fan of [Pipedream](https://pipedream.com?via=raymond) (you can see my posts on it [here](https://www.raymondcamden.com/tags/pipedream)). Recently they released [Pipedream University](https://pipedream.com/university), a set of free online lessons that cover how to get started building workflows. If you've been looking to give it a try, this is a great way to learn what you'll need. 
 
 ## Eleventy 2.0 Goodies
 

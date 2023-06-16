@@ -15,7 +15,7 @@ I'm working on a project to help with local initiatives and as part of that effo
 <img data-src="https://static.raymondcamden.com/images/2022/09/gd1.jpg" alt="View of public folder" class="lazyload imgborder imgcenter">
 </p>
 
-It's a pretty simple interface. You get nice thumbnails, you can view pretty much any kind of file, and you can download it. It's good, but we can do better, right? I decided to look into using the [Google Drive API](https://developers.google.com/drive/api) via [Pipedream](https://pipedream.com) if I could get a data-centric version of the files. I could then render them on my website and have more control over the experience. I could do filtering, sorting, provide context, and so forth, while still having a dynamic list of files. I've got an initial version of this I'm sharing today, but have a follow-up planned with a few more advanced features. Ok, let's get started.
+It's a pretty simple interface. You get nice thumbnails, you can view pretty much any kind of file, and you can download it. It's good, but we can do better, right? I decided to look into using the [Google Drive API](https://developers.google.com/drive/api) via [Pipedream](https://pipedream.com?via=raymond) if I could get a data-centric version of the files. I could then render them on my website and have more control over the experience. I could do filtering, sorting, provide context, and so forth, while still having a dynamic list of files. I've got an initial version of this I'm sharing today, but have a follow-up planned with a few more advanced features. Ok, let's get started.
 
 ## Step One - Make/Decide on the Folder
 
