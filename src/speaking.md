@@ -16,7 +16,7 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://hopin.com/events/adobe-developer-partner-days-2023/registration">Getting started with Creative Cloud Automation Services</a><br/>
+<a href="https://hopin.com/events/adobe-developer-partner-days-2023/registration">Automating Image Workflows with APIs</a><br/>
 Developer & Partner Days 2023<br/>
 Online, June 27-28, 2023
 </p>
