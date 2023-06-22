@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
 
 	// These assets need to go to root
 	eleventyConfig.addPassthroughCopy({'src/assets/manifest.json':'manifest.json'});
+	eleventyConfig.addPassthroughCopy({'src/misc/rss.xsl':'rss.xsl'});
 	eleventyConfig.addPassthroughCopy({'src/assets/service-worker.js':'service-worker.js'});
 	eleventyConfig.addPassthroughCopy({'src/assets/favicon.png':'favicon.png'});
 	eleventyConfig.addPassthroughCopy({'src/assets/favicon_large.png':'favicon_large.png'});
