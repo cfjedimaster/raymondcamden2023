@@ -14,12 +14,12 @@ I started a blog. I feel like I have to struggle to learn new things and if I ca
  I'll get back to you as soon as I can.
 
 <h3>My Next Events</h3>
-
 <p>
-<a href="https://hopin.com/events/adobe-developer-partner-days-2023/registration">Automating Image Workflows with APIs</a><br/>
-Developer & Partner Days 2023<br/>
-Online, June 27-28, 2023
+<a href="https://cfe.dev/events/automating-images-with-photoshop-apis/">Automating Image Workflows with Photoshop APIs</a><br/>
+Certified Fresh Events<br/>
+Online, August 8, 2023
 </p>
+
 
 <p>
 <a href="https://events.geekle.us/js23/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
@@ -34,10 +34,16 @@ Nothing planned currently. Invite me to speak at your event!
 <h3>My Past Events</h3>
 
 <p>
-Here are my past events, most recent first, in a nice scrollable list no one will probably ever read. ;)
+Here are my past events, the most recent first, in a nice scrollable list no one will probably ever read. ;)
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://hopin.com/events/adobe-developer-partner-days-2023/registration">Automating Image Workflows with APIs</a><br/>
+Developer & Partner Days 2023<br/>
+Online, June 27-28, 2023
+</p>
+
 <p>
 <a href="https://events.geekle.us/api/">How NOT to API</a><br/>
 API Forum 2023<br/>
