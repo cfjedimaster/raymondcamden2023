@@ -3,7 +3,7 @@ layout: post
 title: "Quick Tip - Using Pipedream to Monitor my Algolia Index"
 date: "2021-06-16T18:00:00"
 categories: ["misc"]
-tags: ["pipedream"]
+tags: ["pipedream","algolia"]
 banner_image: /images/banners/sheet_music.jpg
 permalink: /2021/06/16/quick-tip-using-pipedream-to-monitor-my-algolia-index
 description: An example of using Pipedream as a quick service to monitor the health of my search service.

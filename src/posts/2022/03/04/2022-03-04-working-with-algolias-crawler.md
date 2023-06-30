@@ -3,7 +3,7 @@ layout: post
 title: "Working with Algolia's Crawler"
 date: "2022-03-04T18:00:00"
 categories: ["development"]
-tags: []
+tags: ["algolia"]
 banner_image: /images/banners/turtle.jpg
 permalink: /2022/03/04/working-with-algolias-crawler
 description: A look at adding Algolia's Crawler product to a Jamstack site

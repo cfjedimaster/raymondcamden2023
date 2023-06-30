@@ -3,7 +3,7 @@ layout: post
 title: "How to Migrate from Lunr to Algolia - a Technical Guide"
 date: "2022-08-09T18:00:00"
 categories: ["Jamstack"]
-tags: []
+tags: ["algolia"]
 banner_image: /images/banners/search.jpg
 permalink: /2022/08/09/how-to-migrate-from-lunr-to-algolia-a-technical-guide
 description: A guide to migrating search support from Lunr to Algolia

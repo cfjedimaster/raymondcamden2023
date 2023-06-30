@@ -3,7 +3,7 @@ layout: post
 title: "An example of Algolia Search with Alpine.js"
 date: "2022-07-19T18:00:00"
 categories: ["JavaScript"]
-tags: ["alpinejs"]
+tags: ["alpinejs","algolia"]
 banner_image: /images/banners/search.jpg
 permalink: /2022/07/19/an-example-of-algolia-search-with-alpinejs
 description: A quick example of using Algolia Search with Alpine.js

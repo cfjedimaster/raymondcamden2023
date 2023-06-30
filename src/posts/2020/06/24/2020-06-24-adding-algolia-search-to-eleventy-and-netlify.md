@@ -3,7 +3,7 @@ layout: post
 title: "Adding Algolia Search to Eleventy and Netlify"
 date: "2020-06-24"
 categories: ["jamstack"]
-tags: ["eleventy"]
+tags: ["eleventy","algolia"]
 banner_image: /images/banners/search.jpg
 permalink: /2020/06/24/adding-algolia-search-to-eleventy-and-netlify
 description: How I added Algolia Search to an Eleventy Site
