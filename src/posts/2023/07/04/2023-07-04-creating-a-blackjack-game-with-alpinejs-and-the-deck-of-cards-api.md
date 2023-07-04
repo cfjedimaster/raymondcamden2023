@@ -50,7 +50,7 @@ async deal() {
 },
 ```
 
-Two things to point out. First, I deal to the player, than the PC (or dealer, name-wise I kinda go back and forth), and then back again. I also modify the card result object to have `showback` set such that I can render the back of the card for the dealer.
+Two things to point out. First, I deal to the player, then the PC (or dealer, name-wise I kinda go back and forth), and then back again. I also modify the card result object to have `showback` set such that I can render the back of the card for the dealer.
 
 Here's how that's done in HTML:
 
@@ -111,7 +111,7 @@ async hitMe() {
 },
 ```
 
-Bust checking was a bit complex. I built a function to get the 'count' for the hand, but in Blackjack, Aces can be 1 or 11. I figured out (and hope I'm right), that you can never have 'two' aces, so  my function returns a `lowCount` and `highCount` value where for the high version, if an Ace exists, it's counted as 11, but only one. Here's that logic:
+Bust checking was a bit complex. I built a function to get the 'count' for the hand, but in Blackjack, Aces can be 1 or 11. I figured out (and hope I'm right), that you can never have two 'high' aces, so my function returns a `lowCount` and `highCount` value where for the high version, if an Ace exists, it's counted as 11, but only one. Here's that logic:
 
 ```js
 getCount(hand) {
