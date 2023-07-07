@@ -9,7 +9,7 @@ permalink: /2023/07/07/want-to-learn-alpinejs
 description: Information about my Alpine.js course on YouTube.
 ---
 
-For the past two weeks or so, I've been releasing videos on YouTube all about learning [Alpine.js](https://aplinejs.dev). Each video is relatively short (although longer than a Tiktok video) and can be quickly consumed, with the entire playlist coming in under an hour. Each video has links to CodePens that let you immediately play with the concepts I cover. 
+For the past two weeks or so, I've been releasing videos on YouTube all about learning [Alpine.js](https://alpinejs.dev). Each video is relatively short (although longer than a Tiktok video) and can be quickly consumed, with the entire playlist coming in under an hour. Each video has links to CodePens that let you immediately play with the concepts I cover. 
 
 I *really* like Alpine (as you can see by [many other posts](https://www.raymondcamden.com/tags/alpinejs) on the topic) as it's an incredibly simple, and practical, JavaScript framework. There's no build process, no hundreds of megabytes of download, and it's something you can pick up rather quickly, as I hope my video series demonstrates. 
 
