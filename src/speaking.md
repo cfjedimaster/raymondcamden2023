@@ -7,13 +7,14 @@ banner_image: /images/banners/raypgday2.jpg
 
 
 As much as I love to write code, I enjoy teaching even more. That's part of the reason 
-I started a blog. I feel like I have to struggle to learn new things and if I can help
- make that struggle better for other people, than I think I've done something good. 
- If you are interested in having me speak at your conference or organization, 
- just <a href="/contact">drop me a line</a> and 
- I'll get back to you as soon as I can.
+I started a blog. I feel like I have to struggle to learn new things, and if I can help
+make that struggle better for other people, then I think I've done something good. 
+
+If you are interested in having me speak at your conference or organization, 
+just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as I can.
 
 <h3>My Next Events</h3>
+
 <p>
 <a href="https://cfe.dev/events/automating-images-with-photoshop-apis/">Automating Image Workflows with Photoshop APIs</a><br/>
 Certified Fresh Events<br/>
