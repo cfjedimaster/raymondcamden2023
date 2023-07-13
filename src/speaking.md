@@ -28,6 +28,12 @@ JavaScript Global Summit'23<br/>
 Online, September 19-20, 2023
 </p>
 
+<p>
+<a href="https://2023.allthingsopen.org/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript </a><br/>
+All Things Open<br/>
+Raleigh, NC, October 15-17, 2023
+</p>
+
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
