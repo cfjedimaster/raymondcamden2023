@@ -232,7 +232,7 @@ Works as expected, hidden from the user, nothing to see here, carry on.
  hidden1:'you can\'t see me...',
 ```
 
-### input[type=picture]
+### input[type=image]
 
 Also nothing special here. I've never used this one in production before but I guess folks have used it.
 
