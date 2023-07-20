@@ -1,0 +1,42 @@
+---
+permalink: /feed_slim.xml
+---
+{% comment %}
+This RSS feed is purely for my mailing list. It removes the top level image and shows the
+first paragraph of content only.
+{% endcomment %}{% assign posts = collections.posts | reverse %}<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ site.title | my_xml_escape }}</title>
+    <link href="{{ "/feed_slim.xml" | prepend: site.url }}" rel="self" type="application/atom+xml"></link>
+    <link href="{{ site.url }}/" rel="alternate" type="text/html"></link>
+    <subtitle>{{ site.description | my_xml_escape }}</subtitle>
+
+    <updated>{{ page.date | date_to_xmlschema }}</updated>
+    <author>
+        <name>Raymond Camden</name>
+        <email>raymondcamden@gmail.com</email>
+    </author>
+    <id>{{ "/feed_slim.xml" | prepend: site.url }}</id>
+
+    <generator>Eleventy</generator>
+
+        {% for post in posts limit:10 %}
+            <entry>
+                <id>{{ post.url | prepend: site.url }}</id>
+                <title>{{ post.data.title | my_xml_escape }}</title>
+                <updated>{{ post.date | date_to_xmlschema }}</updated>
+                <link href="{{ post.url | prepend: site.url }}" rel="alternate" type="text/html" title="{{ post.data.title | my_xml_escape }}"/>
+                <content type="html">{% capture content %}{% excerpt post %}{% endcapture %}{{ content | my_xml_escape }}</content>
+                {% for tag in post.data.tags %}
+                <category term="{{ tag | my_xml_escape }}" />
+                {% endfor %}
+                {% for cat in post.data.categories %}
+                <category term="{{ cat | my_xml_escape }}" />
+                {% endfor %}
+                <author>
+                    <name>Raymond Camden</name>
+                    <email>raymondcamden@gmail.com</email>
+                </author>
+            </entry>
+        {% endfor %}
+</feed>
