@@ -295,7 +295,6 @@ function doSubscriptionForm() {
             return res.json()
         })
         .then(res => {
-            console.log('status',res.status);
             if(res.creation_date) {
                 subStatus.innerHTML = 'You have been subscribed!';
             } else {
