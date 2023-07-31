@@ -296,9 +296,9 @@ function doSubscriptionForm() {
         })
         .then(res => {
             console.log('status',res.status);
-            if(res.status === 'subscribed') {
+            if(res.creation_date) {
                 subStatus.innerHTML = 'You have been subscribed!';
-            } else if(res.status === 400) {
+            } else {
                 subStatus.innerHTML = `There was an error: ${res.detail}`;
             }
             subButton.disabled = false;

@@ -1,9 +1,8 @@
-	
-const axios = require('axios');
-var crypto = require('crypto');
 
-const listId = 'f42e299fb2';
-const apiRoot = `https://us1.api.mailchimp.com/3.0/lists/${listId}/members/`;
+
+
+const buttonDownKey = process.env.BUTTONDOWNKEY;
+const apiRoot = `https://api.buttondown.email/v1/subscribers`;
 
 const handler = async (event) => {
 	try {
@@ -16,37 +15,38 @@ const handler = async (event) => {
 			};
 		}
 
+		let body = { email };
 
-		// https://gist.github.com/kitek/1579117
-		let emailhash = crypto.createHash('md5').update(email).digest('hex');
+		let resp = await fetch(apiRoot, {
+			method:'POST',
+			headers: {
+				'Authorization':`Token ${buttonDownKey}`
+			}, 
+			body: JSON.stringify(body)
+		});
 
-		return axios({
-				method: 'put',
-				url: apiRoot + emailhash,
-				data: {
-					email_address: email,
-					status: 'subscribed',
-					merge_fields: {
-						tag:'blog'
-					}
+		let status = resp.status;
+		let result = await resp.json();
+		if(status === 201) {
+			return {
+				headers: {
+					'Content-Type':'application/json'
 				},
-				auth: {
-					'username': 'anythingreally',
-					'password': process.env.MC_API
-				}
-			}).then(res => {
-				return {
-					statusCode: 200,
-					body: JSON.stringify(res.data)
-				}
-			})
-			.catch(err => {
-				console.log('returning from here', err.response.data.detail);
-				return {
-					statusCode: 500,
-					body: JSON.stringify(err.response.data)
-				};
-			});
+				statusCode: 200, 
+				body: JSON.stringify(result)
+			}
+		} else {
+			console.log(result);
+			return {
+				headers: {
+					'Content-Type':'application/json'
+				},
+				statusCode: 500,
+				body: JSON.stringify(result)
+			};
+		}
+
+
 
 	} catch (error) {
 		return { statusCode: 500, body: error.toString() }
@@ -54,4 +54,3 @@ const handler = async (event) => {
 }
 
 module.exports = { handler }
-
