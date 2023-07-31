@@ -41,7 +41,7 @@ const handler = async (event) => {
 				headers: {
 					'Content-Type':'application/json'
 				},
-				statusCode: 500,
+				statusCode: 200,
 				body: JSON.stringify(result)
 			};
 		}
