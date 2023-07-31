@@ -15,11 +15,7 @@ I use [Eleventy](https://www.11ty.dev/) for this blog and host on [Netlify](http
 
 	netlify dev -c "eleventy --serve --quiet"
 
-The `-c` command tells Netlify's CLI what command to use to run my static site generator. This will run Eleventy and then fire up Netlify's local development server as well. The end result is actually two servers running. You can see that in the screenshot below:
-
-<p>
-<img data-src="https://static.raymondcamden.com/images/2021/12/ntl.jpg" alt="Terminal output from starting up Netlify dev and Eleventy" class="lazyload imgborder imgcenter">
-</p>
+The `-c` command tells Netlify's CLI what command to use to run my static site generator. This will run Eleventy and then fire up Netlify's local development server as well. 
 
 As I said, I run my blog on Eleventy, and I also build a bunch of dumb demos with Eleventy, so I write a lot of [silly blog posts](https://www.raymondcamden.com/tags/eleventy) on it as well. Seriously, I probably need to stop at some point. Anyway, sometimes I need to run my blog locally while I write a post *and* run an instance of Eleventy for a demo. 
 
