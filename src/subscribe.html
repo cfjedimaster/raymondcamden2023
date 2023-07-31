@@ -45,9 +45,9 @@ const doSubscribe = () => {
 	})
 	.then(res => {
 		console.log('status',res.status);
-		if(res.status === 'subscribed') {
+        if(res.creation_date) {
 			$statusP.innerText = 'You have been subscribed!';
-		} else if(res.status === 400) {
+		} else {
 			$statusP.innerText = `There was an error: ${res.detail}`;
 		}
 		$subscribeButton.removeAttribute('disabled');
