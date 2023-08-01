@@ -321,7 +321,7 @@ If you want, you can hit this yourself here: <https://weather2.raymondcamden.wor
 
 I hope you liked this. As I said, I'm *very* happy with the development process in Workers. I will say I've had a bit of bad luck with their support forums. For example, I've got a post up there that's about two weeks old with no response. But hopefully, that's not the norm. As I mentioned above, today I recorded a video of all the above:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o5FI-Xj66T0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;margin:auto;width:100%;margin-bottom:10px"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o5FI-Xj66T0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;margin:auto;margin-bottom:10px"></iframe>
 
 Photo by <a href="https://unsplash.com/@zoltantasi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Zoltan Tasi</a> on <a href="https://unsplash.com/photos/HTpAIzZRHvw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
