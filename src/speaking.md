@@ -21,6 +21,11 @@ Certified Fresh Events<br/>
 Online, August 8, 2023
 </p>
 
+<p>
+<a href="https://11tymeetup.dev/">Building a Now page in Eleventy</a><br/>
+Eleventy Meetup<br/>
+Online, August 17, 2023
+</p>
 
 <p>
 <a href="https://events.geekle.us/js23/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
