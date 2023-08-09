@@ -23,7 +23,7 @@ Even though I'm not going to do a traditional form submission, I wanted to use `
 <div id="app" v-cloak>
   Enter a minimum of 10 characters please:
   <input type="text" v-model="description" minlength=10>
-  {{ currentLength }} characters
+  {% raw %}{{ currentLength }} characters{% endraw %}
 </div>
 ```
 
