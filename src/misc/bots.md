@@ -51,3 +51,8 @@ most recent toot at the time I built the site. Just click on the username to fol
 {% endcapture %}
 
 {% stoot "botsin.space", lasttoot_tdh %}
+
+{% capture "lasttoot_hero" %}
+{% lasttoot "botsin.space", "myrandomsuperhero" %}
+{% endcapture %}
+{% stoot "botsin.space", lasttoot_hero %}
