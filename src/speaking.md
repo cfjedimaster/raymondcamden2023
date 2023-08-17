@@ -16,18 +16,6 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://cfe.dev/events/automating-images-with-photoshop-apis/">Automating Image Workflows with Photoshop APIs</a><br/>
-Certified Fresh Events<br/>
-Online, August 8, 2023
-</p>
-
-<p>
-<a href="https://11tymeetup.dev/">Building a Now page in Eleventy</a><br/>
-Eleventy Meetup<br/>
-Online, August 17, 2023
-</p>
-
-<p>
 <a href="https://events.geekle.us/js23/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
 JavaScript Global Summit'23<br/>
 Online, September 19-20, 2023
@@ -56,6 +44,19 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://cfe.dev/events/automating-images-with-photoshop-apis/">Automating Image Workflows with Photoshop APIs</a><br/>
+Certified Fresh Events<br/>
+Online, August 8, 2023
+</p>
+
+<p>
+<a href="https://11tymeetup.dev/">Building a Now page in Eleventy</a><br/>
+Eleventy Meetup<br/>
+Online, August 17, 2023
+</p>
+
 <p>
 <a href="https://hopin.com/events/adobe-developer-partner-days-2023/registration">Automating Image Workflows with APIs</a><br/>
 Developer & Partner Days 2023<br/>
