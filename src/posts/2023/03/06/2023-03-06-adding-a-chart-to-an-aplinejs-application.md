@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Adding a Chart to an Apline.js Application"
+title: "Adding a Chart to an Alpine.js Application"
 date: "2023-03-06T18:00:00"
 categories: ["development"]
 tags: ["alpinejs","javascript"]
