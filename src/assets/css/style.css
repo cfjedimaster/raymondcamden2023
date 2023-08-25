@@ -2664,3 +2664,11 @@ blockquote.toot-blockquote {
     width: 48px;
     height: auto;
 }
+
+.smallerQuote {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1rem;
+  background-color: #d0d0d0;
+  padding: 10px;
+}
