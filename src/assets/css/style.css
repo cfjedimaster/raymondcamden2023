@@ -2642,21 +2642,19 @@ blockquote.toot-blockquote:before {
 }
 
 blockquote.toot-blockquote {
-    border: 2px solid #e5e7eb;
-    color: hsl(0, 0%, 100%);
-    background: #1d1d1d;
+  border: 2px solid #e5e7eb;
+  color: hsl(0, 0%, 100%);
+  background: #1d1d1d;
 	width: 85%;
 	font-size: 1rem;
-
-    margin-right: 0;
-    margin-left: 0;
-    padding-left: 1.5em;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 1.5em;
 	padding-right: 1.5em;
 	padding-bottom: 1em;
 	line-height: 1;
 	text-align: left;
-
-    font-family: "Karla", sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 .toot-profile img {
@@ -2671,4 +2669,9 @@ blockquote.toot-blockquote {
   line-height: 1rem;
   background-color: #d0d0d0;
   padding: 10px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
 }
