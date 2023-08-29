@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fun With Frontmatter: Part 1 - Related Posts"
+title: "Fun With Front Matter: Part 1 - Related Posts"
 date: "2023-08-28T18:00:00"
 categories: ["jamstack"]
 tags: ["eleventy"]
@@ -9,7 +9,7 @@ permalink: /2023/08/28/fun-with-frontmatter-part-1-related-posts
 description: A series on doing more with your Jamstack site's front matter
 ---
 
-I'm kicking off a little series of tips today that's been sitting in my "Blog Ideas" queue for some time. The idea, "Fun with Frontmatter", was based on the idea of taking a look at some of the fun/interesting/hopefully useful things you could include in your Jamstack site's front matter. More than just title, date, and so forth, but useful features you could add to your site driven by data in your content's front matter. Some of these things are features I've talked about before, but I thought a little series would be fun to explore this week. All of my examples will use [Eleventy](https://www.11ty.dev) but could be applied to any other project. With that out of the way, let's get started!
+I'm kicking off a little series of tips today that's been sitting in my "Blog Ideas" queue for some time. The idea, "Fun with Front Matter", was based on the idea of taking a look at some of the fun/interesting/hopefully useful things you could include in your Jamstack site's front matter. More than just title, date, and so forth, but useful features you could add to your site driven by data in your content's front matter. Some of these things are features I've talked about before, but I thought a little series would be fun to explore this week. All of my examples will use [Eleventy](https://www.11ty.dev) but could be applied to any other project. With that out of the way, let's get started!
 
 ## Tagging Related Posts
 
