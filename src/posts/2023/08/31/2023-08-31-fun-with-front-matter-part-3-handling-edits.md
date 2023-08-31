@@ -91,7 +91,7 @@ Now let's add this to the layout:
 </p>{% endraw %}
 ```
 
-Basically, if an edit, show it, and if an edit reason, show that. That IFs may get a bit hard to read there, but I think it's acceptable. Here's an example of this rendering.
+Basically, if an edit, show it, and if an edit reason, show that. Those IFs may get a bit hard to read there, but I think it's acceptable. Here's an example of this rendering.
 
 <p>
 <img src="https://static.raymondcamden.com/images/2023/08/fwfm6.jpg" alt="Example rendering of an edit with an associated reason." class="imgborder imgcenter" loading="lazy">
