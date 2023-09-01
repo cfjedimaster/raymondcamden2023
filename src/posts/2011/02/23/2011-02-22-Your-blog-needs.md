@@ -13,9 +13,9 @@ guid: 4135
 
 2) A Contact page. You don't (and probably shouldn't) give out your email address. But provide a way for me to contact you. If I find a bug on your blog, or want to hire you, or whatever, I don't want to leave a comment on a random blog entry.
 
-3) A way to subscribe to comments. I <i>hate</i> it when I leave a comment some place and discover I have to refresh the view to see if there are any followups. I'm almost to the point where I won't bother commenting if you are going to make me work to see replies.
+3) A way to subscribe to comments. I <i>hate</i> it when I leave a comment someplace and discover I have to refresh the view to see if there are any follow-ups. I'm almost to the point where I won't bother commenting if you are going to make me work to see replies.
 
-4) A way to subscribe to entries. This one I'm willing to be forgiven on. There are multiple services that will monitor RSS feeds fore you. But it's convenient if the blog itself will offer this. 
+4) A way to subscribe to entries. This one I'm willing to be forgiven on. There are multiple services that will monitor RSS feeds for you. But it's convenient if the blog itself offers this. 
 
 5) Oh yeah - and a RSS feed. And don't hide it. You should use the META tag browsers pick up on as well as a very nice and obvious RSS button/link/etc. 
 
