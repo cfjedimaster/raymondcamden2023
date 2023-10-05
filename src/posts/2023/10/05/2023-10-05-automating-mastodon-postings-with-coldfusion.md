@@ -11,7 +11,7 @@ description: Using the Mastodon API with ColdFusion
 
 I've had a lot of fun building Mastodon bots (see my [list](/bots) of super-important business critical bots as an example), typically using the [Pipedream](https://pipedream.com) platform, and more recently, [Cloudflare Workers](https://developers.cloudflare.com/workers/). The Mastodon API is kinda stupid easy and with "The Other Network" going to hell in a handbasket, I don't see myself building bots anywhere else. Just yesterday I came home from the [Adobe ColdFusion Summit](https://cfsummit.adobeevents.com/) and I thought it would be fun to see how easy it would be to build a Mastodon bot in ColdFusion. Here's what I was able to do in roughly ten minutes.
 
-First, don't forget that to add automation to a Mastodon account, you need to go into your preferences, select the "Development" section and create a new application. You can give very precise permissions for your automation, but I typically just take the defaults. When you're done creating it, you're given your credentials:
+First, don't forget that to add automation to a Mastodon account, you need to go into your preferences, select the "Development" section, and create a new application. You can give very precise permissions for your automation, but I typically just take the defaults. When you're done creating it, you're given your credentials:
 
 <p>
 <img src="https://static.raymondcamden.com/images/2023/10/cfm1.jpg" alt="Credentials from the Mastodon application" class="imgborder imgcenter" loading="lazy">
@@ -21,7 +21,7 @@ The only bit you need from this is the access token.
 
 ## Toot, toot, toot
 
-To post your first toot (Mastodon's name for Tweets), you can send your text to the `/api/v1/statuses` endpoint of your server. If you haven't used Mastodon yet, one of the biggest differences between that and Twitter is the federated nature of the service. Each user (and bot) have their own server with their own API endpoint. I've got a bot up on the `botsin.space` server so to create a toot, it's as easy as:
+To post your first toot (Mastodon's name for Tweets), you can send your text to the `/api/v1/statuses` endpoint of your server. If you haven't used Mastodon yet, one of the biggest differences between that and Twitter is the federated nature of the service. Each user (and bot) has their own server and each server has their own API endpoint. I've got a bot up on the `botsin.space` server so to create a toot, it's as easy as:
 
 ```javascript
 toot = 'Hello World from CFML, #now()#';
@@ -29,8 +29,8 @@ token = 'my token brings all the boys to the yard';
 
 
 cfhttp(url='https://botsin.space/api/v1/statuses', method='post', result='result') {
-	cfhttpparam(type='header', name='Authorization', value='Bearer #token#');
-	cfhttpparam(type='formfield', name='status', value=toot);
+    cfhttpparam(type='header', name='Authorization', value='Bearer #token#');
+    cfhttpparam(type='formfield', name='status', value=toot);
 }
 
 writeDump(deserializeJSON(result.fileContent));
@@ -48,7 +48,7 @@ Here's an example toot:
 
 ## Pretty Toots
 
-A toot can have media attached to it, more than one actually, but I think *typically* most folks will want to have an image attached to a toot. In order to do this, you first upload the media. When you do, you're given a result object that includes an ID value. Then when you toot, you can add the ID to the data. Here's an example of that:
+A toot can have media attached to it, more than one actually, but I think *typically* most folks will want to have an image attached to a toot. To do this, you first upload the media. When you do, you're given a result object that includes an ID value. Then when you toot, you can add the ID to the data. Here's an example of that:
 
 ```javascript
 toot = 'Hello World from CFML, #now()#';
@@ -56,16 +56,16 @@ token = 'damn right its better than yours';
 
 
 cfhttp(url='https://botsin.space/api/v2/media', method='post', result='result') {
-	cfhttpparam(type='header', name='Authorization', value='Bearer #token#');
-	cfhttpparam(type='file', name='file', file=expandPath('./kitten.jpg'));
+    cfhttpparam(type='header', name='Authorization', value='Bearer #token#');
+    cfhttpparam(type='file', name='file', file=expandPath('./kitten.jpg'));
 }
 mediaOb = deserializeJSON(result.filecontent);
 
 
 cfhttp(url='https://botsin.space/api/v1/statuses', method='post', result='result') {
-	cfhttpparam(type='header', name='Authorization', value='Bearer #token#');
-	cfhttpparam(type='formfield', name='status', value=toot);
-	cfhttpparam(type='formfield', name='media_ids[]', value=mediaOb.id);
+    cfhttpparam(type='header', name='Authorization', value='Bearer #token#');
+    cfhttpparam(type='formfield', name='status', value=toot);
+    cfhttpparam(type='formfield', name='media_ids[]', value=mediaOb.id);
 }
 ```
 
@@ -82,39 +82,39 @@ I took all of the above and wrapped it in a simple ColdFusion component. To be c
 ```js
 component {
 
-	property name="server" type="string";
-	property name="token" type="string";
+    property name="server" type="string";
+    property name="token" type="string";
 
-	function init(server, token) {
-		variables.server = arguments.server;
-		variables.token = arguments.token;
-	}
+    function init(server, token) {
+        variables.server = arguments.server;
+        variables.token = arguments.token;
+    }
 
-	function uploadMedia(path) {
+    function uploadMedia(path) {
 
-		cfhttp(url='https://#variables.server#/api/v2/media', method='post', result='local.result') {
-			cfhttpparam(type='header', name='Authorization', value='Bearer #token#');
-			cfhttpparam(type='file', name='file', file=path);
-		}
-		return deserializeJSON(result.filecontent);
-	}
+        cfhttp(url='https://#variables.server#/api/v2/media', method='post', result='local.result') {
+            cfhttpparam(type='header', name='Authorization', value='Bearer #token#');
+            cfhttpparam(type='file', name='file', file=path);
+        }
+        return deserializeJSON(result.filecontent);
+    }
 
-	function postToot(required toot, imagepath) {
+    function postToot(required toot, imagepath) {
 
-		if(arguments.keyExists('imagepath')) {
-			local.mediaOb = uploadMedia(imagepath);
-		}
+        if(arguments.keyExists('imagepath')) {
+            local.mediaOb = uploadMedia(imagepath);
+        }
 
-		cfhttp(url='https://#variables.server#/api/v1/statuses', method='post', result='local.result') {
-			cfhttpparam(type='header', name='Authorization', value='Bearer #variables.token#');
-			cfhttpparam(type='formfield', name='status', value=arguments.toot);
-			if(arguments.keyExists('imagepath')) {
-				cfhttpparam(type='formfield', name='media_ids[]', value=local.mediaOb.id);
-			}
-		}
+        cfhttp(url='https://#variables.server#/api/v1/statuses', method='post', result='local.result') {
+            cfhttpparam(type='header', name='Authorization', value='Bearer #variables.token#');
+            cfhttpparam(type='formfield', name='status', value=arguments.toot);
+            if(arguments.keyExists('imagepath')) {
+                cfhttpparam(type='formfield', name='media_ids[]', value=local.mediaOb.id);
+            }
+        }
 
-		return deserializeJSON(local.result.filecontent);
-	}
+        return deserializeJSON(local.result.filecontent);
+    }
 }
 ```
 
@@ -135,4 +135,3 @@ writedump(result);
 That's it, enjoy!
 
 Photo by <a href="https://unsplash.com/@ollila?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mylon Ollila</a> on <a href="https://unsplash.com/photos/j4ocWYAP_cs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  
