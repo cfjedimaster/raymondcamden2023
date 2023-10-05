@@ -3,7 +3,7 @@ layout: post
 title: "Automatically Posting to Mastodon and Twitter on New RSS Items"
 date: "2022-12-06T18:00:00"
 categories: ["development"]
-tags: ["pipedream"]
+tags: ["pipedream","mastodon"]
 banner_image: /images/banners/announce.jpg
 permalink: /2022/12/06/automatically-posting-to-mastodon-and-twitter-on-new-rss-items
 description: A look at using Pipedream to automatically tweet/toot new items from an RSS feed

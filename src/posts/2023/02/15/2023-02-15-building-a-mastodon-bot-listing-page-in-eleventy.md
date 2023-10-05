@@ -3,7 +3,7 @@ layout: post
 title: "Building a Mastodon Bot Listing Page in Eleventy"
 date: "2023-02-15T18:00:00"
 categories: ["jamstack"]
-tags: ["eleventy"]
+tags: ["eleventy","mastodon"]
 banner_image: /images/banners/robot1.jpg
 permalink: /2023/02/15/building-a-mastodon-bot-listing-page-in-eleventy
 description: How I built a page to show off my Mastodon bots.

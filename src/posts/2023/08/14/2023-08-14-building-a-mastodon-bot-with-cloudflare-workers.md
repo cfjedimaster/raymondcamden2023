@@ -3,7 +3,7 @@ layout: post
 title: "Building a Mastodon Bot with Cloudflare Workers"
 date: "2023-08-14T18:00:00"
 categories: ["serverless"]
-tags: ["cloudflare"]
+tags: ["cloudflare","mastodon"]
 banner_image: /images/banners/superheroes.jpg
 permalink: /2023/08/14/building-a-mastodon-bot-with-cloudflare-workers
 description: How to build a simple Mastodon bot for Cloudflare Workers
