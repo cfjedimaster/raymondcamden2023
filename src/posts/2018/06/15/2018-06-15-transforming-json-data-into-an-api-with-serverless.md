@@ -10,7 +10,7 @@ permalink: /2018/06/15/transforming-json-data-into-an-api-with-serverless
 
 This is something that has been sitting in my "To Write" Trello board for a while now and today I finally got around to building a demo. One of my favorite things to do with serverless is to build API wrappers. There are thousands of APIs out there, but many times you need to manipulate or change the data to make it more appropriate for your use. While you can do that on the client, it can be much more efficient to do so on the server. Of course, who wants to setup a server just to change an API when you can use a serverless function instead? Some examples of this are:
 
-* Transformation: A few months back I used an API that was XML only. I used a severless function to transform it into JSON since this isn't 1995.
+* Transformation: A few months back I used an API that was XML only. I used a serverless function to transform it into JSON since this isn't 1995.
 * Reduction: A while ago I made use of a music API that returned a lot of information. However, I only needed one small part of it. By building a serverless proxy that reduced the data returned, my client, a mobile app, received much less data and therefore was quicker for the end user.
 * Combination: If one API doesn't cover what you need, two or more may, and you can use a serverless function to grab and combine those APIs. A good example of this is getting shipping information from multiple providers.
 * Proxy: And finally - just having your own end point means you can do things like server-side caching or even wholesale replacement of the 'real' API at any time in the future.

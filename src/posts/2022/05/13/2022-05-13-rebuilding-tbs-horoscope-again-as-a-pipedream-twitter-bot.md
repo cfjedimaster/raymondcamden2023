@@ -2,7 +2,7 @@
 layout: post
 title: "Rebuilding TBS Horoscope (Again) as a Pipedream Twitter Bot"
 date: "2022-05-13T18:00:00"
-categories: ["severless"]
+categories: ["serverless"]
 tags: ["pipedream"]
 banner_image: /images/banners/tarot.jpg
 permalink: /2022/05/13/rebuilding-tbs-horoscope-again-as-a-pipedream-twitter-bot
