@@ -3,7 +3,7 @@ layout: post
 title: "A Look at Google's PaLM API"
 date: "2023-10-12T18:00:00"
 categories: ["development"]
-tags: ["genai"]
+tags: ["generative ai"]
 banner_image: /images/banners/catai1.jpg
 permalink: /2023/10/12/a-look-at-googles-palm-api
 description: A look at Google's PaLM2 Generative AI API
