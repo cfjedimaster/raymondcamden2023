@@ -17,7 +17,7 @@ My simple prototype is based on the idea of handling an influx of emails. Imagin
 
 ## The Workflow
 
-For my workflow, I decided to use [Pipedream](https://pipecream.com). One of the triggers it has is email based so I went with that. This gives a unique email address that will kick off a process whenever a new email is received. Now, for my demo, that was fine, but I'd imagine in a "real world" scenario, you would use a real email account and Pipedream has triggers for that. Here's that step:
+For my workflow, I decided to use [Pipedream](https://pipedream.com). One of the triggers it has is email based so I went with that. This gives a unique email address that will kick off a process whenever a new email is received. Now, for my demo, that was fine, but I'd imagine in a "real world" scenario, you would use a real email account and Pipedream has triggers for that. Here's that step:
 
 <p>
 <img src="https://static.raymondcamden.com/images/2023/10/pd1.png" alt="Email trigger" class="imgborder imgcenter" loading="lazy">
