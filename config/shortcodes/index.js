@@ -82,8 +82,12 @@ const commentInclude = (e, old) => {
 
 const lastToot = async (instance, user) => {
 	let rssFeedURL = `https://${instance}/users/${user}.rss`;
-	let feed = await parser.parseURL(rssFeedURL);
-	return feed.items[0].guid.split('/').pop();
+  try {
+    let feed = await parser.parseURL(rssFeedURL);
+    return feed.items[0].guid.split('/').pop();
+  } catch {
+    return '';
+  }
 }
 
 module.exports = {

@@ -21,7 +21,13 @@ module.exports = async (instance, id) => {
         });
         return response
     }
-    let Json = await GetToot(urlToGet);
+    let Json = '';
+    try {
+        Json = await GetToot(urlToGet);
+    } catch {
+        console.log('Error running getToot');
+        return '';
+    }
     if (Json.account) {
         tootLink = `https://` + instance + `@` + Json.account.acct + `/status/` + id
         handleInst = `@` + Json.account.acct + `@` + instance
