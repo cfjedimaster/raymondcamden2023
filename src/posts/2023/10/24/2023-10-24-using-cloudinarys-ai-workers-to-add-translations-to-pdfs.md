@@ -3,7 +3,7 @@ layout: post
 title: "Using Cloudflare's AI Workers to Add Translations to PDFs"
 date: "2023-10-24T18:00:00"
 categories: ["javascript"]
-tags: ["cloudflare","serverless","pdf services","adobe"]
+tags: ["cloudflare","serverless","pdf services","adobe","generative ai"]
 banner_image: /images/banners/catai4.jpg
 permalink: /2023/10/24/using-cloudflare-ai-workers-to-add-translations-to-pdfs
 description: Using Cloudflare's new AI-powered Workers to add translation to a PDF in your browser.
