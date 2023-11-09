@@ -3,7 +3,7 @@ layout: post
 title: "Can GenAI help you win in Vegas?"
 date: "2023-11-09T18:00:00"
 categories: ["development"]
-tags: ["generative ai"]
+tags: ["generative ai","pipedream"]
 banner_image: /images/banners/cat_blackjack.jpg
 permalink: /2023/11/09/can-genai-help-you-win-in-vegas
 description: A look at using Generative AI to help with Blackjack
