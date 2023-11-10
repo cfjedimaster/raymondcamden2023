@@ -22,6 +22,7 @@ somewhat complete from 2013 and onward.
 
 
 <ul>
+<li><a href="https://cloudinary.com/blog/integrating-cloudinary-image-optimization-netlify-hosting">Integrating Cloudinary Image Optimization With Netlify Hosting</a></li>
 <li><a href="https://cloudinary.com/blog/checking-network-strength-load-better-images-cloudinary">Checking Network Strength to Progressively Load Better Images With Cloudinary</a></li>
 <li><a href="https://cloudinary.com/blog/automatically-loading-high-quality-images-cloudinary-intersectionobserver">Automatically Loading High-Quality Images with Cloudinary and IntersectionObserver</a></li>
 <li><a href="https://cloudinary.com/blog/mashing-up-google-static-maps-with-cloudinary">Mashing Up Google Static Maps with Cloudinary</a></li>
