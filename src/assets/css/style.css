@@ -1440,7 +1440,7 @@ and if I remove width 100%, it's left aligned. To do later..
 .post-tags a,
 .post-share a {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 15px;
   text-decoration: none;
 }
 
