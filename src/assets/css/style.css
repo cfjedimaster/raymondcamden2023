@@ -1434,7 +1434,7 @@ and if I remove width 100%, it's left aligned. To do later..
 
 .post-tags,
 .post-share {
-  font-size: 0.77778rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 .post-tags a,
