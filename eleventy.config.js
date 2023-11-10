@@ -1,6 +1,6 @@
 const { categories, getPosts } = require('./config/collections/index.js');
 const { extractExcerpt, hasAnyComments, commentInclude, lastToot } = require('./config/shortcodes/index.js');
-const { ageInDays, algExcerpt, catTagList, fixcattag, getByCategory, myEscape, my_xml_escape, titlecase, toTitle, postCategories, postTags } = require('./config/filters/index.js');
+const { ageInDays, algExcerpt, catTagList, cssmin, fixcattag, getByCategory, myEscape, my_xml_escape, titlecase, toTitle, postCategories, postTags } = require('./config/filters/index.js');
 
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
@@ -36,6 +36,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter('ageInDays', ageInDays);
 	eleventyConfig.addFilter('algExcerpt', algExcerpt);
 	eleventyConfig.addFilter('catTagList', catTagList);
+	eleventyConfig.addFilter('cssmin', cssmin);
 	eleventyConfig.addFilter('fixcattag', fixcattag);
 	eleventyConfig.addFilter('getByCategory', getByCategory);
 	eleventyConfig.addFilter('myEscape', myEscape);

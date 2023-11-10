@@ -1,3 +1,5 @@
+const CleanCSS = require("clean-css");
+
 const ageInDays = d => {
 	let date = new Date(d);
 	let now = new Date();
@@ -32,6 +34,12 @@ const catTagList = p => {
 
   return result;
 }
+
+// Credit: https://support.cloudinary.com/hc/en-us/community/posts/200788162/comments/200128802
+// Used for my new OG images
+const cloudinaryTitleEscape = s => {
+    return encodeURIComponent(s).replaceAll('%2C','%252C');
+};
 
 const fixcattag = str => {
   if(!str) return;
@@ -124,7 +132,10 @@ const postTags = collections => {
   return postTags;
 };
 
+const cssmin = css => {
+  return new CleanCSS({}).minify(css).styles;
+};
 
 module.exports = {
-	ageInDays, algExcerpt, fixcattag, getByCategory, myEscape, catTagList, my_xml_escape, titlecase, toTitle, postCategories
+	ageInDays, algExcerpt, cssmin, fixcattag, getByCategory, myEscape, catTagList, cloudinaryTitleEscape, my_xml_escape, titlecase, toTitle, postCategories
 };

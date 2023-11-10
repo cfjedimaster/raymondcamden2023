@@ -15,8 +15,17 @@ body_class: home-template
 	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i%7CKarla:400,400i,700,700i" rel="preload" as="style">
 	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i%7CKarla:400,400i,700,700i" rel="stylesheet" media="print" onload="this.media='all'">
 
+    {% comment %}
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/css/prism.css" />
+    {% endcomment %}
+    {% capture css %}
+        {% include "assets/css/style.css" %}
+        {% include "assets/css/prism.css" %}
+    {% endcapture %}
+    <style>
+    {{ css | cssmin }}
+    </style>
     <meta name="description" content="{% if description %}{{ description | my_xml_escape }}{% else %}{{ site.description | my_xml_escape }}{% endif %}">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{% if title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}" />
