@@ -83,7 +83,7 @@ let dayInfo = forecast.daily.data.map(f => {
 }).slice(1);
 ```
 
-Note the `slice` at the end. Pirate Weather returns the current day in the forecast and I wanted to focus on the *next* seven days.Here's what this looks like:
+Note the `slice` at the end. Pirate Weather returns the current day in the forecast and I wanted to focus on the *next* seven days. Here's what this looks like:
 
 ```json
 [
