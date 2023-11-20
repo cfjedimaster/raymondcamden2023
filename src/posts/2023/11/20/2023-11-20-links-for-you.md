@@ -23,7 +23,7 @@ This link is a bit old, but here's a look by Addy Osmani about how [Photoshop wa
 
 ## Alternatives to JSON
 
-For me, my history of working with APIs basically went from SOAP (ugh) to JSON, so JSON is been "just how data is done" for me for... probably near twenty years. However, JSON is definitely not the only way to transmit data. There's actually not one, but two alternatives: Protocal Buffers (protobuf) and Avro. If you would like a nice introduction to protobuf, check out this article: [How LinkedIn Adopted Protocol Buffers to Reduce Latency by 60%](https://newsletter.systemdesign.one/p/protocol-buffers-vs-json). You should not, obviously, run out and change all your code. Like many things related to performance tweaking, you should first evaluate if it makes sense, but knowing you have options is *always* a good thing!
+For me, my history of working with APIs basically went from SOAP (ugh) to JSON, so JSON is been "just how data is done" for me for... probably nearly twenty years. However, JSON is definitely not the only way to transmit data. There's actually not one, but two alternatives: Protocal Buffers (protobuf) and Avro. If you would like a nice introduction to protobuf, check out this article: [How LinkedIn Adopted Protocol Buffers to Reduce Latency by 60%](https://newsletter.systemdesign.one/p/protocol-buffers-vs-json). You should not, obviously, run out and change all your code. Like many things related to performance tweaking, you should first evaluate if it makes sense, but knowing you have options is *always* a good thing!
 
 ## Advent of Code 2023!
 
@@ -31,7 +31,7 @@ Happy happy, joy joy! I **absolutely freaking love** [Advent of Code](https://ad
 
 * Give up. No, seriously. It's ok to give up. I "do" AoC until it becomes too much and don't even pretend like I'll finish it. If you do, great! But give yourself permission to just play with it until it stops being fun.
 * The last year or so I've used Python for my solutions, and it's a great way to practice new (to you) languages. 
-* If you can't get something working, check their Reddit. There's always solutions posted and a great way to practice your language of choice is to take a solution in *another* language and rewrite it in the one you're using. It's not cheating, it's learning!
+* If you can't get something working, check their Reddit. There are always solutions posted and a great way to practice your language of choice is to take a solution in *another* language and rewrite it in the one you're using. It's not cheating, it's learning!
 * And remember, this is meant to be fun!
 
 If you want, you can see my previous solutions, and follow along this year, at my AoC repo: <https://github.com/cfjedimaster/adventofcode>. Looks like last year I did 8 days and called it quits. I'm going to try for 10 this year, but we'll see what happens. 
