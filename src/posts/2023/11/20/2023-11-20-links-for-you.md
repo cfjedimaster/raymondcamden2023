@@ -15,7 +15,7 @@ Good morning, readers. These link posts are typically reserved for the weekend, 
 <img src="https://static.raymondcamden.com/images/2023/11/frank.png" alt="A gargoyle with a Santa hat on - a Christmas light in front as well." class="imgborder imgcenter" loading="lazy">
 </p>
 
-Here's some links that hopefully entertain you!
+Here are some links that hopefully entertain you!
 
 ## Photoshop on the Web
 
