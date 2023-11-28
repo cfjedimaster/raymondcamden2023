@@ -100,7 +100,7 @@ Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and r
 <h3>What I'm Listening To</h3>
 
 <p>
-Here's my latest tracks from Spotify (pretty much the only way I listen to music)...
+Here's my latest tracks from Spotify (pretty much the only way I listen to music). You can click on the album cover for a preview.
 </p>
 
 <div class="tracks">
@@ -147,6 +147,10 @@ record *new* beers I've tried.
 	border-width:thin;
 	padding: 10px; 
 }
+
+.track img {
+	cursor: pointer;
+}
 </style>
 
 <script>
@@ -168,7 +172,7 @@ async function init() {
 
 		let html = `
 <div class="track">
-<a href="${t.href}" target="_new"><img src="${t.images[1].url}"></a>
+<img src="${t.images[1].url}" data-preview="${t.preview_url}">
 <a href="${t.href}" target="_new">"${t.name}"</a> by ${artists}
 </div>
 		`;
@@ -177,7 +181,26 @@ async function init() {
 	});
 
 	document.querySelector('.tracks').innerHTML = s;
-	
+
+	// add event listener for music preeview
+	let music = document.querySelectorAll('div.track img');
+	let audio = new Audio();
+	music.forEach(m => {
+		m.addEventListener('click', e => {
+			let preview = e.currentTarget.dataset.preview;
+			if(audio.src) { 
+				audio.pause(); 
+				audio.currentTime = 0; 
+				if(audio.src === preview) {
+					audio.src = '';
+					return;
+				}
+			}
+			audio.src = preview;
+			audio.play();
+			console.log(preview);
+		});
+	});
 }
 
 async function getTracks() {
@@ -192,7 +215,7 @@ async function getTracks() {
 			let now = new Date();
 			let diff = (now.valueOf() - cachedData.timestamp) / (1000 * 60);
 			console.log('age in minutes is', diff);
-			if(cache < 10) return cachedData.tracks;
+			if(diff < 10) return cachedData.tracks;
 		}
 	} 
 
