@@ -198,9 +198,10 @@ async function init() {
 			}
 			audio.src = preview;
 			audio.play();
-			console.log(preview);
 		});
 	});
+	audio.addEventListener('ended', e => { audio.src = '' });
+
 }
 
 async function getTracks() {
