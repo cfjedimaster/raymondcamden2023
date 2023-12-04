@@ -16,19 +16,7 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://2023.allthingsopen.org/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript </a><br/>
-All Things Open<br/>
-Raleigh, NC, October 15-17, 2023
-</p>
-
-<p>
-<a href="https://apiworld.co/">The Photoshop API</a><br/>
-API World<br/>
-Santa Clara, CA, October 24-26, 2023
-</p>
-
-<p>
-<a href="">Customizing the Web Platform with Web Components</a><br/>
+<a href="https://thatconference.com/tx/2024/">Customizing the Web Platform with Web Components</a><br/>
 THAT Conference<br/>
 Round Rock, TX, January 30 - February 1, 2024
 </p>
@@ -44,6 +32,17 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://apiworld.co/">The Photoshop API</a><br/>
+API World<br/>
+Santa Clara, CA, October 24-26, 2023
+</p>
+
+<p>
+<a href="https://2023.allthingsopen.org/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript </a><br/>
+All Things Open<br/>
+Raleigh, NC, October 15-17, 2023
+</p>
 
 <p>
 <a href="https://cfsummit.adobeevents.com/">Leveraging Adobe Acrobat PDF services with Adobe ColdFusion</a><br/>
