@@ -16,7 +16,7 @@ partridge in a pear tree
 two turtle doves
 three French hens
 four calling birds
-five fold rings
+five gold rings
 six geese a-laying
 seven swans a-swimming
 eight maids a-milking
