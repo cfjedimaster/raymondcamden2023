@@ -132,8 +132,12 @@ const postTags = collections => {
   return postTags;
 };
 
+let cssCache = null;
 const cssmin = css => {
-  return new CleanCSS({}).minify(css).styles;
+  if(!cssCache) {
+    cssCache = new CleanCSS({}).minify(css).styles;
+  }
+  return cssCache;
 };
 
 module.exports = {
