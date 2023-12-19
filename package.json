@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/cfjedimaster/raymondcamden2023#readme",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.0",
     "algoliasearch": "^4.16.0",
     "axios": "^1.3.4",
