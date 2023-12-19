@@ -6,6 +6,7 @@ const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const htmlmin = require('html-minifier');
+const postGraph = require('@rknightuk/eleventy-plugin-post-graph');
 
 module.exports = function(eleventyConfig) {
 
@@ -67,6 +68,8 @@ module.exports = function(eleventyConfig) {
 		markdownItAnchor,
 		markdownItAnchorOptions
 	);
+
+	eleventyConfig.addPlugin(postGraph, { sort: 'desc' });
 
 	eleventyConfig.setLibrary('md', markdownLib);
 

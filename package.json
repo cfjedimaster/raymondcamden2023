@@ -33,6 +33,7 @@
     "sendgrid": "^5.2.3"
   },
   "devDependencies": {
+    "@rknightuk/eleventy-plugin-post-graph": "^1.0.1",
     "markdown-it-anchor": "^8.6.7"
   }
 }
