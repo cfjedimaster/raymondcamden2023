@@ -6,6 +6,6 @@ body_class: page-template
 permalink: /postgraph/index.html
 ---
 
-This template makes use of tghe excellent [Eleventy Post Graph Plugin](https://postgraph.rknight.me/). Enjoy:
+This template makes use of the excellent [Eleventy Post Graph Plugin](https://postgraph.rknight.me/). Enjoy:
 
 {% postGraph collections.posts %}
