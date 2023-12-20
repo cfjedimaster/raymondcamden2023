@@ -75,12 +75,19 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
 		if(process.env.CI && outputPath.endsWith('.html')) {
-			let minified = htmlmin.minify(content, {
-				useShortDoctype: true,
-				removeComments: true,
-				collapseWhitespace: true
-			});
-			return minified;
+			/*
+			Encountered an issue with eleventy-plugin-post-graph
+			*/
+			try {
+				let minified = htmlmin.minify(content, {
+					useShortDoctype: true,
+					removeComments: true,
+					collapseWhitespace: true
+				});
+				return minified;
+			} catch(e) {
+				return content;
+			}
 		}
 
 		return content;
