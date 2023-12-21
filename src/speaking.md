@@ -16,6 +16,13 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
+<a href="https://mmcfug.org/">Customizing the Web Platform with Web Components</a><br/>
+Mid-Michigan ColdFusion Users Group<br/>
+Online, January 9th
+</p>
+
+
+<p>
 <a href="https://thatconference.com/tx/2024/">Customizing the Web Platform with Web Components</a><br/>
 THAT Conference<br/>
 Round Rock, TX, January 30 - February 1, 2024
