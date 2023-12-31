@@ -108,7 +108,7 @@ Online, January 25-26, 2023
 <p>
 <a href="https://mmcfug.org/">Introduction to Alpine.js</a><br>
 Mid-Michigan ColdFusion Uses Group<br/>
-Online, January 10
+Online, January 10, 2023
 </p>
 
 <p>
