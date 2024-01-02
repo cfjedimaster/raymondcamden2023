@@ -97,6 +97,10 @@ body_class: post-template
 
 		{% include 'webmentions' %}
         {% include 'mydisqus' %}
+		{% assign year = page.date | date: "%Y" %}
+		{% if year >= 2024 %}
+	        {% include 'giscus' %}
+		{% endif %}
 
 	</article><!-- .post -->
 
