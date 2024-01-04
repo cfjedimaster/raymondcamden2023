@@ -1,0 +1,49 @@
+---
+layout: page
+title: My Toys
+description: My office toys...
+body_class: page-template
+permalink: /toys/index.html
+---
+
+<!--
+Credit: https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/#can-t-we-already-do-this-in-css
+-->
+
+<style>
+img {
+  max-width: 100%;
+  display: block;
+}
+
+figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+figure > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+figure a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  column-count: 2;
+  column-gap: 10px;
+}
+</style>
+
+<div class="container">
+{% for toy in toys %}
+	<figure>
+		<img src="{{toy}}">
+	</figure>
+{% endfor %}
+</div>
