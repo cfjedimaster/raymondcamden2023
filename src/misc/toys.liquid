@@ -40,6 +40,7 @@ figure a {
 }
 </style>
 
+{% comment %}
 <div class="container">
 {% for toy in toys %}
 	<figure>
@@ -47,3 +48,21 @@ figure a {
 	</figure>
 {% endfor %}
 </div>
+{% endcomment %}
+<div class='container'></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', init, false);
+async function init() {
+  let div = document.querySelector('.container');
+  div.innerHTML = '<i>Loading awesome photos...</i>';
+  let req = await fetch('https://eof4egroho59c53.m.pipedream.net');
+  let data = await req.json();
+  let s = '';
+  data.photos.forEach(p => {
+    s += `<figure><img src="${p}"></figure>`;
+  });
+  div.innerHTML = s;
+  //console.log(data);
+}
+</script>
