@@ -21,6 +21,11 @@ Mid-Michigan ColdFusion Users Group<br/>
 Online, January 9th
 </p>
 
+<p>
+<a href="https://cfe.dev/events/the-jam-2024/">Using Generative AI as Your Content Assistant</a><br/>
+TheJam.dev 2024<br/>
+Online, January 24th
+</p>
 
 <p>
 <a href="https://thatconference.com/tx/2024/">Customizing the Web Platform with Web Components</a><br/>
