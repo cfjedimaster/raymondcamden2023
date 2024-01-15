@@ -79,7 +79,7 @@ The result is a JSON array of products with pagination support. As an example, h
 },
 ```
 
-All in all, a pretty impressive little service. You can check their [pricing information](https://www.scraperapi.com/pricing/) on what it costs, and they *do* have a decent free tier. If you like what you see and want to sign up, please use this URL: <https://affiliates.scraperapi.com/signup/2991> I get a small commission on each sign up which will let me go buy those Star Wars items the API returned. ;)
+All in all, a pretty impressive little service. You can check their [pricing information](https://www.scraperapi.com/pricing/) on what it costs, and they *do* have a decent free tier. If you like what you see and want to sign up, please use this URL: <https://www.scraperapi.com/?via=raymond49> I get a small commission on each sign up which will let me go buy those Star Wars items the API returned. ;)
 
 ## Bullet Chatting
 
