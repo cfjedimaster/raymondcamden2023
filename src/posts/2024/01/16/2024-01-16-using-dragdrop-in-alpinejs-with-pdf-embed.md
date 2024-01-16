@@ -6,7 +6,7 @@ categories: ["javascript"]
 tags: ["alpinejs","adobe","pdf services"]
 banner_image: /images/banners/cat_papers.jpg
 permalink: /2024/01/16/using-dragdrop-in-alpinejs-with-pdf-embed
-description: 
+description: How to implement drag and drop with Alpine to render PDFs.
 ---
 
 Drag and drop support in JavaScript is probably two to three hundred years old now (plus or minus a few years), but I use it rarely enough such that when I need it, I run over to [MDN's article](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API) on it as a quick refresher. I thought it might be fun to combine the web's drag and drop support with Adobe's [PDF Embed](https://developer.adobe.com/document-services/apis/pdf-embed/) library. Here's what I built.
