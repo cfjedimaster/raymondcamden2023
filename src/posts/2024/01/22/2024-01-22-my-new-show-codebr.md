@@ -15,6 +15,6 @@ With all that said, I'm happy to announce the launch of `<Code><Br>` - or, Code 
 
 This show will (generally) follow a schedule of the 1st and 3rd Tuesday of each month. And as I said, the general idea is that each session I'll build something live in front of yall, but for this first session I'll be doing something a bit different and talking (and showing) my tech stack. I.e., what tools/programs/websites/etc I use as part of my day-to-day. 
 
-Please show up and use this opportunity to heckle me from the comfort of your office chair. Also, note I'll be posting these to YouTube as well so if you miss it, you can always catch the reply. 
+Please show up and use this opportunity to heckle me from the comfort of your office chair. Also, note I'll be posting these to YouTube as well so if you miss it, you can always catch the replay. 
 
 Finally, why not use the comments section below to leave me some ideas of things you would like to see me cover? I'm definitely open to your suggestions!
