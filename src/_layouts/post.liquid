@@ -16,7 +16,7 @@ body_class: post-template
 				<span class="oldPost">(This post is more than 2 years old.)</span>
 				{% endif %}
 			</div><!-- .post-meta -->
-			<h1 class="post-title underline">{{title}}</h1>
+			<h1 class="post-title underline">{{title | escape}}</h1>
 			<div class="post-tags">
 				{% comment %}
 				Can't use nice filter here as we don't have access to an object that has 
@@ -63,15 +63,6 @@ body_class: post-template
 			{{content}}
 		</div><!-- .post-content -->
 
-		<footer class="post-footer">
-			<p class="post-share">
-				<span class="post-share-title">Share:</span>
-				<a target="_blank" href="https://twitter.com/intent/tweet?text={{ title | my_xml_escape }}&amp;url={{ site.url }}{{ page.url }}" rel="noopener">Twitter</a>
-				<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&amp;t={{ title | my_xml_escape }}" rel="noopener">Facebook</a>
-				<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}&amp;title={{title | my_xml_escape}}&amp;source={{site.title | my_xml_escape}}" rel="noopener">LinkedIn</a>
-			</p>
-		</footer><!-- .post-footer -->
-
 		<div class="author-box">
 			<div class="author-info">
 				<h3>Support this Content!</h3>
@@ -95,12 +86,22 @@ body_class: post-template
 			</div><!-- .author-info -->
 		</div><!-- .author-box -->
 
-		{% include 'webmentions' %}
         {% include 'mydisqus' %}
 		{% assign year = page.date | date: "%Y" %}
 		{% if year >= 2024 %}
 	        {% include 'giscus' %}
 		{% endif %}
+
+		<footer class="post-footer">
+			<p class="post-share">
+				<span class="post-share-title">Share:</span>
+				<a target="_blank" href="https://twitter.com/intent/tweet?text={{ title | my_xml_escape }}&amp;url={{ site.url }}{{ page.url }}" rel="noopener">Twitter</a>
+				<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&amp;t={{ title | my_xml_escape }}" rel="noopener">Facebook</a>
+				<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}&amp;title={{title | my_xml_escape}}&amp;source={{site.title | my_xml_escape}}" rel="noopener">LinkedIn</a>
+			</p>
+		</footer><!-- .post-footer -->
+
+		{% include 'webmentions' %}
 
 	</article><!-- .post -->
 
