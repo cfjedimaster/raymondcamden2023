@@ -306,7 +306,7 @@ let req = await fetch(url, {
 let result = await req.json();
 ```
 
-And that's it. As a finals tep, I simply output it:
+And that's it. As a final step, I simply output it:
 
 ```js
 console.log(`Summary of PDF:\n${result[0].summary}`);
