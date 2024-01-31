@@ -16,21 +16,9 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://mmcfug.org/">Customizing the Web Platform with Web Components</a><br/>
-Mid-Michigan ColdFusion Users Group<br/>
-Online, January 9th
-</p>
-
-<p>
-<a href="https://cfe.dev/events/the-jam-2024/">Using Generative AI as Your Content Assistant</a><br/>
-TheJam.dev 2024<br/>
-Online, January 24th
-</p>
-
-<p>
-<a href="https://thatconference.com/tx/2024/">Customizing the Web Platform with Web Components</a><br/>
-THAT Conference<br/>
-Round Rock, TX, January 30 - February 1, 2024
+<a href="https://devnexus.com/presentations/climbing-up-with-alpine-js">Climbing Up with Alpine.js</a><br/>
+Devnexus<br/>
+Atlanta, GA, April 9-11, 2024
 </p>
 
 <!--
@@ -44,6 +32,25 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://thatconference.com/tx/2024/">Customizing the Web Platform with Web Components</a><br/>
+THAT Conference<br/>
+Round Rock, TX, January 30 - February 1, 2024
+</p>
+
+<p>
+<a href="https://cfe.dev/events/the-jam-2024/">Using Generative AI as Your Content Assistant</a><br/>
+TheJam.dev 2024<br/>
+Online, January 24th
+</p>
+
+<p>
+<a href="https://mmcfug.org/">Customizing the Web Platform with Web Components</a><br/>
+Mid-Michigan ColdFusion Users Group<br/>
+Online, January 9th
+</p>
+
 <p>
 <a href="https://apiworld.co/">The Photoshop API</a><br/>
 API World<br/>
