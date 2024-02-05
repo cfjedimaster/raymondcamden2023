@@ -21,6 +21,12 @@ Devnexus<br/>
 Atlanta, GA, April 9-11, 2024
 </p>
 
+<p>
+<a href="https://carahevents.carahsoft.com/Event/Details/429564-adobe">Customizing the Web Platform with Web Components</a><br/>
+Adobe ColdFusion Summit Eat 2024<br/>
+Reston, VA, April 24, 2024
+</p>
+
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
