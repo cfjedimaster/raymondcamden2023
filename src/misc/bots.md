@@ -26,6 +26,8 @@ most recent toot at the time I built the site. Just click on the username to fol
 {% lasttoot "botsin.space", "randomcomicbook" %}
 {% endcapture %}
 
+You can follow Random Comic Book on Bluesky as well: <https://bsky.app/profile/randomcomicbook.bsky.social>
+
 {% stoot "botsin.space", lasttoot_rcb %}
 
 {% capture "lasttoot_sjc" %}
