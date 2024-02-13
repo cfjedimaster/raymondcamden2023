@@ -6,6 +6,9 @@ const fetch = require('node-fetch');
 module.exports = async function() {
 
     try {
+      // short circuit at home to make it quicker...
+      if(process.env.ELEVENTY_ROOT.includes('/home/ray')) return [];
+
       let resp = await fetch(`https://api.untappd.com/v4/user/checkins/cfjedimaster?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&limit=10`, {
         headers: {
           'user-agent':'MyAgentBringsAllTheBoysToTheYard'

@@ -4,7 +4,7 @@ let parser = new Parser();
 module.exports = async function() {
 
 	// short circuit at home to make it quicker...
-	//if(process.env.ELEVENTY_ROOT.includes('/home/ray')) return [];
+	if(process.env.ELEVENTY_ROOT.includes('/home/ray')) return [];
 	let feed = await parser.parseURL('https://letterboxd.com/raymondcamden/rss/');
 
 	//console.log(feed.items[0]);
