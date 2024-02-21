@@ -1,0 +1,104 @@
+---
+layout: page
+title: Guestbook
+description: Because... why not.
+body_class: page-template
+permalink: /guestbook/index.html
+---
+
+<style>
+div.entry {
+	border-style:solid;
+	border-width:thin;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+</style>
+
+<div id="entries">
+	<i>Loading guestbook entries, please stand by. It will be worth the wait, honest.</i>
+</div>
+
+<h3>Add Your Entry</h3>
+
+<form id="addEntry">
+<p>
+<label for="name">Your Name:</label> <input id="name">
+</p>
+<p>
+<textarea id="comment" placeholder="Your comment"></textarea>
+</p>
+<p>
+<input type="submit" value="Save Entry" id="submitButton">
+</p>
+</form>
+
+<script>
+const GB_URL = 'https://eoxzk4xd3lr6trv.m.pipedream.net';
+const ADD_GB = 'https://eo8ymuvqefph1ce.m.pipedream.net';
+
+const formatter = new Intl.DateTimeFormat('en-us', {
+	dateStyle:'full', 
+	timeStyle:'short'
+});
+
+let $name, $comment, $button, origTextButtonText;
+
+document.addEventListener('DOMContentLoaded', init, false);
+async function init() {
+	console.log('fetching gb entries');
+
+	let entryReq = await fetch(GB_URL);
+	let entries = await entryReq.json();
+
+	let s = '';
+	entries.forEach(e => {
+
+		s += `
+<div class="entry">
+<b>${e.name}</b> said on ${formatter.format(e.date)}:<br/>
+<i>${e.comment}</i>
+</div>
+		`;
+	});
+
+	document.querySelector('#entries').innerHTML = s;
+
+	console.log(entries);
+
+	$name = document.querySelector('#name');
+	$comment = document.querySelector('#comment');
+	$button = document.querySelector('#submitButton');
+	origTextButtonText = $button.value;
+
+	document.querySelector('form#addEntry').addEventListener('submit', addEntry, false);
+}
+
+async function addEntry(e) {
+	e.preventDefault();
+
+	let name = $name.value.trim();
+	let comment = $comment.value.trim();
+	if(name === '' || comment === '') return;
+	console.log(name, comment);
+
+	$button.setAttribute('disabled', 'disabled');
+	$button.value = 'Submitting...';
+	let resp = await fetch(ADD_GB, {
+		method: 'POST', 
+		body: JSON.stringify({
+			name, 
+			comment
+		})
+	});
+	// currently we assume 204 and don't handle errors, maybe later...
+
+	$name.value = '';
+	$comment.value = '';
+	$button.removeAttribute('disabled');
+	$button.value = origTextButtonText;
+	alert('Your guestbook entry is submitted for approval. Thank you!');
+
+
+}
+</script>
