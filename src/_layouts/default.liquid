@@ -73,7 +73,10 @@ body_class: home-template
 		</div>
 	</div>
 
-
+    {% if layout == "post" %}
+    <div class="adaptive" data-ea-publisher="raymondcamdencom" data-ea-type="text" data-ea-style="fixedfooter"></div>
+    <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    {% endif %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
     <script src="/js/prism.js"></script>
