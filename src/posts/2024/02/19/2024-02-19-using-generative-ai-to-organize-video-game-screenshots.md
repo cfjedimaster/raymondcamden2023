@@ -3,7 +3,7 @@ layout: post
 title: "Using Generative AI to Organize Video Game Screenshots"
 date: "2024-02-19T18:00:00"
 categories: ["javascript"]
-tags: ["generative ai"]
+tags: ["generative ai","pipedream"]
 banner_image: /images/banners/cat_steampunk_gamer.jpg
 permalink: /2024/02/19/using-generative-ai-to-organize-video-game-screenshots
 description: 
