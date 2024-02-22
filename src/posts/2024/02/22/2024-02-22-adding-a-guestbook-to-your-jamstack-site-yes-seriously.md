@@ -58,6 +58,8 @@ You can see the result of this yourself here: <https://eoxzk4xd3lr6trv.m.pipedre
 
 To add a guestbook entry, I created another Pipedream workflow. It's also HTTP triggered of course, and does the following:
 
+* **Edited at 1:47PM ** I just added a new step to validate that the name and comment field was sent. Duh, I should have done that initially. If they are not passed, the workflow ends. 
+
 * First, it uses another built-in Pipedream action that adds rows to Google Sheets. I look for the name and comment value in the body of the HTTP trigger, set Date automatically, and Approved to false. For the most part, this just worked, but check out what I do with Name and Comment:
 
 <p>
