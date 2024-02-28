@@ -3,7 +3,7 @@ layout: post
 title: "Testing Multiple Variations of Generative AI Prompts"
 date: "2024-02-26T18:00:00"
 categories: ["javascript"]
-tags: ["generative ai","pipedream"]
+tags: ["generative ai"]
 banner_image: /images/banners/cat_writing_paper.jpg
 permalink: /2024/02/26/testing-multiple-variations-of-generative-ai-prompts
 description: A simple web tool to let you compare and contract different prompt styles.
