@@ -68,7 +68,7 @@ Additionally, some campaign settings and sourcebooks introduce even more exotic 
 Remember, the most important factor in choosing a race is to pick one that excites you and fits the character concept you have in mind.
 </div>
 
-I have absolutely no clue if those exotic races exist, but I did a quick search on Aasimar and it looks like it certainly dos: [Aasimar](https://forgottenrealms.fandom.com/wiki/Aasimar)
+I have absolutely no clue if those exotic races exist, but I did a quick search on Aasimar and it looks like it certainly does: [Aasimar](https://forgottenrealms.fandom.com/wiki/Aasimar)
 
 Alright, now, at this point, I was impressed. But I thought - why not push my luck?
 
