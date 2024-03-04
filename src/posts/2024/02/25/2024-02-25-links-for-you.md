@@ -14,7 +14,7 @@ Good morning programs. Before I get started with the three links I want to share
 * Tomorrow I'm giving a free online presentation at the [Adobe ColdFusion Online Summit](https://adobe-coldfusion-online-summit-2024.attendease.com/) where I'll be talking about how to use Adobe Acrobat PDF Services with ColdFusion. Join me and see how easy the APIs are,or, join me and laugh at how bad my ColdFusion skills have gotten.
 * I had my second `<Code><Br>` episode last week and it went great (imo). I walked through building a simple to play web-based game based on Paper, Rocks, Scissors. You can watch the recording here: <https://youtu.be/15SgRdJPdoE>
 * I decided to give another ad network a try, [ethicalads.io](https://ethicalads.io). I saw it on another site and loved how lightweight and simple they were. I'm not sure how well it will work, but if it offsets my only cost (the newsletter), then it's a win. As a reminder, I'm looking for sponsors for this blog, and if you or your company would like to do so, just reach out!
-
+<!--more-->
 ## sparkly-text for making the web more... sparkly
 
 For my first link, I've got a fun little web component called [sparkly-text](https://github.com/stefanjudis/sparkly-text). As you can imagine, this creates a completely unnecessary but very cute and fun "sparkle" effect on your text with a simple wrapper:
