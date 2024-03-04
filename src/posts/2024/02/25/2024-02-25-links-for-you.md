@@ -36,6 +36,6 @@ Thank you to the fine folks at [Socket](https://socket.dev/) for sharing.
 
 I've said this before and I'll say it again. [Josh W Comeau](https://www.joshwcomeau.com/) produces some of the best technical content I've seen in my *entire* career. Each post contains numerous interactive examples that really help drive the point home. I don't care what the topic is - if I see one of his articles, I'm going to it, because I'll come away more knowledgeable and inspired to improve my technical writing/presenting skills. 
 
-In his latest piece, he presents a deep dives into [how to center a div](https://www.joshwcomeau.com/css/center-a-div/). No, not with the `<center>` tag (yes, it really [was a thing](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/center) in the past), but rather with CSS and loads and loads of examples.
+In his latest piece, he presents a deep dive into [how to center a div](https://www.joshwcomeau.com/css/center-a-div/). No, not with the `<center>` tag (yes, it really [was a thing](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/center) in the past), but rather with CSS and loads and loads of examples.
 
 
