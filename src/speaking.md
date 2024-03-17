@@ -16,12 +16,6 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://adobe-coldfusion-online-summit-2024.attendease.com/">Leveraging Adobe Acrobat PDF services with Adobe ColdFusion</a><br/>
-Adobe ColdFusion Online Summit 2024<br/>
-Online, February 26, 2024
-</p>
-
-<p>
 <a href="https://devnexus.com/presentations/climbing-up-with-alpine-js">Climbing Up with Alpine.js</a><br/>
 Devnexus<br/>
 Atlanta, GA, April 9-11, 2024
@@ -44,6 +38,13 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://adobe-coldfusion-online-summit-2024.attendease.com/">Leveraging Adobe Acrobat PDF services with Adobe ColdFusion</a><br/>
+Adobe ColdFusion Online Summit 2024<br/>
+Online, February 26, 2024
+</p>
+
 
 <p>
 <a href="https://thatconference.com/tx/2024/">Customizing the Web Platform with Web Components</a><br/>
