@@ -40,6 +40,13 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 <div style="height: 400px; overflow:scroll">
 
 <p>
+<a href="https://gdsc.community.dev/events/details/developer-student-clubs-ontario-tech-university-presents-web-development-with-alpinejs/">Web Development with Alpine.js</a><br/>
+Google Developer Student Clubs<br/>
+Online, March 22, 2024
+</p>
+
+
+<p>
 <a href="https://adobe-coldfusion-online-summit-2024.attendease.com/">Leveraging Adobe Acrobat PDF services with Adobe ColdFusion</a><br/>
 Adobe ColdFusion Online Summit 2024<br/>
 Online, February 26, 2024
