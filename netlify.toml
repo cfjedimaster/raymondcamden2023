@@ -1,5 +1,4 @@
 [build]
-	functions = ".functions"
 
 [[headers]]
   for = "/.well-known/webfinger"
