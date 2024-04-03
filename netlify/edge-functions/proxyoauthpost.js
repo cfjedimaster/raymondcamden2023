@@ -1,11 +1,6 @@
 import { getStore } from "@netlify/blobs";
 
 export default async (request, context) => {
-	/*
-	let ref = request.headers.get('referer');
-	let ua = request.headers.get('user-agent');
-	
-	*/;
 
 	const tracker = getStore('tracker');
 
@@ -13,13 +8,13 @@ export default async (request, context) => {
 		ref: request.headers.get('referer'),
 		ua: request.headers.get('user-agent'),
 		ip: context.ip, 
-		geo: context.geo
+		geo: context.geo,
+		time:new Date()
 	};
 
 	let log = await tracker.get('log', { type:'json' });
 	if(!log) log = [];
 	log.push(packet);
-	console.log(log);
 	await tracker.setJSON('log', log);
 
 	return;
