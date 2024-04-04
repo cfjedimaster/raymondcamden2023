@@ -9,7 +9,7 @@ permalink: /2024/03/28/using-generative-ai-to-check-for-spam
 description: Using Google Gemini to check text input for spam.
 ---
 
-A few days ago I wrote up an exploration I did in Spam APIs, ["Spam APIs in 2024"](https://www.raymondcamden.com/2024/03/25/spam-apis-in-2024). After working on those demos and writing up my findings, I thought it might be interesting to see how a generative AI tool, like [Googele's Gemini](https://deepmind.google/technologies/gemini/#introduction) would handle such a task. 
+A few days ago I wrote up an exploration I did in Spam APIs, ["Spam APIs in 2024"](https://www.raymondcamden.com/2024/03/25/spam-apis-in-2024). After working on those demos and writing up my findings, I thought it might be interesting to see how a generative AI tool, like [Google's Gemini](https://deepmind.google/technologies/gemini/#introduction) would handle such a task. 
 
 ## Initial Tests
 
