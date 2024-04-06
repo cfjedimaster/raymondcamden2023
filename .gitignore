@@ -10,3 +10,5 @@ _site
 .cache
 
 scripts/.env
+
+.DS_Store
