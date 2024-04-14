@@ -16,14 +16,8 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://devnexus.com/presentations/climbing-up-with-alpine-js">Climbing Up with Alpine.js</a><br/>
-Devnexus<br/>
-Atlanta, GA, April 9-11, 2024
-</p>
-
-<p>
 <a href="https://carahevents.carahsoft.com/Event/Details/429564-adobe">Customizing the Web Platform with Web Components</a><br/>
-Adobe ColdFusion Summit Eat 2024<br/>
+Adobe ColdFusion Summit East 2024<br/>
 Reston, VA, April 24, 2024
 </p>
 
@@ -38,6 +32,11 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://devnexus.com/presentations/climbing-up-with-alpine-js">Climbing Up with Alpine.js</a><br/>
+Devnexus<br/>
+Atlanta, GA, April 9-11, 2024
+</p>
 
 <p>
 <a href="https://gdsc.community.dev/events/details/developer-student-clubs-ontario-tech-university-presents-web-development-with-alpinejs/">Web Development with Alpine.js</a><br/>
