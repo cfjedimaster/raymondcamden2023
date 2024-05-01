@@ -66,7 +66,7 @@ So how about a demo?
 
 ## Demo One
 
-If you've read any of my previous [Gen AI](https://www.raymondcamden.com/tags/generative+ai) posts here you know I typically build my demo with a super simple Node.js "server" that literally just serves up an HTML page and one API endpoint. It's not a full Express.js engine or anything like that, just a basic two route web server. I'll link to the full code at the end so I won't share every line, but let's start with the front-end. 
+If you've read any of my previous [Gen AI](https://www.raymondcamden.com/tags/generative+ai) posts here you know I typically build my demo with a super simple Node.js "server" that literally just serves up an HTML page and one API endpoint. It's not a full Express.js engine or anything like that, just a basic two-route web server. I'll link to the full code at the end so I won't share every line, but let's start with the front-end. 
 
 I built a super simple chat UI using [Milligram CSS](https://milligram.io/) that looks like so:
 
@@ -113,7 +113,7 @@ async function sendMessage() {
 
 The only real interesting thing here is that I didn't use JSON, just plain strings, as that's all I needed. Felt a bit weird, but KISS, right? 
 
-Here's an example of it in action - I'm going to copy and paste the text from the chat log instead of taking a screen shot so it's easier to read:
+Here's an example of it in action - I'm going to copy and paste the text from the chat log instead of taking a screenshot so it's easier to read:
 
 <div style="background-color: #c0c0c0; padding: 10px; margin-bottom:10px">
 You: "what is the moon made out of?"
