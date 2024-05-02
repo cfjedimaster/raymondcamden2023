@@ -15,7 +15,15 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 
 <h3>My Next Events</h3>
 
+<p>
+<a href="https://gdg.community.dev/events/details/google-gdg-craiova-presents-fnd-conference-2024/">Adding Generative AI to your Workflow with Google Gemini</a><br/>
+F/ND Conference 2024<br/>
+Online, May 18, 2024
+</p>
+
+<!--
 Nothing planned currently. Invite me to speak at your event! 
+-->
 
 <h3>My Past Events</h3>
 
