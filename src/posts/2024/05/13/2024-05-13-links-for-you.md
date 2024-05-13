@@ -15,11 +15,11 @@ Yes, yes, I know it's not the weekend and that's when these posts are supposed t
 
 HTML has been, for better or worse, pretty fault-tolerant since the beginning. Honestly, this is for the best because, at the end of the day, I'd rather my browser be practical and try its best to show me *something* than simply give up if there's one error in the document. 
 
-In this post, ["The case against self-closing tags in HTML"](The case against self-closing tags in HTML), Jake Archibald makes the case *against* self-closing tags and honestly I 100% agree with him. (Although I've absolutely done it in the past, like, recent past.)
+In this post, ["The case against self-closing tags in HTML"](https://jakearchibald.com/2023/against-self-closing-tags-in-html/), Jake Archibald makes the case *against* self-closing tags and honestly I 100% agree with him. (Although I've absolutely done it in the past, like, recent past.)
 
 ## Converting Plain Text to HTML
 
-This is a pretty cool article on Smashing Magazine, ["Converting Plain Text To Encoded HTML With Vanilla JavaScript"](Converting Plain Text To Encoded HTML With Vanilla JavaScript). If you've ever left a comment on a website where your text was 'automatically enhanced', then you've seen an example of taking plain text input and converting to HTML. Sometime's that's as simple as noticing blank lines in input and converting them to paragraphs, sometimes it's more fancy changes like converting `*something*` to italics (as Markdown does). In this post by Alexis Kypridemos, he discusses the various different ways of doing just this. 
+This is a pretty cool article on Smashing Magazine, ["Converting Plain Text To Encoded HTML With Vanilla JavaScript"](https://www.smashingmagazine.com/2024/04/converting-text-encoded-html-vanilla-javascript/). If you've ever left a comment on a website where your text was 'automatically enhanced', then you've seen an example of taking plain text input and converting to HTML. Sometime's that's as simple as noticing blank lines in input and converting them to paragraphs, sometimes it's more fancy changes like converting `*something*` to italics (as Markdown does). In this post by Alexis Kypridemos, he discusses the various different ways of doing just this. 
 
 ## Let vs Const - the Final Answer
 
