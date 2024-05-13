@@ -9,7 +9,7 @@ permalink: /2024/05/13/links-for-you
 description: Let's pretend it's Sunday Links
 ---
 
-Yes, yes, I know it's not the weekend and that's when these posts are supposed to go out, but I was super busy being lazy and didn't even realize it had been two weeks since my last post. It happens. Today I'm (weather permitting) hopping on a plane to attend my first [Google I/O](https://io.google/2024/) and I can't to dig more into Gemini at the sessions there. If you're attending, let me know and come say hi! 
+Yes, yes, I know it's not the weekend and that's when these posts are supposed to go out, but I was super busy being lazy and didn't even realize it had been two weeks since my last post. It happens. Today I'm (weather permitting) hopping on a plane to attend my first [Google I/O](https://io.google/2024/) and I can't wait to dig more into Gemini at the sessions there. If you're attending, let me know and come say hi! 
 
 ## Self-Closing Tags
 
@@ -19,7 +19,7 @@ In this post, ["The case against self-closing tags in HTML"](https://jakearchiba
 
 ## Converting Plain Text to HTML
 
-This is a pretty cool article on Smashing Magazine, ["Converting Plain Text To Encoded HTML With Vanilla JavaScript"](https://www.smashingmagazine.com/2024/04/converting-text-encoded-html-vanilla-javascript/). If you've ever left a comment on a website where your text was 'automatically enhanced', then you've seen an example of taking plain text input and converting to HTML. Sometime's that's as simple as noticing blank lines in input and converting them to paragraphs, sometimes it's more fancy changes like converting `*something*` to italics (as Markdown does). In this post by Alexis Kypridemos, he discusses the various different ways of doing just this. 
+This is a pretty cool article on Smashing Magazine, ["Converting Plain Text To Encoded HTML With Vanilla JavaScript"](https://www.smashingmagazine.com/2024/04/converting-text-encoded-html-vanilla-javascript/). If you've ever left a comment on a website where your text was 'automatically enhanced', then you've seen an example of taking plain text input and converting to HTML. Sometimes that's as simple as noticing blank lines in input and converting them to paragraphs, sometimes it's more fancy changes like converting `*something*` to italics (as Markdown does). In this post by Alexis Kypridemos, he discusses the various different ways of doing just this. 
 
 ## Let vs Const - the Final Answer
 
