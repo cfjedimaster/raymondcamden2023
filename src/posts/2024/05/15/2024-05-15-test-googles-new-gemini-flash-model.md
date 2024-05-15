@@ -4,7 +4,7 @@ title: "Testing Google's New Gemini Flash Model"
 date: "2024-05-15T18:00:00"
 categories: ["development"]
 tags: ["generative ai"]
-banner_image: /images/banners/cat_racing.jpg
+banner_image: /images/banners/cat_racing.jpeg
 permalink: /2024/05/15/test-googles-new-gemini-flash-model
 description: Testing and comparing the Gemini Flash model
 ---
