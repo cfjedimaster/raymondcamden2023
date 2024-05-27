@@ -11,7 +11,7 @@ export default async (req, context) => {
   if(!params.get('path')) return new Response("No path!");
   let path = 'https://www.raymondcamden.com' + params.get('path');
   
-  console.log('query',path);
+  //console.log('query',path);
   const recommendationStore = getStore('recommendations');
 
   let recos = await recommendationStore.get(path, { type:'json'});
@@ -20,7 +20,7 @@ export default async (req, context) => {
     console.log('diff in ms', diff);
     if(diff < CACHE_MAX) return Response.json(recos.recommendations);
   }
-  console.log('Not in cache, or expired');
+  //console.log('Not in cache, or expired');
 
   let body = { 
     "requests":[
@@ -47,7 +47,6 @@ export default async (req, context) => {
   });
 
   let results = await resp.json();
-  console.log(results);
   if(results.status && results.status === 404) return Response.json([]);
   //console.log(results);
   let recommendations = results.results[0].hits.map(h => {
@@ -57,7 +56,7 @@ export default async (req, context) => {
       "title":h.title
     }
   });
-  console.log(`for ${path} found ${recommendations.length} recommendations`);
+  //console.log(`for ${path} found ${recommendations.length} recommendations`);
   await recommendationStore.setJSON(path, { recommendations, cached: new Date() });
 
   return Response.json(recommendations);

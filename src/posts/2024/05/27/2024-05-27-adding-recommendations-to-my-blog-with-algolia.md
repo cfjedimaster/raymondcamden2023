@@ -185,7 +185,8 @@ The last part, and the one that took me the longest, was figuring out how and wh
 ```js
 async function doRecommendations() {
 
-  let url = window.location.pathname.slice(0,-1);
+  let url = window.location.pathname;
+  if(url.slice(-1) === '/') url = url.slice(0,-1);
   let recommendationReq = await fetch('/api/get-recommendations?path=' + encodeURIComponent(url));
   let recommendations = await recommendationReq.json();
 
@@ -222,3 +223,5 @@ async function doRecommendations() {
 This code is only run on blog posts as it wouldn't make sense on other pages. 
 
 And that's it. Honestly,  I'm rather pleased by it, but can see myself tweaking the UI later. Let me know what you think and leave a comment below. 
+
+**Edit** After publishing this blog post, I noticed my recommendations were always returning an empty array in production. Turns out, in my local dev, I have the trailing slash, and in prod, I don't, so the last version of the client-side JavaScript, as you see above, checks to see if the last character is a slash. I definitely won't ever make this mistake again. Definitely.
