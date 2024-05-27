@@ -142,6 +142,7 @@ $(document).ready(function(){
     if(window.location.pathname.indexOf('/2') === 0) {
         doWebMentions();
         doSubscriptionForm();
+        doRecommendations();
     }
 });
 
@@ -307,4 +308,39 @@ function doSubscriptionForm() {
         });
 
     });
+}
+
+async function doRecommendations() {
+
+  let url = window.location.pathname.slice(0,-1);
+  let recommendationReq = await fetch('/api/get-recommendations?path=' + encodeURIComponent(url));
+  let recommendations = await recommendationReq.json();
+
+  console.log(`${recommendations.length} recommendations found`);
+
+  if(recommendations.length === 0) return;
+
+  let formatter = new Intl.DateTimeFormat('en-us', {
+    dateStyle:'long'
+  });
+
+  let reco = `
+		<div class="author-box">
+			<div class="author-info">
+				<h3>Related Content</h3>
+        <ul>
+  `;
+
+  recommendations.forEach(r => {
+    reco += `
+      <li><a href="${r.url}">${r.title} (${formatter.format(new Date(r.date))})</a></li>
+    `;
+  });
+
+  reco += `
+      </ul>
+    </div>
+  </div>`;
+
+  document.querySelector('div.author-box').insertAdjacentHTML('afterend',reco);
 }
