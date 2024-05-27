@@ -12,7 +12,6 @@ export default async (req, context) => {
   let path = 'https://www.raymondcamden.com' + params.get('path');
   
   console.log('query',path);
-
   const recommendationStore = getStore('recommendations');
 
   let recos = await recommendationStore.get(path, { type:'json'});
@@ -48,6 +47,7 @@ export default async (req, context) => {
   });
 
   let results = await resp.json();
+  console.log(results);
   if(results.status && results.status === 404) return Response.json([]);
   //console.log(results);
   let recommendations = results.results[0].hits.map(h => {
