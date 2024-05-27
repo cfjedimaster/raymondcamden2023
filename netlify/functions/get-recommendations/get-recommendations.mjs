@@ -11,17 +11,17 @@ export default async (req, context) => {
   if(!params.get('path')) return new Response("No path!");
   let path = 'https://www.raymondcamden.com' + params.get('path');
   
-  //console.log('query',path);
+  console.log('query',path);
 
   const recommendationStore = getStore('recommendations');
 
   let recos = await recommendationStore.get(path, { type:'json'});
   if(recos) {
     let diff = (new Date() - new Date(recos.cached)) / (1000 * 60);
-    //console.log('diff in ms', diff);
+    console.log('diff in ms', diff);
     if(diff < CACHE_MAX) return Response.json(recos.recommendations);
   }
-  //console.log('Not in cache, or expired');
+  console.log('Not in cache, or expired');
 
   let body = { 
     "requests":[
@@ -57,7 +57,7 @@ export default async (req, context) => {
       "title":h.title
     }
   });
-  //console.log(`for ${path} found ${recommendations.length} recommendations`);
+  console.log(`for ${path} found ${recommendations.length} recommendations`);
   await recommendationStore.setJSON(path, { recommendations, cached: new Date() });
 
   return Response.json(recommendations);
