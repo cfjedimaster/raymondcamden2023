@@ -312,7 +312,9 @@ function doSubscriptionForm() {
 
 async function doRecommendations() {
 
-  let url = window.location.pathname.slice(0,-1);
+  //let url = window.location.pathname.slice(0,-1);
+  let url = window.location.pathname;
+  if(url.slice(-1) === '/') url = url.slice(0,-1);
   let recommendationReq = await fetch('/api/get-recommendations?path=' + encodeURIComponent(url));
   let recommendations = await recommendationReq.json();
 
