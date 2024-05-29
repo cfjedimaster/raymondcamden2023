@@ -9,6 +9,8 @@ permalink: /2023/03/14/progressively-enhancing-a-table-with-a-web-component
 description: Building a web component wrapper to add table sorting.
 ---
 
+**Edited May 29, 2024: I discovered a bug in my implementation, described [here](https://www.raymondcamden.com/2024/05/29/update-to-my-table-sorting-web-component), and I edited the text below to include the correction. Sorry!** 
+
 Back nearly a year ago (holy smokes time goes fast), one of my first articles about web components involved building a component to create a paginated/sorted table: [Building Table Sorting and Pagination in a Web Component](https://www.raymondcamden.com/2022/05/23/building-table-sorting-and-pagination-in-a-web-component). In that example, the component looked like so in your HTML:
 
 ```html
@@ -170,8 +172,8 @@ sortCol(e,i) {
 	let sortToggle = 1;
 	if(this.lastSort === i) {
 		this.sortAsc = !this.sortAsc;
-		if(!this.sortDir) sortToggle = -1;
-	}
+		if(!this.sortAsc) sortToggle = -1;
+	} else this.sortAsc = true;
 
 	this.lastSort = i;
 	
@@ -282,7 +284,7 @@ rows.forEach(r => {
 
 And that's it. You can test that version below:
 
-<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-slug-hash="OJovJee" data-editable="true" data-user="cfjedimaster" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-slug-hash="OJovJee" data-editable="true" data-user="cfjedimaster" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;margin-bottom:15px;">
   <span>See the Pen <a href="https://codepen.io/cfjedimaster/pen/OJovJee">
   PE Table for Sorting (2)</a> by Raymond Camden (<a href="https://codepen.io/cfjedimaster">@cfjedimaster</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
