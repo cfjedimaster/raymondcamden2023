@@ -3,7 +3,8 @@ import { getStore } from "@netlify/blobs";
 let algCredentials = { appId: process.env.ALG_APP_ID, apiKey: process.env.ALG_API_KEY, indexName: 'raymondcamden' };
 
 // difference in minutes, one day basically
-let CACHE_MAX = 24 * 60 * 60 * 1000;
+// changed to 12 hours as im seeing things not picking up when they should
+let CACHE_MAX = 12 * 60 * 60 * 1000;
 
 export default async (req, context) => {
 
@@ -11,16 +12,20 @@ export default async (req, context) => {
   if(!params.get('path')) return new Response("No path!");
   let path = 'https://www.raymondcamden.com' + params.get('path');
   
-  //console.log('query',path);
   const recommendationStore = getStore('recommendations');
 
   let recos = await recommendationStore.get(path, { type:'json'});
-  if(recos) {
+
+  // bypass locally and never cache
+  let bypass = false;
+  console.log('node_env', process.env.NODE_ENV);
+  if(!process.env.NODE_ENV) bypass = true;
+
+  if(recos && !bypass) {
     let diff = (new Date() - new Date(recos.cached)) / (1000 * 60);
-    console.log('diff in ms', diff);
     if(diff < CACHE_MAX) return Response.json(recos.recommendations);
   }
-  //console.log('Not in cache, or expired');
+  console.log('Not in cache, or expired');
 
   let body = { 
     "requests":[
@@ -48,7 +53,7 @@ export default async (req, context) => {
 
   let results = await resp.json();
   if(results.status && results.status === 404) return Response.json([]);
-  //console.log(results);
+  console.log(results.results[0].hits);
   let recommendations = results.results[0].hits.map(h => {
     return {
       "date":h.date,
@@ -56,7 +61,7 @@ export default async (req, context) => {
       "title":h.title
     }
   });
-  //console.log(`for ${path} found ${recommendations.length} recommendations`);
+  console.log(`for ${path} found ${recommendations.length} recommendations`);
   await recommendationStore.setJSON(path, { recommendations, cached: new Date() });
 
   return Response.json(recommendations);
