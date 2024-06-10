@@ -18,8 +18,8 @@ export default async (req, context) => {
 
   // bypass locally and never cache
   let bypass = false;
-  console.log('node_env', process.env.NODE_ENV);
-  if(!process.env.NODE_ENV) bypass = true;
+  // going to add a query string hack to force load, laster
+  //if(!process.env.NODE_ENV) bypass = true;
 
   if(recos && !bypass) {
     let diff = (new Date() - new Date(recos.cached)) / (1000 * 60);
