@@ -9,12 +9,12 @@ permalink: /2024/06/11/using-json-schema-with-google-gemini
 description: How JSON Schema helps shape GenAI results with Google Gemini.
 ---
 
-Back about a month ago I wrote up a post on how to generate JSON results using [Google Gemini](https://gemini.google.com/), ["JSON Results with Google Gemini Generative AI API Calls"](https://www.raymondcamden.com/2024/04/17/json-results-with-google-gemini-generative-ai-api-calls). While you should read that post first, the process basically boiled down to:
+Back about a month ago, I wrote up a post on how to generate JSON results using [Google Gemini](https://gemini.google.com/), ["JSON Results with Google Gemini Generative AI API Calls"](https://www.raymondcamden.com/2024/04/17/json-results-with-google-gemini-generative-ai-api-calls). While you should read that post first, the process basically boiled down to:
 
 * Setting the response type of the result to JSON. Without this, Gemini will return JSON but encoded in Markdown.
 * Using a System Instruction to give directions on the "shape" of the JSON, i.e., use this key and that key.
 
-While these techniques work well, recently yet another feature was added that makes this even better, JSON schema support. JSON Schema is an abstract way to define the shape of JSON and can be really useful in validation. The [website](https://json-schema.org/) provides examples and documentation of how to build your schema. It can be used to define the shape of JSON results as well as signify property types and what is required versus what is optional. 
+While these techniques work well, recently yet another feature was added that makes this even better, JSON schema support. JSON Schema is an abstract way to define the shape of JSON and can be really useful in validation. The [website](https://json-schema.org/) provides examples and documentation of how to build your schema. It can be used to define the shape of JSON results as well as signify property types and what is required versus what is optional. Note that this feature is *not* available in Flash models, only Pro.
 
 It can be somewhat gnarly. For example, here's the schema that defines the JSON results from the [Adobe PDF Extract API](https://developer.adobe.com/document-services/apis/pdf-extract/): <https://developer.adobe.com/document-services/docs/extractJSONOutputSchema2.json>
 
