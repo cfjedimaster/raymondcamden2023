@@ -101,7 +101,8 @@ export default async (req, context) => {
 
   let recos = await recommendationStore.get(path, { type:'json'});
   if(recos) {
-    let diff = (new Date() - new Date(recos.cached)) / (1000 * 60);
+    // tweaked on June 12th as I apparently don't know math :\
+    let diff = new Date() - new Date(recos.cached);
     //console.log('diff in ms', diff);
     if(diff < CACHE_MAX) return Response.json(recos.recommendations);
   }
