@@ -22,7 +22,7 @@ export default async (req, context) => {
   //if(!process.env.NODE_ENV) bypass = true;
 
   if(recos && !bypass) {
-    let diff = new Date() - new Date(recos.cached))
+    let diff = new Date() - new Date(recos.cached);
     console.log('path is', path, 'cache value', recos.cached, ' diff was ', diff, ' and max is ', CACHE_MAX);
     if(diff < CACHE_MAX) return Response.json(recos.recommendations);
   }
