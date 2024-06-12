@@ -3,8 +3,8 @@ import { getStore } from "@netlify/blobs";
 let algCredentials = { appId: process.env.ALG_APP_ID, apiKey: process.env.ALG_API_KEY, indexName: 'raymondcamden' };
 
 // difference in minutes, one day basically
-// changed to 12 hours as im seeing things not picking up when they should
-let CACHE_MAX = 12 * 60 * 60 * 1000;
+// changed to 6 hours as im seeing things not picking up when they should
+let CACHE_MAX = 6 * 60 * 60 * 1000;
 
 export default async (req, context) => {
 
@@ -23,6 +23,7 @@ export default async (req, context) => {
 
   if(recos && !bypass) {
     let diff = (new Date() - new Date(recos.cached)) / (1000 * 60);
+    console.log('path is', path, 'cache value', recos.cached, ' diff was ', diff, ' and max is ', CACHE_MAX);
     if(diff < CACHE_MAX) return Response.json(recos.recommendations);
   }
   console.log('Not in cache, or expired');
@@ -53,7 +54,7 @@ export default async (req, context) => {
 
   let results = await resp.json();
   if(results.status && results.status === 404) return Response.json([]);
-  console.log(results.results[0].hits);
+
   let recommendations = results.results[0].hits.map(h => {
     return {
       "date":h.date,
