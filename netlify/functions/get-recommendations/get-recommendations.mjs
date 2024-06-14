@@ -3,8 +3,8 @@ import { getStore } from "@netlify/blobs";
 let algCredentials = { appId: process.env.ALG_APP_ID, apiKey: process.env.ALG_API_KEY, indexName: 'raymondcamden' };
 
 // difference in minutes, one day basically
-// changed to 6 hours as im seeing things not picking up when they should
-let CACHE_MAX = 6 * 60 * 60 * 1000;
+// changed to 12 hours 
+let CACHE_MAX = 12 * 60 * 60 * 1000;
 
 export default async (req, context) => {
 
