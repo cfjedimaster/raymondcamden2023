@@ -52,6 +52,10 @@ select.cattagYear {
             <td>Build Time:</td>
             <td>{{ buildTime }}</td>
         </tr>
+        <tr>
+            <td>Total Email Subscribers:</td>
+            <td>{{ emailCount | number}}</td>
+        </tr>
 	</table>
 
     <h3>Posts Per Week (Last 8 Weeks)</h3>
@@ -126,6 +130,7 @@ select.cattagYear {
 
 Vue.filter('number', s =>  {
   if(!window.Intl) return s;
+  if(!s) return '';
   return new Intl.NumberFormat().format(s);
 });
 
@@ -161,7 +166,8 @@ new Vue({
         postViewsRSS:[],
         catTagYearData:null,
         selectedCatTagYear:null,
-        cattagYears:[]
+        cattagYears:[],
+        emailCount:null
 	},
 	created:async function() {
 
@@ -236,6 +242,8 @@ new Vue({
         }
 
         this.catTagYearData = res.yearCatTagStats;
+
+        this.emailCount = (await (await fetch('/api/get-stats')).json()).buttondownCount;
 
         // new rss thing
         /*
