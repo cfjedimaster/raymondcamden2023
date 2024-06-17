@@ -314,6 +314,11 @@ async function doRecommendations() {
 
   //let url = window.location.pathname.slice(0,-1);
   let url = window.location.pathname;
+  /*
+  In order to stay under Algolia's free tier limits, going to limit
+  recommendations to items in 202*
+  */
+  if(url.indexOf('202') === -1) return; 
   if(url.slice(-1) === '/') url = url.slice(0,-1);
   let recommendationReq = await fetch('/api/get-recommendations?path=' + encodeURIComponent(url));
   let recommendations = await recommendationReq.json();
