@@ -32,16 +32,7 @@ Read our cool PDF <a href="https://documentservices.adobe.com/view-sdk-demo/PDFs
 
 You get:
 
-<pdf-embed url="https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf" width="100%" height="500px"
-		   key="33f07f2305444579a56b088b8ac1929e">
-
-<p>
-Read our cool PDF <a href="https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf">here</a>.
-</p>
-
-</pdf-embed>
-
-<script src="/js/pdf-embed.js" type="module"></script>
+<iframe loading="lazy" src="pdf.html" style="width:100%;height:520px"></iframe>
 
 PDF Embed itself has many different customizations, not all of which are available via the web component, but the best part is that this can be used in a progressively enhanced manner. As you can see in the example above, if the library doesn't load, you still have a way to direct users to your PDF. 
 
