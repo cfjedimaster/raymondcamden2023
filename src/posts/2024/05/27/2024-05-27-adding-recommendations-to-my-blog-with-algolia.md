@@ -157,7 +157,7 @@ From the top, I import what I need and initialize variables and such. The functi
 
 Otherwise, I hit the Algolia REST API. I do a bit of manipulation on the results to make it simpler (date, url, and title), cache it, and then return it. 
 
-For my blog post on [dyanmically creating variables in Postman](https://www.raymondcamden.com/2024/05/22/dynamically-creating-variables-in-postman), here's the result:
+For my blog post on [dynamically creating variables in Postman](https://www.raymondcamden.com/2024/05/22/dynamically-creating-variables-in-postman), here's the result:
 
 ```json
 [
