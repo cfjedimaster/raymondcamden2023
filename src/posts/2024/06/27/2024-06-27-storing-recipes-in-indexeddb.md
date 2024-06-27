@@ -221,3 +221,9 @@ This struck me as kind of janky (not his solution, my implementation), but... lo
 If you want to check out the code, you can do so here: <https://github.com/cfjedimaster/codebr/tree/main/idb3>
 
 You can demo this online here, but remember, the UI/UX is not ideal: <https://cfjedimaster.github.io/codebr/idb3/index.html>
+
+And as promised, here are the live stream sessions. Enjoy.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oUiBvEkNSYU?si=1gAWjfdGB6dMGkWN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;margin:auto;margin-bottom:15px"></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4FSlKrGGb80?si=Dy235cAzz1-x-Alc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;margin:auto;margin-bottom:15px"></iframe>
