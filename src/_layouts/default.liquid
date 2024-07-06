@@ -7,7 +7,7 @@ body_class: home-template
 	<meta charset="utf-8">
     <title>{% if renderData.title %}{{ renderData.title | titlecase | my_xml_escape }}{% elsif title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://img.buymeacoffee.com; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src 'self' https:;font-src https://fonts.gstatic.com; connect-src https: ws://localhost:8888 http://localhost:8888; frame-src https: http://localhost:8888; media-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://img.buymeacoffee.com; script-src 'self' https: 'unsafe-inline' 'unsafe-eval' http{% if isProd %}s{% endif %}://cdn.carbonads.com; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src 'self' https:;font-src https://fonts.gstatic.com; connect-src https: ws://localhost:8888 http://localhost:8888; frame-src https: http://localhost:8888; media-src *">
     <meta name="generator" content="{{ eleventy.generator }}">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />   
@@ -72,10 +72,12 @@ body_class: home-template
 		</div>
 	</div>
 
+    {% comment %}
     {% if layout == "post" %}
     <div class="adaptive" data-ea-publisher="raymondcamdencom" data-ea-type="text" data-ea-style="fixedfooter"></div>
     <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
     {% endif %}
+    {% endcomment %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/js/custom.js"></script>
     <script src="/js/prism.js"></script>

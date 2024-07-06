@@ -7,9 +7,11 @@ const markdownItAnchor = require('markdown-it-anchor');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const htmlmin = require('html-minifier');
 const postGraph = require('@rknightuk/eleventy-plugin-post-graph');
-
 module.exports = function(eleventyConfig) {
 
+	// locally, it is blank, in prod, its development (https://docs.netlify.com/configure-builds/manage-dependencies/#node-js-environment)
+	eleventyConfig.addGlobalData('isProd', process.env.NODE_ENV === 'development');
+	//console.log('isprod',process.env.NODE_ENV === 'development');
 	eleventyConfig.addPassthroughCopy({'src/assets/css/*.css':'css'});
 	eleventyConfig.addPassthroughCopy({'src/assets/js':'js'});
 	eleventyConfig.addPassthroughCopy({'src/assets/images':'images'});
