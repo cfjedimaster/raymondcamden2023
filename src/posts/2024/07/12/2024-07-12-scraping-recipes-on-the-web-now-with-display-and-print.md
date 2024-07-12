@@ -9,7 +9,7 @@ permalink: /2024/07/12/scraping-recipes-on-the-web-now-with-display-and-print
 description: A followup to my previous post showing how to both scrape AND display recipes.
 ---
 
-A few weeks back I wrote up the process of building an API that looks for JSON-LD on a web page containing recipe information, parse it, and return it as pure data. You can (and should before continuing on) that post here: [Scraping Recipes Using Node.js, Pipedream, and JSON-LD](https://www.raymondcamden.com/2024/06/12/scraping-recipes-using-nodejs-pipedream-and-json-ld). When I first shared this, someone (I forget your name, but thank you!) asked the natural follow up question - can we then render this to HTML or PDF? The answer is, of course, I just had to stop being lazy and build a proper web app. I fired up [Glitch](https://glitch.com) and created the following little demo.
+A few weeks back I wrote up the process of building an API that looks for JSON-LD on a web page containing recipe information, parses it, and returns it as pure data. You can (and should before continuing on) find that post here: [Scraping Recipes Using Node.js, Pipedream, and JSON-LD](https://www.raymondcamden.com/2024/06/12/scraping-recipes-using-nodejs-pipedream-and-json-ld). When I first shared this, someone (I forget your name, but thank you!) asked the natural follow-up question - can we then render this to HTML or PDF? The answer is, of course, I just had to stop being lazy and build a proper web app. I fired up [Glitch](https://glitch.com) and created the following little demo.
 
 <p>
 <img src="https://static.raymondcamden.com/images/2024/07/recipe1.jpg" alt="Screenshot of Web App" class="imgborder imgcenter" loading="lazy">
@@ -19,7 +19,7 @@ It isn't the prettiest demo, but it gets the job done - converting a recipe site
 
 On the real site, which is *still* loading crap, clocks in at 6.7MB. Wow. 
 
-So, here's what I did. I began with minimal HTML. Up until a few seconds ago I had a hard-coded form value to make testing easier, but just now I moved it to an HTML comment:
+So, here's what I did. I began with minimal HTML. Up until a few seconds ago, I had a hard-coded form value to make testing easier, but just now I moved it to an HTML comment:
 
 ```html
 <!DOCTYPE html>
