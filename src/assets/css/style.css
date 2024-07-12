@@ -1410,7 +1410,7 @@ a[href$="/rss/"] svg {
 }
 .post-thumbnail img {
   /* ray mod */
-  width: 80%;
+  width: 60%;
   display: block;
   margin: auto;
 }
