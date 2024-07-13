@@ -1,5 +1,5 @@
 const { categories, getPosts } = require('./config/collections/index.js');
-const { extractExcerpt, hasAnyComments, commentInclude, lastToot } = require('./config/shortcodes/index.js');
+const { extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube } = require('./config/shortcodes/index.js');
 const { ageInDays, algExcerpt, catTagList, cssmin, fixcattag, getByCategory, myEscape, my_xml_escape, titlecase, toTitle, postCategories, postTags } = require('./config/filters/index.js');
 
 const markdownIt = require('markdown-it');
@@ -35,6 +35,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode('commentInclude', commentInclude);
 	eleventyConfig.addAsyncShortcode('stoot',require('./config/shortcodes/stoot.js'));
 	eleventyConfig.addAsyncShortcode('lasttoot', lastToot);
+	eleventyConfig.addAsyncShortcode('liteyoutube', liteYouTube);
 
 	eleventyConfig.addFilter('ageInDays', ageInDays);
 	eleventyConfig.addFilter('algExcerpt', algExcerpt);

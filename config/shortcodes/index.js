@@ -90,7 +90,21 @@ const lastToot = async (instance, user) => {
   }
 }
 
+const liteYouTube = id => {
+  return `
+<lite-youtube videoid="${id}" style="background-image: url('https://i.ytimg.com/vi/${id}/hqdefault.jpg');">
+  <a href="https://youtube.com/watch?v=${id}" class="lty-playbtn" title="Play Video">
+    <span class="lyt-visually-hidden">Play Video</span>
+  </a>
+</lite-youtube>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.2/lite-yt-embed.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.2/lite-yt-embed.css" integrity="sha512-utq8YFW0J2abvPCECXM0zfICnIVpbEpW4lI5gl01cdJu+Ct3W6GQMszVITXMtBLJunnaTp6bbzk5pheKX2XuXQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  `;
+};
+
 module.exports = {
-	extractExcerpt, hasAnyComments, commentInclude, lastToot
+	extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube
 };
 
