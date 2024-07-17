@@ -16,9 +16,15 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://gdg.community.dev/events/details/google-gdg-craiova-presents-fnd-conference-2024/">Adding Generative AI to your Workflow with Google Gemini</a><br/>
-F/ND Conference 2024<br/>
-Online, May 18, 2024
+<a href="https://events.geekle.us/javascript/">Customizing the Web Platform with Web Components</a><br/>
+JavaScript Global Summit '24<br/>
+Online, September 24-25, 2024
+</p>
+
+<p>
+<a href="https://cfsummit.adobeevents.com/">Integrating Generative AI in your ColdFusion Application</a><br/>
+ColdFusion Summit 2024<br/>
+Las Vegas, NV, September 30 - October 1, 2024
 </p>
 
 <!--
@@ -32,6 +38,12 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://gdg.community.dev/events/details/google-gdg-craiova-presents-fnd-conference-2024/">Adding Generative AI to your Workflow with Google Gemini</a><br/>
+F/ND Conference 2024<br/>
+Online, May 18, 2024
+</p>
 
 <p>
 <a href="https://carahevents.carahsoft.com/Event/Details/429564-adobe">Customizing the Web Platform with Web Components</a><br/>
