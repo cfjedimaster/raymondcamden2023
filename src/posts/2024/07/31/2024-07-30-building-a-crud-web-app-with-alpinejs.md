@@ -9,7 +9,7 @@ permalink: /2024/07/31/building-a-crud-web-app-with-alpinejs
 description: 
 ---
 
-One of things I try to encourage here is for my readers to reach out with their questions. That rarely happens, but when it does, I try my best to answer as soon as possible. In this case, I got a great question from a reader back in May and then... life happened. Sorry, Nicholas, but hopefully this isn't too late. His question was pretty simple - could I build an example of using [Alpine.js](https://alpinejs.dev/) for a CRUD interface.
+One of the things I try to encourage here is for my readers to reach out with their questions. That rarely happens, but when it does, I try my best to answer as soon as possible. In this case, I got a great question from a reader back in May and then... life happened. Sorry, Nicholas, but hopefully this isn't too late. His question was pretty simple - could I build an example of using [Alpine.js](https://alpinejs.dev/) for a CRUD interface?
 
 For folks who may not know the term, CRUD refers to:
 
@@ -20,9 +20,9 @@ For folks who may not know the term, CRUD refers to:
 
 You've probably seen a hundred interfaces like this. You have a list of content with links to edit one, delete one, and a link to add a new instance of that content. 
 
-When that reader reached out to me, I agreed to take a look at this, with the stipulation that I'd "fake" the server-side calls. My intent is to demonstrate client-side stuff, not boring old server-side code. (I'm kidding. Mostly.) With that in mind, note that I will *not* be discussing the "proxy" JavaScript methods that fake the server logic. You'll be able to see them if you wish, and I separated them from the rest of the code, but the precise implementation of them is really not important. 
+When that reader reached out to me, I agreed to take a look at this, with the stipulation that I'd "fake" the server-side calls. My intent is to demonstrate client-side stuff, not boring old server-side code. (I'm kidding. Mostly.) With that in mind, note that I will *not* be discussing the "proxy" JavaScript methods that fake the server logic. You'll be able to see them if you wish, I separated them from the rest of the code, but the precise implementation of them is really not important. 
 
-Also, this brings up a really important point. When I talk about Alpine, one of things I discuss is where Alpine is most appropriate. Obviously, this is a matter of opinion, but I generally say Alpine is best for progressive enhancement of a page, not for building a web "app". To me, and again, I'm sharing my opinion here, I generally view an "app" as anything that has two or more "views", or distinct UI components to it. 
+Also, this brings up a really important point. When I talk about Alpine, one of the things I discuss is where Alpine is most appropriate. Obviously, this is a matter of opinion, but I generally say Alpine is best for progressive enhancement of a page, not for building a web "app". To me, and again, I'm sharing my opinion here, I generally view an "app" as anything that has two or more "views", or distinct UI components to it. 
 
 CRUD certainly implies two views typically - that list and editing view I mentioned above, but it feels simple enough that I figured Alpine would probably be fine for this, even without building a 'router' or something similar.
 
@@ -70,7 +70,7 @@ First, the HTML:
 </div>
 ```
 
-Notice my app is split between two `template` tags that check for either `listView` or `editView` being true. In the list view, I iterate over my data (cats) in a simple table. Here's the JavaScript, again, minus my server related calls:
+Notice my app is split between two `template` tags that check for either `listView` or `editView` being true. In the list view, I iterate over my data (cats) in a simple table. Here's the JavaScript, again, minus my server-related calls:
 
 ```js
 document.addEventListener('alpine:init', () => {
@@ -107,7 +107,7 @@ You can test this version here:
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-Technically the R in CRUD usually refers to reading one item, at least how I understand it, but in this case I considered it "Read All" and felt like it was a good stopping point. 
+Technically the R in CRUD usually refers to reading one item, at least how I understand it, but in this case, I considered it "Read All" and felt like it was a good stopping point. 
 
 ## Part Two - Deleting Content
 
@@ -227,7 +227,7 @@ Notice I change my `for` loop to use `catOb`, not `cat`. I'll get back to that a
 });
 ```
 
-So, a few things to note here. First, `editCat` makes a call to the server to get the cat record (to be honest, my `getCats` already returns all the data, but in a real world, the 'get all' logic may only return some properties) and then fires off a new method to set the view. I made this a method as it's slightly complex - switching the true/false values for two variables. 
+So, a few things to note here. First, `editCat` makes a call to the server to get the cat record (to be honest, my `getCats` already returns all the data, but in the real world, the 'get all' logic may only return some properties) and then fires off a new method to set the view. I made this a method as it's slightly complex - switching the true/false values for two variables. 
 
 Back in HTML, I've got this code now to render a form:
 
