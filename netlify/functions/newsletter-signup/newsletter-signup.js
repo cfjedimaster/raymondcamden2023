@@ -1,6 +1,3 @@
-const fetch = require('node-fetch');
-
-
 const buttonDownKey = process.env.BUTTONDOWNKEY;
 const apiRoot = `https://api.buttondown.email/v1/subscribers`;
 

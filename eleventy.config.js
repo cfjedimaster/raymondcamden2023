@@ -1,13 +1,18 @@
-const { categories, getPosts } = require('./config/collections/index.js');
-const { extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube } = require('./config/shortcodes/index.js');
-const { ageInDays, algExcerpt, catTagList, cssmin, fixcattag, getByCategory, myEscape, my_xml_escape, titlecase, toTitle, postCategories, postTags } = require('./config/filters/index.js');
+import { categories, getPosts } from './config/collections/index.js';
+import { extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube } from './config/shortcodes/index.js';
+import { ageInDays, algExcerpt, catTagList, cssmin, fixcattag, getByCategory, myEscape, my_xml_escape, titlecase, toTitle } from './config/filters/index.js';
 
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const xmlFiltersPlugin = require('eleventy-xml-plugin');
-const htmlmin = require('html-minifier');
-const postGraph = require('@rknightuk/eleventy-plugin-post-graph');
-module.exports = function(eleventyConfig) {
+import markdownIt from 'markdown-it';
+import markdownItAnchor from 'markdown-it-anchor';
+
+import xmlFiltersPlugin from 'eleventy-xml-plugin';
+import htmlmin from 'html-minifier';
+import postGraph from '@rknightuk/eleventy-plugin-post-graph';
+import stoot from './config/shortcodes/stoot.js';
+
+import ejsPlugin from "@11ty/eleventy-plugin-ejs";
+
+export default function(eleventyConfig) {
 
 	// locally, it is blank, in prod, its development (https://docs.netlify.com/configure-builds/manage-dependencies/#node-js-environment)
 	eleventyConfig.addGlobalData('isProd', process.env.NODE_ENV === 'development');
@@ -33,7 +38,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 	eleventyConfig.addShortcode('hasAnyComments', hasAnyComments);
 	eleventyConfig.addShortcode('commentInclude', commentInclude);
-	eleventyConfig.addAsyncShortcode('stoot',require('./config/shortcodes/stoot.js'));
+	eleventyConfig.addAsyncShortcode('stoot',stoot);
+
 	eleventyConfig.addAsyncShortcode('lasttoot', lastToot);
 	eleventyConfig.addAsyncShortcode('liteyoutube', liteYouTube);
 
@@ -47,8 +53,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter('my_xml_escape', my_xml_escape);
 	eleventyConfig.addFilter('titlecase', titlecase);
 	eleventyConfig.addFilter('toTitle', toTitle);
-	eleventyConfig.addFilter('postCategories', postCategories);
-	eleventyConfig.addFilter('postTags', postTags);
 
 	// Plugins:
 	eleventyConfig.addPlugin(xmlFiltersPlugin);
@@ -95,6 +99,8 @@ module.exports = function(eleventyConfig) {
 
 		return content;
 	});
+
+	eleventyConfig.addPlugin(ejsPlugin);
 
 	return {
 		dir: {

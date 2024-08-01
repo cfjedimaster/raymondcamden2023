@@ -1,7 +1,15 @@
+/*
 let Parser = require('rss-parser');
 let parser = new Parser();
 
 const fs = require('fs');
+*/
+
+import Parser from 'rss-parser';
+let parser = new Parser();
+
+import fs from 'fs';
+
 const excerptMinimumLength = 140;
 const excerptSeparator = '<!--more-->';
 
@@ -104,7 +112,7 @@ const liteYouTube = id => {
   `;
 };
 
-module.exports = {
+export {
 	extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube
 };
 

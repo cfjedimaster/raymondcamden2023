@@ -4,12 +4,18 @@
 // of the `stoot`/`SToot` shortcode I've used in
 // both Hugo and Astro for static content
 // from Mastodon
+/*
 const EleventyFetch = require("@11ty/eleventy-fetch")
 const md5 = require('md5')
 const {
     DateTime
 } = require("luxon")
-module.exports = async (instance, id) => {
+*/
+import EleventyFetch from '@11ty/eleventy-fetch';
+import md5 from 'md5';
+import { DateTime } from 'luxon';
+
+export default async (instance, id) => {
     let stringToRet = ``
     let tootLink, handleInst, mediaMD5, urlToGet, mediaStuff, videoStuff, gifvStuff, cardStuff, pollStuff = ''
     let imageCount, votesCount = 0

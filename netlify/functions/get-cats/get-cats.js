@@ -20,18 +20,15 @@ const cats = [
 {"name":"Delerium", "age":4, "breed":"fat", "gender":"female"}
 ];
 
-exports.handler = async (event, context) => {
-  try {
-    return {
-      statusCode: 200,
-      body: JSON.stringify(cats),
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
-      }
+export default async (req, context) => {
+
+  return new Response(JSON.stringify(cats), {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+      'Content-Type':'application/json'
     }
-  } catch (err) {
-    return { statusCode: 500, body: err.toString() }
-  }
+  });
+
 }

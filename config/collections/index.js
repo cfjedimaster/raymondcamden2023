@@ -27,6 +27,6 @@ const getPosts = collection => {
 };
 
 
-module.exports = {
+export {
 	categories, getPosts
 };

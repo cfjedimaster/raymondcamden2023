@@ -1,9 +1,7 @@
-
 const CLIENT_ID = process.env.UNTAPPD_CLIENT_ID;
 const CLIENT_SECRET = process.env.UNTAPPD_CLIENT_SECRET;
-const fetch = require('node-fetch');
 
-module.exports = async function() {
+export default async function() {
 
     try {
       // short circuit at home to make it quicker...

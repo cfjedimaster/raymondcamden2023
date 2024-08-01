@@ -1,8 +1,7 @@
 const siteId = 'www.raymondcamden.com';
 const token = process.env.NETLIFY_TOKEN;
-const fetch = require('node-fetch');
 
-const handler = async (event) => {
+export default async () => {
   try {
 
     let endpoint = `https://api.netlify.com/api/v1/sites/${siteId}/deploys`;
@@ -26,13 +25,10 @@ const handler = async (event) => {
       screeenshot_url: lastDeploy.screeenshot_url
     };
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify(deploy),
-    }
+    return Response.json(deploy);
+
   } catch (error) {
     return { statusCode: 500, body: error.toString() }
   }
 }
 
-module.exports = { handler }

@@ -1,4 +1,4 @@
-const CleanCSS = require("clean-css");
+import CleanCSS from 'clean-css';
 
 const ageInDays = d => {
 	let date = new Date(d);
@@ -106,32 +106,6 @@ const toTitle = (p, posts) => {
   return titlePostCache[p];
 };
 
-let postCats = [];
-const postCategories = collections => {
-  if(postCats.length > 0) return postCats;
-  let cats = new Set();
-
-  for(let page of collections.posts) {
-    for(let cat of page.data.categories) {
-      cat = cat.toLowerCase();
-      cats.add(cat);
-    }
-  }
-  postCats = Array.from(cats).sort();
-  return postCats;
-};
-
-let postTagsCache = [];
-const postTags = collections => {
-  if(postTagsCache.length > 0) return postTagCache;
-  let tags = [];
-  for(let tag in collections) {
-    if(tag !== 'all' && tag !== 'posts' && tag !== 'categories') tags.push(tag);
-  }
-  postTags = tags.sort();
-  return postTags;
-};
-
 let cssCache = null;
 const cssmin = css => {
   if(!cssCache) {
@@ -140,6 +114,6 @@ const cssmin = css => {
   return cssCache;
 };
 
-module.exports = {
-	ageInDays, algExcerpt, cssmin, fixcattag, getByCategory, myEscape, catTagList, cloudinaryTitleEscape, my_xml_escape, titlecase, toTitle, postCategories
+export {
+	ageInDays, algExcerpt, cssmin, fixcattag, getByCategory, myEscape, catTagList, cloudinaryTitleEscape, my_xml_escape, titlecase, toTitle
 };

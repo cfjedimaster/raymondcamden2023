@@ -1,7 +1,7 @@
-const Parser = require('rss-parser');
+import Parser from 'rss-parser';
 let parser = new Parser();
 
-module.exports = async function() {
+export default async function() {
 
 	// short circuit at home to make it quicker...
 	if(process.env.ELEVENTY_ROOT.includes('/home/ray')) return [];
