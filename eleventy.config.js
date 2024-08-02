@@ -65,15 +65,10 @@ export default function(eleventyConfig) {
 		html: true,
 	}
 
-	// Options for the `markdown-it-anchor` library
-	const markdownItAnchorOptions = {
-		permalink: true, 
-		permalinkSymbol: '#'
-	}
-
 	const markdownLib = markdownIt(markdownItOptions).use(
-		markdownItAnchor,
-		markdownItAnchorOptions
+		markdownItAnchor, {
+			permalink:markdownItAnchor.permalink.headerLink()
+		}
 	);
 
 	eleventyConfig.addPlugin(postGraph, { sort: 'desc' });
