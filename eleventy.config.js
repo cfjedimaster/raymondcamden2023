@@ -13,7 +13,7 @@ import stoot from './config/shortcodes/stoot.js';
 import ejsPlugin from "@11ty/eleventy-plugin-ejs";
 
 export default function(eleventyConfig) {
-
+	
 	// locally, it is blank, in prod, its development (https://docs.netlify.com/configure-builds/manage-dependencies/#node-js-environment)
 	eleventyConfig.addGlobalData('isProd', process.env.NODE_ENV === 'development');
 	//console.log('isprod',process.env.NODE_ENV === 'development');

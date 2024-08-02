@@ -22,6 +22,7 @@ somewhat complete from 2013.
 
 <ul>
 <li><a href="https://frontendmasters.com/blog/reading-from-the-clipboard-in-javascript/">Reading from the Clipboard in JavaScript</a></li>
+<li><a href="https://cloudinary.com/blog/building-infographic-with-cloudinary-and-the-national-park-service-api">Building Infographics With Cloudinary and the National Park Service API</a></li>
 <li><a href="https://cloudinary.com/blog/further-image-optimization-tips-netlify">Further Image Optimization Tips With Netlify</a></li>
 <li><a href="https://cloudinary.com/blog/integrating-cloudinary-image-optimization-netlify-hosting">Integrating Cloudinary Image Optimization With Netlify Hosting</a></li>
 <li><a href="https://cloudinary.com/blog/checking-network-strength-load-better-images-cloudinary">Checking Network Strength to Progressively Load Better Images With Cloudinary</a></li>
