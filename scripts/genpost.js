@@ -1,11 +1,14 @@
 #!/usr/bin/env node
-var fs = require('fs');
+import fs from 'fs';
+
 if(process.argv.length < 3) {
 	console.log('Usage: genpos TITLE [CATEGORIES] [TAGS]');
 	process.exit(1);
 }
 
-var title = process.argv[2];
+let title = process.argv[2];
+let categories;
+let tags;
 
 if(process.argv.length >= 4) { 
 	/*
