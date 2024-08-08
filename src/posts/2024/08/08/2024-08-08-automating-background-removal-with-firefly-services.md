@@ -205,7 +205,7 @@ And that's it. Given this input:
 The output is this:
 
 <p>
-<img src="https://static.raymondcamden.com/images/2024/08/ps1.jpg" alt="Photo of the author with the background removed. Still way skinnier than he is now." class="imgborder imgcenter" loading="lazy">
+<img src="https://static.raymondcamden.com/images/2024/08/ps2.jpg" alt="Photo of the author with the background removed. Still way skinnier than he is now." class="imgborder imgcenter" loading="lazy">
 </p>
 
 If you want the entire script, you can find it here: <https://github.com/cfjedimaster/fireflyapi/blob/main/demos/remove_bg_scale/demo.mjs>
