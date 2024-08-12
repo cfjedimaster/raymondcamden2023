@@ -40,7 +40,7 @@ description: Search this Site
 		<p>
 		<span x-text="idx+1"></span>) <a :href="result.url" @click="track(result.url, result.objectID, idx+1)" x-text="result.title"></a><br/>
 		Published: <span x-text="result.date"></span><br/>
-		Excerpt: <span x-html="result._snippetResult.content.value"></span>
+		Excerpt: <span x-html="result._snippetResult?.content?.value"></span>
 		</p>
 		</template>
 	</template>
@@ -98,6 +98,11 @@ document.addEventListener('alpine:init', () => {
 			if(this.search === '') return;
 			this.searching = true;
 			this.noResults = false;
+
+			let newUrl = new URL(window.location);
+			newUrl.searchParams.set('search', this.search);
+			history.pushState(null, '', newUrl);
+
 			console.log('search for '+this.search);
 			let resultsRaw = await this.index.search(this.search,{
 				attributesToRetrieve:['title', 'url','date'],

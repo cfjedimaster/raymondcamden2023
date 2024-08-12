@@ -27,6 +27,12 @@ ColdFusion Summit 2024<br/>
 Las Vegas, NV, September 30 - October 1, 2024
 </p>
 
+<p>
+<a href="https://www.algolia.com/devcon/">Integrating Algolia Recommend with My Blog</a><br/>
+Algolia DevCon 2024<br/>
+Online, October 2-3rd, 2024
+</p>
+
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->
