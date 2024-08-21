@@ -35,7 +35,7 @@ I decided to focus mainly on actor.json and outbox.json, figuring toots would be
 
 At a high level, the application consists of:
 
-* [Aline.js](https://alpinejs.dev/) to help with the architecture.
+* [Alpine.js](https://alpinejs.dev/) to help with the architecture.
 * [Shoelace](https://shoelace.style/) for visual components
 * [JSZip](https://stuk.github.io/jszip/) for JavaScript parsing of the zip file. Honestly, I didn't *need* this, I could have asked users to unzip first, but I wanted it to be as easy as possible. 
 
