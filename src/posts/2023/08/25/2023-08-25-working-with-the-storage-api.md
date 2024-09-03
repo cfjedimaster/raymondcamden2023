@@ -13,11 +13,11 @@ Earlier this year at WWDC, Apple [announced](https://webkit.org/blog/14205/news-
 
 <div class="smallerQuote">
 <p>
-WebKit has made some big updates to the storage quota policy. Previously, an origin had a starting storage limit of 1 GB. When exceeding the limit, the subsequent storage operation would fail in Home Screen web apps, or the user would see a prompt asking to increase the quota for the origin in Safari. Starting in macOS Sonoma, iOS 17 and iPadOS 17, the quota is calculated based on total disk space without the user’s input. The origin generally gets a much higher limit, and the user isn’t prompted in Safari. To get the estimated value of the current origin quota and usage, you can use the newly supported `navigator.storage.estimate()` method.
+WebKit has made some big updates to the storage quota policy. Previously, an origin had a starting storage limit of 1 GB. When exceeding the limit, the subsequent storage operation would fail in Home Screen web apps, or the user would see a prompt asking to increase the quota for the origin in Safari. Starting in macOS Sonoma, iOS 17 and iPadOS 17, the quota is calculated based on total disk space without the user's input. The origin generally gets a much higher limit, and the user isn't prompted in Safari. To get the estimated value of the current origin quota and usage, you can use the newly supported `navigator.storage.estimate()` method.
 </p>
 
 <p>
-As each origin gets a higher storage limit by default, WebKit will evict data by origin when the total usage of all origins is bigger than a certain value, the “overall quota”, calculated based on total disk space. An origin is exempt from eviction when its storage mode is persistent. To check the storage mode of your origin, you can use navigator.storage.persisted(); to request the mode be changed to persistent, you can use navigator.storage.persist(). Critical bug fixes have been made to ensure the storage mode value is remembered across sessions, and eviction will count on it. <strong>The Storage API is now fully supported.</strong>
+As each origin gets a higher storage limit by default, WebKit will evict data by origin when the total usage of all origins is bigger than a certain value, the "overall quota", calculated based on total disk space. An origin is exempt from eviction when its storage mode is persistent. To check the storage mode of your origin, you can use navigator.storage.persisted(); to request the mode be changed to persistent, you can use navigator.storage.persist(). Critical bug fixes have been made to ensure the storage mode value is remembered across sessions, and eviction will count on it. <strong>The Storage API is now fully supported.</strong>
 </p>
 </div>
 
@@ -27,7 +27,7 @@ Emphasis mine. I've written quite a bit about storage and browsers, but the [Sto
 
 The Storage API breaks down to a few core methods:
 
-* Check for the *type* of persistence: One thing that is possibly a bit confusing is how the browser handles "persistent" data. If you're like me, you hear persistent and assume it means, well, persistent. That's not quite the base. A browser will persist data but also evict it if storage begins to get limited. Think of it like a casual relationship. The data can stick around, but there are no guarantees if things get sticky.
+* Check for the *type* of persistence: One thing that is possibly a bit confusing is how the browser handles "persistent" data. If you're like me, you hear persistent and assume it means, well, persistent. That's not quite right. A browser will persist data but also evict it if storage begins to get limited. Think of it like a casual relationship. The data can stick around, but there are no guarantees if things get sticky.
 
 * Ask to be persisted: Again, this could be confusing, but this is really the ability to ask for "more* persistent persistent data. This means that the browser won't willy nilly delete the data, but rather ask the user if they're cool giving the website more storage. Asking to be persisted is basically asking your girl/boyfriend to get married. 
 
