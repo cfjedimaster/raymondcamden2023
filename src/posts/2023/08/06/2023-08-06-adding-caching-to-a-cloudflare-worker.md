@@ -58,7 +58,7 @@ This all works reasonably well. On my local machine when I fire up the developme
 
 ## Cloudflare KV
 
-Cloudflare Workers come with multiple different things it can integrate with on their system, including [Cloudflare KV], a key/value system with highly performant persistence. As a key/value system it resembles the [Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API) API quite a bit. You can store data by giving it a key and fetch the same thing back with the key. Also like Web Storage, complex values need to be JSON encoded and decoded. 
+Cloudflare Workers come with multiple different things it can integrate with on their system, including [Cloudflare KV](https://developers.cloudflare.com/kv/), a key/value system with highly performant persistence. As a key/value system it resembles the [Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API) API quite a bit. You can store data by giving it a key and fetch the same thing back with the key. Also like Web Storage, complex values need to be JSON encoded and decoded. 
 
 You can, and should, check the [Workers and KV docs](https://developers.cloudflare.com/workers/wrangler/workers-kv/) for how they work together, but let me demonstrate how simple it is to get started.
 
