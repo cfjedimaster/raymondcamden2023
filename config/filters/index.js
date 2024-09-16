@@ -81,6 +81,7 @@ const my_xml_escape = s => {
 
 const titlecase = str => {
   if(!str) return;
+  if(str.toLowerCase() === 'coldfusion') return 'ColdFusion';
   // https://stackoverflow.com/a/196991/52160
   // modified 11/2/2021 to no longer lowercase the rest
   return str.replace(

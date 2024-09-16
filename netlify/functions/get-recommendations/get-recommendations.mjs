@@ -18,7 +18,7 @@ export default async (req, context) => {
 
   // bypass locally and never cache
   let bypass = false;
-  // going to add a query string hack to force load, laster
+  // going to add a query string hack to force load, later
   //if(!process.env.NODE_ENV) bypass = true;
 
   if(recos && !bypass) {
