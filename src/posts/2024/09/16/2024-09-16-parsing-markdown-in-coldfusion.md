@@ -9,7 +9,7 @@ permalink: /2024/09/16/parsing-markdown-in-coldfusion
 description: A quick example of parsing Markdown in ColdFusion.
 ---
 
-Welcome to my third, yes, third, [ColdFusion](https://www.raymondcamden.com/categories/coldfusion) post in 2024. Is it a trend? Who knows. That being said, I'm doing some prep work to update my presentation on Google [Gemini](https://gemini.google.com) in preparation for my talk at Adobe's [ColdFusion Summit](https://cfsummit.adobeevents.com/) later this month, I'm updating my Node.js demos to ColdFusion and ran into an interesting issue - converting Markdown responses from Gemini to HTML. 
+Welcome to my third, yes, third, [ColdFusion](https://www.raymondcamden.com/categories/coldfusion) post in 2024. Is it a trend? Who knows. That being said, I'm doing some prep work to update my presentation on Google [Gemini](https://gemini.google.com) in preparation for my talk at Adobe's [ColdFusion Summit](https://cfsummit.adobeevents.com/) later this month, I'm updating my Node.js demos to ColdFusion and ran into an interesting issue - converting Markdown responses from Gemini to HTML. **Edit: I realized I gave my function at the bottom a dumb name. I updated the code to reflect a better name on 9/18/2024**
 
 My first quick Google searches didn't really mesh well with what I expected, so I asked on the CFML Slack and [James Moberg](https://github.com/JamoCA) pointed out a few options, but suggested I focus on Flexmark (which was backed up by another person on the Slack). 
 
@@ -82,7 +82,7 @@ writeoutput(result);
 Yeah, not the best variable names, but, it worked perfectly well. I took this scratch code and built a simple UDF:
 
 ```js
-function toMarkdown(str) {
+function markdownToHTML(str) {
 
 	var ds = createObject("java", "com.vladsch.flexmark.util.data.MutableDataSet");
 	var ps = createObject("java", "com.vladsch.flexmark.parser.Parser").builder(ds).build();
@@ -113,7 +113,7 @@ This is another paragraph.
 * Beer 
 </cfsavecontent>
 
-<cfoutput>#toMarkdown(test)#</cfoutput>
+<cfoutput>#markdownToHTML(test)#</cfoutput>
 ```
 
 I hope this helps! It will be in my repo for the presentation once I check it in, but let me know if you have any questions. 
