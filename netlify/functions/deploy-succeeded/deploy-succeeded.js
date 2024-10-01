@@ -75,15 +75,10 @@ export default async (req, context) => {
     */
     console.log('NEW BUILD');
     let body = await req.json();
-    console.log('body',body);
-    console.log('context', context);
-    let event = body.event;
-//    let event = JSON.parse(req.body).event;
-    console.log('NEW EVENT', event);
 
     /// HANDLE EMAIL (if sent)
-    if(event && event.body) {
-      let pubData = JSON.parse(event.body).payload;
+    if(body.payload) {
+      let pubData = body.payload;
       let body = `
 Deploy Succeeded for ${pubData.name} (${pubData.url})
 
