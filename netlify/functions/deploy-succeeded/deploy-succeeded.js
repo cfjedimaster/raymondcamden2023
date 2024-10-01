@@ -5,11 +5,12 @@ My code for successful deploys now consists of two main actions. Send me a nicer
 const algCredentials = { appId: process.env.ALG_APP_ID, apiKey: process.env.ALG_API_KEY, indexName: 'raymondcamden' };
 
 const SG_KEY = process.env.SENDGRID;
-const helper = require('sendgrid').mail;
+import { mail as helper } from 'sendgrid';
+//const helper = require('sendgrid').mail;
 
-const fetch = require('node-fetch');
+import { algoliasearch as algoliaSearch }from 'algoliasearch';
 
-const algoliaSearch = require('algoliasearch');
+//const algoliaSearch = require('algoliasearch');
 const algolia = algoliaSearch(algCredentials.appId, algCredentials.apiKey);
 const index = algolia.initIndex(algCredentials.indexName);
 
@@ -71,7 +72,7 @@ export default async (req, context) => {
     console.log('NEW BUILD');
     let event = JSON.parse(req.body).event;
     console.log('NEW EVENT', event);
-    
+
     /// HANDLE EMAIL (if sent)
     if(event && event.body) {
       let pubData = JSON.parse(event.body).payload;
