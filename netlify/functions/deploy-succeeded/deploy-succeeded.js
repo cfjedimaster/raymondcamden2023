@@ -8,11 +8,11 @@ const SG_KEY = process.env.SENDGRID;
 import { mail as helper } from 'sendgrid';
 //const helper = require('sendgrid').mail;
 
-import { algoliasearch as algoliaSearch }from 'algoliasearch';
+import { algoliasearch as algoliaSearch } from 'algoliasearch';
 
 //const algoliaSearch = require('algoliasearch');
 const algolia = algoliaSearch(algCredentials.appId, algCredentials.apiKey);
-const index = algolia.initIndex(algCredentials.indexName);
+//const index = algolia.initIndex(algCredentials.indexName);
 
 export default async (req, context) => {
 
@@ -62,9 +62,13 @@ export default async (req, context) => {
     };
     console.log('Batch data object created to add to Algolia index');
 
-    let batchResult = await index.batch(requests);
-    console.log('Request to batch index fired, not waiting, good luck');
-
+    await algolia.batch({
+      indexName:algCredentials.indexName,
+      batchWriteParams: {
+        requests
+      }
+    });
+    console.log('Request to batch index fired, not waiting, good luck?');
 
     /*
     New logic to get the event body
@@ -98,11 +102,11 @@ Duration:    ${toMinutes(pubData.deploy_time)}
       await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
     }
 
-    return { statusCode: 200, body: 'I\'m done with this shit...' }
+    return new Response('Done');
 
   } catch (err) {
     console.log('error handler for function ran', JSON.stringify(err.message));
-    return { statusCode: 500, body: err.toString() }
+    return new Response('Error', { status: 500 });
   }
 
 }
