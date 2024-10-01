@@ -74,11 +74,11 @@ export default async (req, context) => {
     New logic to get the event body
     */
     console.log('NEW BUILD');
-    let body = await req.json();
+    let event = await req.json();
 
     /// HANDLE EMAIL (if sent)
-    if(body.payload) {
-      let pubData = body.payload;
+    if(event.payload) {
+      let pubData = event.payload;
       let body = `
 Deploy Succeeded for ${pubData.name} (${pubData.url})
 
