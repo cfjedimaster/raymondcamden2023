@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/cfjedimaster/raymondcamden2023#readme",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0-beta.1",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-plugin-ejs": "^1.0.0-alpha.1",
     "@netlify/blobs": "^7.3.0",

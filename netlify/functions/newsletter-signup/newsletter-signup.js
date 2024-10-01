@@ -1,10 +1,13 @@
 const buttonDownKey = process.env.BUTTONDOWNKEY;
 const apiRoot = `https://api.buttondown.email/v1/subscribers`;
 
-const handler = async (event) => {
+export default async (req) => {
+
 	try {
 
-		const email = event.queryStringParameters.email;
+		let params = new URL(req.url).searchParams;
+		let email = params.get('email');
+
 		if (!email) {
 			return {
 				statusCode: 500,
@@ -25,29 +28,18 @@ const handler = async (event) => {
 		let status = resp.status;
 		let result = await resp.json();
 		if(status === 201) {
-			return {
-				headers: {
-					'Content-Type':'application/json'
-				},
-				statusCode: 200, 
-				body: JSON.stringify(result)
-			}
+
+			return Response.json(result);
+
 		} else {
 			console.log(result);
-			return {
-				headers: {
-					'Content-Type':'application/json'
-				},
-				statusCode: 200,
-				body: JSON.stringify(result)
-			};
+			return Response.json(result);
+
 		}
 
-
-
 	} catch (error) {
-		return { statusCode: 500, body: error.toString() }
+		console.log(error);
+		return new Response('Error', { status: 500 });
 	}
-}
+};
 
-module.exports = { handler }

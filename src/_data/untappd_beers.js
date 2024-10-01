@@ -5,7 +5,7 @@ export default async function() {
 
     try {
       // short circuit at home to make it quicker...
-      if(process.env.ELEVENTY_ROOT.includes('/home/ray')) return [];
+      if(process.env.ELEVENTY_ROOT.includes('/raymondcamden2023')) return [];
 
       let resp = await fetch(`https://api.untappd.com/v4/user/checkins/cfjedimaster?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&limit=10`, {
         headers: {
