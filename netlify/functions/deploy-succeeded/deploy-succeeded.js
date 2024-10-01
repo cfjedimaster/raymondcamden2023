@@ -13,7 +13,7 @@ const algoliaSearch = require('algoliasearch');
 const algolia = algoliaSearch(algCredentials.appId, algCredentials.apiKey);
 const index = algolia.initIndex(algCredentials.indexName);
 
-exports.handler = async (event, context) => {
+export default async (req, context) => {
 
 
   try {
@@ -65,6 +65,13 @@ exports.handler = async (event, context) => {
     console.log('Request to batch index fired, not waiting, good luck');
 
 
+    /*
+    New logic to get the event body
+    */
+    console.log('NEW BUILD');
+    let event = JSON.parse(req.body).event;
+    console.log('NEW EVENT', event);
+    
     /// HANDLE EMAIL (if sent)
     if(event && event.body) {
       let pubData = JSON.parse(event.body).payload;
