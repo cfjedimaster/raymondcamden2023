@@ -74,9 +74,10 @@ export default async (req, context) => {
     New logic to get the event body
     */
     console.log('NEW BUILD');
-    console.log('req.body', req.body);
-
-    let event = JSON.parse(req.body).event;
+    let body = await req.json();
+    console.log('body');
+    let event = body.event;
+//    let event = JSON.parse(req.body).event;
     console.log('NEW EVENT', event);
 
     /// HANDLE EMAIL (if sent)
