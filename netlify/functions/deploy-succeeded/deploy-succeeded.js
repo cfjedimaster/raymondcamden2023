@@ -74,6 +74,8 @@ export default async (req, context) => {
     New logic to get the event body
     */
     console.log('NEW BUILD');
+    console.log('req.body', req.body);
+
     let event = JSON.parse(req.body).event;
     console.log('NEW EVENT', event);
 
