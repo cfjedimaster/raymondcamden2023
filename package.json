@@ -24,7 +24,7 @@
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-plugin-ejs": "^1.0.0-alpha.1",
     "@netlify/blobs": "^7.3.0",
-    "algoliasearch": "^4.16.0",
+    "algoliasearch": "^5.7.0",
     "axios": "^1.3.4",
     "clean-css": "^5.3.2",
     "dotenv": "^16.0.3",
