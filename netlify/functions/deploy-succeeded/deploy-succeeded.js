@@ -73,7 +73,6 @@ export default async (req, context) => {
     /*
     New logic to get the event body
     */
-    console.log('NEW BUILD');
     let event = await req.json();
 
     /// HANDLE EMAIL (if sent)
