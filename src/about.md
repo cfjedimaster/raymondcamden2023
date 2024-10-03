@@ -21,6 +21,7 @@ somewhat complete from 2013.
 
 
 <ul>
+<li><a href="https://frontendmasters.com/blog/writing-to-the-clipboard-in-javascript/">Writing to the Clipboard in JavaScript</a></li>
 <li><a href="https://frontendmasters.com/blog/reading-from-the-clipboard-in-javascript/">Reading from the Clipboard in JavaScript</a></li>
 <li><a href="https://cloudinary.com/blog/building-infographic-with-cloudinary-and-the-national-park-service-api">Building Infographics With Cloudinary and the National Park Service API</a></li>
 <li><a href="https://cloudinary.com/blog/further-image-optimization-tips-netlify">Further Image Optimization Tips With Netlify</a></li>
