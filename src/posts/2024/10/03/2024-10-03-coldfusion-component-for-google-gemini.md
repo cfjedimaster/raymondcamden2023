@@ -3,7 +3,7 @@ layout: post
 title: "ColdFusion Component for Google Gemini"
 date: "2024-10-03T18:00:00"
 categories: ["coldfusion"]
-tags: []
+tags: ["generative ai"]
 banner_image: /images/banners/cf_gemini.jpg
 permalink: /2024/10/03/coldfusion-component-for-google-gemini
 description: A note about my open-source ColdFusion component for Google Gemini's GenAI service.
