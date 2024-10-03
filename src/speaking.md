@@ -16,15 +16,9 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://cfsummit.adobeevents.com/">Integrating Generative AI in your ColdFusion Application</a><br/>
-ColdFusion Summit 2024<br/>
-Las Vegas, NV, September 30 - October 1, 2024
-</p>
-
-<p>
-<a href="https://www.algolia.com/devcon/">Integrating Algolia Recommend with My Blog</a><br/>
-Algolia DevCon 2024<br/>
-Online, October 2-3rd, 2024
+<a href="https://apiworld.co/">Automating and Scaling the Creative Process with Adobe Firefly Services</a><br/>
+API World 2024<br/>
+Santa Clara, CA, November 5-7, 2024
 </p>
 
 <!--
@@ -38,6 +32,17 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://cfsummit.adobeevents.com/">Integrating Generative AI in your ColdFusion Application</a><br/>
+ColdFusion Summit 2024<br/>
+Las Vegas, NV, September 30 - October 1, 2024
+</p>
+
+<p>
+<a href="https://www.algolia.com/devcon/">Integrating Algolia Recommend with My Blog</a><br/>
+Algolia DevCon 2024<br/>
+Online, October 2-3rd, 2024
+</p>
 
 <p>
 <a href="https://events.geekle.us/javascript/">Customizing the Web Platform with Web Components</a><br/>
