@@ -11,7 +11,7 @@ description: How I built an AI story creator with Gemini, Firefly, and Acrobat S
 
 A few months ago, I built a little demo that I simply forgot to actually talk about here. A coworker was building something similar and it reminded me to take a look at the code, update it, and actually share it. This is a pretty cool example of integrating multiple different APIs to create a final product, in this case, a short story with pictures. Here's an example:
 
-<iframe loading="lazy" src="pdf.html" style="width:100%;height:720px"></iframe>
+<iframe loading="lazy" src="https://www.raymondcamden.com/2024/10/11/generating-illustrated-stories-with-ai/pdf.html" style="width:100%;height:720px"></iframe>
 
 How was this built? At a high level:
 
