@@ -149,16 +149,16 @@ And with the same custom markers I demonstrated above, I'll use them like so:
 ```js
 let stores = await getStores();
 for(let store of stores) {
-    let marker = greenIcon;
-    if(!store.open) marker = redIcon;
-     L.marker([store.lat, store.lng], {icon:marker}).addTo(map).bindPopup(store.desc);
+	let marker = greenIcon;
+	if(!store.open) marker = redIcon;
+	L.marker([store.lat, store.lng], {icon:marker}).addTo(map).bindPopup(store.desc);
 }
 ```
 
 It is fairly simple, and you can imagine multiple different icons in play based on the data for your locations. Here's the demo:
 
 <p class="codepen" data-height="700" data-theme-id="dark" data-default-tab="result" data-slug-hash="vYoyKoL" data-pen-title="Leaflet with Custom Icons" data-editable="true" data-user="cfjedimaster" style="height: 700px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/cfjedimaster/pen/vYoyKoL">
+ <span>See the Pen <a href="https://codepen.io/cfjedimaster/pen/vYoyKoL">
  Leaflet with Custom Icons</a> by Raymond Camden (<a href="https://codepen.io/cfjedimaster">@cfjedimaster</a>)
  on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
