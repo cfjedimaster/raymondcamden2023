@@ -96,7 +96,7 @@ body_class: post-template
 			<p class="post-share">
 				<span class="post-share-title">Share:</span>
 				<a target="_blank" href="https://threads.net/intent/post?text=%22{{ title | my_xml_escape }}%22%0A{{ site.url | my_xml_escape }}{{ page.url | my_xml_escape }}" rel="noopener">Threads</a>
-				<a target="_blank" href="https://twitter.com/intent/tweet?text={{ title | my_xml_escape }}&amp;url={{ site.url }}{{ page.url }}" rel="noopener">Twitter</a>
+				<a target="_blank"" href="https://bsky.app/intent/compose?text=%22{{ title | my_xml_escape }}%22%0A{{ site.url | my_xml_escape }}{{ page.url | my_xml_escape }}" rel="noopener">Bluesky</a>
 				<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&amp;t={{ title | my_xml_escape }}" rel="noopener">Facebook</a>
 				<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}&amp;title={{title | my_xml_escape}}&amp;source={{site.title | my_xml_escape}}" rel="noopener">LinkedIn</a>
 			</p>
