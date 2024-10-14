@@ -16,3 +16,5 @@ Forgive the somewhat vague title, but I wanted to point folks to a series of art
 * [Handling Paste Events in JavaScript](https://frontendmasters.com/blog/handling-paste-events-in-javascript/)
 
 That last article is an updated version of a [post of mine](https://www.raymondcamden.com/2024/07/03/working-with-pasted-content-in-javascript) from July, but it's got some new material in it so I definitely recommend checking it out. 
+
+<p><i>Header Photo by <a href="https://unsplash.com/@jasonrosewell">Jason Rosewell</a> on Unsplash</i></p>
