@@ -38,7 +38,8 @@ export default async (instance, id) => {
         tootLink = `https://` + instance + `@` + Json.account.acct + `/status/` + id
         handleInst = `@` + Json.account.acct + `@` + instance
     }
-    if (Json.media_attachments.length !== 0) {
+    // Ray mod to add the check for the key first
+    if (Json.media_attachments && Json.media_attachments.length !== 0) {
         // conditional above prohibits images **and** polls, but
         // otherwise I can't frickin' make it not pick some of the
         // **non**-valid stuff below, for some bizarre reason
