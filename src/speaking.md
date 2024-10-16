@@ -21,6 +21,12 @@ API World 2024<br/>
 Santa Clara, CA, November 5-7, 2024
 </p>
 
+<p>
+<a href="https://connect.tech">Intl is Your Superhero</a><br/>
+Connect.Tech 2024<br/>
+Atlanta, GA, November 18-20, 2024
+</p>
+
 <!--
 Nothing planned currently. Invite me to speak at your event! 
 -->

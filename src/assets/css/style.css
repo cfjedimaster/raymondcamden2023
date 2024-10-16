@@ -2675,3 +2675,12 @@ figcaption {
   text-align: center;
   font-style: italic;
 }
+
+a.header-anchor {
+  text-decoration: none;
+  color: #000000;
+}
+
+a.header-anchor:hover {
+  text-decoration: underline;
+}
