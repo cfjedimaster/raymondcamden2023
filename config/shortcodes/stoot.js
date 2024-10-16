@@ -112,7 +112,8 @@ export default async (instance, id) => {
             but gets the job done.
         */
     }
-    if (Json.card !== null) {
+    // Ray mod again - must be getting bad results
+    if (Json.card !== null && Json.card.url !== null) {
         cardStuff = ``;
         cardStuff = cardStuff + `<a href="${Json.card.url}" rel="noopener"><div class="toot-card"><div class="toot-card-image"><img src="${Json.card.image}" alt="Card image from ${instance} toot ${id}" loading="lazy" class="toot-card-image-image" /></div><div class="toot-card-content"><p class="card-title">${Json.card.title}</p><p class="card-description">${Json.card.description}</p></div></div></a>`;
     }
