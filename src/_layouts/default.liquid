@@ -42,10 +42,18 @@ body_class: home-template
     <meta name="og:description" content="{{ site.description }}" />
     {% endif %}
 
+    {% comment %}
+    New support for an OG image on my home page
+    {% endcomment %}
+    {% if page.url == '/' %}
+    <meta name="twitter:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fwww.raymondcamden.com%2F/opengraph" />
+    <meta name="og:image" content="https://v1.opengraph.11ty.dev/https%3A%2F%2Fwww.raymondcamden.com%2F/opengraph" />
+    {% endif %}
     {% if banner_image %}
     <meta name="twitter:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
     <meta name="og:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
     {% endif %}
+
 
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#1d1d1d">
