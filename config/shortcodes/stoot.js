@@ -16,6 +16,11 @@ import md5 from 'md5';
 import { DateTime } from 'luxon';
 
 export default async (instance, id) => {
+    if(id) id = id.trim();
+
+    // new logic - exit when no id
+    if(id === '' ) return '';
+
     let stringToRet = ``
     let tootLink, handleInst, mediaMD5, urlToGet, mediaStuff, videoStuff, gifvStuff, cardStuff, pollStuff = ''
     let imageCount, votesCount = 0
@@ -165,7 +170,6 @@ export default async (instance, id) => {
             </div>
         </blockquote>`
     }
-
 
     return stringToRet
 }
