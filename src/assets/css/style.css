@@ -2651,7 +2651,7 @@ blockquote.toot-blockquote {
   margin-left: 0;
   padding-left: 1.5em;
 	padding-right: 1.5em;
-	padding-bottom: 1em;
+	/* padding-bottom: 1em; */
 	line-height: 1;
 	text-align: left;
   font-family: "Karla", sans-serif;

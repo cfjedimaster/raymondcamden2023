@@ -12,49 +12,123 @@ I built this page to help me actually remember what I've built. For each of the 
 most recent toot at the time I built the site. Just click on the username to follow or see more.
 </p>
 
-{% capture "lasttoot_nps" %}
-{% lasttoot "botsin.space", "npsbot" %}
-{% endcapture %}
-{% stoot "botsin.space", lasttoot_nps %}
+<p>
+I've got a few bots on Bluesky, right now just <a href="https://bsky.app/profile/randomcomicbook.bsky.social">Random Comic Book</a>, but may add more later.
+</p>
 
-{% capture "lasttoot_rac" %}
-{% lasttoot "botsin.space", "randomalbumcover" %}
-{% endcapture %}
-{% stoot "botsin.space", lasttoot_rac %}
 
-{% capture "lasttoot_rcb" %}
-{% lasttoot "botsin.space", "randomcomicbook" %}
-{% endcapture %}
+<template id="tootDisplay">
+	<blockquote class="toot-blockquote">
+		<div class="toot-header">
+			<a class="toot-profile" rel="noopener" target="_blank">
+				<img class="avatar" src="" loading="lazy">
+			</a>
+			<div class="toot-author">
+				<a class="toot-author-name" rel="noopener" target="_blank"></a>
+				<a class="toot-author-handle" rel="noopener" target="_blank"></a>
+			</div>
+		</div>
+		<p class="toot-body"></p>
 
-You can follow Random Comic Book on Bluesky as well: <https://bsky.app/profile/randomcomicbook.bsky.social>
+		<p>
+		<img class="toot-media-img" src="" loading="lazy">
+		</p>
 
-{% stoot "botsin.space", lasttoot_rcb %}
+		<div class="toot-footer">
+			<a id="link" target="_blank" class="toot-date" rel="noopener"></a>
+		</div>
 
-{% capture "lasttoot_sjc" %}
-{% lasttoot "botsin.space", "superjoycat" %}
-{% endcapture %}
+	</blockquote>
+</template>
 
-{% stoot "botsin.space", lasttoot_sjc %}
+<div id="bots">
+</div>
 
-{% capture "lasttoot_fra" %}
-{% lasttoot "botsin.space", "rulesofacquisition" %}
-{% endcapture %}
+<script>
+let BOTS = [
+	'https://botsin.space/@npsbot',
+	'https://botsin.space/@randomalbumcover',
+	'https://botsin.space/@randomcomicbook',
+	'https://botsin.space/@superjoycat',
+	'https://botsin.space/@rulesofacquisition',
+	'https://botsin.space/@tbshoroscope',
+	'https://botsin.space/@thisdayinhistory',
+	'https://botsin.space/@myrandomsuperhero',
+];
 
-{% stoot "botsin.space", lasttoot_fra %}
+let formatter = new Intl.DateTimeFormat('en-US', {
+  dateStyle:'long',
+  timeStyle:'medium'
+});
 
-{% capture "lasttoot_tbs" %}
-{% lasttoot "botsin.space", "tbshoroscope" %}
-{% endcapture %}
+document.addEventListener('DOMContentLoaded', init, false);
+async function init() {
+	
+	let template = document.querySelector('#tootDisplay');
+	let $bots = document.querySelector('#bots');
+	
+	for(let bot of BOTS) {
+		let lastToot = await getLastToot(bot);
+		let clone = template.content.cloneNode(true);
+		clone.querySelector('.toot-author-name').innerText = lastToot.name;
+		clone.querySelector('.toot-author-name').href = bot;
+		clone.querySelector('.toot-author-handle').innerText = lastToot.handle;
 
-{% stoot "botsin.space", lasttoot_tbs %}
+		clone.querySelector('.toot-body').innerHTML = lastToot.description;
+		clone.querySelector('.toot-profile').href = bot;
+		clone.querySelector('img.avatar').src = lastToot.avatar;
+		clone.querySelector('img.avatar').alt = `Mastodon author for ${lastToot.name}`;
+		clone.querySelector('img.avatar').title = `Mastodon author for ${lastToot.name}`;
 
-{% capture "lasttoot_tdh" %}
-{% lasttoot "botsin.space", "thisdayinhistory" %}
-{% endcapture %}
+		if(lastToot.image) {
+			clone.querySelector('img.toot-media-img').src=lastToot.image;
+		}
+		clone.querySelector('.toot-footer a').innerHTML = lastToot.date;
+		clone.querySelector('.toot-footer a').href = lastToot.link;
+		$bots.append(clone);
+	}
 
-{% stoot "botsin.space", lasttoot_tdh %}
+}
 
-{% capture "lasttoot_hero" %}
-{% lasttoot "botsin.space", "myrandomsuperhero" %}
-{% endcapture %}
-{% stoot "botsin.space", lasttoot_hero %}
+async function getLastToot(bot) {
+	console.log(`about to fetch ${bot}`);
+	let rssFeedUrl = bot.replace(/@([a-z])/i, 'users/$1') + '.rss';
+	let feedReq = await fetch(rssFeedUrl);
+	let feedXml = await feedReq.text();
+	let parser = new DOMParser();
+	let doc = parser.parseFromString(feedXml, "application/xml");
+
+	let latestItem = doc.querySelector('item');
+	let toot = {};
+	toot.name = doc.querySelector('title').innerHTML;
+	toot.avatar = doc.querySelector('image url').innerHTML;
+	toot.date = formatter.format(new Date(latestItem.querySelector('pubDate').innerHTML));
+	toot.link = latestItem.querySelector('link').innerHTML;
+	toot.description = unescape(latestItem.querySelector('description').innerHTML);
+
+	// you cant query select on x:y, this works though
+	let media = latestItem.querySelector('[medium="image"]');
+	if(media) {
+		let img = media.getAttribute('url');
+		toot.image = img;
+	}
+
+	// I bet I could do this in one line - don't care though
+	let handleBits = bot.replace('https://','').split('/');
+	toot.handle = `${handleBits[1]}@${handleBits[0]}`;
+	console.log('toot', toot);
+
+	return toot;
+}
+
+function unescape(s) {
+	/*
+	The first quote one was based on me seeing &amp;quote; from ROA account. May update this later.
+	*/
+	return s.replaceAll('&lt;', '<')
+	.replaceAll('&gt;','>')
+	.replaceAll('&amp;quot;', '"')
+	.replaceAll('&quot;', '"')
+  	.replaceAll('&#39;', "'");
+}
+</script>

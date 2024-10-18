@@ -93,7 +93,8 @@ const lastToot = async (instance, user) => {
   try {
     let feed = await parser.parseURL(rssFeedURL);
     return feed.items[0].guid.split('/').pop();
-  } catch {
+  } catch(e) {
+    console.log(`getting last toot for ${user} returned an error`);
     return '';
   }
 }
