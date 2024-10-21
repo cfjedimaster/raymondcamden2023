@@ -16,6 +16,7 @@ most recent toot at the time I built the site. Just click on the username to fol
 I've got a few bots on Bluesky, right now just <a href="https://bsky.app/profile/randomcomicbook.bsky.social">Random Comic Book</a>, but may add more later.
 </p>
 
+<div id="status"></div>
 
 <template id="tootDisplay">
 	<blockquote class="toot-blockquote">
@@ -61,11 +62,15 @@ let formatter = new Intl.DateTimeFormat('en-US', {
   timeStyle:'medium'
 });
 
+
 document.addEventListener('DOMContentLoaded', init, false);
 async function init() {
 	
 	let template = document.querySelector('#tootDisplay');
 	let $bots = document.querySelector('#bots');
+	let $status = document.querySelector('#status');
+
+	$status.innerHTML = '<p><i>Loading bots...</i></p>';
 	
 	for(let bot of BOTS) {
 		let lastToot = await getLastToot(bot);
@@ -87,6 +92,8 @@ async function init() {
 		clone.querySelector('.toot-footer a').href = lastToot.link;
 		$bots.append(clone);
 	}
+
+	$status.innerHTML = '';
 
 }
 
