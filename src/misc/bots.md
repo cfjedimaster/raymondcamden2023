@@ -122,13 +122,8 @@ async function getLastToot(bot) {
 }
 
 function unescape(s) {
-	/*
-	The first quote one was based on me seeing &amp;quote; from ROA account. May update this later.
-	*/
-	return s.replaceAll('&lt;', '<')
-	.replaceAll('&gt;','>')
-	.replaceAll('&amp;quot;', '"')
-	.replaceAll('&quot;', '"')
-  	.replaceAll('&#39;', "'");
+	let d = document.createElement('div');
+	d.innerHTML = s;
+	return d.textContent;
 }
 </script>

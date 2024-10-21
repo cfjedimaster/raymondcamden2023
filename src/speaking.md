@@ -22,6 +22,18 @@ Santa Clara, CA, November 5-7, 2024
 </p>
 
 <p>
+<a href="https://mmcfug.org/">Intl is Your Superhero</a><br/>
+Mid-Michigan ColdFusion Users Group<br/>
+Online, November 12, 2024
+</p>
+
+<p>
+<a href="https://www.meetup.com/automation-advocates/events/304061463">Automating Document Processes with Adobe Acrobat Services</a><br/>
+Automation Advocates<br/>
+Online, November 13, 2024
+</p>
+
+<p>
 <a href="https://connect.tech">Intl is Your Superhero</a><br/>
 Connect.Tech 2024<br/>
 Atlanta, GA, November 18-20, 2024
