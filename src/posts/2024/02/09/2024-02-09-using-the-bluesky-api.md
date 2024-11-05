@@ -13,7 +13,7 @@ Social media has always been... addicting and kinda gross/dangerous/etc, but lat
 
 I find Threads to be really good for news. It works well as a replacement for Twitter for that type of content. Mastodon works really well for technical content. Bluesky is a bit more unusual for me. I've considered dropping it at times, but then I'll see some great content there. I honestly don't know if I'll be using it a year from now, but for now it's still got a place in Firefox. 
 
-All that being said, yesterday an account [posted](https://bsky.app/profile/anonymous.expectus.fyi/post/3kkwo6lkjsd2n) a link to the Bluesky community showcase which then led me to the [core docs](https://www.docs.bsky.app/docs/get-started) and I was really surprised at how simple their API was. Here's their initial example of just connecting:
+All that being said, yesterday an account [posted](https://bsky.app/profile/anonymous.expectus.fyi/post/3kkwo6lkjsd2n) a link to the Bluesky community showcase which then led me to the [core docs](https://docs.bsky.app/docs/get-started) and I was really surprised at how simple their API was. Here's their initial example of just connecting:
 
 ```js
 import { BskyAgent } from '@atproto/api'
@@ -115,7 +115,7 @@ const image = Buffer.from(file);
 const { data } = await agent.uploadBlob(image, { encoding:'image/jpeg'} )
 ```
 
-This was simply enough and is [documented](https://www.docs.bsky.app/docs/tutorials/creating-a-post#images-embeds) well at Bluesky. 
+This was simply enough and is [documented](https://docs.bsky.app/docs/tutorials/creating-a-post#images-embeds) well at Bluesky. 
 
 The next part was a bit weirder. In one of my first tests, I saw that the link to the Marvel record for the comic wasn't being turned into a real link:
 
@@ -123,7 +123,7 @@ The next part was a bit weirder. In one of my first tests, I saw that the link t
 <a href="https://bsky.app/profile/randomcomicbook.bsky.social/post/3kkwwm5cjbl2g"><img src="https://static.raymondcamden.com/images/2024/02/bs1.jpg" alt="Screen shot of posting showing URL not" class="imgborder imgcenter" loading="lazy"></a>
 </p>
 
-Again, the Bluesky [docs](https://www.docs.bsky.app/docs/advanced-guides/post-richtext) discuss this, I just didn't expect it to be an issue. That's where the `RichText` portion comes in.
+Again, the Bluesky [docs](https://docs.bsky.app/docs/advanced-guides/post-richtext) discuss this, I just didn't expect it to be an issue. That's where the `RichText` portion comes in.
 
 ```js
 const rt = new RichText({
