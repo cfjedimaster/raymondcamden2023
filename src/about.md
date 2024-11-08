@@ -21,6 +21,7 @@ somewhat complete from 2013.
 
 
 <ul>
+<li><a href="https://frontendmasters.com/blog/why-alpine-is-the-new-jquery-and-why-that-is-an-awesome-thing/">Why Alpine is the new jQuery and Why that is an Awesome Thing</a></li>
 <li><a href="https://frontendmasters.com/blog/handling-paste-events-in-javascript/">Handling Paste Events in JavaScript</a></li>
 <li><a href="https://frontendmasters.com/blog/writing-to-the-clipboard-in-javascript/">Writing to the Clipboard in JavaScript</a></li>
 <li><a href="https://frontendmasters.com/blog/reading-from-the-clipboard-in-javascript/">Reading from the Clipboard in JavaScript</a></li>
