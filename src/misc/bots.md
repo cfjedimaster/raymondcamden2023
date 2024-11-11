@@ -47,9 +47,9 @@ I've got a few bots on Bluesky, right now just <a href="https://bsky.app/profile
 
 <script>
 let BOTS = [
-	'https://botsin.space/@npsbot',
-	'https://botsin.space/@randomalbumcover',
-	'https://botsin.space/@randomcomicbook',
+	'https://mastodon.social/@npsbot',
+	'https://mastodon.social/@randomalbumcover',
+	'https://mastodon.social/@randomcomicbook',
 	'https://botsin.space/@superjoycat',
 	'https://botsin.space/@rulesofacquisition',
 	'https://botsin.space/@tbshoroscope',
