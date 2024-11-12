@@ -22,6 +22,12 @@ Santa Clara, CA, November 5-7, 2024
 </p>
 
 <p>
+<a href="https://developerevents.adobe.com/events/details/adobe-developer-events-developer-experience-presents-adobe-developers-live-2024/">Customizing the Web Platform with Web Components</a><br/>
+Adobe Developers List<br/>
+Online, November 12, 2024
+</p>
+
+<p>
 <a href="https://mmcfug.org/">Intl is Your Superhero</a><br/>
 Mid-Michigan ColdFusion Users Group<br/>
 Online, November 12, 2024
