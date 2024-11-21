@@ -50,11 +50,11 @@ let BOTS = [
 	'https://mastodon.social/@npsbot',
 	'https://mastodon.social/@randomalbumcover',
 	'https://mastodon.social/@randomcomicbook',
-	'https://botsin.space/@superjoycat',
-	'https://botsin.space/@rulesofacquisition',
-	'https://botsin.space/@tbshoroscope',
-	'https://botsin.space/@thisdayinhistory',
-	'https://botsin.space/@myrandomsuperhero',
+	'https://mastodon.social/@superjoycat',
+	'https://mastodon.social/@rulesofacquisition',
+	'https://mastodon.social/@tbshoroscope',
+	'https://mastodon.social/@thisdayinhistory',
+	'https://mastodon.social/@myrandomsuperhero',
 ];
 
 let formatter = new Intl.DateTimeFormat('en-US', {
