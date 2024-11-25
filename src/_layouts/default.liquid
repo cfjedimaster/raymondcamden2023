@@ -35,11 +35,11 @@ body_class: home-template
     <meta name="og:type" content="blog" />
 
     {% if description %}
-    <meta name="twitter:description" content="{{description | my_xml_escape  }}" />
-    <meta name="og:description" content="{{ description | my_xml_escape }}" />
+    <meta property="twitter:description" content="{{description | my_xml_escape  }}" />
+    <meta property="og:description" content="{{ description | my_xml_escape }}" />
     {% else %}
-    <meta name="twitter:description" content="{{site.description}}" />
-    <meta name="og:description" content="{{ site.description }}" />
+    <meta property="twitter:description" content="{{site.description}}" />
+    <meta property="og:description" content="{{ site.description }}" />
     {% endif %}
 
     {% comment %}
