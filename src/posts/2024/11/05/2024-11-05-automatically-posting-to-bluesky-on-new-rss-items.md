@@ -9,6 +9,10 @@ permalink: /2024/11/05/automatically-posting-to-bluesky-on-new-rss-items
 description: A look at automating posts to Bluesky when new data is posted to a RSS feed.
 ---
 
+<div style="background-color: #c0c0c0; padding: 10px">
+<strong>Edit on November 25, 2024:</strong> So this post turned out a bit more popular than I expected. :) While working with folks in the comments, two things came about. First, folks needed things spelled out a little bit, so with that in mind, I made a quick Youtube video: <a href="https://www.youtube.com/watch?v=_yp9U-QJgOM">https://www.youtube.com/watch?v=_yp9U-QJgOM</a>. Secondly, a user was running into issues with my code, and it turned out, my own meta tags here for <code>og:description</code> and <code>og:image</code> were using <code>name</code> instead of <code>property</code>. This seemed to work ok in most situations, but wasn't proper. So, I've updated the code here, and the GitHub repo for the workflow, to use that. Thanks to @toothless-666 for helping me debug and @benmillett for pointing out various things as well. You can see the full discussion in the comments below. 
+</div>
+
 Hey folks - just a quick warning. This post is kind of a mashup/update of two earlier posts. Back almost two years ago I talked about this process but used Twitter and Mastodon: ["Automatically Posting to Mastodon and Twitter on New RSS Items"](https://www.raymondcamden.com/2022/12/06/automatically-posting-to-mastodon-and-twitter-on-new-rss-items). Earlier this year I first talked about using the Bluesky API, with a very appropriately named post: ["Using the Bluesky API"](https://www.raymondcamden.com/2024/02/09/using-the-bluesky-api). As I said, this post is going to mash up bits from both, and include new things I've not covered before, but for those of you who have been around here for a while, some of this may be repetition. 
 
 For this solution, I'm using [Pipedream](https://pipedream.com). I've [blogged](/tags/pipedream) for years now and love it. Their [free tier](https://pipedream.com/docs/pricing#free-tier) will support what I'm showing below so you should feel free to give it a try. There are *many* alternatives out there, but Pipedream has some great features that I think make it stand out. You'll see that especially in the first step below. But, keep in mind if you've already got a platform you would want to use, as long as you can handle the execution on new RSS items, you could probably just skip to the last step and copy and paste from my code. 
@@ -122,7 +126,7 @@ let card = {
 let req = await fetch(steps.trigger.event.link);
 let html = await req.text();
 let $$ = cheerio.load(html);
-card.description = $$('meta[name="og:description"]').attr('content');
+card.description = $$('meta[property="og:description"]').attr('content');
 ```
 
 By the way, the use of `$$` as a variable is a twist on the Cheerio docs. They use `$`, but Pipedream uses `$` as a variable as well. 
@@ -138,7 +142,7 @@ https://www.raymondcamden.com/2024/11/04/next-code-break-blogging-with-eleventy
 But without the image, it looked kinda bland. This is where things got a tiny bit complicated. The image is easy to get with Cheerio:
 
 ```js
-let image = $$('meta[name="og:image"]').attr('content');
+let image = $$('meta[property="og:image"]').attr('content');
 ```
 
 I then uploaded fetch it as a blob, and uploaded it to Bluesky:
@@ -188,8 +192,8 @@ export default defineComponent({
     let req = await fetch(steps.trigger.event.link);
     let html = await req.text();
     let $$ = cheerio.load(html);
-    card.description = $$('meta[name="og:description"]').attr('content');
-    let image = $$('meta[name="og:image"]').attr('content');
+    card.description = $$('meta[property="og:description"]').attr('content');
+    let image = $$('meta[property="og:image"]').attr('content');
 
     let blob = await fetch(image).then(r => r.blob());
     let { data } = await agent.uploadBlob(blob, { encoding:'image/jpeg'} );
