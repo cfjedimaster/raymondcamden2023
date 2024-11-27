@@ -22,6 +22,12 @@ Nothing planned currently. Invite me to speak at your event!
 <h3>My Past Events</h3>
 
 <p>
+<a href="https://gdg.community.dev/events/details/google-gdg-college-park-presents-devfest-college-park/">Adding Generative AI to your Workflow with Google Gemini</a><br/>
+DevFest College Park<br/>
+Online, December 3, 2024
+</p>
+
+<p>
 <a href="https://www.wearedevelopers.com/events/webdev-ai-day">Adding Generative AI to your Workflow with Google Gemini</a><br/>
 WeAreDevelopers WebDev &amp; AI Day<br/>
 Online, December 10, 2024
