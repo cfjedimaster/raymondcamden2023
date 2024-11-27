@@ -46,7 +46,7 @@ As I'm working with recipes, I defined my schema as such:
 
 This could be fleshed out more, for example, with a duration properly. I also could have attempted to coerce the ingredients into an array of objects containing the name of the ingredient and quantity. As always, take my blog posts as a starting point and if you build on it, let me know!
 
-The next issue I ran into was actually getting the HTML. Gemini can't be told to go fetch a URL, but my code can. I initially attempted to take the HTML and simply append it to the prompt, but this caused issues. So ,I took another approach - simply saving the HTML and uploading it to Gemini for a multimodal prompt. As a reminder, multimodal is just a fancy way of saying "prompt with an associated file or files", and again, I've got a blog post for that to help you: [Using the Gemini File API for Prompts with Media](https://www.raymondcamden.com/2024/05/21/using-the-gemini-file-api-for-prompts-with-media)
+The next issue I ran into was actually getting the HTML. Gemini can't be told to go fetch a URL, but my code can. I initially attempted to take the HTML and simply append it to the prompt, but this caused issues. So, I took another approach - simply saving the HTML and uploading it to Gemini for a multimodal prompt. As a reminder, multimodal is just a fancy way of saying "prompt with an associated file or files", and again, I've got a blog post for that to help you: [Using the Gemini File API for Prompts with Media](https://www.raymondcamden.com/2024/05/21/using-the-gemini-file-api-for-prompts-with-media)
 
 Given a string of HTML, here's a simple implementation:
 
