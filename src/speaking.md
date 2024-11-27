@@ -15,22 +15,28 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 
 <h3>My Next Events</h3>
 
+<!--
+Nothing planned currently. Invite me to speak at your event! 
+-->
+
+<h3>My Past Events</h3>
+
 <p>
-<a href="https://apiworld.co/">Automating and Scaling the Creative Process with Adobe Firefly Services</a><br/>
-API World 2024<br/>
-Santa Clara, CA, November 5-7, 2024
+<a href="https://www.wearedevelopers.com/events/webdev-ai-day">Adding Generative AI to your Workflow with Google Gemini</a><br/>
+WeAreDevelopers WebDev &amp; AI Day<br/>
+Online, December 10, 2024
 </p>
 
 <p>
-<a href="https://developerevents.adobe.com/events/details/adobe-developer-events-developer-experience-presents-adobe-developers-live-2024/">Customizing the Web Platform with Web Components</a><br/>
-Adobe Developers List<br/>
-Online, November 12, 2024
+Here are my past events, the most recent first, in a nice scrollable list no one will probably ever read. ;)
 </p>
 
+<div style="height: 400px; overflow:scroll">
+
 <p>
-<a href="https://mmcfug.org/">Intl is Your Superhero</a><br/>
-Mid-Michigan ColdFusion Users Group<br/>
-Online, November 12, 2024
+<a href="https://connect.tech">Intl is Your Superhero</a><br/>
+Connect.Tech 2024<br/>
+Atlanta, GA, November 18-20, 2024
 </p>
 
 <p>
@@ -40,22 +46,24 @@ Online, November 13, 2024
 </p>
 
 <p>
-<a href="https://connect.tech">Intl is Your Superhero</a><br/>
-Connect.Tech 2024<br/>
-Atlanta, GA, November 18-20, 2024
+<a href="https://mmcfug.org/">Intl is Your Superhero</a><br/>
+Mid-Michigan ColdFusion Users Group<br/>
+Online, November 12, 2024
 </p>
-
-<!--
-Nothing planned currently. Invite me to speak at your event! 
--->
-
-<h3>My Past Events</h3>
 
 <p>
-Here are my past events, the most recent first, in a nice scrollable list no one will probably ever read. ;)
+<a href="https://developerevents.adobe.com/events/details/adobe-developer-events-developer-experience-presents-adobe-developers-live-2024/">Customizing the Web Platform with Web Components</a><br/>
+Adobe Developers List<br/>
+Online, November 12, 2024
 </p>
 
-<div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://apiworld.co/">Automating and Scaling the Creative Process with Adobe Firefly Services</a><br/>
+API World 2024<br/>
+Santa Clara, CA, November 5-7, 2024
+</p>
+
 <p>
 <a href="https://cfsummit.adobeevents.com/">Integrating Generative AI in your ColdFusion Application</a><br/>
 ColdFusion Summit 2024<br/>
