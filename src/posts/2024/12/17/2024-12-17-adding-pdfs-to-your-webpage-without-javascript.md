@@ -9,7 +9,7 @@ permalink: /2024/12/17/adding-pdfs-to-your-webpage-without-javascript
 description: Using the web browser's built in PDF viewer. 
 ---
 
-In my time at Adobe, one of the products I evangelized was the [PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/), a JavaScript library for adding PDFs to a web page. I still recommend this library of course, but I was thinking this morning about how you could get similar results without JavaScript. Remember, you *are* allowed to build a web page and not ship any JavaScript. It's ok, I won't tell.
+**Edited at 4:03PM to add a small note to the end.** In my time at Adobe, one of the products I evangelized was the [PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/), a JavaScript library for adding PDFs to a web page. I still recommend this library of course, but I was thinking this morning about how you could get similar results without JavaScript. Remember, you *are* allowed to build a web page and not ship any JavaScript. It's ok, I won't tell.
 
 Before looking at what I built, some context to why someone would use a library like Adobe's PDF Embed:
 
@@ -136,3 +136,7 @@ You could get more fancy. I could update the browser's URL to specify a particul
 Also note as I said above, the width and height I picked isn't necessarily the best, and the two PDFs used here don't have the same form factor. I'd expect usually you would want to think about that for your list of PDFs.
 
 Pretty simple, right? If you want to grab a copy of the code I used above, you can find it at my repo here: <https://github.com/cfjedimaster/webdemos/tree/master/iframe_pdf>
+
+## One More Note
+
+I added this a few hours after I posted. There's actually a property you can check to see if the browser supports rendering PDFs itself: [`navigator.pdfViewerEnabled`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/pdfViewerEnabled). Once again I'm reminded that I need to make time to read every single page on developer.mozilla.org!
