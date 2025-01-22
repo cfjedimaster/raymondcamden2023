@@ -3,7 +3,7 @@ layout: post
 title: "Turn Your Weather into Poetry with GenAI"
 date: "2025-01-16T18:00:00"
 categories: ["development"]
-tags: ["generative ai", "javascript"]
+tags: ["generative ai", "python"]
 banner_image: /images/banners/cat_weather_poem.jpg
 permalink: /2025/01/16/turn-your-weather-into-poetry-with-genai
 description: Using Google Gemini to turn a perfectly good forecast into poetry.
