@@ -26,19 +26,13 @@ body_class: home-template
     {{ css | cssmin }}
     </style>
     <meta name="description" content="{% if description %}{{ description | my_xml_escape }}{% else %}{{ site.description | my_xml_escape }}{% endif %}">
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{% if title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}" />
-    <meta name="twitter:creator" content="@raymondcamden" />    
-    <meta name="twitter:site" content="@raymondcamden" />    
     <meta name="og:title" content="{% if title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="og:url" content="{{ page.url | prepend: site.url }}" />
     <meta name="og:type" content="blog" />
 
     {% if description %}
-    <meta property="twitter:description" content="{{description | my_xml_escape  }}" />
     <meta property="og:description" content="{{ description | my_xml_escape }}" />
     {% else %}
-    <meta property="twitter:description" content="{{site.description}}" />
     <meta property="og:description" content="{{ site.description }}" />
     {% endif %}
 
@@ -46,11 +40,9 @@ body_class: home-template
     New support for an OG image on my home page
     {% endcomment %}
     {% if page.url == '/' %}
-    <meta property="twitter:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fwww.raymondcamden.com%2F/opengraph" />
     <meta property="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fwww.raymondcamden.com%2F/opengraph" />
     {% endif %}
     {% if banner_image %}
-    <meta property="twitter:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
     <meta property="og:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
     {% endif %}
     <meta name="fediverse:creator" content="@raymondcamden@mastodon.social">
