@@ -13,7 +13,7 @@ most recent toot at the time I built the site. Just click on the username to fol
 </p>
 
 <p>
-I've got a few bots on Bluesky, right now just <a href="https://bsky.app/profile/randomcomicbook.bsky.social">Random Comic Book</a>, but may add more later.
+I've got a few bots on Bluesky, right now just <a href="https://bsky.app/profile/randomcomicbook.bsky.social">Random Comic Book</a> and <a href="https://bsky.app/profile/dragonhoards.bsky.social">Dragon Hoards</a>, but may add more later.
 </p>
 
 <div id="status"></div>
@@ -47,6 +47,7 @@ I've got a few bots on Bluesky, right now just <a href="https://bsky.app/profile
 
 <script>
 let BOTS = [
+	'https://mastodon.social/@dragonhoards',
 	'https://mastodon.social/@npsbot',
 	'https://mastodon.social/@randomalbumcover',
 	'https://mastodon.social/@randomcomicbook',
