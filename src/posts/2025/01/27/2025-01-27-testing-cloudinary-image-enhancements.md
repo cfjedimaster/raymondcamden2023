@@ -3,7 +3,7 @@ layout: post
 title: "Testing Cloudinary Image Enhancements"
 date: "2025-01-27T18:00:00"
 categories: ["development"]
-tags: []
+tags: ["cloudinary"]
 banner_image: /images/banners/cat_csi.jpg
 permalink: /2025/01/27/testing-cloudinary-image-enhancements
 description: A quick look at two Cloudinary techniques for improving images
