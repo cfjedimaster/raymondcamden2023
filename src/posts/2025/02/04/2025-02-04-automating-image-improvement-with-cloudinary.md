@@ -3,7 +3,7 @@ layout: post
 title: "Automating Image Improvement with Cloudinary"
 date: "2025-02-04T18:00:00"
 categories: ["development"]
-tags: [/"python", "cloudinary"]
+tags: ["python", "cloudinary"]
 banner_image: /images/banners/cat_photo_lab.jpg
 permalink: /2025/02/04/automating-image-improvement-with-cloudinary
 description: Using Pipedream and Cloudinary to automate image processing.
