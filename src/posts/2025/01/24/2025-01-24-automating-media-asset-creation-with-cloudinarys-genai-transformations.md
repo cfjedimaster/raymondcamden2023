@@ -3,7 +3,7 @@ layout: post
 title: "Automating Media Asset Creation with Cloudinary's GenAI Transformations"
 date: "2025-01-24T18:00:00"
 categories: ["development"]
-tags: ["generative ai", "python"]
+tags: ["generative ai", "python", "cloudinary"]
 banner_image: /images/banners/cat_cloud1.jpg
 permalink: /2025/01/24/automating-media-asset-creation-with-cloudinarys-genai-transformations
 description: Using Cloudinary's generative AI features to dynamically create media assets.
