@@ -17,7 +17,7 @@ I've been waiting for this to launch for a few days now, and while technically t
 </p>
 {% endcomment %}
 
-To begin, and remember this may not available just yet, take a look at the docs, [Imagen 3 in the Gemini API](https://ai.google.dev/gemini-api/docs/imagen). 
+To begin, and remember this may not available just yet, take a look at the docs, [Imagen 3 in the Gemini API](https://ai.google.dev/gemini-api/docs/imagen). Note that the Python SDK's were updated recently and you should ensure you have the latest. This [guide](https://ai.google.dev/gemini-api/docs/migrate) can help with migrating.
 
 First, let's consider the sample code, that I'm going to modify a bit and I'll explain why in a bit:
 
