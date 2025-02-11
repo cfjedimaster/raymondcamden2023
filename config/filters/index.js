@@ -72,7 +72,7 @@ const my_xml_escape = s => {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&apos;')
-      .replace(/\n/g, '')
+//      .replace(/\n/g, '')
       .replace(/data-src/g,'src');
 
 }
