@@ -16,7 +16,7 @@ export default function(eleventyConfig) {
 	
 	// locally, it is blank, in prod, its development (https://docs.netlify.com/configure-builds/manage-dependencies/#node-js-environment)
 	eleventyConfig.addGlobalData('isProd', process.env.NODE_ENV === 'development');
-	//console.log('isprod',process.env.NODE_ENV === 'development');
+	console.log('isprod',process.env.NODE_ENV === 'development', 'process.env.NODE_ENV', process.env.NODE_ENV);
 	eleventyConfig.addPassthroughCopy({'src/assets/css/*.css':'css'});
 	eleventyConfig.addPassthroughCopy({'src/assets/js':'js'});
 	eleventyConfig.addPassthroughCopy({'src/assets/images':'images'});
