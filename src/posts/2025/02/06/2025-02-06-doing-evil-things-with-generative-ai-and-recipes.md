@@ -83,7 +83,7 @@ And that, my friends, is Mississippi Pot Roast. It might not cure a bad mood, bu
 
 </div>
 
-Beautiful. I could have stopped there, but then my buddy Todd had a suggestion - I should also add a bunch of snarky comments from folks asking for modifications, complainig, and so forth. And for fun, a few random political ones as well. 
+Beautiful. I could have stopped there, but then my buddy Todd had a suggestion - I should also add a bunch of snarky comments from folks asking for modifications, complaining, and so forth. And for fun, a few random political ones as well. 
 
 That sounded great. So I modified my system instruction to include:
 
