@@ -152,6 +152,8 @@ I prefix the path result with my domain, not because I don't remember my website
 <img src="https://static.raymondcamden.com/images/2025/02/search1.jpg" alt="" class="imgborder imgcenter" loading="lazy">
 </p>
 
+In case you're curious, speed was probably just as good as it was in Python, if not better. In my testing, it felt like it took an average of 2-3 seconds per search which is more than fast enough for me.
+
 ## Making it Executable
 
 As the *very* last step I wanted to turn it into a 'SheBang' script, or a script I could run without having to specify the BoxLang CLI. According to the [docs](https://boxlang.ortusbooks.com/getting-started/running-boxlang/cli-scripting#shebang-scripts) for this, I just needed to add:
