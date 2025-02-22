@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "netlify dev -c \"eleventy --serve --quiet\"",
-    "start": "netlify dev -c \"eleventy --serve --quiet\""
+    "start": "netlify dev -c \"eleventy --serve --quiet\"",
+    "serve": "npm run start"
   },
   "repository": {
     "type": "git",
