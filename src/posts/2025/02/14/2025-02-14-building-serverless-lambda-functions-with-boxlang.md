@@ -44,7 +44,7 @@ In your local copy of the repository, find `settings.gradle`, and modify the roo
 rootProject.name='bx-lambda2'
 ```
 
-That name isn't very descriptive, but it works. On the AWS side, my function is `bx-lambda2-stagin`. If you commit this change, this will kick off a new GitHub Action process and in theory, it will work fine. At this point, you can start iterating on your code. In my testing, commits took roughly a minute and a half to deploy to Lambda. You can keep the workflows window open to monitor the progress.
+That name isn't very descriptive, but it works. On the AWS side, my function is `bx-lambda2-staging`. If you commit this change, this will kick off a new GitHub Action process and in theory, it will work fine. At this point, you can start iterating on your code. In my testing, commits took roughly a minute and a half to deploy to Lambda. You can keep the workflows window open to monitor the progress.
 
 <p>
 <img src="https://static.raymondcamden.com/images/2025/02/lam2.jpg" alt="Screenshot from workflows UI on GitHub" class="imgborder imgcenter" loading="lazy">
