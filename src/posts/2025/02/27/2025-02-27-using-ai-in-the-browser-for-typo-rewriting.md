@@ -113,4 +113,6 @@ GenAI really seems to have it in for Depeche Mode and I'm now reconsidering my p
 </p>
 <script async src="https://public.codepenassets.com/embed/index.js"></script>
 
-As always, let me know what you think!
+As always, let me know what you think! The video I mentioned is below:
+
+{% liteyoutube "GV7wPmXKcb4" %}
