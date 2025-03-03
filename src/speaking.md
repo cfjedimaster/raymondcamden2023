@@ -22,6 +22,25 @@ Nothing planned currently. Invite me to speak at your event!
 <h3>My Past Events</h3>
 
 <p>
+<a href="https://www.arcofai.com/">AI in the Browser and Adding Generating AI to Your Workflow</a><br/>
+Arc of AI<br/>
+Austin, TX, March 31-April 3, 2025
+</p>
+
+
+
+<p>
+Here are my past events, the most recent first, in a nice scrollable list no one will probably ever read. ;)
+</p>
+
+<div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://cfe.dev/sessions/jamdev2025-ai-in-browser/">AI in the Browser</a><br/>
+TheJam.dev 2025<br/>
+Online, February 19-20, 2025
+</p>
+
+<p>
 <a href="https://gdg.community.dev/events/details/google-gdg-college-park-presents-devfest-college-park/">Adding Generative AI to your Workflow with Google Gemini</a><br/>
 DevFest College Park<br/>
 Online, December 3, 2024
@@ -32,12 +51,6 @@ Online, December 3, 2024
 WeAreDevelopers WebDev &amp; AI Day<br/>
 Online, December 10, 2024
 </p>
-
-<p>
-Here are my past events, the most recent first, in a nice scrollable list no one will probably ever read. ;)
-</p>
-
-<div style="height: 400px; overflow:scroll">
 
 <p>
 <a href="https://connect.tech">Intl is Your Superhero</a><br/>
