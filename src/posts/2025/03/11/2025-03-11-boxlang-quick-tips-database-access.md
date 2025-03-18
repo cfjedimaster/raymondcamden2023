@@ -9,7 +9,7 @@ permalink: /2025/03/11/boxlang-quick-tips-database-access
 description: A new series of quick tips for BoxLang developers.
 ---
 
-Today I'm kicking off a new blog/video series of quick tips for people interested in [BoxLang](https://boxlang.io.). These 'quick tips' are just that, a look at how BoxLang can simplify working with the JVM and building CLI scripts, web apps, and serverless applications. Each of these posts will include a video along with sample code and help highlight some of the ways BoxLang can be powerful in just a few lines of code. 
+Today I'm kicking off a new blog/video series of quick tips for people interested in [BoxLang](https://boxlang.io). These 'quick tips' are just that, a look at how BoxLang can simplify working with the JVM and building CLI scripts, web apps, and serverless applications. Each of these posts will include a video along with sample code and help highlight some of the ways BoxLang can be powerful in just a few lines of code. 
 
 For my first quick tip, let's talk database access, which by the way was one of the reasons I got into ColdFusion nearly thirty years ago (I didn't want to figure out how to do it in Perl!). Working with databases in BoxLang can be done in a few steps.
 
