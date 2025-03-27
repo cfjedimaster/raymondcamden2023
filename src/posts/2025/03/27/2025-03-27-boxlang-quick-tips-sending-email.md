@@ -189,7 +189,7 @@ bx:mail
 };
 ```
 
-I'd expect most of your code here would involve creating the mail bodies while the actual action of the mail is a few lines, which is what you want I think! 
+I'd expect most of your code here would involve creating the mail bodies while the actual action of the mail is a few lines, which is what you want I think! You can find these demo scripts here: <https://github.com/ortus-boxlang/bx-demos/tree/master/boxlang_quick_tips/mail>
 
 Alright, if this looks interesting you, definitely give [BoxLang](https://boxlang.io) a spin. Our [installation directions](https://boxlang.ortusbooks.com/getting-started/installation) cover all operating systems and you can get up and running quickly. If you've got questions, head over to our [forum](https://community.ortussolutions.com/c/boxlang/42) or join us on [Slack](https://boxteam.ortussolutions.com/)
 
