@@ -9,6 +9,8 @@ permalink: /2024/11/07/adding-translation-with-a-web-component-and-chrome-ai
 description: Using Chrome's new Generative AI features to add translation.
 ---
 
+**Edit on March 25, 2025** As expected, these APIs have changed quite a bit in the past few months. The code in this article is out of date now, *but*, I updated the Glitch shared at the end to work with the newer APIs.
+
 A few days ago, I [blogged](https://www.raymondcamden.com/2024/10/29/using-chrome-ai-for-translation) about using Chrome's built-in generative AI features (which are still *super duper* too early to even consider for production) to add on-device translation capabilities to a web app. It got me thinking, what if we could do translation automatically via a web component? If for some reason it failed, that would be fine as the original text would still be there, but in cases where it *could* work, it would be automatic. Here's what I built.
 
 First, I whipped up a quick HTML demo of the text I'd like translated:
