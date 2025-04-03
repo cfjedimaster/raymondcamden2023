@@ -9,6 +9,10 @@ permalink: /2025/02/27/using-ai-in-the-browser-for-typo-rewriting
 description: Use Chrome's GenAI APIs to help fix typos.
 ---
 
+<div style="background-color: #c0c0c0; padding:5px;margin-top:10px">
+<strong>Update on April 3, 2025:</strong> As expected, Google has continued to evolve and update these APIs, for the better of course, but that means the code I write about here is 100% broken. That's life, eh? I'm not going to edit the text here as if I tried to keep every post up to date it would be a never-ending job. That being said, I plan on blogging on these APIs more and I corrected the CodePen shown at the end with a new version that works correctly. You can see it here: <a href="https://codepen.io/cfjedimaster/pen/ZYEwoJx">https://codepen.io/cfjedimaster/pen/ZYEwoJx</a>
+</div>
+
 Last week I gave a presentation on Chrome's new [built-in AI](https://developer.chrome.com/docs/ai/built-in) support (I'll link the video at the end) and it's gotten me inspired to consider new and different ways these APIs can be used to enhance the user experience. These APIs still aren't quite ready for production use, and it's absolutely possible we may never see these in Safari or Firefox, but the possibility of using them to enhance an application where available is exciting. For today, I want to share an interesting use case that occurred to me a few weeks ago. 
 
 One of the APIs being built is a [translation](https://developer.chrome.com/docs/ai/translator-api) API (along with a [language detection](https://developer.chrome.com/docs/ai/language-detection)) API as well. In general the idea here is to go from one language to another. But what if you don't want to translate, but rather, "repair", some input text.
