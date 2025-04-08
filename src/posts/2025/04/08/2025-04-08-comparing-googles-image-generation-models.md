@@ -200,7 +200,7 @@ And now, Imagen:
 Almost done, promise. Next:
 
 <blockquote>
-a painting of a cat done in the style of money
+a painting of a cat done in the style of monet
 </blockquote>
 
 First, Gemini:
