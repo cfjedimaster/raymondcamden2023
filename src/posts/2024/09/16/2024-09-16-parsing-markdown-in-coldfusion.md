@@ -19,7 +19,7 @@ I was directed to a blog post by, of course, Ben Nadel: ["Using Flexmark 0.32.24
 
 The [Flexmark](https://github.com/vsch/flexmark-java) library is a Java package that looks to be incredibly customizable and conplex. The install instructions expect you to use Maven or another Java tool, but I figured I just needed to get the right jar. This took me a minute to figure out. I ended up Maven at the [latest release](https://mvnrepository.com/artifact/com.vladsch.flexmark/flexmark-all/0.64.8) for the "all" package, which led to the file listing here: <https://repo1.maven.org/maven2/com/vladsch/flexmark/flexmark-all/0.64.8/> 
 
-On this page, I downloaded `flexmark-all-0.64.8.lib.jar`. 
+On this page, I downloaded `flexmark-all-0.64.8-lib.jar`. 
 
 ## Step Two - Load the Jar
 
