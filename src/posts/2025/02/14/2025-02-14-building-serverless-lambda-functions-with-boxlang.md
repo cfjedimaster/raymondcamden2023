@@ -9,7 +9,7 @@ permalink: /2025/02/14/building-serverless-lambda-functions-with-boxlang
 description: Building serverless function swith BoxLang
 ---
 
-** Edit on April 22, 2025: Thanks to Adam E. for pointing out I had the wrong secret name below. It is fixed now. **
+**Edit on April 22, 2025: Thanks to Adam E. for pointing out I had the wrong secret name below. It is fixed now.**
 
 I've been a fan of serverless for quite some time. My introduction to it was OpenWhisk, way back in [2016](https://www.raymondcamden.com/2016/12/23/going-serverless-with-openwhisk). It's been appealing to me for a long time as an easy way to deploy lightweight services quickly. As much as I've been a fan of the technology, I've yet to really embrace Amazon's Lambda product. I've played with it a bit off and on in the past, but it always felt *incredibly* overwhelming. [Netlify Functions](https://www.netlify.com/platform/core/functions/), [Pipedream](https://pipedream.com), and [Cloudflare Workers](https://workers.cloudflare.com/) have been my main tools for serverless just because of how simple they are. That being said, the last few days I've been playing with [BoxLang](https://boxlang.io/) on AWS and thought I'd share my experience. 
 
