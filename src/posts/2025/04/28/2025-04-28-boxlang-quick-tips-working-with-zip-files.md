@@ -134,6 +134,8 @@ Which returns an array of elements for each item in the zip. Here's a snapshot o
 
 Note how you get details including how much the item was compressed. As I said, the component is pretty powerful, so check the [docs](https://boxlang.ortusbooks.com/boxlang-language/reference/components/zip/zip) for the full syntax.
 
+You can find all the demo files for this post here: <https://github.com/ortus-boxlang/bx-demos/tree/master/boxlang_quick_tips/zip>
+
 ## A Quick Note
 
 While working on the video for this post, the BoxTeam and I discovered a small inconsistency with the zip functions versus `directoryList`. The `directoryList` function used file globs while `compress` and `extract` used a regex. It was decided to switch the functions to use globs which is what you see above. You will *not* see that in my video as the change was made right after, and, the change is not in the release version yet, but will be available in 1.0 which is out in a few days. The docs will be updated to reflect this change as well. (That's on me to fix, so, Ray, don't forget.) Anyway, with that out of the way, enjoy the silky smooth sound of my voice!
