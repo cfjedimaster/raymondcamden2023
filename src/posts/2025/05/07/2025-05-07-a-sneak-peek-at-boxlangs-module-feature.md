@@ -78,10 +78,10 @@ I'm not actually doing any logic here, but it shows the event handlers in action
  * Annotations you can use on a BIF:
  * <pre>
  * // The alias of the BIF, defaults to the name of the Class
- * @BoxBIF 'myBifAlias'
- * @BoxBIF [ 'myBifAlias', 'myOtherBifAlias' ]
- * @BoxMember 'string'
- * @BoxMember { 'string' : { name : '', objectArgument : '' }, 'array' : { name : '', objectArgument : '' } }
+ * @BoxBIF( 'myBifAlias' )
+ * @BoxBIF( [ 'myBifAlias', 'myOtherBifAlias' ] )
+ * @BoxMember( 'string' )
+ * @BoxMember( { 'string' : { name : '', objectArgument : '' }, 'array' : { name : '', objectArgument : '' } } )
  * </pre>
  *
  * The runtime injects the following into the `variables` scope:
@@ -155,7 +155,7 @@ import com.apptasticsoftware.rssreader.RssReader;
 class {
 
 	function init() {
-		variables.rssOb = createObject('java', 'com.apptasticsoftware.rssreader.RssReader');
+		variables.rssOb = new RssReader();
 	}
 
     function invoke(urls) {
