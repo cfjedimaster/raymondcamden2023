@@ -68,9 +68,9 @@ I support hasAnyComments and commentInclude. I take the logic of trying to load
 old comment html. I return either the html or a blank string
 */
 function getCommentText(path, old) {
-    path = './_includes/comments'+path+'.inc';
+    path = './src/_includes/comments'+path+'.inc';
     let oldpath = '';
-    if(old) oldpath = './_includes/comments' + old.replace('http://www.raymondcamden.com','') + '.inc';
+    if(old) oldpath = './src/_includes/comments' + old.replace('http://www.raymondcamden.com','') + '.inc';
     if(fs.existsSync(path)) {
       return fs.readFileSync(path,'utf-8');
     } else if(old && fs.existsSync(oldpath)) {
