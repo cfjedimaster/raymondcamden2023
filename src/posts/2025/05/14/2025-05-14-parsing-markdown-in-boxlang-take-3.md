@@ -4,7 +4,7 @@ title: "Parsing Markdown in BoxLang - Take 3"
 date: "2025-05-14T18:00:00"
 categories: ["development"]
 tags: ["boxlang"]
-banner_image: /images/banners/welcome2018.jpg
+banner_image: /images/banners/cat_two_papers.jpg
 permalink: /2025/05/14/parsing-markdown-in-boxlang-take-3
 description: BoxLang now supports Markdown processing via a module.
 ---
