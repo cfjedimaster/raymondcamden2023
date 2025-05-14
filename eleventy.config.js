@@ -1,5 +1,5 @@
 import { categories, getPosts } from './config/collections/index.js';
-import { extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube } from './config/shortcodes/index.js';
+import { extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube, darkGist } from './config/shortcodes/index.js';
 import { ageInDays, algExcerpt, catTagList, cssmin, fixcattag, getByCategory, myEscape, my_xml_escape, titlecase, toTitle } from './config/filters/index.js';
 
 import markdownIt from 'markdown-it';
@@ -41,6 +41,7 @@ export default function(eleventyConfig) {
 
 	eleventyConfig.addAsyncShortcode('lasttoot', lastToot);
 	eleventyConfig.addAsyncShortcode('liteyoutube', liteYouTube);
+	eleventyConfig.addAsyncShortcode('darkgist', darkGist);
 
 	eleventyConfig.addFilter('ageInDays', ageInDays);
 	eleventyConfig.addFilter('algExcerpt', algExcerpt);
