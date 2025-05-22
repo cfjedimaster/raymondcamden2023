@@ -3,7 +3,7 @@ layout: post
 title: "Using Chrome's (Preview) Prompt API for Data Summarization"
 date: "2025-04-10T18:00:00"
 categories: ["development"]
-tags: ["generative ai", "python"]
+tags: ["generative ai", "javascript"]
 banner_image: /images/banners/cat_raincoat.jpg
 permalink: /2025/04/10/using-chromes-preview-prompt-api-for-data-summarization
 description: Using Chrome's built-in AI to summarize data
