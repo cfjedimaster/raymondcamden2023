@@ -13,7 +13,7 @@ As I continue to play with, and really freaking enjoy [Leaflet](https://leafletj
 
 A few weeks back, they shared [ancient shipwrecks](https://docs.google.com/spreadsheets/d/11fk5YeQ4eFOnYSBNpUdHp4TP42gJ7wY5/edit?gid=970169931#gid=970169931) covering the years from 1500 BC to 1500 AD. I know, that's a bit random, but I thought it was kinda cool. The dataset covers near two thousand unique shipwrecks and includes information, at times, about the cargo that was being carried. I thought this would be fun to map, and here's how I did it.
 
-## Working with CVS
+## Working with CSV
 
 Disregarding the map, the first thing I needed to do was parse the CSV. I turned to a solution I've used many times in the past, [Papa Parse](https://www.papaparse.com/). Papa Parse is a JavaScript library for - wait for it - parsing CSV files. It's worked perfectly for me in the past, and did so mostly this time, with one small issue. 
 
