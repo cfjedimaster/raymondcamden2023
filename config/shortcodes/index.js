@@ -125,7 +125,13 @@ const darkGist = u => {
   `;
 };
 
+const callout = c => {
+  return `
+  <div style="color: #664d03; background-color: #fff3cd; border-color: #ffecb5; padding: 1rem 1rem; margin-bottom: 1rem; border: 1px solid transparent; border-radius: .25rem">${c.trim()}</div>
+  `
+};
+
 export {
-	extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube, darkGist
+	extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube, darkGist, callout
 };
 
