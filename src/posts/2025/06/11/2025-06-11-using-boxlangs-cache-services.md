@@ -85,8 +85,8 @@ So yeah - you've got multiple options here. You can test this out yourself below
 
 <iframe
         allow="fullscreen" 
-        width="600"
-        height="400" 
+        width="100%"
+        height="600" 
         src="https://try.boxlang.io/editor/index.bxm?ro=false&code=eJx1j08LgjAYh%2B%2F7FC942IRQcLfEIKRzQXToOOZbCXPKNvvz7ZuKmoGngXv8Pc%2BqTy7kAyED2Z0sTAmphm%2BRRceoEtZdLBZ0A7p%2BsbADerTw%2F4zkfUHOSFTeTgYtasckZDtoTKmd0ozmw8JTqBa3EMiA9sNxDHtduwcawLeoGoWEjLPJ0nc0519p4vtY2DkMutboKXZSzjt92%2BCG0kIw3fiKvuGKDsRfxwjxtWdzGka1OSiLbNXNFz7ufekX%2BnN8Yg%3D%3D">
     </iframe>
 
