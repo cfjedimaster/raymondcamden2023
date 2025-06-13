@@ -9,9 +9,9 @@ permalink: /2025/06/11/using-boxlangs-cache-services
 description: A look at BoxLang's incredibly complex and powerful caching service.
 ---
 
-Recently I've been looking at BoxLang's [Caching](https://boxlang.ortusbooks.com/boxlang-framework/caching) service, mostly because the docs were updated which made it easier to dig into it. ;) My usual expectation for a caching service is typically a key/value system with APIs to get and set and hopefully a simple way to handle expiration. So for example, I can idealy store a cache value *and* an expiration values at the same time, and if I fetch it later and it's expired, I get a nice null value back. As I said, that's the 'baseline' for what I expect, so I was kind of blown away, and a bit overwhelmed honestly, with what you can do on the [BoxLang](https://boxlang.io) platform. At a high level, here's some of the details:
+Recently I've been looking at BoxLang's [Caching](https://boxlang.ortusbooks.com/boxlang-framework/caching) service, mostly because the docs were updated which made it easier to dig into it. ;) My usual expectation for a caching service is typically a key/value system with APIs to get and set and hopefully a simple way to handle expiration. So for example, I can ideally store a cache value *and* an expiration values at the same time, and if I fetch it later and it's expired, I get a nice null value back. As I said, that's the 'baseline' for what I expect, so I was kind of blown away, and a bit overwhelmed honestly, with what you can do on the [BoxLang](https://boxlang.io) platform. At a high level, here's some of the details:
 
-Out of the box (heh, get it, 'box', 'BoxLang', I'm hilarious), you get the ability to get a default cache. But on top of that, you can create your own cache and specify things like eviction policy and default expirations. As an example, if you need a very short lived cached, you can specify that and store values there knowing you'll get that behavior. 
+Out of the box (heh, get it, 'box', 'BoxLang', I'm hilarious), you get the ability to get a default cache. But on top of that, you can create your own cache and specify things like eviction policy and default expirations. As an example, if you need a very short-lived cache, you can specify that and store values there knowing you'll get that behavior. 
 
 You also get the ability to introspect all those caches at the system level. You can get them all, poke inside, and so forth. Caches also have built in stats so you can do your own reporting, monitoring, and so forth. 
 
@@ -28,7 +28,7 @@ Also, since BoxLang gives you 'interceptor' access to low level events, you can 
 
 Finally, one thing that may trip you up a bit is that the caching functions make use of [Attempts](https://boxlang.ortusbooks.com/boxlang-language/syntax/attempts), a flavor of Java's Optional support. I'll be honest, Attempts feel a bit awkward to me and I struggle with it a bit, but I'm reminded of JavaScript's Promise feature which was near incomprehensible to me at first. It just took time. 
 
-Definitely dig into the [Caching docs](https://boxlang.ortusbooks.com/boxlang-framework/caching) for a look at everything possible, but how about some code? These code examples will make use default BoxLang cache, but take a look at the [provider list](https://boxlang.ortusbooks.com/boxlang-framework/caching#providers) for examples of other flavors. 
+Definitely dig into the [Caching docs](https://boxlang.ortusbooks.com/boxlang-framework/caching) for a look at everything possible, but how about some code? These code examples will make use of the default BoxLang cache, but take a look at the [provider list](https://boxlang.ortusbooks.com/boxlang-framework/caching#providers) for examples of other flavors. 
 
 ## Simple Caching
 
