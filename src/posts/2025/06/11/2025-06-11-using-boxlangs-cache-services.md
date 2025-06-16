@@ -183,9 +183,9 @@ class {
 
 All I did was grab the default cache and use `getOrSet` to handle the logic of getting the value from the cache or fetching it from the API. In this particular case, there isn't a huge time savings - the API I'm using is fairly fast. But consider a case where I'm *paying* for API usage - the cache could literally save me money.
 
-Now, this partiular API isn't using any arguments so it's easier to cache, but you ccould use a dynamic cache key based on arguments. I'd be careful with locations as you wouldn't want a geolocation cache that contains thousands of "slightly off" locations. As always, think before you blindly cache! 
+Now, this particular API isn't using any arguments so it's easier to cache, but you ccould use a dynamic cache key based on arguments. I'd be careful with locations as you wouldn't want a geolocation cache that contains thousands of "slightly off" locations. As always, think before you blindly cache! 
 
-## An "Impactical" Example
+## An "Impractical" Example
 
 Ok, this isn't impractical per se, but consider the typical Fibonacci sequence. Generating a result for that is easy enough:
 
@@ -225,7 +225,7 @@ function fibonacci2(k) {
 	}
 
 	if(k < 2) {
-		result = 1;
+		result = k;
 	} else {
 		result = fibonacci2(k-1) + fibonacci2(k-2);
 	}
@@ -240,13 +240,13 @@ dur = getTickCount() - now;
 println('Total time for Cached version: #dur#ms');
 ```
 
-This version takes 26ms. I'm no Phd in Computer Science, but 0.026s < 5.6. I'm pretty sure anyway. You can test this yourself below. (Note that I'm using `clearAll` again for try.boxlang.io to handle multiple runs in that envrionment.)
+This version takes 26ms. I'm no PhD in Computer Science, but 0.026s < 5.6. I'm pretty sure anyway. You can test this yourself below. (Note that I'm using `clearAll` again for try.boxlang.io to handle multiple runs in that environment.)
 
 <iframe
         allow="fullscreen" 
         width="100%"
         height="600" 
-        src="https://try.boxlang.io/editor/index.bxm?ro=false&code=eJydUctOwzAQPMdfsVIOTQRN1JwQgQPKjQNwKB%2BQOptgxbWR7QBVxb%2BzzoMmlAPilGh2Z3Y8Uzw%2BP2zhFrKrnLG6U9wJraAWO61KzkXUxnBkgaijFm4gi8Gg64yCNmfB%2BDvbXW9iuFgAWZyzT8aUfqcbDbqt4G2hO%2BUiGhi0hJ7WC%2B%2BF8KozZ9uwBhLJ2asRykkVrbbalRKc2OM1hMQI93ZFXLY%2FFCV%2FQRLg%2FuvvpCncd9aBQqywglobcOaQ7PSHLFWTCD2REi6xNHdSetYvaWRjHL1yRScmHnmlUd4HNQwTYZ%2Fofei995wgTb%2B9D8kJ1QweK288mPIc%2BV7Sw5TeLP5jv2c76ej6xo8BpcUlPvf7o5Js7IRk54b8TW8nbMPey%2FQu6991CYNyfOp8AP5ebfbfbvuyiiHuNzSW6ljWzdgXUFncGg%3D%3D">
+        src="https://try.boxlang.io/editor/index.bxm?ro=false&code=eJydUctOwzAQPMdfsVIOTQRNRE6IwAHlxgE4hA9InU2x4trIdoCq6r%2BzzoMmlAPilGh2Z3Y8Uzy9PJZwB9l1zljTKe6EVtCIjVYV5yJqYziwQDRRC7eQxWDQdUZBm7Ng%2FJ3trq9iuFgAWZyzI2NKf9CNLbpS8LbQnXIRDQxaQk%2FrhfdCeN2Zs21YA4nk7M0I5aSKVqV2lQQndngDITHCnV0Rl%2B32RcVfkQS4%2F%2Fo7aQoPnXWgEGusodEGnNknG%2F0pK7VNhJ5ICZdYmXspPeuXNLIxjl65phMTj7zSKO%2BDGoaJsM%2F0PvTee06Qpt%2Feh%2BSE2g4ea288mPIc%2BV7Sw5TeLP5Dv2c76ei6L%2BEIKC0u8bnfH5VkYyckOzfkb3o7YRv2XqZ3Wf%2BuSxiU41PnA%2FD3arP%2FdtuXVQxxv6OxVMeybsa%2BAIu13FQ%3D">
     </iframe>
 
 That's it for now. I've just started to dig into this service, so be sure to check the [docs](https://boxlang.ortusbooks.com/boxlang-framework/caching) for a full coverage of all aspects of it, and let me know if you have any questions. (Leave a comment, or join us on [Slack](https://boxteam.ortussolutions.com/) to ask.)
