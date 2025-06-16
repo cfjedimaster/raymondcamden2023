@@ -1,0 +1,51 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - posts
+        - categories
+permalink: "tags/{{ tag | myEscape }}/feed.xml"
+eleventyComputed:
+    title: "{{ tag | titlecase}} ({{ collections[tag] | size }} Posts)"
+    link: "{{site.url}}/tags/{{tag | myEscape}}/feed.xml"
+---
+
+{% assign posts = collections[tag] | reverse %}<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ title | my_xml_escape }}</title>
+    <link href="{{ link }}" rel="self" type="application/atom+xml"></link>
+    <link href="{{ site.url }}/" rel="alternate" type="text/html"></link>
+    <subtitle>{{ site.description | my_xml_escape }}</subtitle>
+
+    <updated>{{ page.date | date_to_xmlschema }}</updated>
+    <author>
+        <name>Raymond Camden</name>
+        <email>raymondcamden@gmail.com</email>
+    </author>
+    <id>{{ link }}</id>
+
+    <generator>Eleventy</generator>
+
+        {% for post in posts limit:10 %}
+            <entry>
+                <id>{{ post.url | prepend: site.url }}</id>
+                <title>{{ post.data.title | my_xml_escape }}</title>
+                <updated>{{ post.date | date_to_xmlschema }}</updated>
+                <link href="{{ post.url | prepend: site.url }}" rel="alternate" type="text/html" title="{{ post.data.title | my_xml_escape }}"/>
+                <content type="html">{% capture content %}{% excerpt post %}{% endcapture %}{{ content | my_xml_escape }}</content>
+                {% for tag in post.data.tags %}
+                <category term="{{ tag | my_xml_escape }}" />
+                {% endfor %}
+                {% for cat in post.data.categories %}
+                <category term="{{ cat | my_xml_escape }}" />
+                {% endfor %}
+                <author>
+                    <name>Raymond Camden</name>
+                    <email>raymondcamden@gmail.com</email>
+                </author>
+            </entry>
+        {% endfor %}
+</feed>
