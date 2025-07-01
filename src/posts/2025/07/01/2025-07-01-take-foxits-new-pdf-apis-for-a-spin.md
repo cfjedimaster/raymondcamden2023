@@ -20,7 +20,7 @@ Our APIs fall into four basic categories:
 * [eSign](https://developer-api.foxit.com/esign/) - not new, but part of the new umbrella, APIs related to electronic signing 
 * [Embed](https://developer-api.foxit.com/pdf-embed/) - PDF embedding library for the web
 
-We're still ironing out a few kinks, but there's going to be some rapid updates to the offerings. You can [sign up](LINK TBD) to get credentials and there's a free tier, not trial, so you can absolutely kick the tires before you commit to buying anything. How about a quick example?
+We're still ironing out a few kinks, but there's going to be some rapid updates to the offerings. You can [sign up](https://app.developer-api.foxit.com/pricing) to get credentials and there's a free tier, not trial, so you can absolutely kick the tires before you commit to buying anything. How about a quick example?
 
 ## Converting to PDF
 
