@@ -335,3 +335,4 @@ To be fair, this version would probably make it a bit harder to include events -
 What makes me most happy about this is that usually when I think about moving logic from the backend to the frontend, my brain goes to JavaScript. I don't consider offloading "logic" to CSS. Now I will! 
 
 I plan on doing some here later this week, but you can grab these samples here: <https://github.com/ortus-boxlang/bx-demos/tree/master/misc/calendar>
+      
