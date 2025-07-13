@@ -11,6 +11,8 @@ description: Upcoming Presentations and stuff!
 
 Hey folks. Next week I've got not one, not two, but three different presentations happening. Here's what I've got going on.
 
+<!--more-->
+
 ## Code Break Episode 29
 
 My next [Code Break episode](https://cfe.dev/talkshows/codebreak-07082025/) will be Tuesday, July 8th at 12PM CST. I'll be doing some playing around with vibe coding, and yes, I still hate that term. But I've had some recent successes, and failures, with it and I thought it would be fun to explore. Whether you are pro, or anti, generating code with AI, I'd love to have you come in and share your feedback. 
