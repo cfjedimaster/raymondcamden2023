@@ -2684,3 +2684,16 @@ a.header-anchor {
 a.header-anchor:hover {
   text-decoration: underline;
 }
+
+@media print {
+
+  div.ea-placement, div.author-box, footer, header.site-header, div.giscus, div.post-thumbnail {
+    display:none;
+  }
+
+  p,div {
+    widows: 4;
+    orphans: 4;
+  }
+
+}
