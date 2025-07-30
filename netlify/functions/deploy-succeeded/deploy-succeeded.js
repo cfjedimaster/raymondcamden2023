@@ -75,7 +75,13 @@ export default async (req, context) => {
     */
     let event = await req.json();
 
+    return new Response('Done');
+
     /// HANDLE EMAIL (if sent)
+    /*
+    sendgrid removed their free tier in summer of 2025 so I'm commenting out this, removed the func, etc
+    May bring back notifications another way
+    
     if(event.payload) {
       let pubData = event.payload;
       let body = `
@@ -97,10 +103,10 @@ Duration:    ${toMinutes(pubData.deploy_time)}
         });
       }
 
-      await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
+      //await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
     }
+    */
 
-    return new Response('Done');
 
   } catch (err) {
     console.log('error handler for function ran', JSON.stringify(err.message));
@@ -115,27 +121,4 @@ function toMinutes(s) {
 	return `${minutes}m ${s%60}s`;
 }
 
-async function sendEmail(body, subject, from, to) {
-  let mailContent = new helper.Content('text/plain', body);
-  let from_email = new helper.Email(from);
-  let to_email = new helper.Email(to);
-  let mail = new helper.Mail(from_email, subject, to_email, mailContent);
-  let sg = require('sendgrid')(SG_KEY);
 
-  let request = sg.emptyRequest({
-    method: 'POST',
-    path: '/v3/mail/send',
-    body: mail.toJSON()
-  });
-
-  return new Promise((resolve, reject) => {
-    sg.API(request, function(error, response) {
-      resolve(true);
-      if(error) {
-        console.log('oh oh error in API');
-        console.log(JSON.stringify(error.response));
-        reject(error.response.body);
-      }
-    });
-  });
-}
