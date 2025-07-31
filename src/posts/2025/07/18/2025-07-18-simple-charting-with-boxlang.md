@@ -3,7 +3,7 @@ layout: post
 title: "Simple Charting with BoxLang"
 date: "2025-07-18T18:00:00"
 categories: ["development"]
-tags: ["charting"]
+tags: ["boxlang"]
 banner_image: /images/banners/cat_charts.jpg
 permalink: /2025/07/18/simple-charting-with-boxlang
 description: Adding client-side charting to a BoxLang webapp
