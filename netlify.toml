@@ -9,3 +9,8 @@
   for = "/sitemap.xml"
   [headers.values]
     content-type="text/xml; charset=UTF-8"
+
+[[headers]]
+  for="/racing_data.json"
+  [headers.values]
+    access-control-allow-origin = "*"   

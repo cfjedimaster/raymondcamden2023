@@ -10,5 +10,9 @@ permalink: /stats/racing.html
 import { race } from "https://cdn.jsdelivr.net/npm/racing-bars";
 
 console.log('wtaf');
-//race("/racing_data.json", "#race", { /* options */ });
+race("/racing_data.json", "#race", { 
+	caption:'Posts per Category per Month',
+	tickDuration:1000,
+	labelsPosition:'outside'
+});
 </script>

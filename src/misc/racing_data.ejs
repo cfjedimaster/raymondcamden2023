@@ -20,14 +20,15 @@ for(post of collections.posts) {
 	for(let cat of post.data.categories) {
 		// do we have a bucket for year/month/cat
 		existingBucket = bucket.findIndex(b => {
-			return b.year === year && b.month === month && b.category === cat;
+			return b.year === year && b.month === month && b.name === cat;
 		});
 		//console.log(`existingBucket for ${year}, ${month}, ${cat} is ${existingBucket}`);
 		if(existingBucket === -1) {
 			bucket.push({
 				year, 
 				month, 
-				category:cat,
+				date:new Date(year,month,1),
+				name:cat,
 				value:0
 			});
 			existingBucket = bucket.length - 1;
