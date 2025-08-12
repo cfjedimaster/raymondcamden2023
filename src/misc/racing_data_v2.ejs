@@ -1,0 +1,67 @@
+---
+permalink: /racing_data_cat.json
+---
+
+<%
+/*
+First, get a list of all categories
+*/
+
+cats = new Map();
+for(post of collections.posts) {
+	for(cat of post.data.categories) cats.set(cat,0);
+}
+
+/*
+now for each month/year combo, we have a set of stats for each category, and each time a post includes the cat, we +1 to it
+*/
+
+bucket = [];
+
+for(post of collections.posts) {
+	// convert date to YYYY-MM-DD
+	date = post.date.toISOString().split('T')[0];
+	// convert to first of month, with timezones it ends up being the 2nd, but I just need it consistent
+	date = new Date(date);
+	date.setDate(1);
+	year = date.getFullYear();
+	month = date.getMonth();
+
+	// first test to see if we have any for the date 
+	existingBucket = bucket.findIndex(b => {
+			return b.year === year && b.month === month;
+	});
+
+	// if we have none, we add X, one bucket per category for the month 
+	if(existingBucket === -1) {
+
+		cats.forEach((v,c) => {
+			bucket.push({
+				year, 
+				month, 
+				date:new Date(year,month,1),
+				name:c,
+				value:0
+			});
+		});
+	}
+
+	// now we look again for a bucket matching cat
+	for(let cat of post.data.categories) {
+
+		existingBucket = bucket.findIndex(b => {
+			return b.year === year && b.month === month && b.name === cat;
+		});
+
+		// this should always match
+		bucket[existingBucket].value++
+
+	}
+	
+	
+
+}
+
+%>
+
+<%- JSON.stringify(bucket) %>

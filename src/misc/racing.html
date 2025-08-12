@@ -5,13 +5,22 @@ templateEngineOverride: false
 permalink: /stats/racing.html
 ---
 
-<div id="race" style="height: 80vh"></div>
+<div id="race" style="height: 80vh; margin-bottom: 50px;"></div>
+<div id="race2" style="height: 80vh"></div>
+
 <script type="module">
 import { race } from "https://cdn.jsdelivr.net/npm/racing-bars";
 
 race("/racing_data.json", "#race", { 
 	caption:'Posts per Category per Month',
-	tickDuration:1000,
+	tickDuration:400,
 	labelsPosition:'outside'
+});
+
+race("/racing_data_cat.json", "#race2", { 
+	caption:'Total Posts per Category',
+	tickDuration:400,
+	labelsPosition:'outside',
+	makeCumulative:true
 });
 </script>

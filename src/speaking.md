@@ -16,10 +16,11 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://www.intothebox.org/">Getting Started with BoxLang</a><br/>
-Into the Box<br/>
-Washington, DC, April 30-May 2, 2025
+<a href="https://apiworld.co/">Document Workflows with Foxit APIs</a><br/>
+API World<br/>
+Santa Clara, cA, September 3-5, 2025
 </p>
+
 
 <!--
 Nothing planned currently. Invite me to speak at your event! 
@@ -32,6 +33,12 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://www.intothebox.org/">Getting Started with BoxLang</a><br/>
+Into the Box<br/>
+Washington, DC, April 30-May 2, 2025
+</p>
+
 <p>
 <a href="https://www.arcofai.com/">AI in the Browser and Adding Generating AI to Your Workflow</a><br/>
 Arc of AI<br/>
