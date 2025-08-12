@@ -12,7 +12,6 @@ eleventyComputed:
     title: "{{ tag | titlecase}} ({{ collections[tag] | size }} Posts)"
     link: "{{site.url}}/tags/{{tag | myEscape}}/feed.xml"
 ---
-
 {% assign posts = collections[tag] | reverse %}<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ title | my_xml_escape }}</title>
