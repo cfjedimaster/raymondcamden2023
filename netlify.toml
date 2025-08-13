@@ -14,3 +14,8 @@
   for="/racing_data.json"
   [headers.values]
     access-control-allow-origin = "*"   
+
+[[headers]]
+  for="/racing_data_cat.json"
+  [headers.values]
+    access-control-allow-origin = "*"   
