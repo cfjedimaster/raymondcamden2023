@@ -4,7 +4,10 @@ My code for successful deploys now consists of two main actions. Send me a nicer
 
 const algCredentials = { appId: process.env.ALG_APP_ID, apiKey: process.env.ALG_API_KEY, indexName: 'raymondcamden' };
 
-const SG_KEY = process.env.SENDGRID;
+//const SG_KEY = process.env.SENDGRID;
+const PB_KEY = process.env.PUSHBULLET_TOKEN;
+const PB_DEVICE = process.env.PUSHBULLET_DEVICE;
+
 import { mail as helper } from 'sendgrid';
 //const helper = require('sendgrid').mail;
 
@@ -75,12 +78,10 @@ export default async (req, context) => {
     */
     let event = await req.json();
 
-    return new Response('Done');
-
     /// HANDLE EMAIL (if sent)
-    /*
-    sendgrid removed their free tier in summer of 2025 so I'm commenting out this, removed the func, etc
-    May bring back notifications another way
+    // modified aug 2025 - now i use pushbullet
+    //sendgrid removed their free tier in summer of 2025 so I'm commenting out this, removed the func, etc
+    //May bring back notifications another way
     
     if(event.payload) {
       let pubData = event.payload;
@@ -104,8 +105,9 @@ Duration:    ${toMinutes(pubData.deploy_time)}
       }
 
       //await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
+      await sendPB(body, 'Netlify Build Succeeded', PB_DEVICE, PB_KEY);
     }
-    */
+    
 
 
   } catch (err) {
@@ -121,4 +123,23 @@ function toMinutes(s) {
 	return `${minutes}m ${s%60}s`;
 }
 
+async function sendPB(body, title, device, key) {
+  let body = {
+    body, 
+    title, 
+    device_iden:device, 
+    type:"note"
+  };
+
+  await fetch('https://api.pushbullet.com/v2/pushes', {
+    method:'POST',
+    headers: {
+      'Access-Token':key
+    }, 
+    body:JSON.stringify(body)
+  });
+
+  return;
+  // um... for now i dont care about the response
+}
 
