@@ -127,7 +127,7 @@ function toMinutes(s) {
 async function sendPB(body, title, device, key) {
 
   let reqbody = {
-    body, 
+    body:'ray1', 
     title, 
     device_iden:device, 
     type:"note"
