@@ -127,7 +127,7 @@ function toMinutes(s) {
 async function sendPB(body, title, device, key) {
 
   let reqbody = {
-    body:'ray1', 
+    body, 
     title, 
     device_iden:device, 
     type:"note"
@@ -136,13 +136,13 @@ async function sendPB(body, title, device, key) {
   let req = await fetch('https://api.pushbullet.com/v2/pushes', {
     method:'POST',
     headers: {
+      'Content-Type':'application/json',
       'Access-Token':key
     }, 
     body:JSON.stringify(reqbody)
   });
 
   let res = await req.json();
-  console.log(res);
   return;
   // um... for now i dont care about the response
 }
