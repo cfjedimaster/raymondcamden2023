@@ -30,6 +30,7 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({'src/assets/apple-touch-icon.png':'apple-touch-icon.png'});
 
 	eleventyConfig.addPassthroughCopy('src/_redirects');
+	eleventyConfig.addPassthroughCopy('src/ads.txt');
 
 	eleventyConfig.addCollection('categories', categories);
 	eleventyConfig.addCollection('posts', getPosts);
