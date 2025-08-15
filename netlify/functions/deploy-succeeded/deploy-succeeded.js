@@ -124,7 +124,7 @@ function toMinutes(s) {
 }
 
 async function sendPB(body, title, device, key) {
-  let body = {
+  let reqbody = {
     body, 
     title, 
     device_iden:device, 
@@ -136,7 +136,7 @@ async function sendPB(body, title, device, key) {
     headers: {
       'Access-Token':key
     }, 
-    body:JSON.stringify(body)
+    body:JSON.stringify(reqbody)
   });
 
   return;
