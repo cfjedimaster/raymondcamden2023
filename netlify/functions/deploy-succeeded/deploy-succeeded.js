@@ -105,6 +105,7 @@ Duration:    ${toMinutes(pubData.deploy_time)}
       }
 
       //await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
+      console.log('testing call to pb', PB_DEVICE, PB_KEY);
       await sendPB(body, 'Netlify Build Succeeded', PB_DEVICE, PB_KEY);
     }
     
