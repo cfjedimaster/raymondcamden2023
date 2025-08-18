@@ -105,6 +105,7 @@ Duration:    ${toMinutes(pubData.deploy_time)}
       }
 
       //await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
+      console.log('Send push notification');
       await sendPB(body, 'Netlify Build Succeeded', PB_DEVICE, PB_KEY);
     }
     
