@@ -105,7 +105,6 @@ Duration:    ${toMinutes(pubData.deploy_time)}
       }
 
       //await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
-      console.log('testing call to pb');
       await sendPB(body, 'Netlify Build Succeeded', PB_DEVICE, PB_KEY);
     }
     
@@ -132,8 +131,8 @@ async function sendPB(body, title, device, key) {
     device_iden:device, 
     type:"note"
   };
-  console.log('body', reqbody);
-  let req = await fetch('https://api.pushbullet.com/v2/pushes', {
+
+  fetch('https://api.pushbullet.com/v2/pushes', {
     method:'POST',
     headers: {
       'Content-Type':'application/json',
@@ -142,7 +141,7 @@ async function sendPB(body, title, device, key) {
     body:JSON.stringify(reqbody)
   });
 
-  let res = await req.json();
+  //let res = await req.json();
   return;
   // um... for now i dont care about the response
 }
