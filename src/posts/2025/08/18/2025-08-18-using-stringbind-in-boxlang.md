@@ -44,9 +44,9 @@ But what `StringBind` gives us is a more abstract way to create a template and r
 Using this feature requires you to define the template, duh, and than call it with `stringBind` where you'll pass the template and data:
 
 ```js
-str  = """
+str  = "
 This is a big string with ${name} and ${age}. My favorite food is ${food:sushi}.
-"""
+"
 
 s = stringBind(str, {
   "name":"Ray",
@@ -74,7 +74,7 @@ You can try this yourself below:
         allow="fullscreen" 
         width="100%"
         height="600" 
-        src="https://try.boxlang.io/editor/index.bxm?ro=false&code=eJyVjjEKwzAMRXef4iMyJBAyFLqkdOnepfQCCnESQ%2BoUy0kxwXev3W7dChqe%2BNKTxDvgDCJS98kIUjE6M0K8M3bEy%2FgJxW75oSPY9ol51LHBNWDgbXHGawzL0ufNYs%2FUyiqTiY3KUiXJ%2FnVdjO3LhDV2BVBWUks3DlTnPmmpPR5UrJR6pnk%2F21Kq0%2F%2BGD%2BdHUmbZr05j43nWAR07od8Db2W%2FTjQ%3D">
+        src="https://try.boxlang.io/editor/index.bxm?ro=false&code=eJyVjrEKg0AMhvc8xU9wUBCHQhdLl%2B5dSl8g4qkH9iyX0yLiu%2Feu3boVMnzhT75EgwfOYLoPVhFL0NgeGrx1PV42DMg2Jw%2BzQ1wbWXqzV7iu6GSZvA0G3TS1aTPbEtU662D3iphIo%2FlruljX5hFLbARwEnLNN1m5TH2Ucn080F4QPeN8GF2uxel%2Fw4fTGzFzEmZvsMg4mhWNeOXfA2%2B2Ik2s">
     </iframe>
 
 Ok, so fair enough to say, this is one of those functions I don't see using day to day, but I thought it was a pretty cool idea and something I want to keep in my (BoxLang-ified) tool belt for use later. What do people think? I'd love to hear some ideas of how this could be useful, so leave me a comment below!
