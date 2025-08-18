@@ -142,7 +142,7 @@ async function sendPB(body, title, device, key) {
     body:JSON.stringify(reqbody)
   });
 
-  //let res = await req.json();
+  let res = await req.json();
   return;
   // um... for now i dont care about the response
 }
