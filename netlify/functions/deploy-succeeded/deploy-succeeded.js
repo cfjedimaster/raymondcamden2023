@@ -133,7 +133,7 @@ async function sendPB(body, title, device, key) {
     type:"note"
   };
 
-  fetch('https://api.pushbullet.com/v2/pushes', {
+  await fetch('https://api.pushbullet.com/v2/pushes', {
     method:'POST',
     headers: {
       'Content-Type':'application/json',
@@ -142,8 +142,8 @@ async function sendPB(body, title, device, key) {
     body:JSON.stringify(reqbody)
   });
 
-  let res = await req.json();
-  console.log(await res.json());
+  //let res = await req.json();
+  //console.log(await res.json());
   return;
   // um... for now i dont care about the response
 }
