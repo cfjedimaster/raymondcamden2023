@@ -70,7 +70,7 @@ let root = './src/posts/';
 var path = root+year+'/';
 
 try {
-	fs.accessSync(path,fs.F_OK);
+	fs.accessSync(path,fs.constants.F_OK);
 } catch(e) {
 	if(e.code === "ENOENT") {
 		fs.mkdirSync(path);
@@ -79,7 +79,7 @@ try {
 
 path = root+year+'/'+month+'/';
 try {
-	fs.accessSync(path,fs.F_OK);
+	fs.accessSync(path,fs.constants.F_OK);
 } catch(e) {
 	if(e.code === "ENOENT") {
 		fs.mkdirSync(path);
@@ -89,7 +89,7 @@ try {
 path = root+year+'/'+month+'/'+day;
 //console.log(path);
 try {
-	fs.accessSync(path,fs.F_OK);
+	fs.accessSync(path,fs.constants.F_OK);
 } catch(e) {
 	if(e.code === "ENOENT") {
 		fs.mkdirSync(path);
