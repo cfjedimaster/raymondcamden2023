@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', init, false);
 async function init() {
   let div = document.querySelector('.container');
   div.innerHTML = '<i>Loading awesome photos...</i>';
+  alert('Sorry, broken due to change in Google Photos API :( ');
+  /*
   let req = await fetch('https://eof4egroho59c53.m.pipedream.net');
   let data = await req.json();
   let s = '';
@@ -63,6 +65,7 @@ async function init() {
     s += `<figure><img src="${p}"></figure>`;
   });
   div.innerHTML = s;
+  */
   //console.log(data);
 }
 </script>
