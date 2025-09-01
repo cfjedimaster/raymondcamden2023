@@ -15,16 +15,7 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 
 <h3>My Next Events</h3>
 
-<p>
-<a href="https://apiworld.co/">Document Workflows with Foxit APIs</a><br/>
-API World<br/>
-Santa Clara, cA, September 3-5, 2025
-</p>
-
-
-<!--
 Nothing planned currently. Invite me to speak at your event! 
--->
 
 <h3>My Past Events</h3>
 
