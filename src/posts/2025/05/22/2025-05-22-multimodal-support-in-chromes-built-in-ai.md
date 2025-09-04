@@ -9,6 +9,12 @@ permalink: /2025/05/22/multimodal-support-in-chromes-built-in-ai
 description: 
 ---
 
+{% callout %}
+<strong>September 4, 2025:</strong> I was revisiting this post today and noticed my demos broke. This has happened with many of my Chrome AI posts as the specs change and evolve, but I really wanted to have these working well. I updated the CodePens to fix them, but did not edit the text below, so please keep that in mind.
+<br><br>
+I'll also note my use `await createImageBitmap(file);` isn't necessary as I can pass the file object directly to it. I've got <a href="https://blog.tomayac.com">Thomas Steiner</a> of the Chrome team to thank for pointing that out.
+{% endcallout %}
+
 It's been a few weeks since I blogged about Chrome's [built-in AI efforts](https://developer.chrome.com/docs/ai/built-in), but with Google IO going this week there's been a lot of announcements and updates. You can find a great writeup of recent changes on the Chrome blog: ["AI APIs are in stable and origin trials, with new Early Preview Program APIs"](https://developer.chrome.com/blog/ai-api-updates-io25?hl=en).
 
  One feature that I've been excited the most about has finally been made available, [multimodal prompting](https://developer.chrome.com/docs/ai/prompt-api#multimodal_capabilities). This lets you use both image *and* audio data for prompts. Now, remember, this is all still early preview and will likely change before release, but it's pretty promising. 
