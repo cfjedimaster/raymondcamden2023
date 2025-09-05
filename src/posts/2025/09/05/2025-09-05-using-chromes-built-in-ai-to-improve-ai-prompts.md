@@ -195,7 +195,7 @@ The new prompt measurement is 33.
 
 Want to take it for a spin? (And are using Canary with the right flags?) Check out the embed below:
 
-<p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="myevqea" data-pen-title="ChromeAI to Improve Prompt" data-user="cfjedimaster" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-slug-hash="myevqea" data-pen-title="ChromeAI to Improve Prompt" data-user="cfjedimaster" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/cfjedimaster/pen/myevqea">
   ChromeAI to Improve Prompt</a> by Raymond Camden (<a href="https://codepen.io/cfjedimaster">@cfjedimaster</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
