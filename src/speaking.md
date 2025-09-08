@@ -15,7 +15,15 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 
 <h3>My Next Events</h3>
 
+<p>
+<a href="https://cfsummit.adobeevents.com/">Harnessing AI Superpowers in ColdFusion</a><br/>
+Adobe ColdFusion Summit 2025<br/>
+Las Vegas, NV, September 22-23, 2025
+</p>
+
+<!--
 Nothing planned currently. Invite me to speak at your event! 
+-->
 
 <h3>My Past Events</h3>
 
