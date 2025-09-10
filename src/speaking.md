@@ -2,9 +2,11 @@
 layout: page
 title: Speaking Engagements
 description: All about Raymond Camden
-banner_image: /images/banners/raypgday2.jpg
 ---
 
+<p>
+<img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_800/https://static.raymondcamden.com/images/banners/raypgday2.jpg" alt="Speaking Engagements">
+</p>
 
 As much as I love to write code, I enjoy teaching even more. That's part of the reason 
 I started a blog. I feel like I have to struggle to learn new things, and if I can help

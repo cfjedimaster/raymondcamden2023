@@ -10,10 +10,10 @@ description: Search this Site
 
 {% raw %}
 <div x-data="app" x-cloak>
-	<form data-members-form="subscribe" class="subscribe-form">
-		<div class="form-group">
-			<input x-model="search" class="subscribe-email" type="search"> 
-			<button @click.prevent="doSearch" class="button" x-text="searching?'Searching...':'Search'"></button>
+	<form style="margin-bottom: 15px">
+		<div class="input-group">
+			<input x-model="search" class="input input-sm" type="search"> 
+			<button @click.prevent="doSearch" class="btn btn-sm" x-text="searching?'Searching...':'Search'" ></button>
 		</div>
 	</form>
 

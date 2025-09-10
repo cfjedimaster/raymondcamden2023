@@ -4,83 +4,55 @@ layout: default
 
 {% assign posts = collections.posts | reverse %}
 
-<main id="main" class="site-main">
+<section class="hero-intro">
+    <div class="intro-content">
+        <div class="intro-text">
+            <h2>Hi, I'm Raymond Camden 👋</h2>
+            
+            <p>
+            I'm a developer advocate who loves the web platform, APIs, AI, and basically just anything involving
+            code. I love to write about technology and share that with others. I've got fun stuff to show you and I'm so happy you're here!
+            </p>
 
-    {% if site.author_bio %}
-    <div class="hero inner underline">
-        <p class="hero-text">{{site.author_bio}}</p>
-    </div>
-    {% endif %}
-
-    {% for post in posts limit:3 %}
-
-        {% assign img = "https://res.cloudinary.com/raymondcamden/image/fetch/f_auto/https://static.raymondcamden.com" | append: post.data.banner_image %}
-
-        {% if forloop.first %}
-        <div id="featured-posts" class="featured-posts">
-        {% endif %}
-
-            <article class="post post-featured has-image">
-                <div class="post-inside">
-                    <a href="{{post.url}}" class="post-thumbnail">
-                        <img 
-                        src="{{ img }}"
-                        alt="{% if post.data.banner_image_alt %}{{ post.data.banner_image_alt }}{% else %}{{ post.data.title }} {% endif %}" width="900"></a>                        
-                    <header class="post-header">
-                        <div class="post-meta">
-                            <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time>
-                        </div><!-- .post-meta -->
-                        <h2 class="post-title"><a href="{{post.url}}" rel="bookmark">{{post.data.title | escape}}</a></h2>
-                        <div class="post-tags">
-                            {% assign ctList = post | catTagList %}
-                            {% for ct in ctList %}
-                                <a href="{{ct.url}}">{{ct.name}}</a>
-                            {% endfor %}
-                        </div>
-                    </header><!-- .post-header -->
-                </div><!-- .post-inside -->
-            </article><!-- .post -->
-
-        {% if forloop.last %}
+            <p>
+            Welcome to my corner of the internet where I share insights about development, best and sometimes questionable practices, and cat demos.
+            </p>
         </div>
+        <div class="intro-image">
+            <img src="https://www.raymondcamden.com/images/avatar2.jpg" alt="Profile photo" class="profile-photo">
+        </div>
+    </div>
+</section>
+
+
+<section class="blog-posts">
+
+{% for post in posts limit:6 %}
+
+    <article class="post-card">
+        <h2><a href="{{post.url}}">{{post.data.title | escape}}</a></h2>
+        <div class="post-meta">
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time>
+            <span class="categories">
+                {% assign ctList = post | catTagList %}
+                {% for ct in ctList %}
+                    <a href="{{ct.url}}">{{ct.name}}</a>
+                {% endfor %}
+            </span>
+        </div>
+        <p class="post-excerpt">
+        {% if post.templateContent contains '<!--more-->' %}
+            {{ post.content | split:'<!--more-->' | first }}
+        {% else %}
+            {% excerpt post %}
         {% endif %}
-
-    {% endfor %}
-
-	<div class="post-feed inner">
-		<div class="post-feed-title underline">Latest Posts</div>
-        {% for post in posts limit:7 offset:3 %}
-        <article class="post">
-            <header class="post-header">
-                <div class="post-meta">
-                    <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time>
-                </div>
-                <h2 class="post-title"><a href="{{post.url}}" rel="bookmark">{{post.data.title | escape}}</a></h2>
-            </header>
-            <div class="post-content">
-                <p class="post-excerpt">
-                {% if post.templateContent contains '<!--more-->' %}
-                        {{ post.content | split:'<!--more-->' | first }}
-                    {% else %}
-                        {% excerpt post %}
-                    {% endif %}
-                </p>
-                <p class="post-tags">
-                    {% assign ctList = post | catTagList %}
-                    {% for ct in ctList %}
-                       <a href="{{ct.url}}">{{ct.name}}</a>
-                    {% endfor %}
-                </p>
-            </div><!-- .post-content -->
-        </article><!-- .post -->
-        {% endfor %}
-
-        <p>
-        Want more posts? You can peruse a <a href="/all">complete list of my content</a>, or pop over 
-        to my <a href="/search">search</a> page to find what you're looking for.
         </p>
+    </article>
 
-	</div>
+{% endfor %}
 
-    
-</main>
+<p>
+Want to read everything? Head over to my <a href="/all">giant list of every single freaking post ever!</a>.
+</p>
+
+</section>

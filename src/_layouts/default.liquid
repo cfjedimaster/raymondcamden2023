@@ -4,27 +4,14 @@ body_class: home-template
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if renderData.title %}{{ renderData.title | titlecase | my_xml_escape }}{% elsif title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}</title> 
+    
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://img.buymeacoffee.com; script-src 'self' https: 'unsafe-inline' 'unsafe-eval' http{% if isProd %}s{% endif %}://cdn.carbonads.com http{% if isProd %}s{% endif %}://resources.infolinks.com http{% if isProd %}s{% endif %}://router.infolinks.com; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src 'self' https: data:;font-src https://fonts.gstatic.com; connect-src https: ws://localhost:8888 http://localhost:8888; frame-src https: http://localhost:8888 https://try.boxlang.io http://try.boxlang.io; media-src *; worker-src blob: data: http{% if isProd %}s{% endif %}:">
     <meta name="generator" content="{{ eleventy.generator }}">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />   
-	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i%7CKarla:400,400i,700,700i" rel="preload" as="style">
-	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i%7CKarla:400,400i,700,700i" rel="stylesheet" media="print" onload="this.media='all'">
-
-    {% comment %}
-	<link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/css/prism.css" />
-    {% endcomment %}
-    {% capture css %}
-        {% include "assets/css/style.css" %}
-        {% include "assets/css/prism.css" %}
-    {% endcapture %}
-    <style>
-    {{ css | cssmin }}
-    </style>
     <meta name="description" content="{% if description %}{{ description | my_xml_escape }}{% else %}{{ site.description | my_xml_escape }}{% endif %}">
     <meta name="og:title" content="{% if title %}{{ title | my_xml_escape }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="og:url" content="{{ page.url | prepend: site.url }}" />
@@ -46,47 +33,71 @@ body_class: home-template
     <meta property="og:image" content="{{ "https://static.raymondcamden.com" | append: banner_image }}" />
     {% endif %}
     <meta name="fediverse:creator" content="@raymondcamden@mastodon.social">
-
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#1d1d1d">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.url }}">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | prepend: site.url }}">
-    <link rel="webmention" href="https://webmention.io/www.raymondcamden.com/webmention" />
-    <link rel="pingback" href="https://webmention.io/www.raymondcamden.com/xmlrpc" />
     <script data-goatcounter="https://raymondcamden.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    
 </head>
+<body class="line-numbers">
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1><a href="/">Raymond Camden</a></h1>
+                <p class="tagline">Code and Cats</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+                    <li><a href="/about" {% if page.url == "/about/" %}class="active"{% endif %}>About</a></li>
+                    <li><a href="/speaking" {% if page.url == "/speaking/" %}class="active"{% endif %}>Speaking</a></li>
+                    <li><a href="/stuff" {% if page.url == "/stuff/" %}class="active"{% endif %}>Stuff</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Search posts..." id="search">
+                    <button type="button">🔍</button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<body class="{{body_class}} line-numbers">
-	<div id="page" class="site">
-		{% include 'header' %}
-		<div id="content" class="site-content">
-			{{content}}
-			<!-- The tag below includes the theme footer - partials/footer.hbs -->
+    <main class="main">
+        <div class="container">
 
-		{% include 'footer' %}
+        {{ content }}
 
-		</div>
-	</div>
 
-    {% if layout == "post" %}
-    {% comment %}
-    comment ed on aug 13
-	<div data-ea-publisher="raymondcamdencom" data-ea-type="image" class="adaptive" data-ea-style="stickybox"></div>
-    {% endcomment %}
-    {% comment %}
-    <div class="adaptive" data-ea-publisher="raymondcamdencom" data-ea-type="text" data-ea-style="fixedfooter"></div>
-    {% endcomment %}
-    {% comment %}
-    <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
-    {% endcomment %}
-    <script type="text/javascript"> var infolinks_pid = 3439168; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
-    {% endif %}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/js/custom.js"></script>
-    <script src="/js/prism.js"></script>
-    <script src="/js/lazysizes.min.js" async=""></script>
+        {% if layout == "post" %}
+        <script type="text/javascript"> var infolinks_pid = 3439168; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+        {% endif %}
+
+        <script src="/js/custom.js"></script>
+        <script src="/js/prism.js"></script>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+            &copy; {{ "now" | date: "%Y" }} Raymond Camden. 
+            Powered by <a href="https://www.11ty.dev/">Eleventy</a> {{ eleventy.version }}.
+            </p>
+            <div class="social-links">
+                <a href="/now">Now</a>
+                <a href="https://github.com/cfjedimaster">GitHub</a>
+                <a href="https://youtube.com/user/theraymondcamden">YouTube</a>
+                <a href="https://mastodon.social/@raymondcamden">Mastodon</a>
+                <a href="https://linkedin.com/in/raymondcamden">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
