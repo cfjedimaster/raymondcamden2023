@@ -946,3 +946,32 @@ Post page specific styles */
         height: 100px;
     }
 }
+
+/* for old disqus comments */
+div.comments-area {
+
+    h3 {
+        padding-bottom: 15px;
+    }
+
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    
+    div.comment {
+        padding-bottom: 20px;
+        
+        a { color: white; }
+
+
+    }
+
+    div.comment::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        margin-top: 10px;
+    }
+
+}

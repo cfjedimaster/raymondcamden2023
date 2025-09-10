@@ -72,7 +72,10 @@ function getCommentText(path, old) {
     let oldpath = '';
     if(old) oldpath = './src/_includes/comments' + old.replace('http://www.raymondcamden.com','') + '.inc';
     if(fs.existsSync(path)) {
-      return fs.readFileSync(path,'utf-8');
+
+      let s = fs.readFileSync(path, 'utf-8');
+      return s.replace(/<div>\s+<img src=".*?">\s+<\/div>/mg, '');
+
     } else if(old && fs.existsSync(oldpath)) {
       return fs.readFileSync(oldpath,'utf-8');
     } else {
