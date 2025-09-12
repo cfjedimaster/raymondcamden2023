@@ -419,6 +419,11 @@ Post page specific styles */
     	color: var(--text-primary);
 	}
 
+    /* noticed a lack of spacing after ULs */
+    ul {
+        margin-bottom: 15px;
+    }
+
 }
 
 .post-body p:first-of-type {
@@ -974,4 +979,126 @@ div.comments-area {
         margin-top: 10px;
     }
 
+}
+
+/* Blockquote styles */
+blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-green);
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    font-style: italic;
+    color: var(--text-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--primary-green);
+    position: absolute;
+    top: -0.5rem;
+    left: 0.5rem;
+    font-family: Georgia, serif;
+    opacity: 0.3;
+}
+
+blockquote p {
+    margin: 0 0 1rem 0;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Citation/author styling */
+blockquote cite,
+blockquote .quote-author {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+blockquote cite::before,
+blockquote .quote-author::before {
+    content: "— ";
+    color: var(--accent-green);
+}
+
+/* Alternative blockquote style */
+.blockquote-simple {
+    background: none;
+    border-left: 3px solid var(--light-green);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: none;
+}
+
+.blockquote-simple::before {
+    display: none;
+}
+
+.blockquote-simple p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Centered blockquote variant */
+.blockquote-center {
+    text-align: center;
+    border-left: none;
+    border-top: 2px solid var(--accent-green);
+    border-bottom: 2px solid var(--accent-green);
+    padding: 2rem 1.5rem;
+}
+
+.blockquote-center::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    blockquote {
+        padding: 1rem 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    blockquote::before {
+        font-size: 3rem;
+        top: -0.25rem;
+        left: 0.25rem;
+    }
+    
+    blockquote p {
+        font-size: 1rem;
+    }
+    
+    .blockquote-center {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    blockquote {
+        padding: 0.75rem 1rem;
+        margin: 1rem 0;
+    }
+    
+    blockquote::before {
+        font-size: 2.5rem;
+        top: 0;
+        left: 0.1rem;
+    }
+    
+    blockquote p {
+        font-size: 0.95rem;
+    }
 }
