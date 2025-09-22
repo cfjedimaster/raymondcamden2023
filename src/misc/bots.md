@@ -19,7 +19,7 @@ I've got a few bots on Bluesky, right now just <a href="https://bsky.app/profile
 <div id="status"></div>
 
 <template id="tootDisplay">
-	<blockquote class="toot-blockquote">
+	<div class="toot-blockquote">
 		<div class="toot-header">
 			<a class="toot-profile" rel="noopener" target="_blank">
 				<img class="avatar" src="" loading="lazy">
@@ -30,16 +30,14 @@ I've got a few bots on Bluesky, right now just <a href="https://bsky.app/profile
 			</div>
 		</div>
 		<p class="toot-body"></p>
-
 		<p>
 		<img class="toot-media-img" src="" loading="lazy">
 		</p>
-
 		<div class="toot-footer">
 			<a id="link" target="_blank" class="toot-date" rel="noopener"></a>
 		</div>
 
-	</blockquote>
+	</div>
 </template>
 
 <div id="bots">

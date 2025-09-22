@@ -1102,3 +1102,25 @@ blockquote .quote-author::before {
         font-size: 0.95rem;
     }
 }
+
+div.toot-blockquote {
+
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-green);
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    color: var(--text-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    img.avatar {
+        border-radius: 9999px;
+        width: 48px;
+        height: auto;
+    }
+
+    img.toot-media-img {
+        max-width: 450px;
+    }
+}
