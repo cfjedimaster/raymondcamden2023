@@ -18,10 +18,17 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://cfsummit.adobeevents.com/">Harnessing AI Superpowers in ColdFusion</a><br/>
-Adobe ColdFusion Summit 2025<br/>
-Las Vegas, NV, September 22-23, 2025
+<a href="https://mmcfug.org/">Introduction to BoxLang</a><br/>
+Mid-Michigan ColdFusion Users Group<br/>
+Online, October 21, 2025
 </p>
+
+<p>
+<a href="https://www.meetup.com/techacademy/events/311363457/">Developer Relations and Advocacy: A Career in Explaining</a><br/>
+The Tech Academy<br/>
+Online, October 31, 2025
+</p>
+
 
 <!--
 Nothing planned currently. Invite me to speak at your event! 
@@ -34,6 +41,13 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://cfsummit.adobeevents.com/">Harnessing AI Superpowers in ColdFusion</a><br/>
+Adobe ColdFusion Summit 2025<br/>
+Las Vegas, NV, September 22-23, 2025
+</p>
+
+
 <p>
 <a href="https://www.intothebox.org/">Getting Started with BoxLang</a><br/>
 Into the Box<br/>
