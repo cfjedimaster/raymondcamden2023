@@ -2,7 +2,7 @@
 layout: post
 title: "Creating a GenAI Document Summarization Workflow in ColdFusion"
 date: "2025-10-01T18:00:00"
-categories: ["coldfusion"]
+categories: ["coldfusion","generative ai"]
 tags: []
 banner_image: /images/banners/cat_filing_papers.jpg
 permalink: /2025/10/01/creating-a-genai-document-summarization-workflow-in-coldfusion
