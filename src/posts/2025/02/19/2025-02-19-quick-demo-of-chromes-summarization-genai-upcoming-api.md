@@ -130,8 +130,7 @@ Basically just loop over each type and length, run the result, and wait. Note I'
 
 So, I know some of you won't be running a Chrome that supports this yet, let me share the results. For my input, I used the Gettysburg Address. In case you don't know it, here it is:
 
-<div style="background-color: #c0c0c0; padding: 10px">
-Fourscore and seven years ago our forefathers brought forth on this continent a new nation, conceived in liberty and dedicated to the proposition that all men are created equal.
+/2024/11/05/automatically-posting-to-bluesky-on-new-rss-itemsFourscore and seven years ago our forefathers brought forth on this continent a new nation, conceived in liberty and dedicated to the proposition that all men are created equal.
 
 Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated can long endure. We are met on a great battle field of that war. We have come to dedicate a portion of that field as a final resting place for those who here gave their lives that this nation might live. It is altogether fitting and proper that we should do this.
 

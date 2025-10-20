@@ -31,8 +31,11 @@ make the actual recipe incredibly difficult to find.
 ```
 
 I then took this recipe my buddy Scott shared with me:
-
+{% comment %}
 <div style="background-color: #c0c0c0; padding: 10px">
+{% endcomment %}
+
+<div style="background-color: #111111; padding: 25px">
 
 **Mississippi Pot Roast Recipe**
 
@@ -67,7 +70,7 @@ Shopping List
 
 And the result was spectacular:
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 
 Oh, Mississippi Pot Roast. Where do I even begin? This isn't just a recipe; it's a time capsule. A portal back to simpler days, filled with laughter, scraped knees, and the comforting aroma of… well, probably not this, because we didn't have slow cookers back then.
 
@@ -96,7 +99,7 @@ sprinkle a few that are political and completely out of context.
 
 The results were delicious:
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 
 VeganVixen: Can this be made vegan?
 

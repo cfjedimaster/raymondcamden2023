@@ -29,8 +29,7 @@ Note that files and videos can *not* be drag/dropped into the interface and you 
 
 I haven't read Hamlet since college but honestly, I liked what it output. By the way, the output was in Markdown and I've copied it as is here so the markup came from them. Oh, um, spoiler warning for a four-hundred-year-old play.
 
-<div style="background-color: #c0c0c0; padding: 10px">
-
+<div style="background-color: #111111; padding: 25px">
 ## Major Plot Points of Hamlet:
 
 **Act 1:**
@@ -79,7 +78,7 @@ Last week I had [blogged](http://localhost:8888/2024/02/02/using-generative-ai-a
 
 And here's the summary:
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 This article explores the concept of "temperature" in generative AI and demonstrates its impact on the variety and creativity of generated text. 
 
 The author:

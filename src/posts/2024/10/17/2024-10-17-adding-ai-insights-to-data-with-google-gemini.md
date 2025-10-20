@@ -213,7 +213,7 @@ Here's the result:
 
 I recognize that text may be a bit hard to read, so here's a copy:
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 Here are some insights from your sales data:
 
 <ol>

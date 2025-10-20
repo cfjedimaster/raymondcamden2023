@@ -21,7 +21,7 @@ I uploaded the PDF to Gemini and ensured I was using Gemini 1.5. This is importa
 
 For my first test, I simply asked it "what are the attributes of a player character?" Here's what I got:
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 In Dungeons & Dragons, player characters (PCs) are defined by several key attributes:
 
 1. Race: This determines your character's physical characteristics, ancestry, and innate abilities. Examples include humans, elves, dwarves, halflings, dragonborn, tieflings, etc. Each race has unique traits that affect gameplay.
@@ -47,7 +47,7 @@ I'm pretty rusty in D&D, but that surely seems right! (When I shared this in a c
 
 I then asked, "what races are available to player characters?"
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 The most common player character races in Dungeons & Dragons are:
 <p>
 Humans: Adaptable and versatile, with no major strengths or weaknesses.<br/>
@@ -76,7 +76,7 @@ Alright, now, at this point, I was impressed. But I thought - why not push my lu
 
 And holy crap - Gemini delivered!
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 <h3>Character Name: Lyra Swiftfoot</h3>
 Race: Lightfoot Halfling<br>
 Class: Rogue (Thief)<br>
@@ -146,7 +146,7 @@ By the way, the formatting above is a bit off, but that came from me copying and
 
 "do that again please"
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 <h3>Character Name: Falion Sunstrider</h3>
 
 Race: High Elf<br>
@@ -214,7 +214,7 @@ So at this point, I was blown away. Like, I don't even care if it broke any part
 
 "of the two characters you just made, who do you think would be a better party leader?"
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 Between Lyra Swiftfoot and Falion Sunstrider, Lyra would likely be the better party leader for several reasons:
 
 1. **Charisma**: Lyra has a higher Charisma score, which is important for inspiring and motivating others. Her background as an entertainer also suggests she is comfortable in front of crowds and skilled at interacting with people.

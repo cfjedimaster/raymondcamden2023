@@ -9,7 +9,7 @@ permalink: /2024/11/05/automatically-posting-to-bluesky-on-new-rss-items
 description: A look at automating posts to Bluesky when new data is posted to a RSS feed.
 ---
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 <strong>Edit on November 25, 2024:</strong> So this post turned out a bit more popular than I expected. :) While working with folks in the comments, two things came about. First, folks needed things spelled out a little bit, so with that in mind, I made a quick Youtube video: <a href="https://www.youtube.com/watch?v=_yp9U-QJgOM">https://www.youtube.com/watch?v=_yp9U-QJgOM</a>. Secondly, a user was running into issues with my code, and it turned out, my own meta tags here for <code>og:description</code> and <code>og:image</code> were using <code>name</code> instead of <code>property</code>. This seemed to work ok in most situations, but wasn't proper. So, I've updated the code here, and the GitHub repo for the workflow, to use that. Thanks to @toothless-666 for helping me debug and @benmillett for pointing out various things as well. You can see the full discussion in the comments below. 
 </div>
 

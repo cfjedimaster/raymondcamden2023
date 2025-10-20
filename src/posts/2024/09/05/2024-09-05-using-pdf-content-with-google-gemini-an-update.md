@@ -61,7 +61,7 @@ let result = await model.generateContent([
 
 And that's literally it. For an incredibly exciting document relating to Adobe's security policies, I get:
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 The document "Adobe Vendor Security Review Program White Paper" outlines the process and requirements for vendors that handle Adobe data. Here is a summary:
 
 * **Adobe Vendor Security Review (VSR) Program:**  A program managed by Adobe Information Security that evaluates third-party vendors' compliance with the Adobe Vendor Information Security Standard. 
@@ -94,7 +94,7 @@ Return your result as a comma-delimited list.
 
 Using the same upload reference, I got this:
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 Information Security, Data Classification, Vendor Security, Security Review Process, Vendor Information Security Standard,  Vendor Risk Assessment, Policy, Security Management, Data Handling, Legal Obligations, Privacy Assessment, Data Retention, Due Diligence, Auditing, Compliance
 </div>
 
@@ -193,7 +193,7 @@ let result = await model.generateContent([
 
 This is what I got comparing Hamlet and Romeo and Juliet:
 
-<div style="background-color: #c0c0c0; padding: 10px">
+<div style="background-color: #111111; padding: 25px">
 Both *Hamlet* and *Romeo and Juliet* are tragedies written by William Shakespeare. They both share common themes but also exhibit significant differences.
 
 **Similarities:**
