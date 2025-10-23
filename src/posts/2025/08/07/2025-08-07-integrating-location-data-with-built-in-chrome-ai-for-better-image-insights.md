@@ -9,7 +9,7 @@ permalink: /2025/08/07/integrating-location-data-with-built-in-chrome-ai-for-bet
 description: An update to my Chrome AI post integrating location data with AI insights
 ---
 
-A few weeks ago, I shared an interesting demo that [integration location and AI analysis](https://www.raymondcamden.com/2025/07/25/getting-image-insights-with-built-in-chrome-ai-and-exif-data) of images using [Chrome's Built-in AI](https://developer.chrome.com/docs/ai/built-in) support and [Mapbox's Revervse Geocoding API](https://docs.mapbox.com/api/search/geocoding/#reverse-geocoding). The idea was rather simple - let the user select an image and then:
+A few weeks ago, I shared an interesting demo that [integrated location and AI analysis](https://www.raymondcamden.com/2025/07/25/getting-image-insights-with-built-in-chrome-ai-and-exif-data) of images using [Chrome's Built-in AI](https://developer.chrome.com/docs/ai/built-in) support and [Mapbox's Revervse Geocoding API](https://docs.mapbox.com/api/search/geocoding/#reverse-geocoding). The idea was rather simple - let the user select an image and then:
 
 * Run one API call to Mapbox to get the location, if possible, via EXIF information.
 * Ask Chrome to analyze the image for items with in it, returned as a list of tags.
