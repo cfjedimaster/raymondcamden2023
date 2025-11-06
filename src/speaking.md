@@ -18,16 +18,11 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://mmcfug.org/">Introduction to BoxLang</a><br/>
-Mid-Michigan ColdFusion Users Group<br/>
-Online, October 21, 2025
+<a href="https://cfe.dev/events/pixelpalooza-2025/">Embedding PDFs</a><br/>
+PixelPalooza 2025<br/>
+Online, November 20, 2025
 </p>
 
-<p>
-<a href="https://www.meetup.com/techacademy/events/311363457/">Developer Relations and Advocacy: A Career in Explaining</a><br/>
-The Tech Academy<br/>
-Online, October 31, 2025
-</p>
 
 
 <!--
@@ -41,6 +36,18 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://www.meetup.com/techacademy/events/311363457/">Developer Relations and Advocacy: A Career in Explaining</a><br/>
+The Tech Academy<br/>
+Online, October 31, 2025
+</p>
+
+<p>
+<a href="https://mmcfug.org/">Introduction to BoxLang</a><br/>
+Mid-Michigan ColdFusion Users Group<br/>
+Online, October 21, 2025
+</p>
+
 <p>
 <a href="https://cfsummit.adobeevents.com/">Harnessing AI Superpowers in ColdFusion</a><br/>
 Adobe ColdFusion Summit 2025<br/>

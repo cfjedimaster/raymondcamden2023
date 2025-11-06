@@ -21,13 +21,13 @@ Given the following text, rate how much it appears to be spam by giving it a sco
 
 For my first test, I used a 'bad' sample (see my [last post](https://www.raymondcamden.com/2024/03/25/spam-apis-in-2024) for a full listing of my sample data):
 
-<div style="background-color: #c0c0c0; padding: 5px">
+<div style="background-color: var(--card-bg); padding: 5px">
 💪 If you're looking for a lady to be in a relationship with, I could be your lady . I'm Maya, and I'm ready to match with a local dude who understands how to romantic with a girl like me. ❣ 👉Connect with me here👈 .
 </div>
 
 I got this response:
 
-<div style="background-color: #c0c0c0; padding: 5px">
+<div style="background-color: var(--card-bg); padding: 5px">
 I would rate this text a **7/10** on the spam scale. Here's why:
 
 **Spam indicators:**
@@ -49,7 +49,7 @@ It's important to remain cautious and avoid clicking on suspicious links, even i
 
 That feels pretty correct. Next, I tried it with this 'good' sample':
 
-<div style="background-color: #c0c0c0; padding: 5px">
+<div style="background-color: var(--card-bg);padding: 5px">
 Introducing Polls on Buy Me a Coffee 🎉
 
 Aleesha <aleesha@buymeacoffee.com>
@@ -73,7 +73,7 @@ Buy Me a Coffee Team
 
 And got:
 
-<div style="background-color: #c0c0c0; padding: 5px">
+<div style="background-color: var(--card-bg); padding: 5px">
 I would rate this email a **2 out of 10** on the spam scale. Here's why:
 
 **Reasons it's not spam:**
