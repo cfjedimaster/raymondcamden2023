@@ -9,7 +9,7 @@ permalink: /2025/11/07/checking-for-spam-content-with-chrome-ai
 description: Using on-device AI to detect spam content
 ---
 
-Earlier this week I mentioned I'm looking at my previous server-based generative AI demos and seeing which could possibly make sense using on-device AI with [Chrome's AI](https://developer.chrome.com/docs/ai/get-started) support. I remembered a demo from last year where I tested [spam detection](https://www.raymondcamden.com/2024/03/28/using-generative-ai-to-check-for-spam) using Google Gemini. That demo had worked out rather well and so I thought I'd try it out in Chrome.
+Earlier this week I mentioned I'm looking at my previous server-based generative AI demos and seeing which could possibly make sense using on-device AI with [Chrome's AI](https://developer.chrome.com/docs/ai/get-started) support. I remembered a demo from last year where I tested [spam detection](https://www.raymondcamden.com/2024/03/28/using-generative-ai-to-check-for-spam) using Google Gemini. That demo had worked out rather well and so I thought I'd try it out in Chrome. (<strong>Note the update towards the bottom!</strong>)
 
 ## Ok, but why?
 
@@ -150,6 +150,34 @@ All in all, this seems to work rather well I think. If you want to give it a sho
   on <a href="https://codepen.io">CodePen</a>.</span>
       </p>
       <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
+## An Update
+
+I posted this yesterday (Friday, November 7th), and my buddy [Thomas Steiner](https://blog.tomayac.com/) noted a potential issue. After multiple calls using the same session, it's possible the model could get confused by the previous messages. To me, the operation was "one and done", but the session persists and I can absolutely see why he's right about the issue. Luckily, it took approximately 10 seconds to correct using his suggestion of just cloning the sesison. So I went from this:
+
+```js
+let result = await session.prompt(input, { responseConstraint: spamCheckResultSchema });
+```
+
+To:
+
+```js
+// thanks to Thomas Steiner!
+let thisSession = await session.clone();
+let result = await thisSession.prompt(input, { responseConstraint: spamCheckResultSchema });
+```
+
+The `clone` method is just one of many you have available to provide more control, and stability, to your use of the model in the browser, so as always, check the docs for more information, and specifically, this one on [session management](https://developer.chrome.com/docs/ai/session-management) written by Thomas. 
+
+Here's the updated CodePen:
+
+<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-slug-hash="JoGQgja" data-pen-title="Spam Detection Test" data-user="cfjedimaster" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>See the Pen <a href="https://codepen.io/cfjedimaster/pen/JoGQgja">
+  Spam Detection Test</a> by Raymond Camden (<a href="https://codepen.io/cfjedimaster">@cfjedimaster</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://public.codepenassets.com/embed/index.js"></script>
+
 
 Photo by <a href="https://unsplash.com/@hannes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hannes Johnson</a> on <a href="https://unsplash.com/photos/blue-and-brown-cardboard-boxes-mRgffV3Hc6c?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       
