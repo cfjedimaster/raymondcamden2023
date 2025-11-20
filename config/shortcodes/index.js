@@ -1,10 +1,3 @@
-/*
-let Parser = require('rss-parser');
-let parser = new Parser();
-
-const fs = require('fs');
-*/
-
 import Parser from 'rss-parser';
 let parser = new Parser();
 
