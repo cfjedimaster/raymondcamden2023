@@ -60,8 +60,8 @@ body_class: home-template
                     <li><a href="/stuff" {% if page.url == "/stuff/" %}class="active"{% endif %}>Stuff</a></li>
                 </ul>
                 <div class="search-box">
-                    <input type="text" placeholder="Search posts..." id="search">
-                    <button type="button">🔍</button>
+                    <input type="text" placeholder="Search posts..." id="search" aria-label="Search posts">
+                    <button type="button" aria-label="Search">🔍</button>
                 </div>
             </nav>
         </div>
