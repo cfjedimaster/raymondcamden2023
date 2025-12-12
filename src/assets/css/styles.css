@@ -20,6 +20,10 @@
     --hover-bg: #2a2a2a;
 }
 
+html {
+   scroll-padding-top: 9rem;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--dark-bg);
