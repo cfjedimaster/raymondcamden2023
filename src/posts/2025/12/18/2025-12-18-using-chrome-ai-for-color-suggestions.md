@@ -9,7 +9,7 @@ permalink: /2025/12/18/using-chrome-ai-for-color-suggestions
 description: Using AI to suggest RGB colors in response to a basic text prompt. 
 ---
 
-Today's blog post came to me on the way to dropping of my kids at school and made *complete* sense to me, but I've also got the flu and am heavily medicated, so take that for what you will. The idea was simple, given a description of something in the real world, could I use AI to generate RGB colors that would represent that abstract idea. I thought this could be a good use of Chrome's [buil-in AI](https://developer.chrome.com/docs/ai/built-in) model and decided to whip up a quick demo. 
+Today's blog post came to me on the way to dropping of my kids at school and made *complete* sense to me, but I've also got the flu and am heavily medicated, so take that for what you will. The idea was simple, given a description of something in the real world, could I use AI to generate RGB colors that would represent that abstract idea. I thought this could be a good use of Chrome's [built-in AI](https://developer.chrome.com/docs/ai/built-in) model and decided to whip up a quick demo. 
 
 The front end is pretty simple, just a form for you to enter your description and a place for the results:
 
