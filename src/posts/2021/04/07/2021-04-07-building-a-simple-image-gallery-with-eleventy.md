@@ -58,7 +58,7 @@ I use a glob library to get all the images from my `rawphotos` folder. For each,
 When I ran this, it properly added the files to my `img` folder:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/04/elimg1.jpg" alt="Explorer folder of img outputs" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/04/elimg1.jpg" alt="Explorer folder of img outputs" class="lazyload imgborder imgcenter">
 </p>
 
 Cool - so while that worked, I then had an interesting problem. I needed to integrate this into a "real" Eleventy site with an `.eleventy.js` that did other things as well. Here was my first attempt (spoiler, it didn't work):

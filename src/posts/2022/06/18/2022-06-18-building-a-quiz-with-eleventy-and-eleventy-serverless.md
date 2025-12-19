@@ -177,7 +177,7 @@ I then give a unique ID value to each answer. This is based on the question name
 Here's my initial quiz displays:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/06/q1.jpg" alt="Quiz display" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/06/q1.jpg" alt="Quiz display" class="lazyload imgborder imgcenter">
 </p>
 
 ## Checking Quizzes
@@ -298,7 +298,7 @@ For "single" and "true/false" questions it's each to check the result. For "mult
 I keep a tally of how many you get right and then return the results. Here's an example result page:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/06/q2.jpg" alt="Example quiz result" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/06/q2.jpg" alt="Example quiz result" class="lazyload imgborder imgcenter">
 </p>
 
 ## Wrap Up

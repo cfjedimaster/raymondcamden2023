@@ -16,7 +16,7 @@ As I continue my journey into learning the awesomeness of the [Cloudinary](https
 In order to use webhooks, you can either specify a Cloudinary-wide URL or specify it when using certain API methods. For my test, I began at Pipedream, created a new HTTP-triggered workflow, copied the URL, and then pasted it into my Cloudinary account settings:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/11/wh1.jpg" alt="Webhook setting at Cloudinary" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/11/wh1.jpg" alt="Webhook setting at Cloudinary" class="lazyload imgborder imgcenter">
 </p>
 
 ## Testing Events
@@ -32,13 +32,13 @@ By default, Cloudinary will fire the webhook on:
 Since I had my Pipedream workflow set up, I quickly tested using Cloudinary's Media Library. I made a new folder and just started dropping a few files in.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/11/wh2.jpg" alt="Media Library" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/11/wh2.jpg" alt="Media Library" class="lazyload imgborder imgcenter">
 </p>
 
 After uploading, I confirmed that I saw an event on the Pipedream side and confirmed the body matched what Cloudinary documented as part of their payload.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/11/wh3.jpg" alt="Pipedream event record" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/11/wh3.jpg" alt="Pipedream event record" class="lazyload imgborder imgcenter">
 </p>
 
 Cool! Now let's build on it...
@@ -93,7 +93,7 @@ A basic Pipedream workflow would need the HTTP trigger and the verification step
 Let's tackle the first one by using a Filter step that continues if a condition is true. We want to check the `notification_type` value of the `body` sent to the workflow and want to continue when it's set to `upload`. Here's the Filter step I used:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/11/wh4.jpg" alt="Filtering on upload events" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/11/wh4.jpg" alt="Filtering on upload events" class="lazyload imgborder imgcenter">
 </p>
 
 As a reminder, I could have done this in a code step. Heck, I could have done it in the verification step too. But I like my workflows to be descriptive, clear of purpose, and use the built-in stuff, like Filter, whenever possible. 
@@ -142,13 +142,13 @@ export default defineComponent({
 Finally, I added the built-in Pipedream step that emails you. I say this every single time I blog, but I used the same value for the text body of the email as HTML and you should not do that in production. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/11/wh5.jpg" alt="Send email to self configuration" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/11/wh5.jpg" alt="Send email to self configuration" class="lazyload imgborder imgcenter">
 </p>
 
 And here's the final result:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/11/wh6.jpg" alt="Email sample from workflow" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/11/wh6.jpg" alt="Email sample from workflow" class="lazyload imgborder imgcenter">
 </p>
 
 Want to try this yourself? You can make a copy here: <https://pipedream.com/new?h=tch_3brfvn>

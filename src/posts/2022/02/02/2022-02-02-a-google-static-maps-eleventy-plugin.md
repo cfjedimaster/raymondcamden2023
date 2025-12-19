@@ -133,7 +133,7 @@ You can find {{ store.name }} at {{ store.address }}.
 That's not terribly exciting, but it works:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/maps1.jpg" alt="Picture of the rendered output from the template, including the store name, address, and map." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/maps1.jpg" alt="Picture of the rendered output from the template, including the store name, address, and map." class="lazyload imgborder imgcenter">
 </p>
 
 You can find this demo here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/googlemaps2>

@@ -73,7 +73,7 @@ My modification (ignoring the search term) is to check for $checkpoint and see i
 
 I then modified the Twitter search action to add the `since_id` param.
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/pds1.png" alt="Action UI" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/pds1.png" alt="Action UI" class="lazyload imgborder imgcenter">
 
 The next modification was to store a value I could use next time for step ID. I did this in the same step I format the tweets. Note, I could have done a separate step for this. Pipedream's "step" metaphor makes it easy to break things down as much as you want. Much like how you typically write a JavaScript function to do one thing only, you could apply the same to Pipedream too. I'm being lazy though and just keeping it simple.
 
@@ -104,7 +104,7 @@ async (event, steps) => {
 
 There's two mods here. One is to see if we have any tweets at all. We may not. If so, I use the cool `$end` feature to immediately end execution. When this is used, it's rendered nice in the UI too:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/pds2.png" alt="Showing how $end is rendered" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/pds2.png" alt="Showing how $end is rendered" class="lazyload imgborder imgcenter">
 
 Finally, I need to store the ID of the last tweet (first in the array). Notice that I'm using an object for my value. I did that for two reasons. One, I didn't realize Pipedream let you store *just* a value. Secondly, I decided I may enhance this workflow in the future and store more values. That's me pretending I'm forward thinking and smart (spoiler, I'm not). 
 

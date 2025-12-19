@@ -31,7 +31,7 @@ Here's how I re-created this in Pipedream for Mastodon.
 I created my Pipedream workflow with the schedule trigger. I didn't want my bot to be annoying and I didn't want to worry about going over rate limits, so I specified an interval of four hours. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/12/pdm1.jpg" alt="PD Schedule settings" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/12/pdm1.jpg" alt="PD Schedule settings" class="lazyload imgborder imgcenter">
 </p>
 
 ## Step Two - Random Cat Picture

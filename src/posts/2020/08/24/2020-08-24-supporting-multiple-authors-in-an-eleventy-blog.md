@@ -111,7 +111,7 @@ eleventyConfig.addFilter("getAuthor", (authors,label) => {
 As this returns the entire author object, I can use it in the text of my post layout. I use the key as a URL safe destination for the profile page and then display their name. This creates the link you see here:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/08/eam1.png" alt="A blog post with the author name and link." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/08/eam1.png" alt="A blog post with the author name and link." class="lazyload imgborder imgcenter">
 </p>
 
 For the author pages, I used the incredibly awesome Eleventy feature that lets you create [pages from data](https://www.11ty.dev/docs/pages-from-data/). I defined my author page like so:
@@ -165,7 +165,7 @@ eleventyConfig.addFilter("getPostsByAuthor", (posts,author) => {
 Here's a sample author page:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/08/eam2.png" alt="A sample author page showing their info, picture, and lists of poss" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/08/eam2.png" alt="A sample author page showing their info, picture, and lists of poss" class="lazyload imgborder imgcenter">
 </p>
 
 And that's it. You could certainly do more. Don't forget that front matter supports setting multiple values for a particular key, so you could even support posts written by more than one author. You could also build out individual RSS feeds for unique authors if you choose. Again, the repository for this demo is at <https://github.com/cfjedimaster/eleventy-demos/tree/master/multiauthor> and the live version may be visited at <https://admiring-fermi-e83d2d.netlify.app/>. Let me know if you have any questions, or suggestions, about this approach!

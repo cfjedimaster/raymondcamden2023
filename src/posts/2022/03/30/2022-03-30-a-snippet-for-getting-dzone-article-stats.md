@@ -14,7 +14,7 @@ Over the years of running my blog, I've off and on aggregated my content to [DZo
 Being a stat junkie, I've been checking my [profile page](https://dzone.com/users/201258/cfjedimaster.html) often to see how my content is doing. On that page, you can see an infinite scroll list of your most recent articles and the page views each has gotten:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/03/dzone1.jpg" alt="Picture of DZone Profile" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/03/dzone1.jpg" alt="Picture of DZone Profile" class="lazyload imgborder imgcenter">
 </p>
 
 I was curious if I could get those stats in purely data form so I could sort by page views. Like any good web dev, I opened up my devtools, switched to the Network tab, filtered to Fetch/XHR, and was able to see the endpoint they use to fetch the data:
@@ -131,7 +131,7 @@ const authorId = 201258;
 I do two manipulations to the result. First I sort by views. Then I turn the `articleDate` into real dates. Oddly, like one of ten of my articles was, the rest were in time since epoch. Shrug - I've got no clue. All I know is that this worked. Here's my result in [RunJS](https://runjs.app/), one of the best dang apps out there for testing JavaScript:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/03/dzone2.jpg" alt="Screenshot of stats" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/03/dzone2.jpg" alt="Screenshot of stats" class="lazyload imgborder imgcenter">
 </p>
 
 That's only the first bit. I've got 368 articles on DZone so it takes about 10 seconds or so for the script to run. If you want to see a slightly nicer version of this and adapt it for your own DZone profile, I've got a CodePen below. Just edit the `authorId` value to match yours.

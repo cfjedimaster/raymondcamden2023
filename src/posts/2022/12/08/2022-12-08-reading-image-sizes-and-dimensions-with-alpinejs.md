@@ -80,13 +80,13 @@ document.addEventListener('alpine:init', () => {
 My Alpine app has two main variables, `imageLoaded` and `image`. The only real logic is in `selectedFile`. This will use `$refs` to grab the input field and the selected image. I then use a `FileReader` object to read in the bits, set it to the image, and when `onload` is fired, I can update my variables to the front-end displays. Given this source image for example:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/12/web3.jpg" alt="Stop trying to make web3 a thing..." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/12/web3.jpg" alt="Stop trying to make web3 a thing..." class="lazyload imgborder imgcenter">
 </p>
 
 If I select it, I'll see this:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/12/aimage1.jpg" alt="Output from the code showing file size and image dimensions." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/12/aimage1.jpg" alt="Output from the code showing file size and image dimensions." class="lazyload imgborder imgcenter">
 </p>
 
 You can test this yourself using the CodePen below:

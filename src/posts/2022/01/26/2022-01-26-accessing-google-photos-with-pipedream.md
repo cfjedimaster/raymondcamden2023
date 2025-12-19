@@ -18,13 +18,13 @@ I began by creating a HTTP triggered workflow. I went into this process not know
 Next I needed to make use of the Google Photos API. I did this by searching for "Google Photos" when adding a step. Note that this did *not* show up in the first page of apps oddly and I had to click "Load More Apps":
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/01/photos1.jpg" alt="Shot of PD UI to add a new step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/01/photos1.jpg" alt="Shot of PD UI to add a new step" class="lazyload imgborder imgcenter">
 </p>
 
 This drops in a simple code step with an auth connection dropdown:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/01/photos2.jpg" alt="Code step for PD Google Photos action" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/01/photos2.jpg" alt="Code step for PD Google Photos action" class="lazyload imgborder imgcenter">
 </p>
 
 I've shared in the past how Pipedream *really* makes authentication easy but I've got to mention it again. Nearly every time I've used a Google service in the past, roughly 75% of my time is just getting the damn authentication right. Once I get past that hurdle, their APIs are typically easy to use. Pipedream handles that for me. Once I you add an account, it simply provides the auth info for you so you can focus on actually *using* the API.
@@ -32,7 +32,7 @@ I've shared in the past how Pipedream *really* makes authentication easy but I'v
 I will warn you that at the time of me writing this, Google has not yet verified Pipedream's access for this service. You will get a scary-ish warning like so:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/01/photos3.jpg" alt="Warning from Google" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/01/photos3.jpg" alt="Warning from Google" class="lazyload imgborder imgcenter">
 </p>
 
 The approval process is handled by Google and Pipedream started it sometime ago, so right now the delay is Google's fault. That being said, I trust Pipedream so I went ahead and approved it. Hopefully if you're reading this in the future, the warning is gone. 
@@ -127,7 +127,7 @@ async (event, steps, auths) => {
 And it worked! I opened my browser to the URL and got a pic. As I reloaded, it randomly selected new ones (here's one of my favorite favorites):
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/01/photos4.jpg" alt="Daughter reading a Star Wars comic" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/01/photos4.jpg" alt="Daughter reading a Star Wars comic" class="lazyload imgborder imgcenter">
 </p>
 
 So... I was done. And happy with it. But - of course - I decided to tweak it a bit. Specifically I decided to add a cache. Pipedream has an incredibly simple key/value system called [$checkpoint](https://pipedream.com/docs/workflows/steps/code/state/#workflow-state). It lets you store data at a per workflow or step level. Going through my workflow, I made the following changes.

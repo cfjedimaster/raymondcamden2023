@@ -45,7 +45,7 @@ The component uses EJS to generate a random width and height and then outputs it
 We will end up with two random cats. (Random at build time of course, once deployed it's going to be static HTML.) Here's a completely gratuitous screenshot just so I can have some cat pictures in the post:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/webc1.jpg" alt="Output from component, 2 random cats" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/webc1.jpg" alt="Output from component, 2 random cats" class="lazyload imgborder imgcenter">
 </p>
 
 Ok, so far so good, but let's add a bit of interactivity to the component. I want to make it so that when you mouseover the picture, the browser plays a sound file of a cat meowing. I would never do this in real life because it would be annoying af as the kids say, but whatever. Here's the new version:

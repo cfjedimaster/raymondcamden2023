@@ -59,7 +59,7 @@ eleventyConfig.addPassthroughCopy('src/images');
 Here's how this looks when rendered:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/cats1.jpg" alt="Gratuitous cat picture is gratuitous" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/cats1.jpg" alt="Gratuitous cat picture is gratuitous" class="lazyload imgborder imgcenter">
 </p>
 
 Honestly, I don't really need to show you this picture but I couldn't resist. Alright, so the next part was to generate the zip file. While I had a good idea of how I was going to create the zip, I struggled with what was the "best" or more appropriate place to handle that logic. In the end, I decided to use Eleventy's [eleventy.after](https://www.11ty.dev/docs/events/#eleventy.after) event. That event fires after a build is complete. Here's how I used it in my `.eleventy.js` file:

@@ -115,7 +115,7 @@ There's also an option like `get` where you can pass an object containing additi
 The final method I'll show is the `getAll` method which returns an array of cookies. Running `cookieStore.getAll().then(console.log)` on my blog returns:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/04/cookies1.jpg" alt="Console dump of cookies" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/04/cookies1.jpg" alt="Console dump of cookies" class="lazyload imgborder imgcenter">
 </p>
 
 ## Listening for Cookie Events

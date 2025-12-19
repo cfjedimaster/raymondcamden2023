@@ -79,7 +79,7 @@ eleventyConfig.addFilter("getRelated", function(relatedPosts, all) {
 One thing to note about this solution - its unidirectional. In theory you could make this work both ways. I'd remove the condition from the template (since the page you link to may have no related items defined) and then use code that looks at the current page's filePathStem to see if anyone links to it. I was ok with it being unidirectional but that's a modification that could be done. Here's how it looks in the awesomely designed demo I built:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/09/related1.jpg" alt="A blog post showing related entries in a list at the bottom." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/09/related1.jpg" alt="A blog post showing related entries in a list at the bottom." class="lazyload imgborder imgcenter">
 </p>
 
 If you want to play with this, you can grab the source here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/relatedentries>

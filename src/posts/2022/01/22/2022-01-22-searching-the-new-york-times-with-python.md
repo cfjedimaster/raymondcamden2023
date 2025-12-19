@@ -12,7 +12,7 @@ description: Using the New York Times API with Python - some simple demos
 In my effort to keep practicing Python and build fun stuff to help me learn, today I built a few demos of using the [New York Times API](https://developer.nytimes.com/). I last played with this *way* back in 2014: ["Using the New York Times API to Chart Occurrences in Headlines"](https://www.raymondcamden.com/2014/09/15/using-the-new-york-times-api-to-chart-occurrences-in-headlines). In that demo I let you enter a simple search term and then I report on the number of occurrences of that term over time. I think my favorite image from that post is a search for "Internet":
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/s2_small.png" alt="Occurrences of Internet in NYT Headlines" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/s2_small.png" alt="Occurrences of Internet in NYT Headlines" class="lazyload imgborder imgcenter">
 </p>
 
 Today the API popped up back in my head and I thought it would be fun to play with it again, this time in Python. I had some success with it today and thought I'd share the results. It's nothing too exciting and is basic Python stuff, but I love getting the practice and I did learn a bit, so that's always a good use of my time, especially on a Saturday, right?
@@ -58,7 +58,7 @@ The day, month, and year, are all hard coded here. The Archive API lets you filt
 Anyway, once I've filtered to articles for a day, I then `random.choice` to pick one. I then print out the headline. I ran this a few times and here's the output:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/01/nyt1.jpg" alt="Example output from random article selection" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/01/nyt1.jpg" alt="Example output from random article selection" class="lazyload imgborder imgcenter">
 </p>
 
 For my second iteration, I simply removed the hard coded year, month, and day. This gave me a bit more practice with Python date support. You can see that in the top portion of the code below. 
@@ -116,7 +116,7 @@ print(selected["headline"]["main"])
 Getting a random year and month was easy thanks to Python's `random` library. Figuring out the total number of days in the month was a bit harder, and by that I mean I had to google for it. The `calendar` module provides a simple API for it. I'll be honest - in the past I've been lazy with code like this and simply used 28 as a max day. Don't tell my employers. After that, it's pretty much the same code as before. Get by year/month, filter to day, and select one. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/01/nyt2.jpg" alt="Random articles from the NYT" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/01/nyt2.jpg" alt="Random articles from the NYT" class="lazyload imgborder imgcenter">
 </p>
 
 For my final demo, I decided to rebuild the logic I first did nearly ten years ago. Given a term, report on the number of occurrences in headlines over time. Not surprisingly, this is where I first hit the API limits. Thankfully Python has a `sleep` module to make it easy to 'slow' down my code. I also put a limit of 100 years into the code to make it a bit more reasonable. Here's my little command line utility:

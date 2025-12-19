@@ -246,7 +246,7 @@ Now let's test it out in the CodePen below:
 Hopefully, it worked fine for you. Of course, if it failed for some reason, you still saw a table right? But maybe you tried sorting on age and saw this:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/pet1.jpg" alt="Table sorted incorrectly for age" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/pet1.jpg" alt="Table sorted incorrectly for age" class="lazyload imgborder imgcenter">
 </p>
 
 Oops. The age column, which is a number, is sorted as a string. So how do we fix that? Remember that my goal was to have you not touch your original table at all. I initially thought I'd maybe have you add a `data-` attribute to the table, but that didn't feel right. Instead, I came up with another solution - an attribute to the web component:

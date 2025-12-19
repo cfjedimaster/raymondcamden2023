@@ -60,7 +60,7 @@ Here's how I built it.
 I created a new Eleventy site, and in there, I created a folder called `photos` that included a bit over twenty different photos from my own personal collection.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/cloud1.jpg" alt="Screenshot of my photos directory" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/cloud1.jpg" alt="Screenshot of my photos directory" class="lazyload imgborder imgcenter">
 </p>
 
 Next, I installed the [Node.js SDK](https://cloudinary.com/documentation/node_integration) for Cloudinary: `npm i cloudinary`. Once installed, I created a data file named `photos.js`. I began by configuring the Cloudinary object with my credentials:

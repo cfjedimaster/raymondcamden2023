@@ -16,7 +16,7 @@ I promise I won't be making *every* upcoming post about Mastodon, but as I reali
 For the trigger, Pipedream has built in a "New Item in Feed" action. I selected that and entered my RSS feed (<https://www.raymondcamden.com/feed.xml>). I then tested it to confirm it got my feed items. So to be clear, the entire "run this crap when a new item is posted" logic was done in about sixty seconds. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/12/rss1.jpg" alt="Screenshot of configured new item in feed trigger" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/12/rss1.jpg" alt="Screenshot of configured new item in feed trigger" class="lazyload imgborder imgcenter">
 </p>
 
 ## Step Two - Format the Post
@@ -51,7 +51,7 @@ As I [mentioned](https://www.raymondcamden.com/2022/12/01/building-a-mastodon-bo
 They also added a basic Mastodon action for hitting the API. So for example, here's what you get when adding the action:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/12/rss2.jpg" alt="New Mastodon action" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/12/rss2.jpg" alt="New Mastodon action" class="lazyload imgborder imgcenter">
 </p>
 
 Once you've defined a Mastodon account, you can select it and then the code will be able to pick up on the authentication. Make note of the code - it's hitting the Mastodon API to verify credentials - a default call. But when I saw this, I was curious how difficult it would be to change this to posting a new toot. 
@@ -87,7 +87,7 @@ As you can see, I'm posting the text of my new blog post, and that's it. No need
 Guess what? Posting simple text to Twitter has been supported in Pipedream for a decade or so. (Ok, maybe not quite that long.) I literally just added the action, selected my account, and used the same text I used for Mastodon.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/12/rss3.jpg" alt="Configured Tweet action" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/12/rss3.jpg" alt="Configured Tweet action" class="lazyload imgborder imgcenter">
 </p>
 
 ## Conclusion

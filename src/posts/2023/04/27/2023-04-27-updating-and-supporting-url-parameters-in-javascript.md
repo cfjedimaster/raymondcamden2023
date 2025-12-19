@@ -16,13 +16,13 @@ Not quite a *long* time ago, but roughly two years ago I wrote a [blog post](htt
 I'm going to cheat a bit and steal some of the text/images from the older post. Here's our application in its default state:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/vu1.jpg" alt="Demo layout of application, list of items with filters" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/vu1.jpg" alt="Demo layout of application, list of items with filters" class="lazyload imgborder imgcenter">
 </p>
 
 There's a list of items that consist of people, cats, and a dog. Each item has a name and type. On top, there are filters for the name and type. If you enter any text, the items that match the name (ignoring case) will be shown. If you select one or more of the types, only those matching will be shown.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/vu2.jpg" alt="Items filtered by name and type" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/vu2.jpg" alt="Items filtered by name and type" class="lazyload imgborder imgcenter">
 </p>
 
 Let's take a look at the code. First, the HTML:

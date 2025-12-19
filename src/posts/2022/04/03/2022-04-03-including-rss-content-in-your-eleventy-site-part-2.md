@@ -52,7 +52,7 @@ Then I could use it in my output like so:
 Simple and effective. Here's how it looks:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/rss2-1.jpg" alt="RSS items showing a nice date" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/rss2-1.jpg" alt="RSS items showing a nice date" class="lazyload imgborder imgcenter">
 </p>
 
 ## Show Full Content
@@ -148,7 +148,7 @@ There's a few things I do here outside of grabbing N feeds. First, I include the
 Note that the main change here is including the blog where the item came from. Here's how this looks:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/rss2-2.jpg" alt="List of items" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/rss2-2.jpg" alt="List of items" class="lazyload imgborder imgcenter">
 </p>
 
 All of this may be found in my Eleventy demos repo here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/use_rss>

@@ -63,7 +63,7 @@ I simplify the result a bit by looking for the title and wikitext. Again, sooooo
 
 I noticed that the random characters shared something in common. They all had a box on the right:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/rah1.png" alt="RAH character example" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/rah1.png" alt="RAH character example" class="lazyload imgborder imgcenter">
 
 I noticed "Specialty" in the box and thought that would be nice information for the tweet. I had originally considered the first sentence of the main text, but I figured name, specialty, and an image would be enough. When I looked at the wiki text, I could see the box inline with the rest of the code. Here's a sample:
 {% raw %}
@@ -228,11 +228,11 @@ async (event, steps) => {
 
 My third step was based on a brand new action Dylan from Pipedream created and shared, `upload_media_to_twitter`. When it comes to tweets with media, Twitter requires you to upload the image first, which gives you an ID value, that you can then use in your tweet. So in Pipedream I added the step and told it to use the value from the first step:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/rah2.png" alt="Pipedream upload to media step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/rah2.png" alt="Pipedream upload to media step" class="lazyload imgborder imgcenter">
 
 The output of this will be an ID value that can then be used to generate the tweet:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/rah3.png" alt="Last step - making the tweet" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/rah3.png" alt="Last step - making the tweet" class="lazyload imgborder imgcenter">
 
 And that's it. I apologize if I sound like I'm repeating myself, but I freaking love that most of my work was in creating my text and using the wikia API. The actual "now tweet this at a schedule" part was trivial. And heck, if I wanted to change this to a daily email, or even a SMS message, I can reuse my step in another workflow. I love it! 
 

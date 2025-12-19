@@ -44,7 +44,7 @@ So that's nearly a thousand words, and I still don't feel like I've quite nailed
 I began with an existing MongoDB database. (Actually it was on a service called mLab and I had to migrate it. That went painlessly.) MongoDB gave me my connection string information which I knew was going to be sensitive, so step one was adding it to my Netlify site an environment variable.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/08/sj1.jpg" alt="Netlify environemnt settings" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/08/sj1.jpg" alt="Netlify environemnt settings" class="lazyload imgborder imgcenter">
 </p>
 
 I then switched to Eleventy. My first page us a list of films and to get that, I'm using a global data file. Here it is:
@@ -76,7 +76,7 @@ async function getFilms() {
 There's a couple of things that are important here. First, I get my Netlify environment variable like any other, but for this to work I need to use `ntl dev` to run my site and not `eleventy --serve`. Technically `ntl dev` is doing that anyway, but don't forget. This is what will "inject" the environment variable. You can see it in your console:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/08/sj2.jpg" alt="ntl dev output" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/08/sj2.jpg" alt="ntl dev output" class="lazyload imgborder imgcenter">
 </p>
 
 Although crucial aspect? Closing the Mongo connection. That's huge and cost me two days of trying to figure out why it could run locally but never built on Netlify. Huge thanks go to [Dave Rupert](https://daverupert.com/) for finding this issue and even submitting a PR so I could fix it in one click. 

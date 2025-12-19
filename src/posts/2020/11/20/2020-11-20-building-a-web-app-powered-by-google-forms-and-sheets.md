@@ -18,7 +18,7 @@ Google lets you direct form answers to a Google Sheet. And here's where things g
 Let's check out a demo of this in action. First, I built a form:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/forma1.jpg" alt="Three question form" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/forma1.jpg" alt="Three question form" class="lazyload imgborder imgcenter">
 </p>
 
 My form has three questions, all required. Obviously you can have more, have optional questions, and so forth. You can view this form here: <https://docs.google.com/forms/d/e/1FAIpQLSfYL868eNC-iWLVI50EvsPHtIVwfCIReMrBkbkZGiL_xd81sA/viewform>
@@ -26,7 +26,7 @@ My form has three questions, all required. Obviously you can have more, have opt
 I set up the form to save to a Google Sheet (that isn't the default), and then once in the sheet, I added a new column, Approved. I set it to be a checkbox so it was quick to use:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/form2.jpg" alt="Spreedsheet" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/form2.jpg" alt="Spreedsheet" class="lazyload imgborder imgcenter">
 </p>
 
 Notice that Google has also added a timestamp. I don't need that but it's handy information. Now for the fun part. My sheet is only editable by me, but the public has the ability to store data in it via the form. But only I can edit the additional columns. 
@@ -120,7 +120,7 @@ If you don't use Vue.js, don't worry, lets just focus on the `Papa.parse` sectio
 And that's it. Now you can load the application and see the table, all driven by user content without any server-side code:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/form3.jpg" alt="Table of cats" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/form3.jpg" alt="Table of cats" class="lazyload imgborder imgcenter">
 </p>
 
 You can see the complete code below:

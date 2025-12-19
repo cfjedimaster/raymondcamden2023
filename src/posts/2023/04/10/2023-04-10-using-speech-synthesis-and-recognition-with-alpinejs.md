@@ -69,7 +69,7 @@ The Eliza library I use has a few methods. `getInitial` starts a conversation. `
 Eliza, the OG ChatGPT.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/04/nerd.jpg" alt="Old computer nerd, could be me." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/04/nerd.jpg" alt="Old computer nerd, could be me." class="lazyload imgborder imgcenter">
 </p>
 
 ## Adding Speech Synthesis

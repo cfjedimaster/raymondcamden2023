@@ -26,7 +26,7 @@ If you've not seen the `-b` option before, it means "bare" and generates a much 
 I then fired up the application with `npm run serve` and confirmed it worked. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/vn1.jpg" alt="Vue bare app" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/vn1.jpg" alt="Vue bare app" class="lazyload imgborder imgcenter">
 </p>
 
 Next, I started using the `netlify dev` command. This enables you to test local applications as if they were running on the Netlify platform. I noticed that `netlify dev` ran `npm run serve`, but I don't remember that being documented. It was the first script defined in my package.json file and so maybe that's why it fired, but I went with a more specific command: `netlify dev -c "npm run serve"`. The `-c` flag specifies the command for the CLI to run.
@@ -34,7 +34,7 @@ Next, I started using the `netlify dev` command. This enables you to test local 
 I noticed that the output that was much more verbose when running via `netlify dev`. When you use `npm run serve`, there's a lot of webpack related messages that gets output to one line, constantly being overwritten. It's a lot of noise so I'm fine with that. But when running via `netlify dev`, they all get output to the screen. This is fine, but you may miss the message stating that the server is up and running:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/vn2.jpg" alt="Netlify dev message hidden amongst log messages" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/vn2.jpg" alt="Netlify dev message hidden amongst log messages" class="lazyload imgborder imgcenter">
 </p>
 
 Once I saw this message and opened my browser to localhost:8888 I didn't worry about it again. Cool, now let's go serverless.
@@ -96,7 +96,7 @@ export default {
 All I've done here is fire off a call to the function (the `.netlify/functions` path is how you "address" serverless functions on Netlify) and displayed the result. Here's how it looks:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/vn3.jpg" alt="Vue application calling the function" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/vn3.jpg" alt="Vue application calling the function" class="lazyload imgborder imgcenter">
 </p>
 
 Beautiful, right? Now to get it live. First, I made a new repo for it: <https://github.com/cfjedimaster/vue-netlify-demo>. Then I made a Netlify site tied to the GitHub repo. I specified `npm run build` to generate the Vue production version of the app and entered `dest` for the folder to use as the site source.

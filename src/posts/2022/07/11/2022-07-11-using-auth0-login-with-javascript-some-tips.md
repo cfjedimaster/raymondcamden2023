@@ -18,19 +18,19 @@ Ok, this all began when I used the [JavaScript quickstart](https://auth0.com/doc
 Outside of the issues, the quickstart is rather well done. I especially like how it offers to set stuff up for your code right in the guide:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/a1.jpg" alt="UI offering to make an application for you" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/a1.jpg" alt="UI offering to make an application for you" class="lazyload imgborder imgcenter">
 </p>
 
 However, if you use this option, it creates the application with one setting misconfigured. Go ahead and let the tutorial create the application, but then go into the [dashboard](https://manage.auth0.com/) in another tab, open the Applications panel and select your new application. (It will probably be the only one.) You should be in the Settings panel and if you scroll down to Application properties, look for **Token Endpoint Authentication Method**:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/a2.jpg" alt="Token Endpoint settings" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/a2.jpg" alt="Token Endpoint settings" class="lazyload imgborder imgcenter">
 </p>
 
 See that yellow warning there? When I was going through the quickstart I wasn't able to log in, randomly came in here, noticed that, and figured, ok, let's change it. Change it to "None", save, and you'll notice it's now disabled:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/a3.jpg" alt="Disabled setting" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/a3.jpg" alt="Disabled setting" class="lazyload imgborder imgcenter">
 </p>
 
 I assume it can be re-enabled if you tweak other settings, but all I know is that it was enough to get my demo code working.
@@ -40,13 +40,13 @@ I assume it can be re-enabled if you tweak other settings, but all I know is tha
 The second issue I ran into was 100% my fault, but with the assumption that other folks may make the same mistake, I figured I'd share. As you scroll down the quickstart, the content on the right-hand changes. This is super obvious to everyone. I assume. But I was on step three and stuck as the text didn't explain what to do:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/a4.jpg" alt="Shot from tutorial" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/a4.jpg" alt="Shot from tutorial" class="lazyload imgborder imgcenter">
 </p>
 
 Turns out - I just needed to scroll a bit more:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/a5.jpg" alt="Shot from tutorial - scroll down" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/a5.jpg" alt="Shot from tutorial - scroll down" class="lazyload imgborder imgcenter">
 </p>
 
 Yeah... I should have noticed that but as I said, if you're like me, don't repeat this mistake. 
@@ -68,7 +68,7 @@ And in fact, this is where the tutorial falls apart for me. I went ahead and dow
 Wow, three exclamation marks. I need to chill for a sec:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/chillcat.jpg" alt="Chill cat" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/chillcat.jpg" alt="Chill cat" class="lazyload imgborder imgcenter">
 </p>
 
 ### A Demo 

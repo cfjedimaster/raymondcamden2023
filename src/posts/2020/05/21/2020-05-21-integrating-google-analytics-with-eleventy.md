@@ -28,13 +28,13 @@ Now for the crucial part. When you create a service account, it will include an 
 Yes, "damnga" is "damn google analytics" - I was frustrated. Copy the email address, go to your Google Analytics dashboard, and add it as a user to the property your working with. This can be done via the Admin link. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/ga1.png" alt="View User Management" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/ga1.png" alt="View User Management" class="lazyload imgborder imgcenter">
 </p>
 
 All it needs is "Read &amp; Analyze" permissions. While in your dashboard, also click the "View Settings" link and get your View ID:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/ga2.png" alt="View ID" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/ga2.png" alt="View ID" class="lazyload imgborder imgcenter">
 </p>
 
 Alright, once you've done that, let's look at the code, bit by bit at first. Start off initializing the library:
@@ -401,7 +401,7 @@ eleventyConfig.addFilter('toData', (p, articles) => {
 And here's how it looks:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/ga3.png" alt="Example output" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/ga3.png" alt="Example output" class="lazyload imgborder imgcenter">
 </p>
 
 You can see it live at the [JavaScript Cookbook](https://www.javascriptcookbook.com/) and the complete code at the GitHub repo: <https://github.com/cfjedimaster/javascriptcookbookstatic>

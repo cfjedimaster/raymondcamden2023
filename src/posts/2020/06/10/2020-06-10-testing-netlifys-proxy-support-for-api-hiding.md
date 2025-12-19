@@ -36,7 +36,7 @@ const app = new Vue({
 Note that the hard coded values for `at` and `cat` could absolutely be dynamic. I was testing Netlify here, not our API. When run in the browser, you see this in network tools:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/06/nr1.png" alt="Network request" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/06/nr1.png" alt="Network request" class="lazyload imgborder imgcenter">
 </p>
 
 If you dig into the headers and such nothing there will reveal what the destination is either. To make this work, I added a file, `_redirects`, which this:

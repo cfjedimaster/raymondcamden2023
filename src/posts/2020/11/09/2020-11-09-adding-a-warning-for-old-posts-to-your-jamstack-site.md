@@ -12,13 +12,13 @@ description: How to add a message to older content on your static site.
 While doing some important research this past weekend (yes, it was research), I ran into something interesting on a Forbes article:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/forbes.jpg" alt="Forbes article with a header saying the post is older than two years." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/forbes.jpg" alt="Forbes article with a header saying the post is older than two years." class="lazyload imgborder imgcenter">
 </p>
 
 Look at that warning on the bottom. This is an incredibly useful warning for readers to let them know the content may be out of date. And while the topic here was a video game, you can imagine this being even more useful on a technical blog. I thought this was such a good idea I went ahead and implemented it here:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/old.jpg" alt="A picture demonstrating a post saying that it is more than two years old." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/old.jpg" alt="A picture demonstrating a post saying that it is more than two years old." class="lazyload imgborder imgcenter">
 </p>
 
 So how did I do it? I'm using [Eleventy](https://www.11ty.dev/) for my Jamstack framework and [Liquid](https://shopify.github.io/liquid/) for my template language, but this could be implemented anywhere. 

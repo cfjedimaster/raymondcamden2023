@@ -87,7 +87,7 @@ layout: main
 You can see now that I loop over a list of authors and output a comma if the loop has more than one item. This made individual blog posts work fine. Here's a post with two authors:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/09/ma1.jpg" alt="Post showing multiple authors" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/09/ma1.jpg" alt="Post showing multiple authors" class="lazyload imgborder imgcenter">
 </p>
 
 The second change I had to make was to the authors template. The template was fine, but the `getPostsByAuthor` filter had to be updated:

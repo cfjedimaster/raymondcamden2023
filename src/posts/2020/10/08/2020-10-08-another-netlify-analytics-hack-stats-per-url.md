@@ -301,13 +301,13 @@ const app = new Vue({
 Which basically has a form field on top and a table of results:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/10/a1.jpg" alt="Table of results" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/10/a1.jpg" alt="Table of results" class="lazyload imgborder imgcenter">
 </p>
 
 64K page views on my vue content is pretty nice. I can also search by year since my pages follow a date based path system:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/10/a2.jpg" alt="Using /2020 as the path" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/10/a2.jpg" alt="Using /2020 as the path" class="lazyload imgborder imgcenter">
 </p>
 
 Not bad for a year that is totally insane and hellish, right?

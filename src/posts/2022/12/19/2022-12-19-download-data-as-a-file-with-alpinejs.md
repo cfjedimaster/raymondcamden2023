@@ -19,7 +19,7 @@ In the original article, I first demonstrated downloading a JSON file. But as mo
 
 For the first version, we're going to look at a tabular set of cats. I will not make you scroll past the gratuitous picture of a cat on a table. Heh, I lie:
 
-<img data-src="https://static.raymondcamden.com/images/2020/12/black-cat-yawn.jpg" alt="Cat on a table" class="imgborder imgcenter ls-is-cached lazyloaded" src="https://static.raymondcamden.com/images/2020/12/black-cat-yawn.jpg">
+<img src="https://static.raymondcamden.com/images/2020/12/black-cat-yawn.jpg" alt="Cat on a table" class="imgborder imgcenter ls-is-cached lazyloaded" src="https://static.raymondcamden.com/images/2020/12/black-cat-yawn.jpg">
 
 Ok, so our data:
 
@@ -129,7 +129,7 @@ element.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent
 That's literally the entire change. Now when clicking download you get a CSV that can be opened in Excel. My previous post had a screenshot of that but as this was before you could use Dark mode in Office, I figured I'd update it with a new one:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/12/dl1.jpg" alt="Excel sample output" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/12/dl1.jpg" alt="Excel sample output" class="lazyload imgborder imgcenter">
 </p>
 
 Here's the entire example:

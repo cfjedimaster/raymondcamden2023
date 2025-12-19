@@ -16,7 +16,7 @@ First off, my Alpine application is going to display images from a specific fold
 For each image in that folder, I want to display a thumbnail and then a "web-sized" version (basically something nicely sized but not huge). To display these images, I'm going to use a library I've used before, [Parvus](https://github.com/deoostfrees/Parvus). Parvus is a lightbox library where you can view an image in a 100% full overlay above the rest of the page. It's fairly lightweight and simple and was easy to use [last time](https://www.raymondcamden.com/2022/07/15/getting-images-from-a-twitter-account-2022), so I figured I'd fire it up again. Here's how the application renders:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/alp1.jpg" alt="List of thumbnails" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/alp1.jpg" alt="List of thumbnails" class="lazyload imgborder imgcenter">
 </p>
 
 Note the use of sepia. I used sepia because that's what real designers do. I'm kidding. Mostly. Seriously though, please don't take my horrible design skills as indicative of what you can build with Cloudinary and Alpine. I'm where good design goes to die. 
@@ -24,7 +24,7 @@ Note the use of sepia. I used sepia because that's what real designers do. I'm k
 Clicking on an individual image opens it up:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/alp2.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/alp2.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 You can see that Parvus adds navigation, a counter (X of Y), and a "close" button. Let's look at the code.

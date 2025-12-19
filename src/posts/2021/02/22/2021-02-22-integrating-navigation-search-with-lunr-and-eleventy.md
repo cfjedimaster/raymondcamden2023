@@ -12,13 +12,13 @@ description: How to use navigation search forms and Lunr
 Forgive me for what may be a slightly confusing title. I've previously talked about integrating [Lunr](https://lunrjs.com/) and [Eleventy](https://www.11ty.dev/) (["Adding Search to your Eleventy Static Site with Lunr"](https://www.raymondcamden.com/2019/10/20/adding-search-to-your-eleventy-static-site-with-lunr) and the more recent ["Using Pre-Built Lunr Indexes with Eleventy"](https://www.raymondcamden.com/2021/01/22/using-pre-built-lunr-indexes-with-eleventy)). In both of those blog posts I had a simple home page with a search for embedded directly on it:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/el1.jpg" alt="Example of search displayed results on home page" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/el1.jpg" alt="Example of search displayed results on home page" class="lazyload imgborder imgcenter">
 </p>
 
 For my simple demo, this was sufficient, but I wanted something that was a bit more realistic. In many sites, the navigation itself has a small form field where a user can enter a term, hit a button (or Enter), and then takes them to a search page with results. So for example, imagine this as your top navigation bar:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/el2.jpg" alt="Example of search field in header" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/el2.jpg" alt="Example of search field in header" class="lazyload imgborder imgcenter">
 </p>
 
 The expectation is that I can enter a term there, hit the button, and on the search page, it should already be performing a query for my input. As you can probably guess, with Lunr this involves noticing the search term in the query string and automatically performing the search. Here's how I did that.
@@ -32,13 +32,13 @@ First, I'm not going to go over how the site was built, I did that in my [first 
 I used that demo as my source and then modified it quite a bit. First, I added Bootstrap to the UI. Look how pretty it is now:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/el3.jpg" alt="Example of demo with Bootstrap applied" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/el3.jpg" alt="Example of demo with Bootstrap applied" class="lazyload imgborder imgcenter">
 </p>
 
 I also removed the search application from the home page and instead made a dedicated page for it (`search.liqud`):
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/el4.jpg" alt="Search page example" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/el4.jpg" alt="Search page example" class="lazyload imgborder imgcenter">
 </p>
 
 Here's how I enabled the search in the navigation to correctly default the search. First, I made sure my search form was using `GET`, this will include the term in the query string. Here's the relevant code from my layout:

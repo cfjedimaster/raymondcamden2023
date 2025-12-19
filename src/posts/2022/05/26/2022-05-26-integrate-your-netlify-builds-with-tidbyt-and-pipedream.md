@@ -12,19 +12,19 @@ description: How I integrated Netlify build status alerts with the Tidbyt device
 A few months ago I randomly came across a Facebook app for a little device that looked completely unnecessary yet also completely cool: [Tidbyt](https://tidbyt.com/). The Tidbyt is a little hardware LED device that shows different pieces of data, for example, sunrise and sunset:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/tid1.jpg" alt="Hardware showing sunrise/sunset" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/tid1.jpg" alt="Hardware showing sunrise/sunset" class="lazyload imgborder imgcenter">
 </p>
 
 Or moon phase information:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/tid2.jpg" alt="Moon phase displayed on Tidbyt" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/tid2.jpg" alt="Moon phase displayed on Tidbyt" class="lazyload imgborder imgcenter">
 </p>
 
 And of course, Nyan cat:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/tid3.jpg" alt="Nyan cat on Tidbyt" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/tid3.jpg" alt="Nyan cat on Tidbyt" class="lazyload imgborder imgcenter">
 </p>
 
 As I said, this is not something I *need* in my life, but I'm so happy I got it. It's just a fun piece of hardware. But even cooler is that it's got an API. You can use the API to build full apps or just one-time messages. Their [developer documentation](https://tidbyt.dev/) is pretty well done, and while I ran into a hiccup or two, it was pretty easy to start sending custom messages to my hardware. The only real nit is that you must send a picture, a 64x32 image. That's kind of a bummer when you want to just send a quick text message, but there are multiple ways to generate images out there so it's not too much of a problem. 
@@ -36,7 +36,7 @@ With that in mind - let me share how I built a Netlify integration!
 Short and simple - when I deploy my site (this site, the one you are on right now!), I want a notification when the build is complete. Something like so:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/tid.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/tid.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 Netlify takes between two to four minutes when building my site, so this way I can get a visual notification when the build is done. Let me share how I did it.
@@ -80,7 +80,7 @@ let result = await resp.json();
 As you can see, there isn't too much to it. I specify a template (which for me was just a black rectangle using the proper size for Tidbyt) and then the text I want to use. I send this to Bannerbear and the result is a JSON packet that includes the URL to the generated image. Now I want to be clear, Bannerbear has a heck of a lot of options, I just used the quickest and simplest thing I could to generate my image, but it's definitely a service to check out. Here's what that image looks like when done:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/complete.png" alt="Build Complete" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/complete.png" alt="Build Complete" class="lazyload imgborder imgcenter">
 </p>
 
 The next step was to get that data on my Tidbyt. As I mentioned, they have an API, but you can also find an NPM package: <https://npm.io/package/tidbyt>. Once installed, and with your keys setup in environment variables, it's pretty quick to use:
@@ -127,7 +127,7 @@ export default defineComponent({
 The final step was to copy the URL from the Pipedream workflow and tell Netlify to hit it on a successful build. I went into my site's settings, Build &amp; deploy, Deploy notifications. I added a new notification and selected the "deploy succeeds" notification. Lastly, I just pasted in my URL from Pipedream:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/tid4.jpg" alt="Deploy notification" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/tid4.jpg" alt="Deploy notification" class="lazyload imgborder imgcenter">
 </p>
 
 ## Wrap Up

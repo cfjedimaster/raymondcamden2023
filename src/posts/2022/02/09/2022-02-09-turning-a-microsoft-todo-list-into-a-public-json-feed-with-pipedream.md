@@ -12,13 +12,13 @@ description: Making a public JSON feed of a ToDo List using Pipedream workflows.
 A few months ago I wrote up a [blog article](https://www.raymondcamden.com/2021/11/13/congratulating-yourself-with-pipedream-and-microsoft-to-do) on how to use Microsoft's Graph API to check your [tasks](https://todo.microsoft.com/tasks/) and congratulate for completing items over the previous week. I'm a *huge* fan of Microsoft To Do and while I use it for tasks lists, my biggest use case now is a "blog idea" list.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/todo1.jpg" alt="Screenshot of MS ToDo app with my blog ideas" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/todo1.jpg" alt="Screenshot of MS ToDo app with my blog ideas" class="lazyload imgborder imgcenter">
 </p>
 
 I've got a horrible memory so whenever a random idea pops in my head, I try to immediately write it down. (Literally during my writing of this blog entry I had an idea for another blog entry and it turns out I [already wrote it](https://www.raymondcamden.com/2021/09/24/creating-a-manual-related-posts-feature-in-eleventy).) I also try to add a few notes so that I can remember exactly what I was thinking. More than once I wrote down the gist of an idea and later on forgot what the heck I was thinking.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/todo2.jpg" alt="Seriously, Mortal Kombat Ponies??!?" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/todo2.jpg" alt="Seriously, Mortal Kombat Ponies??!?" class="lazyload imgborder imgcenter">
 </p>
 
 I randomly thought this morning that it would be kind of cool to take my list and actually put it up on my blog. Based on how easy it was to work with the Graph API and Pipedream I whipped up the following workflow.

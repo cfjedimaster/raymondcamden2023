@@ -18,13 +18,13 @@ First off though - I can say I spent much more time thinking about the process t
 Alright, let's start by looking at the Google Sheet:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/gs1.png" alt="Google Sheet" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/gs1.png" alt="Google Sheet" class="lazyload imgborder imgcenter">
 </p>
 
 I've got a simple header and two columns, one for the text and one for the date. For the text, I found a cool [StackOverflow post](https://webapps.stackexchange.com/questions/76174/how-to-limit-the-length-of-data-in-a-cell-in-google-sheets) that described how to limit the size of text in a cell. I used this to prevent the user from typing too much in the text cell.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/gs2.png" alt="Limited size of cell" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/gs2.png" alt="Limited size of cell" class="lazyload imgborder imgcenter">
 </p>
 
 What you can't see in the screenshot above is that it actually edited my text after I entered it to reduce the total number of characters. I didn't even know about the "note" feature of cells, but that worked pretty well! 
@@ -32,7 +32,7 @@ What you can't see in the screenshot above is that it actually edited my text af
 For the date column I applied date validation. Nice and simple.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/gs3.png" alt="Date validation on the cell" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/gs3.png" alt="Date validation on the cell" class="lazyload imgborder imgcenter">
 </p>
 
 All in all, I've made the sheet such that the writer should be guided to enter appropriate data. It isn't a web form with fancy hipster JavaScript, but it works. 
@@ -51,7 +51,7 @@ Another reason I like this is that I could - if I choose, pause the workflow and
 The first step in the workflow is the CRON trigger. As all of this is just a test mine is still turned off, but it would be simple to pick a good schedule:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/gs4.png" alt="CRON trigger" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/gs4.png" alt="CRON trigger" class="lazyload imgborder imgcenter">
 </p>
 
 For my second step, I use a trick I learned from Pipedreamer (that's not really a word) [Dylan Sathar](https://twitter.com/DylanSather) - a Node step that sets constants for use later in the workflow. My code is just this:
@@ -69,7 +69,7 @@ Because my workflow needs to read and write to the sheet in multiple steps, I wa
 My next sheet reads the data. Since my first row is a header, I skip that in my range:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/gs5.png" alt="Read Google Sheet step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/gs5.png" alt="Read Google Sheet step" class="lazyload imgborder imgcenter">
 </p>
 
 To be clear, that was zero code on my part. 
@@ -112,13 +112,13 @@ Notice the two `$end` calls here to possibly end the workflow early. Outside of 
 The next step posts the tweet. No code, took two seconds to type in the paramater:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/gs6.png" alt="Tweet step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/gs6.png" alt="Tweet step" class="lazyload imgborder imgcenter">
 </p>
 
 The next step removes the row. Again, no code, took four seconds to get it working, much longer than the previous step, because I didn't notice I needed to pass a sheet ID along with the spreadhseet ID.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/gs7.png" alt="Remove row from Google Sheets step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/gs7.png" alt="Remove row from Google Sheets step" class="lazyload imgborder imgcenter">
 </p>
 
 And that's it! You can see the entire workflow yourself here: <https://pipedream.com/@raymondcamden/scheduled-tweet-manager-p_jmCyaa/>. Don't forget you can fork this and play with it yourself if you want. Let me know if you've got any questions or suggestions by leaving me a comment below!

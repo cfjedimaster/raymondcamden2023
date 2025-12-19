@@ -136,19 +136,19 @@ I asked for help on Twitter and [Stephen Bell](https://twitter.com/stephenjbell)
 First, you enable it.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc1.jpg" alt="MailChimp RSS to Email signup" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc1.jpg" alt="MailChimp RSS to Email signup" class="lazyload imgborder imgcenter">
 </p>
 
 Next, you give it a campaign name. FYI the "business name" there is what I used for my second test account just for screen shots.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc2.jpg" alt="Name the campaign" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc2.jpg" alt="Name the campaign" class="lazyload imgborder imgcenter">
 </p>
 
 On the next screen, you configure the RSS feed and schedule.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc3.jpg" alt="RSS details and schedule" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc3.jpg" alt="RSS details and schedule" class="lazyload imgborder imgcenter">
 </p>
 
 Now this brings up a very important detail. When working on my blog, my post templates don't normally include a time. Here's an example:
@@ -183,31 +183,31 @@ The time was arbitrary, but felt safe. My blog doesn't hide "future" posts so ev
 The next screen lets you specify an audience (you will only have one on the free tier) or filter it down to a segment or tag. I kept it simple and just used my audience.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc4.jpg" alt="Selecting the audience/segment for the list" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc4.jpg" alt="Selecting the audience/segment for the list" class="lazyload imgborder imgcenter">
 </p>
 
 The next screen lets you tweak quite a bit (the screen shot only shows about half the options). For me, all I did here was tweak the 'From name' option but you may want to do more.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc5.jpg" alt="Campaign options" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc5.jpg" alt="Campaign options" class="lazyload imgborder imgcenter">
 </p>
 
 The next screen asks you to pick a template. This is a bit overwhelming but I think the best option is the 1 column option under Basic. Now here's where things get a bit complex. The template is *not* setup to actually work with RSS. I'm not sure why MailChimp doesn't have one built for you (maybe it does and I couldn't find it), but their template editor isn't too hard to use once you get into it. By default you will see something like this:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc6.jpg" alt="Mail design" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc6.jpg" alt="Mail design" class="lazyload imgborder imgcenter">
 </p>
 
 As you mouse over the template, each part lets you click to edit, remove, or add new bits. That block, "It's time to design your email", should be removed or edits, and MailChimp will tell you if you don't. You can click to edit it and give it a nicer title and text:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc7.jpg" alt="Editing the first block" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc7.jpg" alt="Editing the first block" class="lazyload imgborder imgcenter">
 </p>
 
 Next you need to add the RSS information. In the list of blocks to the right you'll see two. "RSS Header" uses the information from your feed to dynamically add the title and description. I did not use this as I liked my text block which included how to reach out to me. Instead I dragged in the "RSS Items" block. You can, if you choose, edit the layout here. For example, I went to custom so I could remove the word "Excerts" from the text. You could tweak more here if you want.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc8.jpg" alt="Editing RSS Items" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc8.jpg" alt="Editing RSS Items" class="lazyload imgborder imgcenter">
 </p>
 
 The last thing I'll point out is the "Social Follow" block at the bottom. I edited that to remove Facebook and changed the URLs for Twitter and Website to point to my Twitter account and site. 
@@ -215,13 +215,13 @@ The last thing I'll point out is the "Social Follow" block at the bottom. I edit
 You can continue to tweak as you see fit of course. As I said, the editor is pretty powerful. Hit next and you can confirm everything is ok. Before you continue, be sure to use the "Preview and Test" function on the top right. You can enter your email address and it will fire off an email to it. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc10.jpg" alt="Sample email" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc10.jpg" alt="Sample email" class="lazyload imgborder imgcenter">
 </p>
 
 What's cool is that it automatically uses your most recent blog post as content even if it's old. I missed this test feature at first and I was so happy to find it. The last thing to do is click "Start RSS" at the bottom. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/mc9.jpg" alt="Confirm start" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/mc9.jpg" alt="Confirm start" class="lazyload imgborder imgcenter">
 </p>
 
 And that's it! As I said, I just launched this so I'm not 100% sure how well it's going to work, but [sign up](/subscribe) and let me know what you think. 

@@ -14,7 +14,7 @@ Apologies for what may be a long winded, kinda haphazzard post. The beginning of
 Alright, so what's the point of all this? I've noticed for some time now the comment traffic on my blog has decreased to near nothing. In fact, here's a chart that shows in pretty stark detail how much it's dropped:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/d1.jpg" alt="Line chart showing drop of comments" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/d1.jpg" alt="Line chart showing drop of comments" class="lazyload imgborder imgcenter">
 </p>
 
 For folks curious, that chart comes from the Disqus reporting tool I built a few years ago called Vader. You can read more about it here: [Working with the Disqus API - Deeper Stats (2)](https://www.raymondcamden.com/2016/08/25/working-with-the-disqus-api-deeper-stats-2) Disqus is a simple way to add commenting to a site, and I totally get why strong analytics requires a paid update, but I will never understand why Disqus simply can't tell you the total number of comments a site has. That's incredibly silly, if you ask me.
@@ -301,7 +301,7 @@ A few things to note. The function `generateFileName` uses the `link` value from
 The end result of this was a *bunch* of folders and files that mimicked my blog:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/d2.jpg" alt="Folder/file view of output" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/d2.jpg" alt="Folder/file view of output" class="lazyload imgborder imgcenter">
 </p>
 
 The next thing I want to point out is the use of `parentText`. Disqus supports deep comment threading. In order to keep my sanity, I decided I'd simply present them in a single list of comments, but to flag (and link) to parent posts. Let me be clear, this is not the best solution by a long run, but it felt like a reasonable compromise. 

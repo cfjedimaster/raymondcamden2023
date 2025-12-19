@@ -61,7 +61,7 @@ Oh, and yeah, I use TweetDeck, with the Better TweetDeck extension, in "install 
 I *love* the new [Windows Terminal](https://github.com/microsoft/terminal) program. I was initially excited about it because it added tabs, but it's a great little app for multiple reasons. I love how easy it is to configure it, I love having WSL tabs and cmd.exe tabs in the same window, it's just great. You can find other terminal programs with tabs, but none of them felt right to me.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/stack1.png" alt="Windows terminal" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/stack1.png" alt="Windows terminal" class="lazyload imgborder imgcenter">
 </p>
 
 I used [Hyper](https://hyper.is/) for a while, but formatting issues creeped in that never seemed to get fixed. It basically became unusable to me. 
@@ -69,7 +69,7 @@ I used [Hyper](https://hyper.is/) for a while, but formatting issues creeped in 
 So that's what I use locally, what about in production, or, as they say - the cloud....
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/stack2.jpg" alt="The Cloud" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/stack2.jpg" alt="The Cloud" class="lazyload imgborder imgcenter">
 </p>
 
 ## Static Site Generator - Eleventy

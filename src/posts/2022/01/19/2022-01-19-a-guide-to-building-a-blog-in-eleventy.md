@@ -14,7 +14,7 @@ About eight months or so I had the idea to write up a guide for building a blog 
 I started writing, and building, and then, yeah, life happened. This may come as a shock to you, but this isn't the first project I started with lofty goals that ended up forgotten.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/01/judgy.jpg" alt="Judgy cat judging me..." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/01/judgy.jpg" alt="Judgy cat judging me..." class="lazyload imgborder imgcenter">
 </p>
 
 This past weekend my wife and I had the opportunity to get away for a few days and I started thinking about the guide again. I realized some ways I could do it better, as well as how I could bring it to completion, so I put some work into it and got it to a point where I think it's ready for public consumption!

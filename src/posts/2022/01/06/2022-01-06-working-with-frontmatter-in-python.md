@@ -93,7 +93,7 @@ for result in result:
 Here's sample output:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/01/fmp1.jpg" alt="Example output from the search script." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/01/fmp1.jpg" alt="Example output from the search script." class="lazyload imgborder imgcenter">
 </p>
 
 Check out the [docs](https://pypi.org/project/python-frontmatter/) for more information on what the module can do as I only used what was necessary for my script. The full version of my search script may be found here: <https://github.com/cfjedimaster/raymondcamden2020/blob/master/search.py>

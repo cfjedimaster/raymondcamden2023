@@ -192,7 +192,7 @@ One thing I went back and forth on is whether or not I should apply a default so
 Alright, for the third and final version, we need to add paging. My dataset isn't terribly large, so I went with a page size of 3 cats per page. Here is a completely unnecessary picture of three cats:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/03/3cats.jpg" alt="Three kittens" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/03/3cats.jpg" alt="Three kittens" class="lazyload imgborder imgcenter">
 </p>
 
 I started off in HTML by adding two new buttons:

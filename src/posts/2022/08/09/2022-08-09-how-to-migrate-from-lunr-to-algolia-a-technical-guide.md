@@ -109,7 +109,7 @@ given time.
 If you’re good with the price, the next step is [signing up](https://www.algolia.com/users/sign_up) and creating your account. After confirming your email address, you will be dropped into the Algolia dashboard.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a1.jpg" alt="Initial Algolia dashboard" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a1.jpg" alt="Initial Algolia dashboard" class="lazyload imgborder imgcenter">
 </p>
 
 The first page directs you to create an index, a necessary part of building a search
@@ -130,7 +130,7 @@ update the index to reflect changes in your dataset, but never to reload data th
 already given to Algolia. Initially, Algolia will offer a few options as far as seeding goes:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a2.jpg" alt="Import options" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a2.jpg" alt="Import options" class="lazyload imgborder imgcenter">
 </p>
 
 At this point, how you seed the index is entirely up to you and how your data is stored.
@@ -138,14 +138,14 @@ I’m a Jamstack developer, so I’ll generate a JSON file of the searchable ado
 run a build of my site, and copy that JSON by hand.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a3.jpg" alt="Seeding data" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a3.jpg" alt="Seeding data" class="lazyload imgborder imgcenter">
 </p>
 
 After uploading, I'm dropped into an interface that lets me see my index, and best of all,
 immediately start testing search.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a4.jpg" alt="Test search interface" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a4.jpg" alt="Test search interface" class="lazyload imgborder imgcenter">
 </p>
 
 At this point, you have a persisted index. It's done and ready for search. If you're using
@@ -155,7 +155,7 @@ and feed it to the index through the Algolia API. There’s probably an SDK for 
 backend language you’re using:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a5.jpg" alt="SDK list" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a5.jpg" alt="SDK list" class="lazyload imgborder imgcenter">
 </p>
 
 All of that is backed by a REST API, so if you don’t like those options, you can just ping
@@ -240,7 +240,7 @@ be returned, but only the relevant snippet.
 [On my site](https://www.raymondcamden.com/search/), this data is then rendered on the DOM:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a6.jpg" alt="Site search example" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a6.jpg" alt="Site search example" class="lazyload imgborder imgcenter">
 </p>
 
 This manual approach gave me complete control over the search experience, but
@@ -248,7 +248,7 @@ Algolia goes the extra mile and gives us an out-of-the-box solution called
 [InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/). This lets you create a search interface via widgets where all the heavy lifting is done for you. Libraries and components are available for multiple different frontend frameworks and mobile platforms:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a7.jpg" alt="InstaSearch clients" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a7.jpg" alt="InstaSearch clients" class="lazyload imgborder imgcenter">
 </p>
 
 This library greatly simplifies the search process on the front-end [while still giving you
@@ -262,14 +262,14 @@ searches have been performed, how many people are searching, and what they’re
 doing after the query.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a8.jpg" alt="Analytics screen" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a8.jpg" alt="Analytics screen" class="lazyload imgborder imgcenter">
 </p>
 
 This overview also reports on the most common searches, the most common results,
 and critically, searches that didn’t return anything:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a9.jpg" alt="Search stats" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a9.jpg" alt="Search stats" class="lazyload imgborder imgcenter">
 </p>
 
 You can also enable (via the settings) a weekly email that summarizes your site's recent
@@ -277,7 +277,7 @@ search history. It includes the basic stats around usage, along with the details
 searches and those without results.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/a10.jpg" alt="Example email search stats" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/a10.jpg" alt="Example email search stats" class="lazyload imgborder imgcenter">
 </p>
 
 ## Going Further

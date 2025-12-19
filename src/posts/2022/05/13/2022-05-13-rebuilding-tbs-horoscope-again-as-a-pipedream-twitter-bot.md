@@ -14,7 +14,7 @@ I've got a problem. Honestly, I do. I keep building stupid Twitter bots. But - I
 Many years ago, almost eleven actually, I built a [TBS Horoscope](https://www.raymondcamden.com/2011/08/28/Latest-Nook-App-TBS-Horoscope/) application. This application created completely fake and silly horoscopes (the TBS stands for total bull pucky) and made use of Flex Mobile. Remember that? Even better - it was built for the [NookColor](https://en.wikipedia.org/wiki/Nook_Color). 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/tbs1.jpg" alt="Remember this thing?" class="lazyload imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/tbs1.jpg" alt="Remember this thing?" class="lazyload imgcenter">
 </p>
 
 I miss Flex Mobile as it was a pretty fun platform to build with. Not to be outdone though - a few years later, I then rebuilt it as an [Alexa skill](https://www.raymondcamden.com/2017/10/04/rebuilding-a-flex-mobile-app-as-an-alexa-skill). I built this using the [OpenWhisk](https://openwhisk.apache.org/) platform which was one of the easiest to use serverless platforms at the time. 
@@ -24,7 +24,7 @@ Apparently, at some time I also uploaded it to the [Amazon app store](https://ww
 This morning I decided to see how quickly I could get it running as a Twitter bot. This was done for no special reason and certainly not due to rumors that a certain billionaire was having second thoughts about his purchase of a social network due to the number of fake accounts it had on it. Honest. Would this face lie to you?
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/tbs2.jpg" alt="Innocent cat is innocent." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/tbs2.jpg" alt="Innocent cat is innocent." class="lazyload imgborder imgcenter">
 </p>
 
 As I've shown here a few times now, the process of building a Twitter bot on Pipedream is a few simple steps:

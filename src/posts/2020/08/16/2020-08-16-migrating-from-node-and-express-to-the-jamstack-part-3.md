@@ -159,7 +159,7 @@ exports.handler = async (event, context) => {
 This is the back end work - the front end work is mainly a bunch of messy JavaScript. I didn't use Vue.js for this project as I wanted to keep things simple with so many moving parts already. Each film page now renders comments and includes a form for adding a new one.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/08/nla10.png" alt="Film page" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/08/nla10.png" alt="Film page" class="lazyload imgborder imgcenter">
 </p>
 
 Instead of sharing my ugly code, I'll just say that I added a form to the films page and if you are logged in, you can submit it. I've got some UI manipulation I'll skip for now, but here's how I call my serverless function in a secure manner:

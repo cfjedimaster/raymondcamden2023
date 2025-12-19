@@ -18,7 +18,7 @@ As I've already covered *how* to use IndexedDB here in the past I won't go into 
 For this first blog post, I'm going to demonstrate a simple application that uses IndexedDB without any helper libraries at all. It's a simple "Contacts" application (see my [earlier post](https://www.raymondcamden.com/2022/08/11/building-a-web-based-badge-scanner) for something similar) that stores a list of people, including a first name, last name, and email property. The interface lists contacts and provides a form to the right. The form on the right can be used for creating new contacts or editing existing ones.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/idb1.jpg" alt="Screenshot from demo application." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/idb1.jpg" alt="Screenshot from demo application." class="lazyload imgborder imgcenter">
 </p>
 
 I'll share the complete code for the application at the end, and I'm going to skip talking about DOM methods and the such. Instead, let's focus on the IndexedDB portions. 
@@ -63,7 +63,7 @@ db = await initDb();
 I love async/await like I love a good cookie. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/idb2.jpg" alt="Cookie monster picture for no particular good reason" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/idb2.jpg" alt="Cookie monster picture for no particular good reason" class="lazyload imgborder imgcenter">
 </p>
 
 Now let's look at the various CRUD (Create/Read/Update/Delete) functions.

@@ -107,7 +107,7 @@ center=30.175776,-92.077008&zoom=15&size=400x400&maptype=roadmap
 You can see that blow:
 
 <p>
-<img data-src="https://maps.googleapis.com/maps/api/staticmap?center=30.175776,-92.077008&zoom=15&size=400x400&maptype=roadmap&markers=color:blue%7C30.175776,-92.077008&key=AIzaSyC3hC35ehz1oAfUll7q7qzUlPa27Gz5g5g" class="lazyload imgcenter" alt="Static Map image">
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=30.175776,-92.077008&zoom=15&size=400x400&maptype=roadmap&markers=color:blue%7C30.175776,-92.077008&key=AIzaSyC3hC35ehz1oAfUll7q7qzUlPa27Gz5g5g" class="lazyload imgcenter" alt="Static Map image">
 </p>
 
 Notice that I center my map at the location *and* add a marker so it's really obvious what I'm pointing out. Markers can have different colors and labels, but I'm keeping it simple for now. Here's a CodePen showing the complete application. 

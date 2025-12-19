@@ -20,7 +20,7 @@ Before I show the code, you can take a look at the demo here: <https://cyoa.verc
 Here's an example page from the demo:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/cyoa.jpg" alt="Demo page from CYOA site" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/cyoa.jpg" alt="Demo page from CYOA site" class="lazyload imgborder imgcenter">
 </p>
 
 In the screen shot above, the choices presented to the user are all driven by front matter. Here's that particular page:

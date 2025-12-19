@@ -24,7 +24,7 @@ Adam Cameron is an old friend of mine from the ColdFusion community and is an al
 If you don't follow me on Twitter (I understand), then you may be missing my blog posts over on our Medium site: <https://medium.com/adobetech>. Not just my content, which is a small part, but a huge amount of great technical content from Adobe. Returning here has been eye opening in terms of how much developer stuff is going on with Adobe. Also, I was able to get the jedimaster email address at adobe.com (jedimaster@adobe.com), so I'm never leaving this job.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/04/cat_saber.png" alt="Cat holding a light saber" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/04/cat_saber.png" alt="Cat holding a light saber" class="lazyload imgborder imgcenter">
 </p>
 
 ### Learn Python

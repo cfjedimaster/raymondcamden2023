@@ -12,7 +12,7 @@ description: A look at Pipedream's SQL Service
 So, I know how I'm *supposed* to learn something. You go the docs. You start at the beginning. You read to the end. Done. Except... I just don't work that way. I'll definitely go through an introduction and at least attempt to go through the docs one by one, but typically I want to try stuff as soon as I learn. That means leaving the docs, playing with what I learned, and then returning, hopefully, to keep learning. This means I'll sometimes miss interesting things. So for example, I was playing with something on [Pipedream](https://pipedream.com/?via=raymond) when I noticed this in the top navigation:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/sql1.png" alt="Top level nav, highlighting SQL" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/sql1.png" alt="Top level nav, highlighting SQL" class="lazyload imgborder imgcenter">
 </p>
 
 SQL? People still use that? 
@@ -40,13 +40,13 @@ And you just store it. Done. There are details, of course, on how [data is mappe
 
 Speaking of using it, and I'm going to show an example in a second, you can either write Node code to store information or use the SQL destination to handle it for you. The below is a screen shot I "borrowed" from the official docs:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/sql2.png" alt="Example of SQL destination" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/sql2.png" alt="Example of SQL destination" class="lazyload imgborder imgcenter">
 
 Before I get into an example, there's two final details that are important. First, this is not meant to be a permanent data storage solution. The [data retention](https://docs.pipedream.com/destinations/sql/#data-retention?via=raymond) docs say that currently your data is only stored for 30 days. That may be a deal breaker but don't forget you've got like an infinite number of other data storage systems you can use. Secondly, you do not yet have "workflow access" to the data. What I mean by that is you can run SQL queries against your data on the site (I'll be showing an example later in this post), but your workflows can't use code to access the data. This is a [known issue](https://github.com/PipedreamHQ/roadmap/issues/3) and hopefully something added soon. 
 
 Alright, so how about a simple example, and while we're at it, I can show you another cool Pipedream feature. When you create a new account, one of the workflows you have automatically is "Global Error Workflow". This is the default error support you have for your account. Notice I said "error support", not "error handler", as it doesn't change how your workflows report errors, but rather handles processing the error after the naughty workflow has screwed up. I say "by default" because all new workflows have a setting for it:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/sql3.png" alt="Settings showing error handler support" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/sql3.png" alt="Settings showing error handler support" class="lazyload imgborder imgcenter">
 
 And because the Global Error Workflow is, itself, a workflow, you can click in there and check out the code. The workflow has the following steps:
 
@@ -81,15 +81,15 @@ The workflow has access to an error object as well as context about the workflow
 
 Alright, now that I'm storing data, how do I use it? Well my original plan was to build a workflow that would return the data for me and I'd potentially build a dashboard. Unfortunately you can't do that yet. But you can run queries. Here's how that SQL tab looks on the Pipedream site.
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/sql4.png" alt="SQL panel" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/sql4.png" alt="SQL panel" class="lazyload imgborder imgcenter">
 
 They've got a simple editor for you to write SQL in, but it's got nice autocomplete like the code editors do. You can also expand tables on the left hand side to see what columns you have:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/sql5.png" alt="Table properties" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/sql5.png" alt="Table properties" class="lazyload imgborder imgcenter">
 
 Notice that my date is being stored as a string. Dates are *definitely* supported so I could make that better, but for now I'm going to wait until I get code access to data. Here's the result of a quick query:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/sql6.png" alt="SQL result" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/sql6.png" alt="SQL result" class="lazyload imgborder imgcenter">
 
 The little downward arrow on the upper right there let's you download your results in CSV. One more quick note about data - your data will not show up for a full minute. This is [documented](https://docs.pipedream.com/destinations/sql/#what-happens-when-you-send-data-to-a-sql-destination?via=raymond) but if you are doing quick testing, don't forget. 
 

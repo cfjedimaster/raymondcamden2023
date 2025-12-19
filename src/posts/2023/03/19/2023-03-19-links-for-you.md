@@ -32,5 +32,5 @@ I know what you're thinking, "My office is missing something, Raymond, do you ha
 Here is a picture of it in my office, but honestly it's not a great picture and it looks a heck of a lot cooler in motion:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/lamp.jpg" alt="Jellyfish lava lamp" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/lamp.jpg" alt="Jellyfish lava lamp" class="lazyload imgborder imgcenter">
 </p>

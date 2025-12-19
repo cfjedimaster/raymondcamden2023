@@ -48,7 +48,7 @@ As you can see `description` is just simple data, but `currentLength` is a compu
 And that's it. Simple. But let's make it a bit more fancy. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/fancycat.jpg" alt="Fancy cat is fancy" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/fancycat.jpg" alt="Fancy cat is fancy" class="lazyload imgborder imgcenter">
 </p>
 
 Here I've modified the character count to add a span with some classes applied:

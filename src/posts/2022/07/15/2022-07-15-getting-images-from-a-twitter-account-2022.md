@@ -16,7 +16,7 @@ Some time ago, back in the "before time" of 2016, I wrote up a demo of a simple 
 Here's a beautiful example of getting the images from [@randomcomicbook](https://twitter.com/randomcomicbook)
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/ts1.jpg" alt="Sample result from demo" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/ts1.jpg" alt="Sample result from demo" class="lazyload imgborder imgcenter">
 </p>
 
 And here's how I built this new version. There's a backend and a frontend, of course, so let's start with the backend.
@@ -53,13 +53,13 @@ I created the app via Twitter's [developer console](https://developer.twitter.co
 Pipedream has excellent support for working with Twitter APIs, and I've built *way* too many Twitter bots with them. However, normally I've used their support based on a particular account. So by that I mean - I set up my bot to post on a schedule, and the action to send a tweet is based on the bot's account. In this case, I wanted to use Twitter APIs based on my Twitter app, and for that, you use a different action - "Twitter Developer App":
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/ts2.jpg" alt="The right step to add in Pipedream" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/ts2.jpg" alt="The right step to add in Pipedream" class="lazyload imgborder imgcenter">
 </p>
 
 After selecting that, you then pick the "Use any Twitter Developer App API" option:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/ts3.jpg" alt="Almost done picking the right step..." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/ts3.jpg" alt="Almost done picking the right step..." class="lazyload imgborder imgcenter">
 </p>
 
 After selecting it, you are then given a step that lets you configure the Twitter Developer app. For that, you'll enter your values from the Twitter developer portal. And best of all - once you've done that, Pipedream will remember the connection and let you select it again. The default code shows that it uses the [Twit](https://www.npmjs.com/package/twit) library.

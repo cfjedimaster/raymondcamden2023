@@ -12,7 +12,7 @@ description: How to use Netlify's APIs to display build status information on yo
 One of the cool little features Netlify has is the ability to add a "build status" graphic to your site. You can find this by logging on to your Netlify admin, going to your site settings, and scrolling to status badges:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/ntl1.jpg" alt="Netlify instructions for adding a status badge" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/ntl1.jpg" alt="Netlify instructions for adding a status badge" class="lazyload imgborder imgcenter">
 </p>
 
 And here's a live example, right in my blog post:

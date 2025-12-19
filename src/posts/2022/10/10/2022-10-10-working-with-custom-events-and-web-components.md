@@ -121,7 +121,7 @@ document.querySelector('#ray').addEventListener('PAGE_VIEW', e => {
 Here's how it looks in devtools. It's in dark mode so you know it's legit:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/devtools1.jpg" alt="Example output from event listener" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/devtools1.jpg" alt="Example output from event listener" class="lazyload imgborder imgcenter">
 </p>
 
 You can find the latest version here (as I mentioned earlier, I'm slowly migrating my web components to a new repo) - <https://github.com/cfjedimaster/webcomponents/tree/main/pdfembed>

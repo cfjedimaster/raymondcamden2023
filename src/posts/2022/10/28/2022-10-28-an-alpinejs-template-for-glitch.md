@@ -76,7 +76,7 @@ Finally, and I forgot this part when I published the blog post a few minutes ago
 Cool. So how do you use this? You could copy and paste, but Glitch makes this easier. Click `New Project` in the upper right-hand UI:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/g1.jpg" alt="Glitch new project menu" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/g1.jpg" alt="Glitch new project menu" class="lazyload imgborder imgcenter">
 </p>
 
 And select `Import from GitHub`. In the prompt, enter the repo I created for my template: <https://github.com/cfjedimaster/glitch-alpine>

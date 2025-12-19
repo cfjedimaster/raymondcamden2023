@@ -29,7 +29,7 @@ Ok, so that's a lot of preamble. I did get things working. I struggled with the 
 Let me break down I accomplished the first three parts (maybe two and a half to be honest). First, Identity is a feature you have to enable to use first. This is done in your site settings:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/08/nla1.png" alt="UI for enabling Identity" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/08/nla1.png" alt="UI for enabling Identity" class="lazyload imgborder imgcenter">
 </p>
 
 That's the easy part. Next, you need to provide a way to let users login, signup, and logout. The docs suggest either the [Identity widget](https://github.com/netlify/netlify-identity-widget) or a custom solution with [gotrue-js](https://github.com/netlify/gotrue-js). My initial assumption was that the widget would be 'cute' but probably not customizable for my needs. I decided to try it anyway and I'm glad I did as it worked just fine. 
@@ -62,7 +62,7 @@ loginBtn.addEventListener('click', () => {
 Clicking the button opens up this dialog:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/08/nla2.png" alt="Login widget" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/08/nla2.png" alt="Login widget" class="lazyload imgborder imgcenter">
 </p>
 
 Notice the social login provider there - Google. Unfortunately, this is the only "regular" social login provider that is supported. By regular I mean I'm ignoring developer-centric ones like GitHub. About two weeks ago I [posted](https://community.netlify.com/t/add-additional-social-logon-providers/20125) a request on the Netlify forums asking for more support, specifically Twitter and Facebook. I got a response that said such support would have to come from the [gotrue](https://github.com/netlify/gotrue) project. So I went to the project and discovered that a [pull request](https://github.com/netlify/gotrue/pull/111) from almost two years ago added Facebook support. The PR says that there's a ToDo for Netlify Identity to work with the provider which implies the impetus is on Netlify to add it. Unfortunately I haven't gotten a response yet on the forum thread.
@@ -119,7 +119,7 @@ Guess what?
 If you go to your site settings, Identiy, settings again, and scroll down, you find this section:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/08/nla3.png" alt="Oh yeah, those webhooks" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/08/nla3.png" alt="Oh yeah, those webhooks" class="lazyload imgborder imgcenter">
 </p>
 
 As you can see, there's webhook settings for Identity that correspond to the three events. And here's the fun part. They work for social login. I shared this all on the forum post but it looks like two serious bugs. One, the serverless function isn't working the same as the webhook, and two, the docs don't mention these webhooks anywhere. (Oh, and like every other serverless event the 'shape' of the data isn't documented, and that's known now for a few years. I did discover something interesting there that I'll share at the end of the post.) 

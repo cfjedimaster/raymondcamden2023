@@ -38,7 +38,7 @@ I figured - why not - if I'm adding the product back in I should use the latest 
 So with that mindset, I decided to try my own tools again. And then I discovered that since my web site was using the latest version, the previous code I wrote no longer worked. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/12/sadcat.jpg" alt="Sad Cat" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/12/sadcat.jpg" alt="Sad Cat" class="lazyload imgborder imgcenter">
 </p>
 
 After a cry or two, I did some research. I began with the [GA 4](https://developers.google.com/analytics/devguides/reporting/data/v1) API docs. From what I could see, the code was pretty similar to previous versions. You create a somewhat complex query structure, pass it to the API, and then parse the somewhat complex results. I'm not going to attempt to explain it deeply as there's documentation for that, but here's one simple example:
@@ -405,7 +405,7 @@ https://www.raymondcamden.com/api/getPageFiews?path=www.raymondcamden.com/2021/1
 Which as of right now returns... wait for it... 28. Sigh. Ok, so I've got an existing [stats](https://www.raymondcamden.com/stats) page and decided to simply add this new report to it. You can click that previous link to see it live, but here's a screen shot of the new report:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/12/ga1.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/12/ga1.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 The entirety of the stats page is a very simpe Vue app (you can peruse the source in devtool!) so I won't share the bits here, but basically I did a fetch to my JSON feed and then multiple calls to get page views for each unique post. 

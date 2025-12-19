@@ -36,7 +36,7 @@ Begin by ensuring your Netlify CLI is up to date. They update pretty often so fi
 Next, in an existing and connected Netlify site, run: `ntl dev --graph`. (As an FYI, the `netlify` CLI has an alias of `ntl`.) This will do... um... stuff... but also fire up your local server. Notice though that you'll get a new URL as well:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/ng1.png" alt="Netlify Graph URL" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/ng1.png" alt="Netlify Graph URL" class="lazyload imgborder imgcenter">
 </p>
 
 This opens up the Graph UI where you can handle connecting APIs as well as working with queries. For connecting APIs, you'll need to go to the various services, create an application, and ensure you setup redirect URLs right. This is detailed here: <https://github.com/netlify/labs/blob/main/features/graph/documentation/authentication.md#custom-clients>
@@ -44,7 +44,7 @@ This opens up the Graph UI where you can handle connecting APIs as well as worki
 I did this for Spotify so that I could make authenticated calls using my credentials. You can then use their GraphQL editor to design a query. Now, don't panic. I'm "aware" of GraphQL, as I assume most developers are, but I really haven't used it a lot. To be honest though, the editor makes it super easy to use. I literally just dug down into the `recentlyPlayed` part of Spotify's API and picked the things I thought made sense. It then created the query for me. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/ng2a.jpg" alt="GraphQL editor" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/ng2a.jpg" alt="GraphQL editor" class="lazyload imgborder imgcenter">
 </p>
 
 I clicked the "Play" button and was able to peruse the result (I trimmed it a bit):
@@ -124,7 +124,7 @@ I clicked the "Play" button and was able to peruse the result (I trimmed it a bi
 Ok, now comes the freaking magic part. Once you have the query to your liking, you then click "Generate Handler" under the "Actions" menu:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/ng3.jpg" alt="The Generate Handler button" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/ng3.jpg" alt="The Generate Handler button" class="lazyload imgborder imgcenter">
 </p>
 
 This will do two things. First, it creates `.functions/netlifyGraph`. From what I can tell, this is the core service for the feature and contains your GraphQL queries. You do *not* touch this. It then generates `.functions/ExampleQuery.js`. The name comes from the default name of your query. I've renamed mine to `latestTracks`. Out of the box, this provides an endpoint to hit your GraphQL query. You just hit it and get JSON back... unless you're using authentication. You will see this on top:

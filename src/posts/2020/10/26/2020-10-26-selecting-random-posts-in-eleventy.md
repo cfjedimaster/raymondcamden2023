@@ -92,7 +92,7 @@ eleventyConfig.addFilter("getRandom", function(items) {
 Nice and simple. It could be even shorter, I don't need to have two lines, but I kept it like that as I knew I was going to build better versions. Here's an example of how this renders:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/10/r1.jpg" alt="Blog post with random link at the bottom" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/10/r1.jpg" alt="Blog post with random link at the bottom" class="lazyload imgborder imgcenter">
 </p>
 
 Cool! Except that it's entirely possible that the random post selected would be the same as the current one. Especially while the blog is just starting and only has a few entries. So I then created a new filter, `getRandom2`. This one expects the current page as an argument. Here's how I called it in the template:
@@ -125,7 +125,7 @@ eleventyConfig.addFilter("getRandom2", function(items,avoid) {
 First, I ensure that I have at least two or more items. If I have one, or zero (which doesn't make sense as I'm calling it from a blog post, but whatever), then I return nothing. To get my random post that isn't my current post, I select a random one and loop until it's url does not match the current page's url. A while loop may not be best here. I could have made a new array with the current item filtered out and then selected randomly from there. As always - multiple ways to skin the cat.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/10/r2.jpg" alt="Skin the cat?!?!?" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/10/r2.jpg" alt="Skin the cat?!?!?" class="lazyload imgborder imgcenter">
 </p>
 
 I was going to wrap it up here, but then I thought of yet another version. While random selections are fine, it would be cool to perhaps select a random post in the same category. My sample post above didn't have categories, so for each post I added one:

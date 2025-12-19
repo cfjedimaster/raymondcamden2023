@@ -21,7 +21,7 @@ Right now you would build this like so:
 <li>Parse the RSS feed. There's a RSS action that does this for you:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/es1.png" alt="RSS parser" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/es1.png" alt="RSS parser" class="lazyload imgborder imgcenter">
 </p>
 
 By that way, it may not be obvious, but that action actually supports *multiple* feeds which is pretty bad ass.</li>
@@ -68,7 +68,7 @@ if (currentDay === parseInt(this.targetDayOfWeek)) {
 So how do you use it? When you create a new workflow you can now select from Event Sources as a source:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/es2.png" alt="List of sources" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/es2.png" alt="List of sources" class="lazyload imgborder imgcenter">
 </p>
 
 In the screenshot above you'll see a number of items below SDK. Those are all *previous* event sources I've used. When you add a new event source, you configure it and name it, and it makes sense that you may want to use them again. 
@@ -76,19 +76,19 @@ In the screenshot above you'll see a number of items below SDK. Those are all *p
 If you click on Event Source, you then get a list of available sources. (Note that you can add a 100% customized one using the CLI. Also note that you can edit the code of an event source.) 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/es3.png" alt="List of event sources" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/es3.png" alt="List of event sources" class="lazyload imgborder imgcenter">
 </p>
 
 Once you select it, you can then set up the parameters. Each event source will be different.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/es4a.png" alt="Configured source" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/es4a.png" alt="Configured source" class="lazyload imgborder imgcenter">
 </p>
 
 In this case I used Pipedream's blog's RSS feed. At the bottom (not shown on the screen shot above) is a Create Source button. After doing so, your event source is configured and ready to be used in your workflow:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/es9.png" alt="New configured ES" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/es9.png" alt="New configured ES" class="lazyload imgborder imgcenter">
 </p>
 
 Well almost. By default event sources are turned off. See the little toggle on the right. I believe they do this for cases where you may want to setup your workflow first before it starts firing off events. Just don't forget.
@@ -96,7 +96,7 @@ Well almost. By default event sources are turned off. See the little toggle on t
 Event sources have their own administration panel at Pipedream. You can view them at <https://pipedream.com/sources/>.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/es5.png" alt="ES Editor" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/es5.png" alt="ES Editor" class="lazyload imgborder imgcenter">
 </p>
 
 For each event source you see a history of past events, logs, and configuration. You can also modify the code which is pretty cool. When I was playing around this feature earlier this week, I needed to slightly modify the RSS event source and it took all of two minutes.

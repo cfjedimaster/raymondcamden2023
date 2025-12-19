@@ -17,7 +17,7 @@ This is an entirely opensource, Node-based text analysis tool that looks at inpu
 Before I show using it, how did I find it? A day or so ago I noticed the "Explore" link in the top navigation of the Pipedream site. That brings you to <https://pipedream.com/explore>.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/es1.png" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/es1.png" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 This page has a bunch of shared workflows that you can look at it, including one named [Real-Time Sentiment Analysis](https://pipedream.com/@pravin/p_zACkav/readme). Once you open up a workflow, you can click the big green COPY button to put a copy in your account and play around with it.
@@ -27,13 +27,13 @@ So that's how I found the Sentiment package. Cool. I decided to build a demo bas
 First, I added an email trigger. This gives you a unique email address that will be checked often. When it gets new email, it will start the workflow.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/es2.png" alt="Example email trigger" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/es2.png" alt="Example email trigger" class="lazyload imgborder imgcenter">
 </p>
 
 I next built a step that would serve to set up my constant values. I learned this technique from the Pipedream folks. It's not required - remember you can do everything in one step if you want - but I like this breakdown. In this case I've got one constant, the highest level I'll ignore. I.e., everything below this level is considered too angry. The Sentiment package returns a value from -5 to 5 based on how negative or positive it is.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/es3.png" alt="Constants step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/es3.png" alt="Constants step" class="lazyload imgborder imgcenter">
 </p>
 
 Next I built a step to do the analysis. This is a Node.js step with just a few lines of code:
@@ -80,25 +80,25 @@ The only thing probably interesting there is I do a bit of inspection of the fro
 The last step is to have it email me. I configure it with the values I used earlier:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/es4.png" alt="Email config step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/es4.png" alt="Email config step" class="lazyload imgborder imgcenter">
 </p>
 
 That just leaves testing! I sent a few angry emails (trust me, I've got some pent up quarantine rage going on) and watched as the workflow executed and processed my emails. Here's an example:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/es5.png" alt="Sample email report" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/es5.png" alt="Sample email report" class="lazyload imgborder imgcenter">
 </p>
 
 Of course, for my initial testing, I did something a bit quicker than writing email, and you should definitely make note of it. Workflows have a "Send Test Event" button and on the right is a blue pencil icon:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/es6.png" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/es6.png" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 If you click the pencil, you can edit the test event data. I did this to modify the content of the test:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/es7.png" alt="Editing test events" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/es7.png" alt="Editing test events" class="lazyload imgborder imgcenter">
 </p>
 
 This is a very cool feature. Do note though that for this particular trigger, the "shape" of the event data doesn't quite match what you get when you send a real email. A [bug](https://github.com/PipedreamHQ/roadmap/issues/424) has already been opened for this and it may be fixed by the time you read this post.

@@ -26,5 +26,5 @@ Finally, I've linked to my [Buy Me a Coffee](https://www.buymeacoffee.com/raymon
 Anyway, that's a lot of me talking about yall giving me stuff, but to be clear, I launched this blog because I wanted to give yall stuff. As I like to say, I've been writing buggy software since the day I started. I'm not the smartest person out there, and when I struggle with something, I like to share how I got past it. Or heck, when something just makes me happy (yes, code makes me happy sometimes), I like to share that excitement as well. So thank you to everyone who has been a regular reader over the years, and thank you to everyone who is reading a post on this blog for the first time. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/10/hello-cat.gif" alt="Cat waving hello." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/10/hello-cat.gif" alt="Cat waving hello." class="lazyload imgborder imgcenter">
 </p>

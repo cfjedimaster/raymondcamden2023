@@ -22,19 +22,19 @@ Alright, so start off by going to the [WSL2 Install](https://docs.microsoft.com/
 As part of the install process, they document how to check your WSL installs. You can do this by running `wsl -l -v`:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/wsl1.png" alt="wsl cli example" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/wsl1.png" alt="wsl cli example" class="lazyload imgborder imgcenter">
 </p>
 
 To update, you simply run `wsl --set-version Ubuntu 2` where `Ubuntu` is the name of your distro and may be different. You may get prompted to install stuff first:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/wsl2.png" alt="Warning to install stuff" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/wsl2.png" alt="Warning to install stuff" class="lazyload imgborder imgcenter">
 </p>
 
 I followed the directions there which basically had you copy and paste stuff into Powershell (be sure to run Powershell as an Administrator). I then ran the command again and got:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/wsl3.png" alt="Even more stuff" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/wsl3.png" alt="Even more stuff" class="lazyload imgborder imgcenter">
 </p>
 
 Once again, follow the link, do the install, and you should be good. One one machine I had to tweak my BIOS, but on the other the install was good enough.
@@ -42,13 +42,13 @@ Once again, follow the link, do the install, and you should be good. One one mac
 Now if you run the update command again, you should hopefully get:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/wsl4.png" alt="Final update" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/wsl4.png" alt="Final update" class="lazyload imgborder imgcenter">
 </p>
 
 On my fancy new laptop, this was rather quick, unfortunately I don't remember how long. On my older desktop, this was *not* quick. I think it took maybe 30 minutes. When done though you can quickly confirm it's been updated:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/wsl5.png" alt="Confirm WSL version" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/wsl5.png" alt="Confirm WSL version" class="lazyload imgborder imgcenter">
 </p>
 
 You can also make WSL2 the default by doing this: `wsl --set-default-version 2`. I only run one distro on my machine so this really isn't an issue for me.
@@ -60,7 +60,7 @@ This then quickly led to an issue - how do I edit files there? I've got two answ
 First, you can browse your distro file system in Explorer.exe by going to `\\wsl$`:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/wsl6.png" alt="WSL support in Explorer" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/wsl6.png" alt="WSL support in Explorer" class="lazyload imgborder imgcenter">
 </p>
 
 You'll see your distros there and can work with your file system. In my testing, I've noticed that when I copy files over to Ubuntu, I *sometimes* get a copy with ":Zone.Identifier" in it. This is known and I believe has something to do with AV stuff. You can read more about it here: [Zone.Identifier Files when copying from Windows to WSL filestructure](https://github.com/microsoft/WSL/issues/4609). For now I'm just deleting when I see them, typically before I do a git commit. 
@@ -72,19 +72,19 @@ The next thing was getting support for Visual Studio Code. This was also pretty 
 You add that extension, then run "Remote-WSL: New Window". This will open a new window and do a one time download of support stuff. For me it took about 2 minutes I think. When done, you'll have nothing in the file explorer - at first:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/wsl7.png" alt="VSC File Explorer under WSL" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/wsl7.png" alt="VSC File Explorer under WSL" class="lazyload imgborder imgcenter">
 </p>
 
 Note that it says "Connected to remote" and it has a "WSL:Ubuntu" marker on the lower left corner. Clicking to open a folder will bring up UI on top to browse:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/wsl8.png" alt="File open UI" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/wsl8.png" alt="File open UI" class="lazyload imgborder imgcenter">
 </p>
 
 This was a bit weird to me at first, but once you select a folder, everything returns to normal. So here's a screen shot of my editor right now. You can see the "WSL" marks so I know it's in the Ubuntu file system, but outside of that, everything is "normal":
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/wsl9.png" alt="File UI" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/wsl9.png" alt="File UI" class="lazyload imgborder imgcenter">
 </p>
 
 But wait - there's one more nit. I was testing with a Vue project and noticed I had "lost" `.vue` file support. Turns out you may have to reinstall some extensions. Basically if an extension does anything UI wise, like color schemes, it will work. Other extensions have to be installed again.

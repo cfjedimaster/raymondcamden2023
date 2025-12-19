@@ -39,7 +39,7 @@ const app = new Vue({
 
 Easy-peasy lemon squeezy. Should just work, right? So you fire up your browser and see...
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/vd1.png" alt="Browser screenshot, code isn't working" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/vd1.png" alt="Browser screenshot, code isn't working" class="lazyload imgborder imgcenter">
 
 Oh crap - where's the dynamic data? If you're like me you immediately open up devtools and if you do, you won't find an error. So what could it be?
 

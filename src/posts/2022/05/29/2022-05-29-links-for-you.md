@@ -16,7 +16,7 @@ A few quick links here to end May. This week has been incredibly difficult for m
 For my first link, I want to share a cool Visual Studio Code extension my buddy [Scott Stroz](https://scottstroz.com/) shared, the [MySQL Shell for VS Code](https://marketplace.visualstudio.com/items?itemName=Oracle.mysql-shell-for-vs-code). This is a *dang* well done extension for folks who use MySQL. Even better, it's done in a notebook interface which is something I've only really started using since I began playing with Python. To give you an idea of how it looks, I'm going to steal one of their graphics:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/links1.jpg" alt="Screen shot of MySQL Code interface" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/links1.jpg" alt="Screen shot of MySQL Code interface" class="lazyload imgborder imgcenter">
 </p>
 
 Slick, right? Oracle has been doing some cool stuff lately and I've been meaning to dig into their stack more for quite some time now. 

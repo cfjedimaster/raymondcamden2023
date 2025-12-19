@@ -16,7 +16,7 @@ One of the things that my teammates wanted to know was how well these tags were 
 And plus - if I have the opportunity to try to learn a new API and build something, I'm going to leap at the opportunity. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/09/raisehand.gif" alt="Animated gif of person raising their hand excitedly" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/09/raisehand.gif" alt="Animated gif of person raising their hand excitedly" class="lazyload imgborder imgcenter">
 </p>
 
 I did what any good developer would do and did a quick google for "stackoverflow api" and ended up at the [Stack Exchange API](https://api.stackexchange.com/). As I expected, there's an API for pretty much every aspect of the site. Even better, you can do things without authentication or an API key. That being said, I absolutely recommend [registering an application](https://stackapps.com/apps/oauth/register) just to get a key. I worked on my demo over a few days and didn't hit the anonymous quota towards the end, but signing up was quick and painless (and free), and the key worked right away. 

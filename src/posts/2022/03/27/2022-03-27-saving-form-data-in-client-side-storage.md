@@ -63,7 +63,7 @@ Alright, let's start off by looking at the form I'll use for the demo. While cov
 It's not terribly exciting, but gets the job done in terms of demonstrating multiple types of form fields. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/03/f1.jpg" alt="Picture of the rendered form fields" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/03/f1.jpg" alt="Picture of the rendered form fields" class="lazyload imgborder imgcenter">
 </p>
 
 ## Saving Form Data
@@ -149,7 +149,7 @@ Remember that LocalStorage only takes simple values, so the object is serialized
 Woot! Ok, at this point, I can type in data, and confirm it's working in DevTools:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/03/f2.jpg" alt="Picture from DevTools showing saved form" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/03/f2.jpg" alt="Picture from DevTools showing saved form" class="lazyload imgborder imgcenter">
 </p>
 
 ## Retrieving the Data

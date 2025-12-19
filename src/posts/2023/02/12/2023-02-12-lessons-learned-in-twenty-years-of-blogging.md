@@ -20,7 +20,7 @@ Funny that I thought I had "many years" of development experience back then. Whi
 My blog was completely custom-built, in ColdFusion, and while I can't seem to find an original picture of the first design, I did find this from 2005:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/ray1.jpg" alt="Screen shot of blog" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/ray1.jpg" alt="Screen shot of blog" class="lazyload imgborder imgcenter">
 </p>
 
 It may be hard to read, but apparently, on February 3, 2005, I posted not once, not twice, but three times. To be fair, this was pre-Twitter, and as I've said before, I used to post a lot of notes, links, and so forth, as a way of sharing cool stuff with others.
@@ -50,7 +50,7 @@ So that's a lot of pre-amble, let me get around to what I actually wanted to dis
 For people launching a personal blog, figure out what makes you excited, and focus on that. It won't always be easy, and sometimes I'm not passionate about anything. Your personal and work life can absolutely impact your energy to write, but when you find something that makes you giddy, focus your attention on that. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/ray2.jpg" alt="Cat with a laser" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/ray2.jpg" alt="Cat with a laser" class="lazyload imgborder imgcenter">
 </p>
 
 At times, I feel like a cat chasing a laser pointer. People who have been visiting my blog for a long time will know that I get *super* excited about a topic, write about 20 posts on it, and then never mention it again. It's not that I started to dislike a particular topic, but once I feel like I've played with something enough and have learned it enough, I move on. My blog started off as a "ColdFusion blog", but in that time I've covered hundreds of different technical topics as well as the books, movies, and games I'm excited about. 
@@ -77,7 +77,7 @@ When I began web development, in roughly 1990 or so, it was somewhat more diffic
 That being said, while I think it would behoove budding bloggers (alliteration ftw) to host their own blog on their own domain on their own server, there are some good platforms out there to make it simpler. [Dev.to](https://dev.to/) is one of the best platforms for developers who want to get started blogging and offers a quick sign-up, zero code, and easy methods of writing. Most importantly, they offer an export option:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/ray3.jpg" alt="Export from dev.to" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/ray3.jpg" alt="Export from dev.to" class="lazyload imgborder imgcenter">
 </p>
 
 No matter where you choose to write, ensure you have the ability to keep your content. Sites come and go, and yuo don't want to wake up one day to find that all of your hard work has disappeared. 
@@ -103,7 +103,7 @@ I've forgotten way more good ideas than I've actually got done on (electronic) p
 While I've used various tools in the past, for the past year or so I've been really enjoying Microsoft To Do. Here's my current list, and you'll notice the second to last item is something I wrote a day or so ago, I just haven't gotten around to checking it off.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/ray4.jpg" alt="List of blog ideas" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/ray4.jpg" alt="List of blog ideas" class="lazyload imgborder imgcenter">
 </p>
 
 ## Getting the Word Out
@@ -136,5 +136,5 @@ Finally, be honest. This kind of goes back to not worrying about your content be
 I say thank you to my readers often, but I'd like to *really* express just how happy I am to have had an audience for so many years. You've kept me on my toes. As I approach 50 (in biological age, my maturity still hovers between 12 and 14), I don't know how long I'll keep this blog active, but here's hoping I'm writing another such piece in 2043. Also, I have always respected and admired our robotic overlords. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/ray5.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/ray5.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>

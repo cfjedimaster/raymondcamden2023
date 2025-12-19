@@ -20,31 +20,31 @@ A few days I was thinking about this usecase and realized I could probably do it
 After logging into Pipedream and going to my "Source" panel, I created a new source and selected Google Calendar. Pipedream lets you select from a few different types of events (to be clear, I mean programatic events, not calendar events, sorry for the confusion!) including one named, "New Or Updated Event (Instant)". As the name says, this will run instantly based on *any* particular edit done to a calendar. I authenticated with Google via Pipedream, selected my calendar (a custom one I made for this blog post), and then took the defaults for the rest. I did specify a name for the source though so it would be easier to find later. (I do a lot of testing!)
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/12/cal2-1.jpg" alt="Screen shot of Event Source UI" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/12/cal2-1.jpg" alt="Screen shot of Event Source UI" class="lazyload imgborder imgcenter">
 </p>
 
 Once this was created, I then made a few edits to my calendar. As I did, I was able to see, instantly, new events. Note that in the screenshot below, the event source code is smart enough to use the calendar event title as a label. That's cool!
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/12/gcal2-2.jpg" alt="Screen shot of Event Source events" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/12/gcal2-2.jpg" alt="Screen shot of Event Source events" class="lazyload imgborder imgcenter">
 </p>
 
 Now that I have an event source that fires when I edit a calendar, the next step was to use it in a workflow. I created a new Pipedream workflow, used my event source as the source. Do *not* forget that there is a boolean trigger for event sources that "enables" it. Your event source is running, but in the context of the workflow, you must enable it there. This is different from the "active" toggle of the workflow itself and every time I use an event source like this, I forgot to hit the toggle:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/12/gcal2-3.jpg" alt="Enable the source in the workflow" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/12/gcal2-3.jpg" alt="Enable the source in the workflow" class="lazyload imgborder imgcenter">
 </p>
 
 Then I had add a second step. Remember that the idea is to trigger a build. While this is pretty simple code in Node, Pipedream actually has a built in action for performing HTTP requests. I added it, totally did <strong>not</strong> forget to change them ethod to POST, and pasted in the URL I got from the Netlify site settings so I can trigger a build.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/12/gcal2-4.jpg" alt="Workflow" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/12/gcal2-4.jpg" alt="Workflow" class="lazyload imgborder imgcenter">
 </p>
 
 This just left testing. I created an event in Google Calendar, which automatically triggered my event source, which automatically triggered my Netlify build, which then triggers happiness!
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/12/gcal2-5.jpg" alt="Netlify Builds triggered by calendar events" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/12/gcal2-5.jpg" alt="Netlify Builds triggered by calendar events" class="lazyload imgborder imgcenter">
 </p>
 
 Woot! So in theory I could stop there, but then I thought, if Pipedream makes Google Calendar so easy to use, could I use it in my [Eleventy](https://www.11ty.dev/) site instead of the Google Node library I had? Turns out - I certainly could.

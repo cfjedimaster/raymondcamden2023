@@ -51,7 +51,7 @@ eleventyConfig.addFilter('onthisday', (date, posts) => {
 Basically - check the year and ensure it's less than the current year, then check for matches on month and date (which is the day of the month). Here's an example of how it looks when content is found:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/06/otd.jpg" alt="On This Day related content" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/06/otd.jpg" alt="On This Day related content" class="lazyload imgborder imgcenter">
 </p>
 
 That's it. I do think you could make it a bit better if you perhaps allowed for a bit of wiggle room - like maybe return results that match the day, but also one before and one after. That would help find matches near weekends when publishing may slow down. If you want a copy of a complete demo of this, you can find it here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/onthisdayfilter>

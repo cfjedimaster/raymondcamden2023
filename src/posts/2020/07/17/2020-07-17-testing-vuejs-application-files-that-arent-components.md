@@ -106,7 +106,7 @@ console.log(dice.roll('2d6+2'));
 And this was the result:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/vrpg1.jpg" alt="Error output from script" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/vrpg1.jpg" alt="Error output from script" class="lazyload imgborder imgcenter">
 </p>
 
 Ok, so an admission. I'm still a bit hazy on the whole module thing in Node, and JavaScript in general. I've used require, imports, exports, but I wouldn't pass a technical interview question on them. I hope you don't think less of me. Honestly. 

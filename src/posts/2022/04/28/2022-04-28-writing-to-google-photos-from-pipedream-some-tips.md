@@ -132,5 +132,5 @@ return await axios($, {
 And just to prove it worked - here's the result in the Google Photos UI - back when I was skinny.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/gp1.jpg" alt="Photo album with uploaded picture" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/gp1.jpg" alt="Photo album with uploaded picture" class="lazyload imgborder imgcenter">
 </p>

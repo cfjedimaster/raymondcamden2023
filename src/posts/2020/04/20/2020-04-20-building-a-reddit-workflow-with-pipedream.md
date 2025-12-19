@@ -14,25 +14,25 @@ Almost four years ago I [blogged](https://www.raymondcamden.com/2016/07/05/new-p
 So before I begin, how does Pipedream support Reddit? Currently, Pipedream doesn't have a "service explorer" or a way to see what pre-built actions are available. What I've been doing is going to a test workflow I use for, well, testing, and click to add a new action. I then browse what's available. If you know what you want, you can click the name of the app to filter. Apps will be at the end of the list of actions:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit1.png" alt="Action/app display" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit1.png" alt="Action/app display" class="lazyload imgborder imgcenter">
 </p>
 
 After you click it, the actions are then filtered to items within it. In the case of Reddit, this is quite a bit:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit2.png" alt="List of actions" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit2.png" alt="List of actions" class="lazyload imgborder imgcenter">
 </p>
 
 You can type to filter even more. For my case I knew I wanted to get new posts so typing "new" was enough:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit3.png" alt="New" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit3.png" alt="New" class="lazyload imgborder imgcenter">
 </p>
 
 Finally, once you select the action, note that the you probably still need to know about the API itself. Sometimes the properties are obvious, but sometimes they aren't. So in the example above, I knew what Subreddit meant but wasn't sure about the value of "after":
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit4.png" alt="Property examples" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit4.png" alt="Property examples" class="lazyload imgborder imgcenter">
 <p>
 
 So in that case, I simply used the [Reddit API documentation](https://www.reddit.com/dev/api/). 
@@ -60,7 +60,7 @@ async (event, steps) => {
 * Next, I used the "get new" Reddit action. While this supports an "after" filter, that relies on the ID of a post. There is no way to apply a date filter. I figured I'd fix that later. All I specified here then was the subreddit:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit5.png" alt="Configured step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit5.png" alt="Configured step" class="lazyload imgborder imgcenter">
 </p>
 
 * As I said above, there's no way (that I know of) to filter to today via the API. So I added a Node.js step to filter to posts no more than 24 hours old.
@@ -125,13 +125,13 @@ Be sure to make note of that epic ternary operator in there. I'm a 10X developer
 * And then finally, I added the email step. By default, Pipedream's email step requires the text of an email but makes the HTML property optional. To keep things easier, I supplied my HTML value for both, which is *not* what you would want to do. Since I know I can read HTML email, I figured that was ok.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit6.png" alt="Email step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit6.png" alt="Email step" class="lazyload imgborder imgcenter">
 </p>
 
 And that was it. Now I've got a daily report for my favorite subreddit (it's for my local area) that shows up in my inbox once a day.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit7.png" alt="Email example" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit7.png" alt="Email example" class="lazyload imgborder imgcenter">
 </p>
 
 You can view (and copy!) the complete workflow here: <https://pipedream.com/@raymondcamden/daily-reddit-posts-p_dDCYOd/edit>
@@ -145,7 +145,7 @@ But Pipedream doesn't support the idea of "loop over this array and execute a st
 Let's start with the API. I began with a HTTP trigger which gave me a URL to hit. I then added the same "get new" Reddit action and tied the subreddit name to the query string:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit8.png" alt="Reddit step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit8.png" alt="Reddit step" class="lazyload imgborder imgcenter">
 </p>
 
 Note that after I had tested my URL with a query string value (`subreddit`), the editor was smart enough to suggest it when I added the step. It even (although it's not in this screen shot) showed a sample value. This was freaking cool and super helpful. 
@@ -180,7 +180,7 @@ And that's it. Now if I hit `myurl?subreddit=Acadiana` I get a JSON dump of new 
 So that's the API. To build my "real" workflow, the one handling gathering and emailing data, I built a new CRON-based workflow. For my second step, I used the "get my subscribed subreddits" action. I only needed to supply "subscriber" as an argument:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit9.png" alt="My subs actin" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit9.png" alt="My subs actin" class="lazyload imgborder imgcenter">
 </p>
 
 The next step is a Node one. This handles taking the results from the previous step and making the asynchronous calls to my API:
@@ -225,7 +225,7 @@ Note I also sort the posts by date. I think some people may prefer their "report
 From my initial workflow to this one, it took me maybe one hour total. I loved that I had that flexibility and could basically just drop in steps like LEGO pieces. Here's a screen shot of the email:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit10.png" alt="Final email" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit10.png" alt="Final email" class="lazyload imgborder imgcenter">
 </p>
 
 You can view/copy my workflow here: <https://pipedream.com/@raymondcamden/daily-reddit-posts-2-p_ZJC9x9/edit>

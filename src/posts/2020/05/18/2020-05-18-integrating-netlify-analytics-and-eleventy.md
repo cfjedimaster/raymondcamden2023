@@ -12,7 +12,7 @@ description: How to use Netlify's Analytics API in Eleventy
 Before I begin, know that I'm using an *undocumented* part of the [Netlify API](https://open-api.netlify.com/) so you should proceed with caution. I've been waiting for them to release the docs for sometime now (although it didn't stop me from building my own [demo](https://www.raymondcamden.com/2019/10/05/building-a-netlify-stats-viewer-in-vuejs)) and I'm not sure if it will ever happen, but in the meantime, I'll continue to play with it. Alright, so with that out of the way, this weekend I worked on a cool little thing I've added to my blog. While you can see it on the right hand side, it's this list of links here:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/pp1.png" alt="List of Popular Posts" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/pp1.png" alt="List of Popular Posts" class="lazyload imgborder imgcenter">
 </p>
 
 This list was created by hitting the Netlify Analytics API for the site, getting the most viewed content in the past seven days, and then "manipulated" a bit before rendering. Let me describe the steps it took to get here.
@@ -22,7 +22,7 @@ This list was created by hitting the Netlify Analytics API for the site, getting
 Step one was to get the raw data. First, I created a Personal Access Token. This is done under your user profile at Netlify in the Applications section:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/pp2.png" alt="Applications page" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/pp2.png" alt="Applications page" class="lazyload imgborder imgcenter">
 </p>
 
 Once I had the key, I first wrote a script to get all of my sites. This was just so I could get the ID of my blog.

@@ -13,7 +13,7 @@ As the title says, I'm *incredibly* happy to announce the final release of [The 
 
 
 <p>
-<a href="https://www.manning.com/books/the-jamstack-book"><img data-src="https://static.raymondcamden.com/images/2022/04/book.jpg" alt="Cover of The Jamstack Book" class="lazyload imgborder imgcenter"></a>
+<a href="https://www.manning.com/books/the-jamstack-book"><img src="https://static.raymondcamden.com/images/2022/04/book.jpg" alt="Cover of The Jamstack Book" class="lazyload imgborder imgcenter"></a>
 </p>
 
 This book was written by both [Brian Rinaldi](https://remotesynthesis.com/) and myself and covers the basics of what the Jamstack is, demonstrates multiple examples, and goes into topics like using a CMS and serverless. 

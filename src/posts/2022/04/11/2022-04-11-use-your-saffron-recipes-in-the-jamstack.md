@@ -77,7 +77,7 @@ This is enough to get Eleventy to start using the recipe files, but I also added
 Once this is done, you can see the files being parsed into HTML:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/saff1.jpg" alt="File tree of compiled recipes" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/saff1.jpg" alt="File tree of compiled recipes" class="lazyload imgborder imgcenter">
 </p>
 
 Of course, the result isn't pretty, it's just a block of text. To really start displaying the recipes correctly, we need to parse those files
@@ -169,7 +169,7 @@ eleventyConfig.addFilter("recipeText", (content) => {
 That isn't the most elegant solution, but it works. Note that my template does *not* make use of all the data from the Saffron export, but that could be done later. Also note I never make use of the actual contents. *In theory*, I could parse the recipe in `compile` and return the instructions as my content, but I was fine ignoring the contents. I reserve the right to rethink that later, but for now, it's working:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/saff2.jpg" alt="Example Recipe" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/saff2.jpg" alt="Example Recipe" class="lazyload imgborder imgcenter">
 </p>
 
 And that's it! Honestly I was *incredibly* impressed by how Eleventy supported custom template formats, especially with the `getData` feature as it made it so easy to use my content in my templates. Also, the whole reason for this post is that I've got another idea related to the cooking and the Jamstack and I needed some sample content to play with. You can find the complete source code for this demo here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/saffron>

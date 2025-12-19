@@ -14,7 +14,7 @@ A few weeks ago, I began helping a friend migrate his company blog from WordPres
 You can see their existing blog here, <https://news.ascendingnode.tech/> (At the time I write this, the Eleventy version is done, just not yet deployed). In case you don't want to click, here's the front page of posts:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/11/ext1.jpg" alt="Screenshot of blog, showing 4 recent posts" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/11/ext1.jpg" alt="Screenshot of blog, showing 4 recent posts" class="lazyload imgborder imgcenter">
 </p>
 
 In the screenshot above, you see four blog posts. This is - again - a very typical blog interface. You see a title, a date, and an extract of the post. The title (and the word 'more' at the end) should link to the actual blog post. All four of the posts shown above look to be identical in terms of 'form' and function. However, if you click the first link, you actually end up on an external site.

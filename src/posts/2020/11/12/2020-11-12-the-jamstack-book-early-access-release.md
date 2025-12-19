@@ -12,7 +12,7 @@ description: I'm working on a new Jamstack book you can get now!
 I've already mentioned this on Twitter and LinkedIn, but this week the Manning Early Access Program (MEAP) version of the new book I'm writing with [Brian Rinaldi](https://remotesynthesis.com/) has gone live - The Jamstack Book.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/jamstackbook.png" alt="The Jamstack book cover" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/jamstackbook.png" alt="The Jamstack book cover" class="lazyload imgborder imgcenter">
 </p>
 
 This book is a *much* updated version of our earlier book on static site generators. It covers everything from why you would consider Jamstack to when you would not. It shows you multiple different examples of static site generators, from simple blogs to ecommerce sites, and goes into how you move to production and integrate APIs and serverless. 
@@ -37,19 +37,19 @@ But wait! If you use the super-secret hidden code below, you get it for 50% off 
 Not yet - keep going down...
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/cat0.jpg" alt="Cat" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/cat0.jpg" alt="Cat" class="lazyload imgborder imgcenter">
 </p>
 
 Nope, more to go...
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/cat1.jpg" alt="More Cat" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/cat1.jpg" alt="More Cat" class="lazyload imgborder imgcenter">
 </p>
 
 Almost there, honest!
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/cat2.jpg" alt="Even More Cat" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/cat2.jpg" alt="Even More Cat" class="lazyload imgborder imgcenter">
 </p>
 
 

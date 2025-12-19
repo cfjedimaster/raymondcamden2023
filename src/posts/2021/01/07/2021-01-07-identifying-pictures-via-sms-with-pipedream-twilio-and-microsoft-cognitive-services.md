@@ -18,13 +18,13 @@ First, I ensured that I had a phone number set up with Twilio. Twilio has an exc
 With that in place, on Pipedream I created a new Twilio event source. They have one specifically for incoming SMS:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/sms1.jpg" alt="Twilio SMS Event Source" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/sms1.jpg" alt="Twilio SMS Event Source" class="lazyload imgborder imgcenter">
 </p>
 
 In this process you will enter your Twilio keys, and as soon as it's authenticated, the Pipedream UI will be able to fetch your available phone numbers and let you select it. Honestly I was really impressed with how easy that was. Once created, I could test it immediately by sending a text to the number:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/sms2.jpg" alt="Testing SMS events" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/sms2.jpg" alt="Testing SMS events" class="lazyload imgborder imgcenter">
 </p>
 
 Ok, so with that source working well, I created a new workflow. The workflow would fire every time a SMS message was received. I then needed to do the following:
@@ -77,7 +77,7 @@ async (event, steps) => {
 Let's break this down. The first thing I do is look for the presense of an attached image. How did I know it was `event.MediaUrl0`? I looked at the event source events which lets you dig in the data. You can also do this in the workflow itself by using the test feature. It lets you pick from multiple previous events. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/sms3.jpg" alt="Looking at the event data" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/sms3.jpg" alt="Looking at the event data" class="lazyload imgborder imgcenter">
 </p>
 
 Ok, back to the code. THe value I look for (`MediaUrl0`), is a URL pointing to the image. You can open that in your browser to test. I noticed that when I used Microsoft's online tester for the API, it didn't like the fact that Twilio's URLs didn't end in ".jpg" or some other image file type. But the API itself was totally fine with it.
@@ -89,31 +89,31 @@ The last part of the code handles telling the user they need to send an image if
 So with that done, I need to send the text back. Guess what? Pipedream has a Twilio SMS sending action built. I literally added it and specified values for To, From, and Body. I didn't write one more line of code:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/sms4.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/sms4.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 And that's literally it! I know I'm a complete fan boy when it comes to Pipedream, but I was blown away how much simpler this version was. I feel confident saying that 90% of my time was gathering keys, fighting my darn GET vs POST issue, and basically non-Pipedream stuff. So does it work? Yes! Here's some fun examples.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/sms5.jpg" alt="Picture of a glass of water" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/sms5.jpg" alt="Picture of a glass of water" class="lazyload imgborder imgcenter">
 </p>
 
 And another...
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/sms6.jpg" alt="Picture of a toy" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/sms6.jpg" alt="Picture of a toy" class="lazyload imgborder imgcenter">
 </p>
 
 And another...
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/sms7.jpg" alt="Glass of wine" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/sms7.jpg" alt="Glass of wine" class="lazyload imgborder imgcenter">
 </p>
 
 Who else had wine last night? And finally, my son being my son:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/sms8.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/sms8.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 Want to try this out yourself? View and copy the workflow URL: <https://pipedream.com/@raymondcamden/identify-picture-p_mkCkL5o>

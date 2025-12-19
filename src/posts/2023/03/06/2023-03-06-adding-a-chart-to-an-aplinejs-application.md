@@ -16,7 +16,7 @@ For a while now my blog queue has had an item in there suggesting I take a look 
 I'll start by sharing what I built *before* I added a chart to the display. This application consists of a list of cities. For each city, we use the [Pirate Weather API](https://pirateweather.net/) to get an hourly forecast and from that, I display the temperature over the next twelve hours. Here's how that looks:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/alp1.jpg" alt="Table of four cities and four weather forecasts." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/alp1.jpg" alt="Table of four cities and four weather forecasts." class="lazyload imgborder imgcenter">
 </p>
 
 I probably should have included a timestamp but for now, this gets the point across. Let's take a look at the code. I begin by defining my cities. This probably would be dynamic, loaded from a database or API, etc.
@@ -102,7 +102,7 @@ Here's a CodePen demonstrating the complete application.
 For my chart, I thought it would be nice to visualize both the highest and lowest temperatures for each of the cities. That would give us an idea of the range over our time period as well as the relative difference in warmth between the cities. (Spoiler - Louisiana is hot. Always hot.) Here's the chart I came up with:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/alp2.jpg" alt="Chart showing temperature ranges" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/alp2.jpg" alt="Chart showing temperature ranges" class="lazyload imgborder imgcenter">
 </p>
 
 Note that this was me doing the bare minimum in terms of "design". Chart.js seems really powerful and I could absolutely do more to make this prettier, but honestly, it works, and I was pleased with how quickly I got this working. Here's what I had to do.

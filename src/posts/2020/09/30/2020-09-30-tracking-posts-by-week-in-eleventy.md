@@ -14,7 +14,7 @@ I've been running a "successful" blog for about seventeen years now. I say "succ
 One of the ways I try to make my blog successful is by having a consistent schedule. I used to blog every week day. That's not really doable these days so instead I try to do at least one blog post a week. I wanted an easy way to see how well I was doing with that schedule so I decided to hack up a quick addition to my [stats](/stats) page. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/ppw.jpg" alt="Posts poer weeks stat" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/ppw.jpg" alt="Posts poer weeks stat" class="lazyload imgborder imgcenter">
 </p>
 
 This new information looks at the last eight weeks and reports on how many total posts I wrote. As of the day I'm writing this, it looks like I've got two weeks where I "failed" but honestly I'm fine with that. So, how did I build it?

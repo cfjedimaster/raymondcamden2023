@@ -147,7 +147,7 @@ function scanResult(r) {
 I turn off the current scanner. Parse the data and save it as well as the original string in a global variable, and then update the DOM to reflect a new scan that came in. I use the name value as a label. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/q1.jpg" alt="Screenshot" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/q1.jpg" alt="Screenshot" class="lazyload imgborder imgcenter">
 </p>
 
 Did I mention that the UI wasn't pretty? 
@@ -217,7 +217,7 @@ async function renderContacts() {
 The Dexie line is the `toArray()` part. Stupid simple and so much easier than "native" IndexedDB calls. Here's the oh-so-lovely result:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/q2.jpg" alt="Table of scanned contacts" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/q2.jpg" alt="Table of scanned contacts" class="lazyload imgborder imgcenter">
 </p>
 
 ## Downloading a Zip 

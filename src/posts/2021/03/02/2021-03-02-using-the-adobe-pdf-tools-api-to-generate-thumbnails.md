@@ -81,7 +81,7 @@ This boils down to:
 The end result is a zip of every image. Here's an example:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/03/pdft.jpg" alt="Zip listing" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/03/pdft.jpg" alt="Zip listing" class="lazyload imgborder imgcenter">
 </p>
 
 So given that we've got a way to create a zip of images, what I need to do is take this, extract out the first file (which should represent the first page of the PDF), and then resize it so it's appropriate for a thumbnail.
@@ -282,7 +282,7 @@ async function makeThumbnail(path, width, quality) {
 And here's an example I got from a lovely IRS form.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/03/thumb.jpg" alt="Thumbnail" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/03/thumb.jpg" alt="Thumbnail" class="lazyload imgborder imgcenter">
 </p>
 
 In the next post, I'm going to show how to take this and employ it with Eleventy!

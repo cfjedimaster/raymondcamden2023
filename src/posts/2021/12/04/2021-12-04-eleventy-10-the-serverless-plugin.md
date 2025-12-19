@@ -16,7 +16,7 @@ As with most things I do on this blog, when I struggle with something, I try to 
 Ok, with that out of the way, let's start by describing a situation where Eleventy Serverless could help out!
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/12/readycat.jpg" alt="Cat with I'm Ready text" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/12/readycat.jpg" alt="Cat with I'm Ready text" class="lazyload imgborder imgcenter">
 </p>
 
 When it comes to sites that are statically generated, the typical way to add dynamic information is with client-side scripting. The page will load for the user, and sometime soon(ish), hopefully, JavaScript will figure out what it needs to figure out. This may be done entirely by itself, or JavaScript may be used to make a network request to an API. 

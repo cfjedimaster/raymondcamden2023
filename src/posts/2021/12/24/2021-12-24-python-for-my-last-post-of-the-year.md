@@ -12,7 +12,7 @@ description: A simple Python function I wrote for no good reason whatsoever...
 For the last post of the year (probably, I'm off next week with very little on my calendar so I hope to spend a lot of time doing nothing, not blogging) I thought I'd share a quick Python function. This function is inspired by my favorite Christmas movie, ["A Christmas Story"](https://www.imdb.com/title/tt0085334/). In one of the more pivotal scenes, one character dares another to stick their tongue on a cold pole. You see, one of the characters said their dad stated that sticking their tongue on cold metal would result in the tongue sticking. The other character didn't believe it. As you can imagine, disaster unfolds.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/12/pole_post.jpg" alt="Tongue stuck to cold post, shot from A Christmas Story" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/12/pole_post.jpg" alt="Tongue stuck to cold post, shot from A Christmas Story" class="lazyload imgborder imgcenter">
 </p>
 
 In this scene, the character goading the other to stick his tongue on the pole uses progressively more serious "dares", so for example, first a dare, then a double dare, and so forth.

@@ -50,7 +50,7 @@ This gives me an object containing the name of a category/tag, the count of post
 When you have a list of categories and tags with counts, you can then get a good idea of what you're covering, which again, for a brand new site is something you can do without the 'work' of gathering stats, but later on will be more difficult. It also makes it easier to find places where it may make sense to update your organization. Here's my current set of categories:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/org1.jpg" alt="List of categories and number of posts per each" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/org1.jpg" alt="List of categories and number of posts per each" class="lazyload imgborder imgcenter">
 </p>
 
 Right away I notice something interesting. While I try to keep my categories generic and my tags specific, I see I've got a `jquery` category. Most likely the posts in that category should be using `javascript` and `jquery` should be a tag. At the same time, when I first started blogging, I was almost entirely writing about ColdFusion, so I'm not sure I'd move `coldfusion` to a tag. 
@@ -65,7 +65,7 @@ Yet another useful thing to look for is really *low* values in stats. Whenever I
 Finally, having the stats makes it super easy to find typos:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/org2.jpg" alt="type of vuesjs tag" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/org2.jpg" alt="type of vuesjs tag" class="lazyload imgborder imgcenter">
 </p>
 
 Oops. 
@@ -95,13 +95,13 @@ Note that I also track word count while I edit using the [Word Count](https://ma
 Another part of a successful content site is having a regular publishing schedule. Once again, what that means for each site will depend on the site in question, but for me, I've defined a cadence of a post a week. It's a goal and not one I care to be strict about, but I do try to make note of my cadence so I can know when I'm falling a bit too far behind. One way I do that is by checking my posts per week stats over the previous two months. Here you can see the output:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/org3.jpg" alt="List of posts per week over an 8 week period" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/org3.jpg" alt="List of posts per week over an 8 week period" class="lazyload imgborder imgcenter">
 </p>
 
 I also report on posts per year, which only gets interesting after a few years.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/org4.jpg" alt="List of posts per year" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/org4.jpg" alt="List of posts per year" class="lazyload imgborder imgcenter">
 </p>
 
 The way I handle this is a mixture of build-time code in Eleventy and JavaScript code on the front end. This was *probably* not something I needed to do, but as my solution is working ok for now, I'll leave it be. On the server-side, in that same loop, I have an array of the date of every single post. Yes, all of them.

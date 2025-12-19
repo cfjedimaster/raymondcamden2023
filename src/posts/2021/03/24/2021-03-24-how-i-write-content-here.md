@@ -52,7 +52,7 @@ To make it quicker to use in my editor, Visual Studio Code, I built a shortcut t
 		"prefix": "img",
 		"body": [
 			"<p>",
-			"<img data-src=\"https://static.raymondcamden.com/images/$CURRENT_YEAR/$CURRENT_MONTH/$1\" alt=\"\" class=\"lazyload imgborder imgcenter\">",
+			"<img src=\"https://static.raymondcamden.com/images/$CURRENT_YEAR/$CURRENT_MONTH/$1\" alt=\"\" class=\"lazyload imgborder imgcenter\">",
 			"</p>"
 		],
 		"description": "Images"
@@ -70,7 +70,7 @@ For my top banner, I use an image from [Unsplash](https://unsplash.com/), a serv
 Alright, so when I'm done, I commit my Markdown file to my GitHub repository: <https://github.com/cfjedimaster/raymondcamden2020> At this point, Netlify takes over. It notices whenever I commit to my repository and automatically fires off builds. These builds take time:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/03/ray1.jpg" alt="Build times" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/03/ray1.jpg" alt="Build times" class="lazyload imgborder imgcenter">
 </p>
 
 Normally I just go do something else. When the build is done (and you can use `netlify watch` at the CLI to monitor), I then write a tweet about the post. I also do a "ICYMI" (In Case You Missed It) repeat tweet for about a week later. 

@@ -14,13 +14,13 @@ Before I begin, a few quick notes. Yes, that title is intentional and not a typo
 Yesterday a friend on Facebook shared that he had recently discovered [Fill Murray](https://www.fillmurray.com/), a Bill Murray placeholder service. So for example, the URL https://www.fillmurray.com/200/300 creates:
 
 <p>
-<img data-src="https://www.fillmurray.com/200/300" alt="Fill Murray" class="lazyload imgborder imgcenter">
+<img src="https://www.fillmurray.com/200/300" alt="Fill Murray" class="lazyload imgborder imgcenter">
 </p>
 
 This is one of *many* silly image placeholder services out there, with my favorite being, of course, [placekitten](https://placekitten.com/):
 
 <p>
-<img data-src="https://placekitten.com/500/500" alt="" class="lazyload imgborder imgcenter">
+<img src="https://placekitten.com/500/500" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 Commenting on the friends FB post along with others, we were sharing different placeholder services we like, when it occured to me - what if I build a placeholder service that dynamically returned another placeholder service?
@@ -151,21 +151,21 @@ I've been writing JavaScript since it came out in a Netscape beta and I don't th
 I don't know about you but that feels like some proper black magic vodoo shit right there. So given my root URL of https://placeplace.m.pipedream.net I can then do stuff like https://placeplace.m.pipedream.net?width=300&height=500:
 
 <p>
-<img data-src="https://placeplace.m.pipedream.net?width=300&height=500" alt="Placeholder test" class="lazyload imgborder imgcenter">
+<img src="https://placeplace.m.pipedream.net?width=300&height=500" alt="Placeholder test" class="lazyload imgborder imgcenter">
 </p>
 
 And here's a few more examples of differing sizes:
 
 <p>
-<img data-src="https://placeplace.m.pipedream.net?width=200&height=200" alt="Placeholder test" class="lazyload imgborder imgcenter">
+<img src="https://placeplace.m.pipedream.net?width=200&height=200" alt="Placeholder test" class="lazyload imgborder imgcenter">
 </p>
 
 <p>
-<img data-src="https://placeplace.m.pipedream.net?width=400&height=400" alt="Placeholder test" class="lazyload imgborder imgcenter">
+<img src="https://placeplace.m.pipedream.net?width=400&height=400" alt="Placeholder test" class="lazyload imgborder imgcenter">
 </p>
 
 <p>
-<img data-src="https://placeplace.m.pipedream.net?width=500&height=200" alt="Placeholder test" class="lazyload imgborder imgcenter">
+<img src="https://placeplace.m.pipedream.net?width=500&height=200" alt="Placeholder test" class="lazyload imgborder imgcenter">
 </p>
 
 If for some unknown reason you want to see the whole workflow, you can check it out here: <https://pipedream.com/@raymondcamden/placeplace-p_q6CzbDg>

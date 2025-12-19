@@ -83,7 +83,7 @@ openPDF() {
 This is all boilerplate per our docs, just slightly modified for Vue, for example, `this.adobeDCView` to represent Vue's data. However when `previewFile` was called, this error was returned:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/vue1.jpg" alt="Vue Error" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/vue1.jpg" alt="Vue Error" class="lazyload imgborder imgcenter">
 </p>
 
 Honestly I was completely at a loss as to why this error was being thrown. Nothing seemed amiss. I ensured that the div element was being found correctly. I ensured that the library was *really* loaded. Nothing made sense. 
@@ -124,7 +124,7 @@ console.log("Ray2", window.ray);
 And saw this:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/vue2.png" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/vue2.png" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 Note how the Vue object is a Proxy, which makes sense - Vue's data is reactive and all. Honestly I'm not sure why I didn't have this issue before, but certainly Vue 3 is a *significant* update from Vue 2. So, I didn't want to use a window object as it felt... wrong. I did a bit of searching and found this StackOverflow answer: [How to make a template variable non-reactive in Vue](https://stackoverflow.com/a/52844620/52160) which led to a note in the [official docs](https://v2.vuejs.org/v2/guide/instance.html#Data-and-Methods) on the use of `Object.freeze()`.

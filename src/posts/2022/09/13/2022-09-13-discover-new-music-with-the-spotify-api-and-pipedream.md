@@ -16,19 +16,19 @@ I'm a huge [Spotify](https://spotify.com) fan, and one of my favorite features i
 So far I've gotten:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/music1.jpg" alt="Slipknot" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/music1.jpg" alt="Slipknot" class="lazyload imgborder imgcenter">
 </p>
 
 I've heard of Slipknot before but have never actually listened to any of their music. Guess what - I don't like em! But I really did enjoy playing the track (and a few others afterward).
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/music2.jpg" alt="Lil Uzi Vert" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/music2.jpg" alt="Lil Uzi Vert" class="lazyload imgborder imgcenter">
 </p>
 
 I've heard of Pharrell, but not Lil Uzi Vert. Again, not my primary style, but I liked this one better than the Slipknot track.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/music3.jpg" alt="Barry Gray" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/music3.jpg" alt="Barry Gray" class="lazyload imgborder imgcenter">
 </p>
 
 And in a completely different vein, a track with multiple composers. I've heard of Hans ZImmer and Ramin Djawadi before, but not the others. This was my favorite of the bunch. 
@@ -95,13 +95,13 @@ def handler(pd: "pipedream"):
 The important bit is the `params` block where I access the earlier steps. The result of this is a 'page' of tracks based on the search, an array. Here's how that's rendered in Pipedream:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/music4.jpg" alt="Result of API call" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/music4.jpg" alt="Result of API call" class="lazyload imgborder imgcenter">
 </p>
 
 All we need to do now is get a random track from that step. While building this, [Zalman Lew](https://twitter.com/zalmanlew) on the Pipedream Slack let me know there's actually a Pipedream step built in that lets you point to an array of data and have a random one returned. (You can find it in Helpers, named "Random Item from List".) So while I could have done it in a few lines of Python, I went with the built-in step:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/music5.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/music5.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 At this point, I've got a randomly selected track value I can use. How did I use it?

@@ -12,13 +12,13 @@ description: An example of modifying Prism's Copy support to alter the text in t
 This post definitely falls into the "I'm Not Sure This is a Good Idea" Department, but I thought I'd share on the wild chance it was useful to others. I've been using [Prism](https://prismjs.com/index.html) for source code blocks for sometime now and I like it fine enough. Recently I was working on a presentation about technical documentation. While working on the slide deck, I came across a code sample that had some line breaks in it:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/spotify.png" alt="Curl example" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/spotify.png" alt="Curl example" class="lazyload imgborder imgcenter">
 </p>
 
 In the code sample above, the curl command is broken over multiple lines. This isn't valid, but is nicely readable. Compare that to this version:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/curl.png" alt="Another curl example" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/curl.png" alt="Another curl example" class="lazyload imgborder imgcenter">
 </p>
 
 This is also nicely readable, but did you know that Windows users can't use `\` to break commands like that? The main terminal, cmd.exe, uses `^` instead. It's a minor issue, but it's something I'm cognizant of when I write docs. Developers, right or wrong, will copy and paste things as they learn and something small like this could trip them up.

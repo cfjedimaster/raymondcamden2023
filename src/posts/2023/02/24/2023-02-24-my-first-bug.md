@@ -18,13 +18,13 @@ So at some point, I stopped playing the games (err, well, stopped playing the ga
 My manual was the Applesoft BASIC Programming Reference Manual:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/apple1.jpg" alt="Cover of the BASIC manual" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/apple1.jpg" alt="Cover of the BASIC manual" class="lazyload imgborder imgcenter">
 </p>
 
 This was a good manual, but I quickly ran into an issue, and by quickly I mean on page 2. Here's where I got stuck:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/apple2.jpg" alt="Screenshot from page 2" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/apple2.jpg" alt="Screenshot from page 2" class="lazyload imgborder imgcenter">
 </p>
 
 BASIC programs consist of lines of code preceded by line numbers. By default, execution will go from the lowest number to the highest, but basic jumping around was supported as well. The typical program would use line numbers counted by ten. This lets you "slip in" lines of code you may have forgotten. Never complain about writing code in Notepad again - this was truly old-school coding. (And to be fair, it was a hell of a lot better than using punch cards. I'm old, but not *that* old.) 
@@ -32,7 +32,7 @@ BASIC programs consist of lines of code preceded by line numbers. By default, ex
 Anyway, I followed that text very carefully, and when I ran it, I got an error. Here it is recreated in the Windows [AppleWin](https://github.com/AppleWin/AppleWin) emulator:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/apple3.jpg" alt="Error report, syntax error in 10" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/apple3.jpg" alt="Error report, syntax error in 10" class="lazyload imgborder imgcenter">
 </p>
 
 I swear I looked at this for *hours* (most likely it was far less than that) and I just couldn't figure it out. I'd look at the manual, look at the screen, go back to the manual, and I just had no clue. 
@@ -40,7 +40,7 @@ I swear I looked at this for *hours* (most likely it was far less than that) and
 Then... I went back to the manual, and read *past* the lines of code...
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/apple4.jpg" alt="Snippet from page, with last line highlighted" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/apple4.jpg" alt="Snippet from page, with last line highlighted" class="lazyload imgborder imgcenter">
 </p>
 
 See that highlighted line? Yeah, young Ray didn't notice it. I had entered the first line of code... and then used the spacebar to wrap the cursor to the next line. 

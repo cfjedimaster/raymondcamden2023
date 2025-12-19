@@ -28,7 +28,7 @@ https://res.cloudinary.com/raymondcamden/image/fetch/e_sepia/https://www.raymond
 And it would render as:
 
 <p>
-<img data-src="https://res.cloudinary.com/raymondcamden/image/fetch/e_sepia/https://www.raymondcamden.com/images/avatar2.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://res.cloudinary.com/raymondcamden/image/fetch/e_sepia/https://www.raymondcamden.com/images/avatar2.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 Cool! So let's see if we can use this to add a bit of responsiveness to my blog. Let me preface this by saying that I've been "adjacently" familiar with responsive design for years. By that I mean, I know the very high level basics, I recognize it in code when I see it, but I haven't actually built sites with it myself. For this blog post, I used the excellent article from MDN, [Responsive Images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). I want to be clear that what I did was just a test (although it is deployed right now!) and it could most likely be done better. Basically, blame my ignorance, not Cloudinary. 
@@ -67,7 +67,7 @@ Like I said above, I'm still fairly new to this and I know I could provide even 
 As a quick test, I opened up dev dtools and tested with this blog post, which right now is using https://static.raymondcamden.com/images/banners/welcome2018.jpg. This image clocks in at 82.3KB. When I resize my viewport down, I get the Cloudinary version which is 13.0 kb. (The 0 size for the first request shows it was being loaded via cache.)
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/11/r1.jpg" alt="Screen shot of blog with devtools" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/11/r1.jpg" alt="Screen shot of blog with devtools" class="lazyload imgborder imgcenter">
 </p>
 
 So just to recap. Given that I could do this better, definitely, but it took maybe 30 minutes to add a responsive header to my blog and I didn't have to touch *one* of my older media files. Cloudinary did all the work, I literally just crafted a URL. Freaking awesome!

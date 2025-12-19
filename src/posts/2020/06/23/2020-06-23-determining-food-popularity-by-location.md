@@ -177,13 +177,13 @@ Check out the complete demo below:
 For the second demo, I wanted to kick it up a notch, mainly by making it easy to see what the food types look like in other areas. I start off with a full map of America (and that's my bias, I could use geolocation here and center on your location):
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/06/ft1.jpg" alt="Map centered on America" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/06/ft1.jpg" alt="Map centered on America" class="lazyload imgborder imgcenter">
 </p>
 
 If you click on a location, I then get the data and report it.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/06/ft2.jpg" alt="Food report for Bellingham, WA" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/06/ft2.jpg" alt="Food report for Bellingham, WA" class="lazyload imgborder imgcenter">
 </p>
 
 For the most part, this code isn't too difficult, except that I removed Vue.js and kept it vanilla. The front end is rather bare so I'll skip it (will share full code in a bit), so let's focus on the JavaScript. I begin with code handling displaying the map:

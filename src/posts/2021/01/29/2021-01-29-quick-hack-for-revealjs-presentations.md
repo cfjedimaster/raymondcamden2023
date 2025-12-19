@@ -36,13 +36,13 @@ Note that in the notes above, I used line breaks to seperate each "part" of my n
 When giving a Reveal.js presentation, you can open up the speaker view in another window by just hitting the `S` key. Here's how that slide looks.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/r1.jpg" alt="Speaker view for Reveal.js" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/r1.jpg" alt="Speaker view for Reveal.js" class="lazyload imgborder imgcenter">
 </p>
 
 It may be a bit hard to see in the screen shot above, so here's another one focused on the lower right side panel:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/r2.jpg" alt="Zoom in on speaker notes" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/r2.jpg" alt="Zoom in on speaker notes" class="lazyload imgborder imgcenter">
 </p>
 
 Notice what happened? My notes are all on one line. If you think about it, that makes sense. Reveal.js is HTML based and while I treated the notes area like I would have in PowerPoint, it's still HTML, which means a line break is meaningless outside a `pre` tag. 
@@ -50,7 +50,7 @@ Notice what happened? My notes are all on one line. If you think about it, that 
 I could easily fix that by adding some `br` tags, but honestly, when I'm in the "flow" of working on a good presentation, I don't want to have to worry about that. That's one thing PowerPoint does really well - as a slide authoring environment it's incredible. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/typing.gif" alt="Real picture of Ray typing" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/typing.gif" alt="Real picture of Ray typing" class="lazyload imgborder imgcenter">
 <figcaption>Real picture of Raymond working on a presentation.</figcaption>
 </p>
 
@@ -68,7 +68,7 @@ notes.forEach(n => {
 This could be done in one line but I'm not currently doing a technical code test so why bother pretending. The result is a slighly better view:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/01/r3.jpg" alt="Notes with line breaks" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/01/r3.jpg" alt="Notes with line breaks" class="lazyload imgborder imgcenter">
 </p>
 
 There's probably a nicer way of doing this, but it works for me! 

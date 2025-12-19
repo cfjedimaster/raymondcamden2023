@@ -12,7 +12,7 @@ description: How I used Pipedream and Alpine to build a web-based front end to a
 I'm working on a project to help with local initiatives and as part of that effort, I needed to look into creating a nice way to display, make available, etc., files stored in Google Drive. Google Drive lets you make a folder public, and to be honest, the interface isn't too hard to use. I've got a folder you can open yourself at <https://drive.google.com/drive/folders/1FYLaoscxWBV_BU5sFouf7XCrv7cKktBY?usp=sharing>. Here's how it looks if you don't want to click.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/gd1.jpg" alt="View of public folder" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/gd1.jpg" alt="View of public folder" class="lazyload imgborder imgcenter">
 </p>
 
 It's a pretty simple interface. You get nice thumbnails, you can view pretty much any kind of file, and you can download it. It's good, but we can do better, right? I decided to look into using the [Google Drive API](https://developers.google.com/drive/api) via [Pipedream](https://pipedream.com?via=raymond) if I could get a data-centric version of the files. I could then render them on my website and have more control over the experience. I could do filtering, sorting, provide context, and so forth, while still having a dynamic list of files. I've got an initial version of this I'm sharing today, but have a follow-up planned with a few more advanced features. Ok, let's get started.
@@ -34,7 +34,7 @@ In Pipedream, I built a new workflow using the HTTP request trigger. Don't forge
 I then went to add an action to get my Google Drive folders. I knew that Pipedream had built-in actions for working with Google Drive, and quite a few of them:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/gd2.jpg" alt="Google Drive actions" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/gd2.jpg" alt="Google Drive actions" class="lazyload imgborder imgcenter">
 </p>
 
 Unfortunately, and a bit odd, they don't yet have an action for "List Files in Folder". I raised this in their Slack (track the issue [here](https://github.com/PipedreamHQ/pipedream/issues/4271)!) and there's a good chance that by the time you read this it will be supported, but luckily, Pipedream made it *incredibly* easy to do. Just select one of the first two options, "Use any Google Drive with...". I chose Node.js and you get code like so:

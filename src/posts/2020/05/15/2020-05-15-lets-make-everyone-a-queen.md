@@ -63,7 +63,7 @@ Ok, so with that being said, I thought it would build a few demos with this.
 As I said, Tracery is powerful, but complex. While I had a end game in mind (the second demo I'll be showing), I thought it would make sense to start with a web site first to keep it simple. As the title of this post suggests, it's all about making you a queen. I had my daughters in mind but anyone can be a queen if they want. Here's the end result:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/q1.png" alt="Queen Of" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/q1.png" alt="Queen Of" class="lazyload imgborder imgcenter">
 </p>
 
 You can demo this yourself here: <https://queenof.netlify.app/#Lindy> Notice I've included the name in the URL. You can change the hash mark to whatever, or just type whatever you want in the form field. The basic pattern is relatively simple: X is the queen of A, something of B, and something else of C. It's built using Vue.js because of course I'd use Vue for this. Here's the code:
@@ -184,7 +184,7 @@ Now, at this point, everything's been pretty simple. In theory the next step is 
 First, Pipedream created a new action that lets you use *your* credentials:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/q2.png" alt="New action for posting tweets" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/q2.png" alt="New action for posting tweets" class="lazyload imgborder imgcenter">
 </p>
 
 Once you've added this, you supply your own application credentials. You can get these simply enough at <https://developer.twitter.com/en> but note! If you've just today made the account for your bot, your bot itself needs to ask for permission to create Twitter apps. Twitter is totally fine with this, but there's an approval process. Mine took seven days. It's been a while since I've done this before so I can't tell you if that's slow or fast, but if you're planning something like this, you may want to request this as soon as possible. 
@@ -192,7 +192,7 @@ Once you've added this, you supply your own application credentials. You can get
 Once you've done that then it's a simple matter of copying your keys into the Pipedream action and then specifying what to tweet. Here's how I did it. (Note, the text in white is a sample value.)
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/q3.png" alt="Action values used for posting the tweet" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/q3.png" alt="Action values used for posting the tweet" class="lazyload imgborder imgcenter">
 </p>
 
 I believe that this is only an issue for automation of tweets that are sent *to* users but again, the Pipedream side of this was simple. The only real issue was the week delay in getting the developer account approved. 

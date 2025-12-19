@@ -14,13 +14,13 @@ So this is perhaps a bit of an edge case, but I was thinking about it this weeke
 First, I began with an incredibly simple one page site built with [Eleventy](https://www.11ty.dev/). You can see the site in all it's glory at <https://weather-demo.netlify.app/>. Here's how it renders normally:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/w1.jpg" alt="Website with no weather warning" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/w1.jpg" alt="Website with no weather warning" class="lazyload imgborder imgcenter">
 </p>
 
 Now here is what it does when it thinks it may close due to weather:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/w2.jpg" alt="Website with weather warning" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/w2.jpg" alt="Website with weather warning" class="lazyload imgborder imgcenter">
 </p>
 
 The giant red arrow is there just to point out the change. My CSS isn't quite good enough to do something like that. ;) So how did I build this?
@@ -146,13 +146,13 @@ Just a basic IF check and nothing more. I could go more complex, but for a simpl
 Well first off, we could simply use JavaScript in the browser and hit the API when the client visits the site. This particular API does not support CORS but does support JSONP. However, that means every hit to the page will hit the API. HERE has an incredibly generous free tier, but I'd still like to avoid that. In this particular case, a market that opens at 6AM, I could simply check the weather at 5AM. How? I'm hosting the site on Netlify, and they support a unique build URL that you can hit to generate a new build. You can find this in your "Build hooks" setting for your site:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/w3.jpg" alt="Build hook" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/w3.jpg" alt="Build hook" class="lazyload imgborder imgcenter">
 </p>
 
 Next I needed a way to run this on a schedule. For this I decided to use [Pipedream](https://pipedream.com/). It may be overkill, but I created a quick Workflow that used a CRON source and a "send http request" step.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/w4.jpg" alt="Pipedream workflow to automate building the site" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/w4.jpg" alt="Pipedream workflow to automate building the site" class="lazyload imgborder imgcenter">
 </p>
 
 By the way, I totally suck at CRON so I used [crontab.guru](https://crontab.guru/) to help me write the expression.

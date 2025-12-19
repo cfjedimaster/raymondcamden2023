@@ -173,7 +173,7 @@ for result in result:
 I print out the results with my domain because in both VS Code and Terminal, the links can be clicked. Here's an example:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/01/p1.jpg" alt="Example output from the Python script" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/01/p1.jpg" alt="Example output from the Python script" class="lazyload imgborder imgcenter">
 </p>
 
 Here's the entire script if you wish to see it, and feel free to critique my Python code - I'm sure it could be done a lot better!

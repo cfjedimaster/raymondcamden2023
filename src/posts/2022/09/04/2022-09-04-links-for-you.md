@@ -12,7 +12,7 @@ description: A few links for your Sunday
 Another Sunday and another few posts to share with yall. I got ten hours of sleep last night so today is the best day ever. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/bestcat.jpg" alt="Best day ever" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/bestcat.jpg" alt="Best day ever" class="lazyload imgborder imgcenter">
 </p>
 
 ## One Serverless Principle to Rule Them All: Idempotency by Adrienne Braganza Tacke

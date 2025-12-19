@@ -14,7 +14,7 @@ This was originally just going to be a tweet, but then I realized I wanted a bit
 Back almost exactly a month ago, I [blogged](https://www.raymondcamden.com/2020/04/20/building-a-reddit-workflow-with-pipedream) about using Pipedream to build a Reddit email report. The idea was that I wanted a daily email of posts from my subscribed subreddits for the past 24 hours of content. The implementation was a bit complex. I used one workflow to handle "get a days worth of content from subreddit" as a general "API" and another workflow connected to my authentication. It handles getting my subscriptions, hitting the API, and then generating the email. Here's an example of how that looked:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/reddit10.png" alt="Email report" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/reddit10.png" alt="Email report" class="lazyload imgborder imgcenter">
 </p>
 
 This worked well, but after a while of actually *getting* the email, I noticed some problems. The email takes all of the posts from all of my subscriptions and sorts them together. I thought this made sense to me, but I noticed it made it harder to actually read the content. Sometimes I don't care about a subreddit and mentally it just felt weird going from the movies subreddit to the Acadiana one. Also, some subreddits get a **huge** amount of traffic in a day. The email was hard to read and just too long.

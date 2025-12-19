@@ -167,13 +167,13 @@ In an HTML template, I just include it and use it:
 Here's the result:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/wc1.jpg" alt="Two cats rendered by web components" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/wc1.jpg" alt="Two cats rendered by web components" class="lazyload imgborder imgcenter">
 </p>
 
 Surely the web gods intended components to be used for cats, right? If you open up devtools, you can see them just as any other element:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/wc2.jpg" alt="Elements via of the web component." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/wc2.jpg" alt="Elements via of the web component." class="lazyload imgborder imgcenter">
 </p>
 
 If you want, you can view it online here: <https://cfjedimaster.github.io/webdemos/webcomponents/test1.html>

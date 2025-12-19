@@ -16,7 +16,7 @@ description: A look at Windy's Webcam API to demonstrate just how many cameras a
 Back during the last hurricane I took this lovely snapshot. Not terrifying at all...
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/12/w2.jpg" alt="Windy's view of an incoming hurricane." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/12/w2.jpg" alt="Windy's view of an incoming hurricane." class="lazyload imgborder imgcenter">
 </p>
 
 Anyway, it's a great little app, and like a few other people I know, I've got a bit of an addiction to weather apps. That being said, a while ago I discovered Windy had an API, and not only that, but a [Webcams API](https://api.windy.com/webcams). A literal API that returns information about publicly known webcams around the world. This information contains a wealth of information, including screenshots and information about the location. As an example, here's information about a webcam near me:
@@ -154,7 +154,7 @@ All it really does is get your location via the browser's geolocation API. It th
 The result is pretty cool I think. Here's my area:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/12/w3.jpg" alt="Display of various local webcams" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/12/w3.jpg" alt="Display of various local webcams" class="lazyload imgborder imgcenter">
 </p>
 
 As you can see they're all traffic based. Also note that Windy's API supports embed and live views, but for my app I thought the pictures alone were ok. You can click for a more dynamic version. 
@@ -162,7 +162,7 @@ As you can see they're all traffic based. Also note that Windy's API supports em
 Microsoft Edge's devtools makes it easy to fake your location too. Here's Moscow:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/12/w4.jpg" alt="Display of cameras found in the Moscow area" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/12/w4.jpg" alt="Display of cameras found in the Moscow area" class="lazyload imgborder imgcenter">
 </p>
 
 All in all, this took me like five minutes to code, but it was kinda fun. It's on CodePen, and normally I'd just embed it, but geolocation doesn't work inside CodePen embeds, so if you want to play with it yourself, just head over here: <https://codepen.io/cfjedimaster/pen/yLzOpPZ>

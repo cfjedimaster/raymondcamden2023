@@ -197,7 +197,7 @@ Cool, so on to the third idea!
 When I first started looking into this, I reached out to Zach on Mastodon (note, Eleventy has an official presence now: <https://fosstodon.org/@eleventy>), and he shared a plugin I remember hearing about, but never actually used: [Directory Output](https://www.11ty.dev/docs/plugins/directory-output/). You install it by simply adding it to your config and then using `addPlugin`, once done, the result is a very nicely rendered table:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/11/perf1.jpg" alt="Directory Plugin output" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/11/perf1.jpg" alt="Directory Plugin output" class="lazyload imgborder imgcenter">
 </p>
 
 The above screenshot is only part of it, but you can see how it renders both size and timings, which is cool. You can also configure a warning for files that are too large, and honestly, I was surprised my `all` page didn't trigger that, but it is just a bunch of short links, so perhaps it's not too bad. 

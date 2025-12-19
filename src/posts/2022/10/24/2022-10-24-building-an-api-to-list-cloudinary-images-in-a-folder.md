@@ -14,7 +14,7 @@ I was preparing to work on a Cloudinary and Apline post when I realized I needed
 Before I start talking about code, I began by logging into my Cloudinary account, going into my Media Library, and creating a new folder named `cats`. In there, I dragged and dropped a few cat pictures from my personal collection. (Do not ask how many of these I have.)
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/cp1.jpg" alt="Screen shot of Cloudinary Media Library cats folder" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/cp1.jpg" alt="Screen shot of Cloudinary Media Library cats folder" class="lazyload imgborder imgcenter">
 </p>
 
 In Pipedream, I created a new workflow with the HTTP trigger. I've talked about Pipedream [quite a bit](https://www.raymondcamden.com/tags/pipedream) here, but for those unfamiliar with the service, this is their way of creating a workflow that's executed by an incoming HTTP request. 
@@ -22,25 +22,25 @@ In Pipedream, I created a new workflow with the HTTP trigger. I've talked about 
 Because I like my workflows to be as flexible as possible, I specified an "Export Variables" step which is a simple way to define key/value pairs in your workflow. In my case, I defined a key of `folder` with the value, `cats`. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/cp2.jpg" alt="Export variables step defining my folder" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/cp2.jpg" alt="Export variables step defining my folder" class="lazyload imgborder imgcenter">
 </p>
 
 Now I need to get my images from the folder. I began by seeing what Pipedream had in terms of Cloudinary support. I added a step and searched for Cloudinary, and of course, they had stuff!
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/cp3.jpg" alt="Cloudinary support in Pipedream" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/cp3.jpg" alt="Cloudinary support in Pipedream" class="lazyload imgborder imgcenter">
 </p>
 
 Unfortunately, none of the built-in actions supported getting a list of images from a folder:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/cp4.jpg" alt="List of actions supported for Cloudinary in Pipedream" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/cp4.jpg" alt="List of actions supported for Cloudinary in Pipedream" class="lazyload imgborder imgcenter">
 </p>
 
 Fortunately, and as with other services, you can write custom Node/Python code as seen in the screenshot above. I've mentioned this before, but the beauty of this is that Pipedream handles authentication for you (once you log in of course):
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/cp5.jpg" alt="Custom Cloudinary code" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/cp5.jpg" alt="Custom Cloudinary code" class="lazyload imgborder imgcenter">
 </p>
 
 Ok, so while I don't have to worry about authentication (which to be honest, their SDK makes incredibly easy anyway), I did have to dig a bit to find out how to list images from a folder. Turns out, there are multiple ways documented on Cloudinary's support site in this useful article: [Listing all assets within a folder](https://support.cloudinary.com/hc/en-us/articles/202521082-Listing-all-assets-within-a-folder)

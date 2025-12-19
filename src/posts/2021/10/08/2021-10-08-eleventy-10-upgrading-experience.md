@@ -16,7 +16,7 @@ With [Eleventy 1.0](https://www.11ty.dev/blog/eleventy-v1-beta/) coming soon, I 
 After upgrading Eleventy to the 1.0 beta (`npm i @11ty/eleventy@beta`), I fired up my local copy of this site and... bam! It crashed. Luckily though the error was nice and clear:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/10/upgrade1.jpg" alt="Error about unknown filter" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/10/upgrade1.jpg" alt="Error about unknown filter" class="lazyload imgborder imgcenter">
 </p>
 
 This error makes me very, *very* happy. What is it? The [LiquidJS](https://liquidjs.com/) template language (the primary one I use for this site, but not exclusively) is a great project, but for some reason has a default behavior that I find insane. When using a filter that doesn't exist, the default behaviour is for Liquid to ignore it. So your coworker tells you to use the cat filter in certain blocks, like so:
@@ -33,7 +33,7 @@ So in Eleventy 1.0, they simply set the [default Liquid option](https://github.c
 Woot! Ok, but then I had another problem: 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/10/upgrade2.jpg" alt="illegal filename error" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/10/upgrade2.jpg" alt="illegal filename error" class="lazyload imgborder imgcenter">
 </p>
 
 The line in question looked like so:
@@ -47,7 +47,7 @@ The line in question looked like so:
 This issue is covered in the [Eleventy Liquid](https://www.11ty.dev/docs/languages/liquid/) docs here:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/10/upgrade3.jpg" alt="Warning about includes" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/10/upgrade3.jpg" alt="Warning about includes" class="lazyload imgborder imgcenter">
 </p>
 
 The solution was to just add single quotes:

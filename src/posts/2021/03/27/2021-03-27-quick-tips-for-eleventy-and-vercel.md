@@ -40,25 +40,25 @@ All I'm doing here is iterating over an array of cats. That data comes from `_da
 Just to confirm it works, I ran `eleventy --serve` and hit the page in my browser.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/03/ve1.jpg" alt="HTML listing of cats" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/03/ve1.jpg" alt="HTML listing of cats" class="lazyload imgborder imgcenter">
 </p>
 
 Awesome, right? Ok, so if I want to run this with Vercel and use it's local dev server, I'd probably try: `vercel dev`. However, doing so will result in this:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/03/ve2.jpg" alt="The CLI doesn't know the framework." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/03/ve2.jpg" alt="The CLI doesn't know the framework." class="lazyload imgborder imgcenter">
 </p>
 
 Notice how it doesn't recognize the framework? That's because, at least for me, I use my globally installed Eleventy CLI and do not install it locally. I may be in the minority for that, but that's typically how I role. Luckily it's easy enough to fix. First I'll do an `npm init -f` to create a blank package.json. Next I'll do a `npm i --save @11ty/eleventy` to set Eleventy as a dependency. Now if I run `vercel dev`, it recognizes that I'm using Eleventy.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/03/ve3.jpg" alt="CLI picks up on Eleventy" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/03/ve3.jpg" alt="CLI picks up on Eleventy" class="lazyload imgborder imgcenter">
 </p>
 
 Cool! Except when it starts, I get this:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/03/ve4.jpg" alt="Error on startup" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/03/ve4.jpg" alt="Error on startup" class="lazyload imgborder imgcenter">
 </p>
 
 It may be a bit hard to read in the screen shot, but here's some of the relevant bits:

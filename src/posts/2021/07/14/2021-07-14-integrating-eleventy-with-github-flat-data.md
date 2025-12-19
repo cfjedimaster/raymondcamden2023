@@ -63,13 +63,13 @@ Thirty-three degrees? That's chilly! All kidding aside, note that it's in Celsiu
 So, the first thing I did was use the Visual Studio Code extension. It prompts you for a schedule (supporting both simple schedules and CRON):
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/07/flat1.jpg" alt="Flat Data Editor, schedule" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/07/flat1.jpg" alt="Flat Data Editor, schedule" class="lazyload imgborder imgcenter">
 </p>
 
 I selected every day as I figured that was appropriate for weather data. Next, you need to select your data source. This can be either HTTP or SQL. You'll be prompted for what URL to hit, where to save the data, and what post processing you need, if any.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/07/flat2.jpg" alt="Data source settings" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/07/flat2.jpg" alt="Data source settings" class="lazyload imgborder imgcenter">
 </p>
 
 In the screen shot above, you can see I've specified my API endpoint. I tell the action to store the result in Eleventy's `_data` folder. This means I can then access it in my templates. Finally, since I'm a crazy American and won't convert to metric until the end of time, I specified a post processing template. 
@@ -163,7 +163,7 @@ You can see this live here: <https://eleventy-flat.netlify.app/>. The repository
 If you go to the repository, you can go to the Actions page and see the GitHub Action's history:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/07/flat3.jpg" alt="GitHub Action history" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/07/flat3.jpg" alt="GitHub Action history" class="lazyload imgborder imgcenter">
 </p>
 
 It's probably not clear, but the action runs on schedule *and* when I do my own commits, which I think is pretty cool. You can also click into each instance and get details. That helped a lot when I was having issues. 

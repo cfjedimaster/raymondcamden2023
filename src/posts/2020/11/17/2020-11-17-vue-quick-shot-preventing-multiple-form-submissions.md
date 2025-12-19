@@ -32,7 +32,7 @@ I then built a simple form:
 And then I submitting the form, clicking rapidly to send multiple requests. Pipedream records executions of workflows, and I could see multiple firing at once:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/11/pd1.png" alt="List of multiple executions" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/11/pd1.png" alt="List of multiple executions" class="lazyload imgborder imgcenter">
 </p>
 
 So let's fix it! Again, I want to stress that if this is the only thing you're doing on a page, Vue is going to be overkill. First, I modified the HTML a bit:

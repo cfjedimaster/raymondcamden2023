@@ -105,7 +105,7 @@ Finally, I do a bit of work on the results. If none were found, I set the value 
 Here's an example of how it looks, and please note that it's me doing my best at design. Don't blame Alpine or Algolia. ;)
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/alg1.jpg" alt="Example search result" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/alg1.jpg" alt="Example search result" class="lazyload imgborder imgcenter">
 </p>
 
 If you want to give this a try yourself, play with the CodePen below, and as always, let me know if you've got any questions!

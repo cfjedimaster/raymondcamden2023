@@ -41,7 +41,7 @@ collections_config_override: true
 The next issue I ran into was an odd one. I'd go to edit a post and I'd be forced into the raw code editor, not the pretty visual one. This turned out to be entirely my fault. For my blog, I use some code to lazy load images. The HTML looks like so:
 
 ```html
-<img data-src="https://static.raymondcamden.com/images/2023/03/alp1.jpg" alt="Table of four cities and four weather forecasts." class="imgborder imgcenter lazyloaded">
+<img src="https://static.raymondcamden.com/images/2023/03/alp1.jpg" alt="Table of four cities and four weather forecasts." class="imgborder imgcenter lazyloaded">
 ```
 
 I use JavaScript to find the image tags with `data-src`, wait for them to become visible, and then load them at that time. Unfortunately, this means people without JavaScript don't see the image at all. I need to rethink this solution at some point, but the important part is that the invalid HTML caused the CMS to not be able to use the nicer editor. Support mentioned that the error could have been handled better (with a warning for example), but it was entirely my fault, and indicative of a site that's been patch worked for quite a few years.
@@ -61,13 +61,13 @@ I'll also note that while debugging this (and a big shout out to CloudCannon sup
 So after a few missteps (with a majority of the issues being my fault), I got things working. While it's pretty basic, you can see the live version at <https://thrifty-goldfinch.cloudvent.net/>. The CMS editor is - honestly - a delight. The dashboard gives you a visual of your site, including a mobile version, and the activity log is super useful:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/04/shot1.png" alt="Dashboard" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/04/shot1.png" alt="Dashboard" class="lazyload imgborder imgcenter">
 </p>
 
 Writing content is also well done. As someone with a *long* history on the web, I don't have an incredibly high opinion of rich text editors, but the CloudCannon one keeps things really simple and outputs great HTML.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/04/shot2.png" alt="Post Editor" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/04/shot2.png" alt="Post Editor" class="lazyload imgborder imgcenter">
 </p>
 
 Honestly, as a developer who lives and breathes writing Markdown, this was absolutely pleasant and has me completely reconsidering how I write content for my own site. I'm definitely going to be recommending CloudCannon in the future and using it when I can!

@@ -12,13 +12,13 @@ description: An example of how flexible Pipedream is - you can tie workflows to 
 File this under "You probably will never need it but...", did you know that [Pipedream](https://pipedream.com?via=raymond) is flexible to the point of allowing you to define *truly* customized ways to kick off workflows? How flexible? What about the ability to fire workflows on a full moon?
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/moon1.jpg" alt="Email about a full moon" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/moon1.jpg" alt="Email about a full moon" class="lazyload imgborder imgcenter">
 </p>
 
 This is the email I got yesterday, and yep, I can confirm this happened:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/moon2.jpg" alt="Picture of the full moon" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/moon2.jpg" alt="Picture of the full moon" class="lazyload imgborder imgcenter">
 </p>
 
 [Sources](https://pipedream.com/docs/sources/) in Pipedream are anything that can start a workflow. So for example:
@@ -74,7 +74,7 @@ The code begins with the metadata related to the source, including the name, and
 Once deployed, I made a new workflow, configured the source with my key, and ended it with an "email" me action built by Pipedream:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/moon3.jpg" alt="Full workflow" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/moon3.jpg" alt="Full workflow" class="lazyload imgborder imgcenter">
 </p>
 
 This is an older V1 workflow on Pipedream so I can share it here: <https://pipedream.com/@raymondcamden/email-on-full-moon-p_V9CaRmP>. While my specific example here isn't terribly useful, I hope it's a good demonstration of what's possible. Let me know what you think.

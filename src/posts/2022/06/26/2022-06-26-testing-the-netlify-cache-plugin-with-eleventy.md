@@ -108,7 +108,7 @@ You'll notice I output the time the file was created on top, this will be useful
 Once I confirmed this was working locally, I deployed to Netlify. I did a few deploys and in general it averaged around a minute and fifteen seconds:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/06/cache1.jpg" alt="Two deploys" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/06/cache1.jpg" alt="Two deploys" class="lazyload imgborder imgcenter">
 </p>
 
 If I keep repeating the builds, the times don't change and if I look at the logs, you can see that the cached results from the fake process never exist:
@@ -151,7 +151,7 @@ npm i -D netlify-plugin-cache
 Now - when I deployed the first time, it didn't show any improvement in caching because it needed to be setup, but the second and further builds showed a dramatic improvement (well, relatively):
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/06/cache2.jpg" alt="Quicker builds" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/06/cache2.jpg" alt="Quicker builds" class="lazyload imgborder imgcenter">
 </p>
 
 Now I'm seeing builds around thirty-five to forty seconds. And the logs confirm the cache is working:

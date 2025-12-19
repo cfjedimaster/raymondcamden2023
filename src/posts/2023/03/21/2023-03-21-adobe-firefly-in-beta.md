@@ -22,61 +22,61 @@ In general, this worked well, but sometimes I added a bit to get things a bit cl
 Here's a Fighter:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_fighter.jpg" alt="Cat fighter" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_fighter.jpg" alt="Cat fighter" class="lazyload imgborder imgcenter">
 </p>
 
 Here's a Paladin:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_paladin.jpg" alt="Cat paladin" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_paladin.jpg" alt="Cat paladin" class="lazyload imgborder imgcenter">
 </p>
 
 The Barbarian, which is very similar, and could have been improved if I asked for a common weapon like an axe:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_barbarian.jpg" alt="Cat barbarian" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_barbarian.jpg" alt="Cat barbarian" class="lazyload imgborder imgcenter">
 </p>
 
 Now for something really fun - the Bard. The double-sided lute was crazy and I absolutely loved it:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_bard.jpg" alt="Cat bard" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_bard.jpg" alt="Cat bard" class="lazyload imgborder imgcenter">
 </p>
 
 Next up is the Cleric:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_cleric.jpg" alt="Cat cleric" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_cleric.jpg" alt="Cat cleric" class="lazyload imgborder imgcenter">
 </p>
 
 For Druid, I specifically asked to add a "leafy staff", and the result wasn't what I expected, but I loved it:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_druid.jpg" alt="Cat druid" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_druid.jpg" alt="Cat druid" class="lazyload imgborder imgcenter">
 </p>
 
 Here's the Ranger - I added "bow and arrow" and the result was much more stylish than I expected:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_ranger.jpg" alt="Cat ranger" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_ranger.jpg" alt="Cat ranger" class="lazyload imgborder imgcenter">
 </p>
 
 Next is the Monk:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_monk.jpg" alt="Cat monk" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_monk.jpg" alt="Cat monk" class="lazyload imgborder imgcenter">
 </p>
 
 The Rogue ended up being my favorite, it looks like they're carrying the severed head of someone they just assasinated:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_rogue.jpg" alt="Cat rogue" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_rogue.jpg" alt="Cat rogue" class="lazyload imgborder imgcenter">
 </p>
 
 Finally, while there are multiple magic-using classes in D&D, I went with simple and just used "wizard" as a prompt. The eyes on this one are crazy good:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/03/cat_wizard.jpg" alt="Cat wizard" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/03/cat_wizard.jpg" alt="Cat wizard" class="lazyload imgborder imgcenter">
 </p>
 
 This was fun, and if you want to try it yourself, head over to the [site](https://firefly.adobe.com/) and request Beta access. I'm not sure how long it will take to get in, but if you are interested, sign up as soon as possible. 

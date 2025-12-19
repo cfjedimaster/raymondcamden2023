@@ -14,7 +14,7 @@ As a *very* new user of [FaunaDB](https://dashboard.fauna.com/accounts/register?
 So given that a Jamstack site is static by it's very nature, how can we incorporate FaunaDB data into it? For my experiment, I began by creating a database of products. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/img1.png" alt="Dashboard view of Products" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/img1.png" alt="Dashboard view of Products" class="lazyload imgborder imgcenter">
 </p>
 
 Each product had a pretty simple structure:
@@ -27,7 +27,7 @@ Each product had a pretty simple structure:
 I made a few random products using the dashboard and employed all of my creativity for the names and descriptions.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/img2.png" alt="One example product" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/img2.png" alt="One example product" class="lazyload imgborder imgcenter">
 </p>
 
 Alright - so I have data. Not a lot of it, but enough for a demo. How to get it into Eleventy? One of the more interesting features of Eleventy are [global data files](https://www.11ty.dev/docs/data-global/). These are files that provide data to the rest of the site. So for example, you could build a hard coded like of products and name it products.json:
@@ -102,7 +102,7 @@ The portion you see on top is front matter, a common way in Jamstack programs to
 The code loops over each product and creates a link to a product detail page I'll share in a moment. This portion, `{% raw %}{{product.name | slug}}{% endraw %}`, demonstrates a filter. It takes input, like "Raymond Camden", and creates a filename safe version of it: "raymond-camden". The end result is a set of links and names based on my data in FaunaDB:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/img3.png" alt="List of products" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/img3.png" alt="List of products" class="lazyload imgborder imgcenter">
 </p>
 
 Notice that the products are sorted based on how the FaunaDB code returned it. I could have sorted it there, or I could sort it in Eleventy. In my case I'm happy with the default sort. Now lets look at the product pages. 
@@ -138,13 +138,13 @@ The frontmatter on top is a bit more complex here, but hopefully understandable.
 After front matter I simply display the product. After saving this, Eleventy generates one page per product:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/img4.png" alt="Product file output" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/img4.png" alt="Product file output" class="lazyload imgborder imgcenter">
 </p>
 
 And if we return to the index page, we can click to load one of the products:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/img5.png" alt="One product page" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/img5.png" alt="One product page" class="lazyload imgborder imgcenter">
 </p>
 
 And voila, we're done! (You can demo this version here: <https://faunadbv1.vercel.app/>) But while this may make you incredibly happy, you probably realize an important issue. Eleventy will only load the products from FaunaDB when the site is built. What if your products change? 
@@ -238,7 +238,7 @@ I've modified the HTML to remove the hard coded availability value and replaced 
 Here's an example:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/img6.png" alt="Static+Dynamic product info" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/img6.png" alt="Static+Dynamic product info" class="lazyload imgborder imgcenter">
 </p>
 
 Now I've got the best of both worlds. I've got a static site driven by dynamic content that will load incredibly fast but can still include up to date shipping estimates for my users. (You can demo this version here: <https://faunadbv2.vercel.app/>)

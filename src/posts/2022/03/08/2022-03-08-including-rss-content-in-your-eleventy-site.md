@@ -56,7 +56,7 @@ see my [profile](https://medium.com/@cfjedimaster).
 I thought about adding the article date too, but decided to keep it simple. Here's the result rendered out:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/03/rss.jpg" alt="RSS output" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/03/rss.jpg" alt="RSS output" class="lazyload imgborder imgcenter">
 </p>
 
 And that's all there is to it. As a reminder, you can find the entire source code for this blog up in a [public repo](https://github.com/cfjedimaster/raymondcamden2020) if you want to see it in context. If having the most up-to-date version of the feed is important, you've got a few options.

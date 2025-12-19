@@ -46,13 +46,13 @@ Once you have a key, you can copy the code from the [Getting Started](https://ww
 Breaking this down, you listen for an event signifying that the library is loaded and then create a new "view" based on a div in your HTML. (In the example above, `adobe-dc-view`.) Once that's done you can use the `previewFile` method to add it the PDF viewer to the page. Here's a screen shot of this particular example:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/pdf1.jpg" alt="Screen shot of PDF Viewer" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/pdf1.jpg" alt="Screen shot of PDF Viewer" class="lazyload imgborder imgcenter">
 </p>
 
 I realize that screen shot is a bit small, but in case you can't see it, the viewer includes the tools you would normally expect in Acrobat - navigation, search, as well as annotation tools. You can even save directly from the viewer and include your annotations. Here is my attempt at making life insurance documents more fun.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/pdf2.jpg" alt="A page from the PDF with a bad drawing of a cat." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/pdf2.jpg" alt="A page from the PDF with a bad drawing of a cat." class="lazyload imgborder imgcenter">
 </p>
 
 Cool. So as I said, it's a pretty powerful embedded viewer, and I want to play with it more later, but I first wanted to take a stab at adding it to a simple Vue.js application. Here's how I did it.
@@ -160,7 +160,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", () => { app.pdfAPIReady = t
 For the most part, all I did was use Adobe's example of reading a file and moved it inside a Vue method. The end result lets you select a local PDF and have it rendered on my Vue app:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/pdf3.jpg" alt="Example from my Vue app" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/pdf3.jpg" alt="Example from my Vue app" class="lazyload imgborder imgcenter">
 </p>
 
 As I said, this is a rather simple integration, but hopefully useful to folks wanting to use it with Vue. I've got some more examples coming! You can find the complete source code below.

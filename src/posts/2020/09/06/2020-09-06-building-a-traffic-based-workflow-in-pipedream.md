@@ -30,7 +30,7 @@ Essentially metadata and your logic in one file. It gets a bit more complex than
 I thought I'd take a stab at building something real. My local city has a website, <http://lafayette911.org/>, that publishes "live" traffic incidents. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/laf1.jpg" alt="View of traffic reports" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/laf1.jpg" alt="View of traffic reports" class="lazyload imgborder imgcenter">
 </p>
 
 It's an old site, one I've built demos on in the past past, but it works. Using devtools, I was able to see that it's making a POST request to https://apps.lafayettela.gov/L911/Service2.svc/getTrafficIncidents. The result is:
@@ -147,7 +147,7 @@ First, I added `dedupe: "unique",`. This tells Pipedream to filter out any outpu
 I deployed this and then started testing. On the Pipedream website, I can see my events as well as a graph over time:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/laf2.jpg" alt="Pipedream event report" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/laf2.jpg" alt="Pipedream event report" class="lazyload imgborder imgcenter">
 </p>
 
 What may not be terribly obvious is that you can see a "spike" in the incidents. I'm writing this at around 10 in the morning so it makes sense that more reports would come in with the morning traffic. 
@@ -157,7 +157,7 @@ What's truly cool though - and I feel like a bit of a broken record when it come
 Make a workflow - select this event source - and then add the email step:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/laf3.jpg" alt="Traffic email workflow" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/laf3.jpg" alt="Traffic email workflow" class="lazyload imgborder imgcenter">
 </p>
 
 As you can see, this one's already disabled as it got too noisy too quickly, but with zero code, I've got a working notifier about accidents in my city. 
@@ -165,7 +165,7 @@ As you can see, this one's already disabled as it got too noisy too quickly, but
 Don't want email? I can send an SMS instead using a variety of options:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/09/laf4.jpg" alt="SMS options" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/09/laf4.jpg" alt="SMS options" class="lazyload imgborder imgcenter">
 </p>
 
 It really doesn't matter. If you just want to do X when there's a new accident, the support is there. What you actually do with the data is up to you. And this is why I love Pipedream. By making it easy to build the event source, it then makes it easier to build multiple different workflows. I took what was basically a simple API endpoint and turned it into an entirely new feature. (Although honestly I didn't actually ask anyone if I could do this so be sure to use with caution!) 

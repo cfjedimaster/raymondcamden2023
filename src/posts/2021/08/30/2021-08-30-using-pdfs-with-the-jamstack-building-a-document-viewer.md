@@ -206,7 +206,7 @@ So nothing really too exciting here - a bulleted list that iterates over my docu
 So I wanted to link to a URL based on the original file name, but not with the extension. So back in my data file, I took something like `/documentLibrary/cat.docx` and removed everything but the file name without the extension. With the previous example, that would be `cat`. However, I still wanted something URL safe, and given that a document could be named `cats are better than dogs.docx`, I'd use the `slug` filter to turn that into `cats-are-better-than-dogs`. I'm not happy with slug/slug there, but, it works. Here's how this renders using my lovely Boostrap layout:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/08/doclib1.jpg" alt="Bulleted list of documents" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/08/doclib1.jpg" alt="Bulleted list of documents" class="lazyload imgborder imgcenter">
 </p>
 
 The template that handles documents is a bit more complex. It needs to handle using the PDF Embed... when it can... and then either rendering an image or just plain giving up (mostly). Here's that template.
@@ -266,7 +266,7 @@ While the Embed API has save functionality built in, I always include a link at 
 Here's an example where the Embed API is rendering a PDF version of a Powerpoint:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/08/doclib2.jpg" alt="Web page with PDF embed rendering a Powerpoint presentation" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/08/doclib2.jpg" alt="Web page with PDF embed rendering a Powerpoint presentation" class="lazyload imgborder imgcenter">
 </p>
 
 If you would like to see the complete repository, you can check it out here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/pdftest4> Enjoy and ask for help if you need it!

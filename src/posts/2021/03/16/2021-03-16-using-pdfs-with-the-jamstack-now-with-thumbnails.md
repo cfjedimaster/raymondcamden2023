@@ -12,7 +12,7 @@ description: Combing Adobe PDF APIs with Eleventy to create PDF Thumbnails
 A few weeks ago I [posted](https://www.raymondcamden.com/2021/02/25/using-pdfs-with-the-jamstack) a tutorial on using PDFs with [Eleventy](https://www.11ty.dev/). In that post I described how to use a data file to scan a directory of PDFs and make them available to a Liquid template. I then followed up that post with another, where I [described](https://www.raymondcamden.com/2021/03/02/using-the-adobe-pdf-tools-api-to-generate-thumbnails) using Adobe's [PDF Tools API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) to generate thumbnail images from PDFs. I thought it would be nice to combine the two so I could have my Eleventy site both list the PDFs as well as generate thumbnails. Here's how that looks with me spending about five seconds on layout:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/03/pdf11_1.jpg" alt="Screenshot of PDF demo" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/03/pdf11_1.jpg" alt="Screenshot of PDF demo" class="lazyload imgborder imgcenter">
 </p>
 
 So how did I do it? Keep in mind I described most of the process in my earlier post (["Using the Adobe PDF Tools API to Generate Thumbnails"](https://www.raymondcamden.com/2021/03/02/using-the-adobe-pdf-tools-api-to-generate-thumbnails)). The process boils down to:

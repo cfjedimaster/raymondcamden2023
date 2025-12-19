@@ -14,7 +14,7 @@ Normally I write these "Links For You" posts on the weekend, but my family and I
 ## Eleventy 2.0
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/happycat.webp" alt="Happy Dancing Cat" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/happycat.webp" alt="Happy Dancing Cat" class="lazyload imgborder imgcenter">
 </p>
 
 I'm **super** excited that Eleventy has hit 2.0! You can read about all the changes on the [blog post](https://www.11ty.dev/blog/eleventy-v2/), and there's quite a bit, but for me the biggest updates are:
@@ -40,6 +40,6 @@ In this [post](https://reverentgeek.com/configure-eleventy-to-host-a-custom-mast
 As an aside, David does [commissioned](https://reverentgeek.com/shop/) artwork. Here's one he did for me: 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/rayhead.jpg" alt="My head" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/rayhead.jpg" alt="My head" class="lazyload imgborder imgcenter">
 </p>
 

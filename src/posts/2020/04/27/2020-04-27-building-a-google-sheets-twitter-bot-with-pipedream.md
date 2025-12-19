@@ -20,7 +20,7 @@ So I thought - what if the random bot was tied to content that I had full contro
 While NASA may have an API (I'm pretty sure they do), I instead built a Google Sheet where I manually selected some pictures I thought were nice.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/moon1.png" alt="Google Sheet screenshot" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/moon1.png" alt="Google Sheet screenshot" class="lazyload imgborder imgcenter">
 </p>
 
 I then registered my bot which is mainly painless now that I've done it multiple, multiple times. ;)
@@ -36,7 +36,7 @@ With my data in place, I designed the following workflow in Pipedream:
 Alright, here's comes the cool part. Pipedream handled steps 1, 2, 4, and 5. I've shown their CRON trigger before, but here's the Google Sheet action. I connected it to my app and pasted in the sheet ID:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/04/moon2.png" alt="Google Sheet step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/moon2.png" alt="Google Sheet step" class="lazyload imgborder imgcenter">
 </p>
 
 Make note of the range. My sheet uses two columns so my range goes from A2 in one corner (A1 is the header) to B999 in the other. That means if I ever have one thousand rows I'll need to edit the range. That will take about 5 seconds so I'm not concerned, and again, since I'm manually controlling the data for this bot, I'll know.

@@ -20,7 +20,7 @@ I began by creating a new web site. Here it is. All of it.
 But check out that Lighthouse score...
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/ns1.jpg" alt="100 Lighthouse score like a G6" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/ns1.jpg" alt="100 Lighthouse score like a G6" class="lazyload imgborder imgcenter">
 </p>
 
 I then went ahead and created a GitHub repository, added my code to it, and made a new Netlify site that tied to it. Back in my command line, I used the CLI to generate a new function (`ntl functions:create rebuild`), and copied the code from the [docs](https://github.com/netlify/labs/blob/main/features/scheduled-functions/documentation/README.md). 
@@ -97,13 +97,13 @@ So - one of the first things I immediately thought of was using this feature as 
 To enable this,  you need to go into your "Build hooks" section of your site's "Build &amp; deploy" settings. There you can add a new hook:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/ns2.jpg" alt="Form to add a new build hook" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/ns2.jpg" alt="Form to add a new build hook" class="lazyload imgborder imgcenter">
 </p>
 
 Once you add it, you get a secret URL:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/ns3.jpg" alt="Build hook with part of the URL obscured..." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/ns3.jpg" alt="Build hook with part of the URL obscured..." class="lazyload imgborder imgcenter">
 </p>
 
 In order to trigger a build, you need to make a POST request. So I modified my scheduled function like so:
@@ -133,7 +133,7 @@ Next, I do my POST.
 And that's it. I also changed my schedule to `@daily` so it rebuilds once a day. I tested again via the CLI (`ntl functions:invoke rebuild`) and had the "Deploys" part of my Netlify site up. I could see it firing!
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/ns4.jpg" alt="Success build of the site based on the scheduled task." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/ns4.jpg" alt="Success build of the site based on the scheduled task." class="lazyload imgborder imgcenter">
 </p>
 
 And that's it. I'm *really* happy with how easy Netlify made this, especially with them supporting the "simpler" shortcut aliases for CRON. There isn't anything more to the code than what I've shown here, but you can peruse the repo if you would like: <https://github.com/cfjedimaster/netlify_scheduled_functions_test>. I'd also love to know how you plan on using this, so reach out with your ideas!

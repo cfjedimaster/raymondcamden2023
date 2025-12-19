@@ -24,7 +24,7 @@ I decided to go the data URL route as I figured it would be the simplest. I woul
 So - I began with a simple Eleventy site that displayed a list of cats. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/qr1.jpg" alt="List of cats" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/qr1.jpg" alt="List of cats" class="lazyload imgborder imgcenter">
 </p>
 
 This was driven by a static JSON file:
@@ -136,7 +136,7 @@ module.exports = function(eleventyConfig) {
 Yeah, that's about as simple as you can get. Here's how the page renders:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/qr2.jpg" alt="Page with rendered QR code" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/qr2.jpg" alt="Page with rendered QR code" class="lazyload imgborder imgcenter">
 </p>
 
 You can see this for yourself here: <https://eleventy-qrcodes.netlify.app/> I pointed my camera at one of the cat pages and the camera picked up on the code right away. 

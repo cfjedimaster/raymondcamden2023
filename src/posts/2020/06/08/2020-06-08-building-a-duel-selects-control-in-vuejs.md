@@ -12,7 +12,7 @@ description: How to build a "dual select" control in Vue.js
 Earlier this week, an old friend of mine and all around good/smart guy Ben Nadel wrote up his experience on building a "dual select" control in AngularJS: ["Managing Selections With A Dual-Select Control Experience In Angular 9.1.9"](https://www.bennadel.com/blog/3841-managing-selections-with-a-dual-select-control-experience-in-angular-9-1-9.htm). If you aren't aware, a "dual select" control is one where two vertical columns of information are presented and the user can move items from one side to another. Ben had a great animated GIF on his blog entry that he was cool with me sharing:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/06/ds.gif" alt="Animated gif showing how a dual select works" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/06/ds.gif" alt="Animated gif showing how a dual select works" class="lazyload imgborder imgcenter">
 </p>
 
 I've built these types of controls before but had not yet attempted to build it in Vue.js. With that mind, this weekend I worked on an example of it - both in a simple Vue.js application and also as a component version. While I'm sure this could be done differently (and I'd love to see examples in the comments below!), here's how I built it.

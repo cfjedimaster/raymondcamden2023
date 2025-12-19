@@ -29,7 +29,7 @@ I found a nice example of this here: [Making JavaScript download files without t
 First, let's begin with an app that just displays a table of cats. Not a cat on a table...
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/12/black-cat-yawn.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/12/black-cat-yawn.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 but an HTML table of cats. Here's the code with some static data:
@@ -134,7 +134,7 @@ download() {
 The changes were me just making use of the `unparse` method and then updating the filename and MIME type. That's literally it. Now if you download, and you have Excel or another such program installed, you can open up the file right away.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/12/excel1.jpg" alt="Excel in dark mode is so awesome. This is a picture of Excel rendering the cat data." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/12/excel1.jpg" alt="Excel in dark mode is so awesome. This is a picture of Excel rendering the cat data." class="lazyload imgborder imgcenter">
 </p>
 
 You can play with this version here:

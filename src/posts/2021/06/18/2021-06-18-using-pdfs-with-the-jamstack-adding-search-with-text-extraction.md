@@ -249,7 +249,7 @@ function search() {
 I'm just using some vanilla JS here to load in the data, pass it to Lunr, and set up the form field and button to handle doing the search. If you want to give this a spin, head over to <https://pdftest3.vercel.app/> and click the Search link on top. A good search term is "launch". To make it even fancier (I'll all about the fancy), I made it such that when you go through to the embedded view, I pass along the search term and use the Embed API to highlight it:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/06/pdfsearch.jpg" alt="PDF Search term highlighting example" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/06/pdfsearch.jpg" alt="PDF Search term highlighting example" class="lazyload imgborder imgcenter">
 </p>
 
 You can find the complete source code for this demo here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/pdftest3>

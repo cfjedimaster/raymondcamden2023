@@ -35,13 +35,13 @@ Notice the `## My Birthday` part? I allow for Markdown in the MadLib as well. Th
 
 The actual application breaks down into three parts. First, a simple title screen:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/ml1.png" alt="Title screen" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/ml1.png" alt="Title screen" class="lazyload imgborder imgcenter">
 
 I employed *all* of my incredible design skills there as you can see. I won't share the code for this part as it's just what you see.
 
 The next route handles prompting for the parts of the MadLib. I show one prompt at a time. A user on Twitter suggested asking a progress bar here and I agree that it would be a good change.
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/ml2.png" alt="Prompt example" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/ml2.png" alt="Prompt example" class="lazyload imgborder imgcenter">
 
 Let's look at the code for this. I'm skipping the styling part but you'll be able to see everything in the repository. (I'll share the link at the end.) 
 
@@ -111,7 +111,7 @@ This was all pretty easy. What took me the most time was getting the darn `focus
 
 The final view simply renders the MadLib:
 
-<img data-src="https://static.raymondcamden.com/images/2020/04/ml3.png" alt="Render of the ML" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/04/ml3.png" alt="Render of the ML" class="lazyload imgborder imgcenter">
 
 I'll skip the code for this route as well as it just uses a Vuex method to get the rendered HTML. Let's look at that store:
 

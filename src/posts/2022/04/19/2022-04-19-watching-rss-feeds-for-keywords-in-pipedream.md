@@ -16,7 +16,7 @@ Back in the day, I used to run a website called rssWatcher. (If you want, you ca
 The first part to my workflow was the trigger which was a simple schedule. This defaults to once an hour, but when it comes to *most* RSS feeds, that's way overkill so I switched it to 6 hours.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/rss1.jpg" alt="Picture of scheduled trigger" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/rss1.jpg" alt="Picture of scheduled trigger" class="lazyload imgborder imgcenter">
 </p>
 
 Honestly, once a day would probably be best for this.
@@ -26,7 +26,7 @@ Honestly, once a day would probably be best for this.
 In the next step, I need to actually gather the RSS data. Luckily, Pipedream has a built-in action for it. In fact, it's one I wrote and contributed to them: [Merge RSS Feeds](https://pipedream.com/apps/rss/actions/merge-rss-feeds). This action lets you specify any number of RSS feeds. The action will parse them all and either return a date sorted merge list of items, or return them separated by RSS feed. The default is to merge them together but I knew I'd need them separated so I set that option to false. But to be clear, this entire step was done for me. I literally just configured it!
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/rss2.jpg" alt="RSS Merge step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/rss2.jpg" alt="RSS Merge step" class="lazyload imgborder imgcenter">
 </p>
 
 In the example above, I merged my RSS feed, [Todd Sharp's blog](https://recursive.codes/), and [Scott Stroz](https://scottstroz.com/). I recommend subscribing and reading to *both* of their blogs - they're incredibly smart and cool developers. 
@@ -58,7 +58,7 @@ export default defineComponent({
 When editing the step, I entered 'dog' and 'cat'. You can see this both when editing (it's in the configuration) and when just viewing the step:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/rss3.jpg" alt="Keyword step configuration" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/rss3.jpg" alt="Keyword step configuration" class="lazyload imgborder imgcenter">
 </p>
 
 ## Step Four - Removing Old Entries
@@ -207,7 +207,7 @@ For the email I used the item title, when it was published (could be formatted b
 For the last step I just want to send it to me via email, and luckily Pipedream has an "email me" step built in. I added it and literally just set the subject and HTML. Note that the step requires both a plain text and HTML string, and I used the same for both. That's bad, but I honestly I'm fine with it. Just keep in kind for a production workflow you would want to handle both cases.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/rss4.jpg" alt="Email step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/rss4.jpg" alt="Email step" class="lazyload imgborder imgcenter">
 </p>
 
 ## The Result
@@ -215,7 +215,7 @@ For the last step I just want to send it to me via email, and luckily Pipedream 
 And here's how it looks when it finds results:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/rss5.jpg" alt="Email result" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/rss5.jpg" alt="Email result" class="lazyload imgborder imgcenter">
 </p>
 
 So - I'd love to share this workflow with you, but right now, Pipedream doesn't support sharing of V2 workflows. If anyone wants to see more details, let me know, and if you are reading this in the future (how's the jetpacks???), please let me know and I can make the workflow public. Enjoy!

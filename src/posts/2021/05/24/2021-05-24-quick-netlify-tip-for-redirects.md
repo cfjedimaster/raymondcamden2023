@@ -37,7 +37,7 @@ As soon as I did that, and deployed, it worked perfectly. I do find it odd that 
 Anyway - as I said - this hit me twice now so hopefully I won't forget. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/he_will_forget.jpg" alt="Spoiler: He will forget" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/he_will_forget.jpg" alt="Spoiler: He will forget" class="lazyload imgborder imgcenter">
 </p>
 
 Photo by <a href="https://unsplash.com/@jamietempleton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jamie Templeton</a> on <a href="https://unsplash.com/s/photos/directions?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

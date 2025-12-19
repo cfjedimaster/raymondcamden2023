@@ -22,7 +22,7 @@ The index is a mirror of your data which is an important thing to keep in mind. 
 I began by creating a boring blog in Eleventy. One home page, a posts folder and a couple of markdown files. Nothing else really.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/06/ag1.png" alt="Screenshot of Blog" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/06/ag1.png" alt="Screenshot of Blog" class="lazyload imgborder imgcenter">
 </p>
 
 I'm not going to show the code for this part as I'm assuming you already have a basic understanding of Eleventy, but everything's in my GitHub repo I'll share at the end. 
@@ -68,7 +68,7 @@ As the comment says, I wanted to remove code blocks, and the text inside them, a
 With that file generated, I manually uploaded it to Algolia and tested. Their dashboard is *damn* well done and really helpful. One of the best features is that you can search right away:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/06/ag2.png" alt="Algolia dashboard" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/06/ag2.png" alt="Algolia dashboard" class="lazyload imgborder imgcenter">
 </p>
 
 Ok, so technically, if you don't mind some manual work, you're done. You could simply reupload the JSON file every time you generate your site. And I know that sounds lame, but I can totally see people building a site that potentially gets updated pretty rarely. In that case it may be worth the (relatively minor) hassle.
@@ -180,7 +180,7 @@ As you can see, the Algolia aspect is simple. Do note that when you define the `
 Here's my incredibly beautiful search engine:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/06/ag3.png" alt="Search form and results" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/06/ag3.png" alt="Search form and results" class="lazyload imgborder imgcenter">
 </p>
 
 Yes, I could do a *heck* of a lot more to make this nicer looking. They even return information to let you highlight results too. Just please don't judge Algolia by my pretty basic demo here. :)

@@ -47,7 +47,7 @@ Spotify supports alerts for bands if you follow them, but as much as I use Spoti
 I don't know exactly when they put out their release - it feels like every few weeks - so I decided on a weekly schedule. I figured Monday morning would be a good time to check as it would give me a way to help kick start my week. Here's how CRON triggers look in v2. The important thing is that they're still easy to set up - now need to learn CRON's crazy (and powerful) syntax.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/gt1.jpg" alt="Screen shot of UI for editing the schedule for a trigger" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/gt1.jpg" alt="Screen shot of UI for editing the schedule for a trigger" class="lazyload imgborder imgcenter">
 </p>
 
 ## Step Two - Spotify Search
@@ -79,7 +79,7 @@ export default defineComponent({
 Most of that code came out of the box from the Spotify action, and again, notice the `Authorization` header. Pipedream did that for me. I tested that step and then inspected the results:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/gt2.jpg" alt="Results of searching for albums on Spotify" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/gt2.jpg" alt="Results of searching for albums on Spotify" class="lazyload imgborder imgcenter">
 </p>
 
 ## Step Three - Filter the Results
@@ -177,7 +177,7 @@ export default defineComponent({
 By the way, their email service supports plain text too, but as I know I'm the one getting the email, I'm fine with HTML only. And here's the result:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/02/gt3.jpg" alt="Sample email result from the workflow" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/02/gt3.jpg" alt="Sample email result from the workflow" class="lazyload imgborder imgcenter">
 </p>
 
 All in all, fairly simple, although I'm still getting used to the new editor. Also, as soon as I blog this, someone will tell me how to do this in Spotify itself without any code, but I'm fine with that. Pretty much everything I build I build for the joy of writing code! Either way, let me know what you think!

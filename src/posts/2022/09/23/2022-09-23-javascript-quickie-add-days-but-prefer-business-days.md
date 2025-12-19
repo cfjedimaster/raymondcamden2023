@@ -16,7 +16,7 @@ Given a particular date, I want to add a certain number of days to it (or weeks,
 To test out my theory that this was possible, I decided to use the [date-fns](https://date-fns.org/) date library.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/09/sohot.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/09/sohot.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 date-fns has a wealth of useful date utilities, including a couple I'd need to implement my logic:

@@ -86,7 +86,7 @@ Alright, so what did I build? I was curious if it would be possible to use a web
 This isn't *terribly* long, here's how this looks with a bit of CSS:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/mf1.jpg" alt="HTML display of the form fields" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/mf1.jpg" alt="HTML display of the form fields" class="lazyload imgborder imgcenter">
 </p>
 
 Right away, we can improve this a bit by adding a bit of natural grouping with the `fieldset` and `legend` tags:
@@ -173,7 +173,7 @@ Right away, we can improve this a bit by adding a bit of natural grouping with t
 And here's how this looks:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2023/02/mf2.jpg" alt="Form with fieldsets" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2023/02/mf2.jpg" alt="Form with fieldsets" class="lazyload imgborder imgcenter">
 </p>
 
 Nicer! Looking at this, what if we could display one `fieldset` at a time, and dynamically add navigation? If you read my [Slideshow web component](https://www.raymondcamden.com/2023/02/08/another-update-to-my-slideshow-web-component-javascript-support) post, you saw an example of this. Given a list of images for input, I add a Previous and Next button to let you navigate the images. I built something similar for this - `MultistepForm`:

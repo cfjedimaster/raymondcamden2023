@@ -12,7 +12,7 @@ description: How I used Pipedream to automatically back up my Nintendo Switch sc
 I've been a gamer for my entire life, starting with the venerable Atari 2600 back when I was almost late for grade school because I was having a really good game of Space Invaders.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/switch1.jpg" alt="Box art for Space Invaders" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/switch1.jpg" alt="Box art for Space Invaders" class="lazyload imgborder imgcenter">
 </p>
 
 For a long time, my go-to gaming system came from Nintendo. First the NES, then SNES, and Nintendo 64. But around when the GameCube came out, I wasn't quite as infatuated with them anymore. I started playing the Xbox and Playstation, and generally just felt like Nintendo wasn't making "serious" video game consoles anymore. (Now I realize how silly that sounds. Trust me.)
@@ -28,7 +28,7 @@ When I complained about how silly and obtuse this process seemed, [Cory Birdsong
 I knew [Pipedream](https://pipedream.com?via=raymond) had super-simple support for executing workflows when a Twitter account posted a new tweet. Could I automate the process of taking my screenshots and making them available in the cloud?
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/switch2.jpg" alt="Let's A-Go!" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/switch2.jpg" alt="Let's A-Go!" class="lazyload imgborder imgcenter">
 </p>
 
 ## Step Zero - Setup a Twitter Account
@@ -44,7 +44,7 @@ The first (real) step in building my workflow was a Pipedream trigger that fires
 * Polling interval - this defaults to 15 minutes and I left it at that
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/switch3.jpg" alt="Screenshot of configured Trigger" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/switch3.jpg" alt="Screenshot of configured Trigger" class="lazyload imgborder imgcenter">
 </p>
 
 Remember that while testing, you can trigger this automatically so you don't have to wait.
@@ -73,13 +73,13 @@ There's a bit of foreshadowing here as I know I'm going to need the URL to the m
 So, originally when working on this I had planned to post to a Google Photos album. I ran into some issues there and I plan on (hopefully) blogging about that later. For now, though I went with copying to a Dropbox folder. Again, Pipedream has this baked in. So I selected the action, configured the folder, and told it where to find the source (the URL from the previous step) and the file name to use (the file value from the previous step):
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/switch4.jpg" alt="Configured Dropbox action" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/switch4.jpg" alt="Configured Dropbox action" class="lazyload imgborder imgcenter">
 </p>
 
 And... that's it. Pipedream handled all of the hard stuff and I literally had to write about 5 lines of code. Here's an example with a shot I just took a few minutes ago:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/04/switch5.jpg" alt="Switch screenshot in Dropbox UI" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/04/switch5.jpg" alt="Switch screenshot in Dropbox UI" class="lazyload imgborder imgcenter">
 </p>
 
 Note this is a screenshot from the Dropbox UI, if I had file system integration on this laptop it would have just shown up. If you want to see the original, here's a [link](https://static.raymondcamden.com/images/2022/04/switch6.jpg) to it. Feel free to make fun of my Diablo character names. As I've said a few times recently, Pipedream currently doesn't allow public sharing of workflows using their new UI, but it's coming soon, so if you want that link and it's in the future (i.e., not today ;), drop me a line.

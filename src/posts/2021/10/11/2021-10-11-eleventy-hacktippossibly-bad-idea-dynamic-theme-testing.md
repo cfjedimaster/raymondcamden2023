@@ -12,7 +12,7 @@ description: How to test a new theme in an Eleventy site
 As I've done every few years, I'm in the process of working on a new look for this blog. I figure it's going to take a while to get it set up properly. In the past I've simply made a copy of my site and worked there when I had free time, but today another idea occurred to me. As the title says, this *may* be a bad idea, but hey, it worked on my machine so surely I should share with everyone, right? 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/10/surely.jpg" alt="Don't Call Me Surely" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/10/surely.jpg" alt="Don't Call Me Surely" class="lazyload imgborder imgcenter">
 </p>
 
 The idea I had was to see if I could operate my site with two layouts. By default, Eleventy will use the `_includes` folder for included documents and layouts. You can specify a new folder for includes and for layouts if you wish. What I thought would be interesting was if I could use a completely new folder for my new theme and simply tell Eleventy to use it when I wanted to work on it.

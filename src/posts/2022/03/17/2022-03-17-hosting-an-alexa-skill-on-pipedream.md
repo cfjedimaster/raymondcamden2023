@@ -30,7 +30,7 @@ The best part of developing for Alexa though is that you can create "personal" s
 Ok, so let's talk about hosting a skill on Pipedream. First off, since you need a URL for Alexa to hit, you'll want to create your workflow with the HTTP trigger. This will give you the URL you need to provide to Alexa. Here's the important bit. When you add your endpoint in the Alexa console, ensure you select: "My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority"
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/03/a1.jpg" alt="Screenshot showing the endpoint URL and proper setting" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/03/a1.jpg" alt="Screenshot showing the endpoint URL and proper setting" class="lazyload imgborder imgcenter">
 </p>
 
 What follows next is how I built my workflow. These specifics could be changed based on your preferences. I try to have small concrete things in individual Pipedream steps, but Pipedream is fine with one big code step too if you want. So first I built a step that simply got the intent out from the request object.

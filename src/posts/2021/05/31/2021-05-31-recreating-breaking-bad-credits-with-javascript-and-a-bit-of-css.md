@@ -14,7 +14,7 @@ I try to exercise every week day (although with today being a holiday I gave mys
 One of the signature things of the show is their credits. I don't mean the short opening sequence, but rather the credits shown at the bottom in the beginning of the show. For each person's name, they attempt to replace part of the name with a matching element's symbol. They keep the case of the symbol and apply a green color to it. Here's an example:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/bbcredits.jpg" alt="Shot from the opening of Breaking Bad" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/bbcredits.jpg" alt="Shot from the opening of Breaking Bad" class="lazyload imgborder imgcenter">
 </p>
 
 Because I was bored, and because it wasn't necessarily useful, I took a stab at seeing if I could build this in JavaScript (with a bit of CSS of course). 
@@ -43,7 +43,7 @@ function bbString(input, className, elements) {
 Most likely this could be written in fewer lines and with more "I can pass the Google interview test" coolness, but it worked. I then used the [Random User Generator](https://randomuser.me/) to spit out a hundred users, copied that into RunJS again and used it to return just an array of names. For fun, I then added mine on top. (I also removed a few names that used non-Roman letters to keep things simpler.) Here's how it looks:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/05/bb2.jpg" alt="Example output showing matched elements replaced with green text" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/05/bb2.jpg" alt="Example output showing matched elements replaced with green text" class="lazyload imgborder imgcenter">
 </p>
 
 And that's it. Here's a CodePen if you want to play with yourself. Enjoy!

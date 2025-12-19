@@ -24,7 +24,7 @@ The second link I'll share is to Dr. Axel Rauschmayer's excellent [2ality](https
 Finally, a bit of nontech and tech. Last night I saw "Doctor Strange in the Multiverse of Madness". I went with my wife, one of my sons, one of my daughters, and my brother-in-law. I loved it. My daughter loved it. The other three were more "so so" on it. That being said, if you're a parent, you should really consider it R-rated, not PG-13. Some of the horror is surprising at times. It didn't bother me but it absolutely surprised me. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/05/strange.jpg" alt="Poster for Dr. Strange" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/05/strange.jpg" alt="Poster for Dr. Strange" class="lazyload imgborder imgcenter">
 </p>
 
 I'll share that one of my most favorite creations ever is the [@randomcomicbook](https://twitter.com/randomcomicbook) Twitter bot. It uses the Marvel API to share random comic covers from the history of Marvel's publications. I love the variety of art styles and seeing just how *old* some of their content is. If you want, you can check out the complete workflow at Pipedream: <https://pipedream.com/@raymondcamden/random-comic-book-p_o7C5v1y>

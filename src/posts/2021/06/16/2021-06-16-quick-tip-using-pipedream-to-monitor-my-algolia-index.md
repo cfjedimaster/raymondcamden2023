@@ -12,7 +12,7 @@ description: An example of using Pipedream as a quick service to monitor the hea
 Last year (sometimes that surprises me, time has been so weird with COVID) I wrote about using Algolia with Eleventy, and specifically how I added it here ([Adding Algolia Search to Eleventy and Netlify - Part Two](https://www.raymondcamden.com/2020/07/01/adding-algolia-search-to-eleventy-and-netlify-part-two)). A few weeks ago I discovered an issue with my implementation that caused the index on Algolia's side to be empty. I fixed that issue and updated my blog post with a detailed description on top. Everything was perfect.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/06/kitten_unicorn.jpg" alt="Kitten Unicorn FTW" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/06/kitten_unicorn.jpg" alt="Kitten Unicorn FTW" class="lazyload imgborder imgcenter">
 </p>
 
 Except when I tried [searching](https://www.raymondcamden.com/search) for something yesterday and nothing worked. I hopped on over to the Algolia dashboard and saw my index was empty again. I went over to the Netlify dashboard, fired off another build, and couldn't recreate the issue. Last time it was a race condition so one test obviously wasn't enough, but *something* is up. 
@@ -43,7 +43,7 @@ All this does is a quick sanity check on my index size. I've got over six thousa
 The final step of my worklow is an email step:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/06/mail.jpg" alt="Mail step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/06/mail.jpg" alt="Mail step" class="lazyload imgborder imgcenter">
 </p>
 
 And that's it. If you want to see the entire workflow yourself, here's the link: <https://pipedream.com/@raymondcamden/algolia-test-p_yKCaROg> I'll let folks know if I figure out the issue!

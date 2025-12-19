@@ -125,7 +125,7 @@ async doSearch() {
 A few things. First, notice I'm asking for `date` in the results. Showing the date for my results is important so I can see which results are more recent. Next, I ask for a snippet of the `content` property, this lets me display part of the content in the result. Finally, I make use of the `Intl` API to format the dates returned in my results. I'd normally use a Vue filter for that, but as they are deprecated in Vue 3, I'm trying to wean myself off of them. Here's a screen shot of how my search page renders:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/alg1.jpg" alt="An example of search results" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/alg1.jpg" alt="An example of search results" class="lazyload imgborder imgcenter">
 </p>
 
 Let me be clear - this could look nicer. Blame me, not Algolia. But I'm incredibly happy to be able to rip out Google (and their ads) and replace it with a simpler, nicer system! You can find all the code for my implementation here: <https://github.com/cfjedimaster/raymondcamden2020> As always, questions and comments are welcome!

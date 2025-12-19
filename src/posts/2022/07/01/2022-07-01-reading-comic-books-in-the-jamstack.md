@@ -202,25 +202,25 @@ Basically, it's the "web" version of my cache. Whew! Now on to displaying them.
 Alright, as I said earlier I was going with a *real* simple experience on the front end. First, here's the home page showing thumbnails:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/comic1.jpg" alt="Thumbnails of comics" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/comic1.jpg" alt="Thumbnails of comics" class="lazyload imgborder imgcenter">
 </p>
 
 After clicking one, you see one image per page, with controls on top and bottom:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/comic2.jpg" alt="First page of the comic" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/comic2.jpg" alt="First page of the comic" class="lazyload imgborder imgcenter">
 </p>
 
 And for comparison, another page, which nicely shows you how to draw a wreath:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/comic3.jpg" alt="Another page" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/comic3.jpg" alt="Another page" class="lazyload imgborder imgcenter">
 </p>
 
 I honestly gave it my best effort and this is what I came up with:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/07/comic4.jpg" alt="A poorly drawn wreath" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/07/comic4.jpg" alt="A poorly drawn wreath" class="lazyload imgborder imgcenter">
 </p>
 
 Honestly, I look like I had a stroke halfway through drawing it. Anyway, the home page iterates through each comic and displays the thumbnail:

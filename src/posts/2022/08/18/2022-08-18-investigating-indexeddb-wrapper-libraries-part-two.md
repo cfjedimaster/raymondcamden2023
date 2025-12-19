@@ -73,7 +73,7 @@ db.version(1).stores({contacts:'++id,lastName'})
 Will the simplicity continue???
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/idb2_1.jpg" alt="Questioning cat" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/idb2_1.jpg" alt="Questioning cat" class="lazyload imgborder imgcenter">
 </p>
 
 ## Get All Contacts

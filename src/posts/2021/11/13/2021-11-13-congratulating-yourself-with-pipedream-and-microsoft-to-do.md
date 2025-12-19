@@ -14,7 +14,7 @@ I'm very, very excited about this blog post. Not that it's anything super import
 Here's how the todo for this blog post looks in the Windows application:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/11/todo1.jpg" alt="To Do Application showing one todo" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/11/todo1.jpg" alt="To Do Application showing one todo" class="lazyload imgborder imgcenter">
 </p>
 
 In general, I really just dig the application and it's worked well for me. A few years ago (August 2019), Mary Branscombe shared this tweet:
@@ -34,7 +34,7 @@ I reached out on their forums, and got responses, but after three plus months of
 On a whim, and wanting to do something productive and fun on a Saturday morning, I randomly hopped over to the Graph Explorer and tried it again... and it worked!
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/11/todo2.jpg" alt="Happy Cat" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/11/todo2.jpg" alt="Happy Cat" class="lazyload imgborder imgcenter">
 </p>
 
 Ok - with access to my To Dos, I began to dig in. First, to get a list of all your task lists (to dos are grouped within lists), you make an authenticated call to `https://graph.microsoft.com/v1.0/me/todo/lists`. This returns a result like so (I cut some out):
@@ -151,31 +151,31 @@ Alright, so at this point, I've got an endpoint that returns completed To Dos fi
 I began with a scheduled based trigger. Pipedream lets you pick from some defaults or enter a cron expression. What's really freaking cool is that as you enter your expression, it updates text that reflects the expression itself. Cron has always been hard for me to grok but this feature made me completely confident in my final value.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/11/todo3.jpg" alt="Schedule trigger set for Sunday" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/11/todo3.jpg" alt="Schedule trigger set for Sunday" class="lazyload imgborder imgcenter">
 </p>
 
 Sunday was an arbitrary decision. I could see picking end of business day on Friday or Saturday morning as well. Next, I checked to see if Pipedream had support for using Microsoft Graph API calls and of course - they did:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/11/todo4.jpg" alt="List of Microsoft actions" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/11/todo4.jpg" alt="List of Microsoft actions" class="lazyload imgborder imgcenter">
 </p>
 
 I selected "Microsoft Graph API" which then led to this choice:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/11/todo5.jpg" alt="Run Node.js code with MS Graph API" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/11/todo5.jpg" alt="Run Node.js code with MS Graph API" class="lazyload imgborder imgcenter">
 </p>
 
 Running code with the Graph API is exactly what I needed. After selecting this, you get a code step with the ability to provide your authentication:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/11/todo6.jpg" alt="Default Graph API code step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/11/todo6.jpg" alt="Default Graph API code step" class="lazyload imgborder imgcenter">
 </p>
 
 What's cool here is you click the button on top and login (one time, after you've done that you can create other workflows and Pipeream remembers your login). You can then test with the default code they use which just requests the logged in user's profile. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/11/todo7.jpg" alt="Result from running call." class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/11/todo7.jpg" alt="Result from running call." class="lazyload imgborder imgcenter">
 </p>
 
 Ok, just to recap how awesome Pipedream is - at this point I've got a workflow that will run on a custom schedule and the ability to use the Microsoft Graph API with minimal code since Pipedream handles authentication for you. You can see how in the code above: `${auths.microsoft_graph_api.oauth_access_token}` 
@@ -252,13 +252,13 @@ async (event, steps) => {
 Finally, I added the "email me" Pipedream step which makes it simple to send an email to the workflow owner, i.e. me. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/11/todo8.jpg" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/11/todo8.jpg" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 A quick note about the settings I used above. The "Mail Me" step requires plain text and HTML is optional. Normally when sending email you always send plain text and if you send HTML and if the end user supports it, they get the nicer looking email. For me, I know HTML works so I just used the same value for both. Again, don't do this in production or when sending emails to other folks. Here's how it looks:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/11/todo9.jpg" alt="Sample email" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/11/todo9.jpg" alt="Sample email" class="lazyload imgborder imgcenter">
 </p>
 
 You can check out the cmplete workflow here: <https://pipedream.com/@raymondcamden/completed-todos-p_vQCzLlm>

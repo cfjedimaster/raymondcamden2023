@@ -12,7 +12,7 @@ description: Using Netlify event triggers to send detailed mail on build notific
 One of the features Netlify supports is sending an email to you on various events. One of them is a successful build. Here's what it looks like:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/netlify1.png" alt="" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/netlify1.png" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 Short and sweet. But I really want a bit more information about the build, specifically how long it took. Netlify is quick, but my site is rather large. Every now and then I screw things up and one of the ways I can quickly tell is by seeing how long a build took. All of this information is available and I can go to the Netlify site to get those details, but it would be nice if my email simply passed that along. 
@@ -243,7 +243,7 @@ $mail(body);
 And it would simply send it to the email address on file for the current site. And here's an example of the result:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/05/netlify2.png" alt="Email sample" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/05/netlify2.png" alt="Email sample" class="lazyload imgborder imgcenter">
 </p>
 
 By the way, "Build Title" is driven by the Git commit message and will be "null" in a manual build. I could support that in my email so it looks nicer, but I'm fine with "null".  You can find the code for the function, and the rest of my site, up on GitHub: <https://github.com/cfjedimaster/raymondcamden2020>.

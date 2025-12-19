@@ -14,7 +14,7 @@ A few days ago I [blogged](https://www.raymondcamden.com/2020/07/17/testing-vuej
 That realization was incredibly freeing. It also immediately started the creative juices flowing. While walking my dog a few days ago (another activity that really improves my creativity) I formulated a good plan to build random monsters. One of the staples of many RPGs are random encounters. Your character, or party, is wondering the wilderness and all of a sudden they find themselves under attack.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/bt1.gif" alt="Screen shot from Bards Tale 1" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/bt1.gif" alt="Screen shot from Bards Tale 1" class="lazyload imgborder imgcenter">
 </p>
 
 The idea I had took a base set of monsters and then applied various modifiers and randomness to them. The idea being that you could have a small of monsters that would "scale up" to many more unique ones. Now, by "unique" I mean something like comparing a blue gremlin to a red gremlin. Many old games would take a base monster, apply a color shift to it, and call it done. Here's the basic flow of what I built.
@@ -64,7 +64,7 @@ const baseMonsters = [
 Each monster has a name, three attributes related to how well they fight (my game only has strength, dexterity, and intelligence) and their hit points. For each stat I assign dice rolls applicable for their respective strength as a creature. This was kinda arbitrary of course. I gave rats higher (possible) dexterity because I figured they were quick. I gave gremlins higher intelligence because, well, gremlins. 
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/gremlin.jpg" alt="Gremlin from the old movie" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/gremlin.jpg" alt="Gremlin from the old movie" class="lazyload imgborder imgcenter">
 </p>
 
 So the first step is to select one and then run the dice rolls for each stat. Next, there is a chance that a monster has a boon. A boon is a positive or negative change to one part of their stats. The chance for this change is based on a constant:
@@ -198,7 +198,7 @@ console.log(monsterMaker.create(6));
 And here's some results:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/07/monsters.jpg" alt="List of resulting monsters" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/07/monsters.jpg" alt="List of resulting monsters" class="lazyload imgborder imgcenter">
 </p>
 
 You can find this repo at <https://github.com/cfjedimaster/vue-demos/tree/master/grpg>. Feel free to make PRs to add new monsters and titles.

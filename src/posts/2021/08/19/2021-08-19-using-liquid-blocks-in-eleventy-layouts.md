@@ -117,7 +117,7 @@ This will be used in the footer.
 The result is not what you would expect:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/08/block1.jpg" alt="The web page rendered the footer in the main content" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/08/block1.jpg" alt="The web page rendered the footer in the main content" class="lazyload imgborder imgcenter">
 </p>
 
 Ok, so what now? I did some Googling and found this Eleventy issue: [Using Nunjucks blocks from within Markdown](https://github.com/11ty/eleventy/issues/1467). In the issue, they described that in order to do this with Nunjucks, you can't use Eleventy layouts, but must specify the layout with Nunjucks itself.
@@ -158,7 +158,7 @@ To:
 I'm ok with that change as it lets me specify a default value for footer as well. Now I've got this:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/08/block2.jpg" alt="Footer displayed, not the content" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/08/block2.jpg" alt="Footer displayed, not the content" class="lazyload imgborder imgcenter">
 </p>
 
 And if you think about it, the missing "main" content makes sense. I'm no longer using Eleventy to do my layout, so in `layout.liquid`, `{% raw %}{{ content }}{% endraw %}` doesn't exist. (Well the code is there of course, I mean the *value* of content isn't set.) 
@@ -220,7 +220,7 @@ This will be used in the footer.
 Woot! Now it's perfect! Except my *other* site pages don't work!
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/08/block3.jpg" alt="Main content is gone" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/08/block3.jpg" alt="Main content is gone" class="lazyload imgborder imgcenter">
 </p>
 
 On a page using Eleventy's built in layout processing, my content isn't working. Dangit. Luckily there's an easy, if somewhat hackish, solution:

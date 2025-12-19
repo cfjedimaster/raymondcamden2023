@@ -25,7 +25,7 @@ Before we begin talking about slots, let's talk about what problems they can sol
 Ok, but what about arguments that may be longer, and more complex? Consider the typical "Card" UI component. Here's an example from the [Vuetify](https://vuetifyjs.com/en/components/cards/) library:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/card1.jpg" alt="Example of Vuetify Card" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/card1.jpg" alt="Example of Vuetify Card" class="lazyload imgborder imgcenter">
 </p>
 
 Looking at that component, you can see it's got multiple different parts. A header image, header text, main body text, a row of buttons (well, one button) at the bottom. All of this could be passed to a web component tag, but it's going to get a bit messy. So example:
@@ -113,7 +113,7 @@ Ok, given the above component, I can then do:
 Which returns the following:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/10/slot1.jpg" alt="Slot demo results" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/10/slot1.jpg" alt="Slot demo results" class="lazyload imgborder imgcenter">
 </p>
 
 You can play with this below:

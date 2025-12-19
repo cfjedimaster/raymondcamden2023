@@ -140,7 +140,7 @@ Let's skip `dedupe` for a bit and look at the `run` block. I use `node-fetch` to
 When I deployed this via the command line, it prompted me for my two values, and then simply created the configured source and made it available. So for example, I could create a new workflow, and look for it as a source:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/sw1.jpg" alt="Severe Weather alert source" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/sw1.jpg" alt="Severe Weather alert source" class="lazyload imgborder imgcenter">
 </p>
 
 At this point, you can do anything imaginable with the source. You could send an SMS message. You can send a notification to a device. You could email a listserv of people who may be in the area as a warning. As the simplest example, I created a workflow that simply sent me an email. I added a Python step that took the alert (notice I said alert, not alerts, my event source is going to fire one time for each unique alert) and created a string appropriate for email:
@@ -176,7 +176,7 @@ export("html", html)
 And then this was passed to an email step. Pipedream has a "send an email to the owner" step that is super easy to use but note that if I wanted more fine-grained control, I could easily use something like Sendgrid instead. Here's how that configured step looks:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/sw2.jpg" alt="Configured email step" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/sw2.jpg" alt="Configured email step" class="lazyload imgborder imgcenter">
 </p>
 
 As a quick note, I'm using the same value for plain text and HTML emails, which isn't good, but as I know I'm the person getting the email and my email client supports HTML, I don't worry about it. 
@@ -184,7 +184,7 @@ As a quick note, I'm using the same value for plain text and HTML emails, which 
 I did a quick test where I used [Accuweather](https://www.accuweather.com/en/us/severe-weather)'s severe weather page to find active events. Here's an example of the email I got:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2022/08/sw3.jpg" alt="Example email" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2022/08/sw3.jpg" alt="Example email" class="lazyload imgborder imgcenter">
 </p>
 
 As always, if any of this doesn't make sense, just let me know!

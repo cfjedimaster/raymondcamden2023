@@ -22,7 +22,7 @@ QuickChart works by essentially creating a server wrapper to Chart.js. (An open 
 The URL can get rather complex, but the end result is just an image.
 
 <p>
-<img data-src="https://quickchart.io/chart?c={type:'pie',options:{title:{display:true, text:'The Battle'}},data:{labels:['Knowing','Red and Blue Lasers'], datasets:[{data:[50,50]}]}}" alt="" class="lazyload imgborder imgcenter">
+<img src="https://quickchart.io/chart?c={type:'pie',options:{title:{display:true, text:'The Battle'}},data:{labels:['Knowing','Red and Blue Lasers'], datasets:[{data:[50,50]}]}}" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 Since most of the work is done on the chart.js side, you'll want to have some basic familiarity with it before starting, but it isn't a difficult library to use. Also, QuickChart will return nice errors when you screw up. For example, I added an extra } to the URL below:
@@ -34,7 +34,7 @@ Since most of the work is done on the chart.js side, you'll want to have some ba
 And the result:
 
 <p>
-<img data-src="https://quickchart.io/chart?c={type:'pie',options:{title:{display:true, text:'The Battle'}}},data:{labels:['Knowing','Red and Blue Lasers'], datasets:[{data:[50,50]}]}}" alt="" class="lazyload imgborder imgcenter">
+<img src="https://quickchart.io/chart?c={type:'pie',options:{title:{display:true, text:'The Battle'}}},data:{labels:['Knowing','Red and Blue Lasers'], datasets:[{data:[50,50]}]}}" alt="" class="lazyload imgborder imgcenter">
 </p>
 
 Cool, so given that it's just simple HTML, how can we integrate Vue with it? For my first demo, I setup an image that was bound to a computed property:

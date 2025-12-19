@@ -14,7 +14,7 @@ Welcome to another [Vue Quick Shot](https://www.raymondcamden.com/tags/vue+quick
 The tip today is how to warn a user before they leave a form that hasn't been submitted. So imagine a form where a user has entered some data, but then they get distracted. 
 
 <p style="text-align: center">
-<img data-src="https://static.raymondcamden.com/images/2020/10/cat1.jpg" alt="Real picture of me being distrated" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/10/cat1.jpg" alt="Real picture of me being distrated" class="lazyload imgborder imgcenter">
 <i>Real picture of Raymond being distracted.</i>
 </p>
 
@@ -127,7 +127,7 @@ methods:{
 Basically - if we setup the handler, remove it. Now, in theory, if you edit the form and try to leave via the link, you'll get a prompt:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2020/10/cat2.jpg" alt="Prompt before leaving web page" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2020/10/cat2.jpg" alt="Prompt before leaving web page" class="lazyload imgborder imgcenter">
 </p>
 
 This is certainly not a perfect solutio, but it may help prevent a user from accidentally losing changes. If you've done this better (most likely!), please share your solution below! Here's a CodePen with the entire solution.

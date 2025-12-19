@@ -14,7 +14,7 @@ Earlier this week I spent some time working on a demo that combined the Jamstack
 First, I <strike>stole</strike>borrowed a bunch of PDFs from the IRS. I figure they own me a few PDFs, right? I grabbed around ten or so and put them into two subdirectories based on whether they were a form or instructions for a form (and to be clear, I didn't *really* check, I just kinda threw some around):
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/pdfj1.jpg" alt="Screen shot of a list of PDF files" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/pdfj1.jpg" alt="Screen shot of a list of PDF files" class="lazyload imgborder imgcenter">
 </p>
 
 With my source material available, the first thing I had to do was ensure the PDFs ended up being available on the static site. By default, Eleventy is going to ignore the PDFs as they aren't recognized as supported files (much like it ignores JavaScript, CSS, and images). This is easy enough to fix with [passthrough copy](https://www.11ty.dev/docs/copy/). I added the following to my `.eleventy.js`:
@@ -127,7 +127,7 @@ For the URL I switch to my Vercel site if I detect I'm in production. Ditto for 
 And that's really it. When the Eleventy site is generated, I end up with HTML files under `pdf/` and the raw PDFs under `/pdfs`. That's not terribly good naming but it works well enough I think. Here's an example of one of the pages.
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/02/pdfj2.jpg" alt="Example web page showing PDF embed" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/02/pdfj2.jpg" alt="Example web page showing PDF embed" class="lazyload imgborder imgcenter">
 </p>
 
 You can test this yourself here: <https://pdftest.vercel.app>. As a reminder, I used the most basic embed possible. Check the [docs](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=view) for more examples of how you can configure it. You can find the source here: <https://github.com/cfjedimaster/eleventy-demos/tree/master/pdftest> 

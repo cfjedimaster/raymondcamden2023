@@ -18,7 +18,7 @@ While Pipedream is *really* freaking powerful for building workflows, you can us
 To begin, create a new Workflow and select the `HTTP API` trigger. This is how you create a Pipedream workflow that can be executed via a URL call:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/06/pd1.png" alt="HTTP Trigger" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/06/pd1.png" alt="HTTP Trigger" class="lazyload imgborder imgcenter">
 </p>
 
 Next, you need to add a new action, `Run Node.js code`, this gives you a step where you can write any code you want. At this point, the exact code depends on your remote API. It may require authentication via a header. It may require complex parameters and the such. Also, Node provides multiple different ways of making HTTP calls. Even Pipedream itself has a [baked in action](https://pipedream.com/docs/quickstart/make-http-request/#use-a-pre-built-action-to-make-an-http-request-from-your-workflow) for hitting a remote URL. To keep things simple (and, being biased to my preference as I'm writing this), I'll use `node-fetch`. 
@@ -41,7 +41,7 @@ async (event, steps) => {
 The endpoint in this example, a `get-cats` function on my blog, doesn't actually require authentication, but it's a quick and simple API to hit. The key here is hard coded to a simple value - we'll return to that in a moment. Here's how the complete workflow looks in Pipedream:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/06/pd2.jpg" alt="Workflow diagram" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/06/pd2.jpg" alt="Workflow diagram" class="lazyload imgborder imgcenter">
 </p>
 
 You can hit this now at: <https://enm7s7e1ezjcufu.m.pipedream.net/>
@@ -55,13 +55,13 @@ For example, if you need to fetch data from an API that requires an API key, you
 Click on "New Environment Variable" and give it a name and value. Since this is account-wide, you normally want to use a specific name of some sort. Since we're hitting my fake little cat API, I'll name it "FAKE_CAT_API":
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/06/pd3.jpg" alt="New environment variable" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/06/pd3.jpg" alt="New environment variable" class="lazyload imgborder imgcenter">
 </p>
 
 What's cool is as soon as you save it, it's available in intellisense in the editor:
 
 <p>
-<img data-src="https://static.raymondcamden.com/images/2021/06/pd4.jpg" alt="The Pipedream editor is awesome!" class="lazyload imgborder imgcenter">
+<img src="https://static.raymondcamden.com/images/2021/06/pd4.jpg" alt="The Pipedream editor is awesome!" class="lazyload imgborder imgcenter">
 </p>
 
 While we're here, let's go ahead and make one change to demonstrate transforming the response. My fake API returns an array of cat objects that contain name, age, breed, and gender. What if we know we don't need breed or gender? We can map that out before we return it like so:
