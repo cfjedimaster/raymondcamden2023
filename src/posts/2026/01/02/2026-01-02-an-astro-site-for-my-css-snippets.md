@@ -4,7 +4,7 @@ title: "An Astro site for my CSS Snippets"
 date: "2026-01-02T18:00:00"
 categories: ["development"]
 tags: ["javascript","astro"]
-banner_image: /images/banners/welcome2018.jpg
+banner_image: /images/banners/snippets.jpg
 permalink: /2026/01/02/an-astro-site-for-my-css-snippets
 description: A simple Astro site to display CSS snippets.
 ---
@@ -238,3 +238,6 @@ Basically, loop over my content, get unique tags, and create an array of pages f
 The last step was deploying it, and here I had multiple options. I chose Netlify as I host most of my sites there. [Webflow](https://webflow.com) supports Astro apps as well, but they are tied to existing web sites, not really standalone. Even though my GitHub repo has a bunch of Astro crap in it, I used the Netlify CLI to connect it and set it up. Netlify supports dynamic as well as static Astro apps, and you should check their [docs](https://docs.astro.build/en/guides/deploy/netlify/) for more information on that, but for me this was literally about a 5 minute process at most. "It just worked" which is the best thing a dev can say about something. As I shared above, you can browse the site here, <https://css-snippets.netlify.app/>, and if you want to see all of the source, you can find it here: <https://github.com/cfjedimaster/astro-tests/tree/main/css-snippets>
 
 As always, let me know what you think, and I've got my next little Astro site planned already! :) 
+
+Photo by <a href="https://unsplash.com/@e_clement?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Evelyn Clement</a> on <a href="https://unsplash.com/photos/brown-and-black-happy-birthday-card-lot-TjvEfjXIb_s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      
