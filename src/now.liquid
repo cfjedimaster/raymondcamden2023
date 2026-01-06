@@ -17,6 +17,8 @@ or have finished. This page was last generated on {{ "now" | date: "%B %e, %Y" }
   <div class="film">
   {% if book.image != null %}
   <img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_216/{{book.image.url}}" alt="Cover of {{ book.title }}">
+  {% else  %}
+  <img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_216/https://static.raymondcamden.com/images/no_cover_available.jpg" alt="No Cover Available">
   {% endif %}
   "{{ book.title  }}" by {{ book.authors | join: ', ' }}
   </div>
