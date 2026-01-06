@@ -5,6 +5,7 @@
   "main": "eleventy.config.js",
   "type": "module",
   "scripts": {
+    "dev2": "eleventy --serve --quiet",
     "dev": "netlify dev -c \"eleventy --serve --quiet\"",
     "start": "netlify dev -c \"eleventy --serve --quiet\"",
     "serve": "npm run start"

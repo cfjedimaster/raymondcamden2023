@@ -12,96 +12,16 @@ or have finished. This page was last generated on {{ "now" | date: "%B %e, %Y" }
 
 <h3>What I'm Reading</h3>
 
-      <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
-      <style type="text/css" media="screen">
-  .gr_custom_container_1757454244 {
-    /* customize your Goodreads widget container here*/
-    border: 1px solid gray;
-    border-radius:10px;
-    padding: 10px 5px 10px 5px;
-    background-color: transparent;
-    color: #FFFFFF;
-    width: 100%;
-  }
-  .gr_custom_header_1757454244 {
-    /* customize your Goodreads header here*/
-    border-bottom: 1px solid gray;
-    width: 100%;
-    margin-bottom: 5px;
-    text-align: center;
-    font-size: 120%
-  }
-  .gr_custom_each_container_1757454244 {
-    /* customize each individual book container here */
-    width: 100%;
-    clear: both;
-    margin-bottom: 10px;
-    overflow: auto;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #aaa;
-  }
-  .gr_custom_book_container_1757454244 {
-    /* customize your book covers here */
-    overflow: hidden;
-    height: 160px;
-      float: left;
-      margin-right: 4px;
-      width: 98px;
-  }
-  .gr_custom_author_1757454244 {
-    /* customize your author names here */
-    font-size: 10px;
-  }
-  .gr_custom_tags_1757454244 {
-    /* customize your tags here */
-    font-size: 10px;
-    color: gray;
-  }
-  .gr_custom_rating_1757454244 {
-    /* customize your rating stars here */
-    float: right;
-  }
-</style>
-
-      <div id="gr_custom_widget_1757454244">
-          <div class="gr_custom_container_1757454244">
-    <h2 class="gr_custom_header_1757454244">
-    <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/7962326-raymond?shelf=currently-reading&amp;utm_medium=api&amp;utm_source=custom_widget">Currently Reading</a>
-    </h2>
-      <div class="gr_custom_each_container_1757454244">
-          <div class="gr_custom_book_container_1757454244">
-            <a title="The Business Value of Developer Relations: How and Why Technical Communities Are Key To Your Success" rel="nofollow" href="https://www.goodreads.com/review/show/5871372601?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Business Value of Developer Relations: How and Why Technical Communities Are Key To Your Success" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1539921160l/40167835._SX98_.jpg" /></a>
-          </div>
-          <div class="gr_custom_title_1757454244">
-            <a rel="nofollow" href="https://www.goodreads.com/review/show/5871372601?utm_medium=api&amp;utm_source=custom_widget">The Business Value of Developer Relations: How and Why Technical Communities Are Key To Your Success</a>
-          </div>
-          <div class="gr_custom_author_1757454244">
-            by <a rel="nofollow" href="https://www.goodreads.com/author/show/18042013.Mary_Thengvall">Mary Thengvall</a>
-          </div>
-      </div>
-      <div class="gr_custom_each_container_1757454244">
-          <div class="gr_custom_book_container_1757454244">
-            <a title="The End of the World As We Know It: New Tales of Stephen King's The Stand" rel="nofollow" href="https://www.goodreads.com/review/show/7871046656?utm_medium=api&amp;utm_source=custom_widget"><img alt="The End of the World As We Know It: New Tales of Stephen King's The Stand" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1728982787l/220377457._SX98_.jpg" /></a>
-          </div>
-          <div class="gr_custom_title_1757454244">
-            <a rel="nofollow" href="https://www.goodreads.com/review/show/7871046656?utm_medium=api&amp;utm_source=custom_widget">The End of the World As We Know It: New Tales of Stephen King's The Stand</a>
-          </div>
-          <div class="gr_custom_author_1757454244">
-            by <a rel="nofollow" href="https://www.goodreads.com/author/show/4522.Christopher_Golden">Christopher Golden</a>
-          </div>
-      </div>
-  <br style="clear: both"/>
-  <center>
-    <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
-  </center>
-  <noscript>
-    Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Raymond, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
-  </noscript>
+<div class="films">
+{% for book in hardcover_books  %}
+  <div class="film">
+  {% if book.image != null %}
+  <img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_216/{{book.image.url}}" alt="Cover of {{ book.title }}">
+  {% endif %}
+  "{{ book.title  }}" by {{ book.authors | join: ', ' }}
   </div>
-
-      </div>
-      <script src="https://www.goodreads.com/review/custom_widget/7962326.Currently%20Reading?cover_position=left&cover_size=medium&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=true&widget_border_width=1&widget_id=1757454244&widget_text_color=FFFFFF&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
-	  
+{% endfor %}
+</div>
 
 <h3>What I'm Listening To</h3>
 

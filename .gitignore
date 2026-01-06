@@ -12,3 +12,5 @@ _site
 scripts/.env
 
 .DS_Store
+
+deno.lock 
