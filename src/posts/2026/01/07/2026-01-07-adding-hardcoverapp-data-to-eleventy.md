@@ -53,7 +53,7 @@ Next, I needed to know which books were in my "Currently Reading" status and luc
 }
 ```
 
-Simple, right? Ok, now to how I actually used it.
+Simple, right? There is one minor nit to keep in mind - their dashboard makes it easy to get your key, but it expires in one year and you can't programatically renew it. My solution? Adding a reminder to my calendar. Ok, now to how I actually used it.
 
 ## Providing the Data to Eleventy
 
