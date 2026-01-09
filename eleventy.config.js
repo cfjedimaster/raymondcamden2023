@@ -31,6 +31,7 @@ export default function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy('src/_redirects');
 	eleventyConfig.addPassthroughCopy('src/ads.txt');
+	eleventyConfig.addPassthroughCopy({'src/misc/robots.txt':'robots.txt'});
 
 	eleventyConfig.addCollection('categories', categories);
 	eleventyConfig.addCollection('posts', getPosts);
