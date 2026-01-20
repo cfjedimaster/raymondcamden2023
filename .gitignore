@@ -14,3 +14,5 @@ scripts/.env
 .DS_Store
 
 deno.lock 
+
+.env

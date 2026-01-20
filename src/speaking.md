@@ -18,9 +18,15 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://cfe.dev/events/pixelpalooza-2025/">Embedding PDFs</a><br/>
-PixelPalooza 2025<br/>
-Online, November 20, 2025
+<a href="https://adobe-coldfusion-online-summit-2026.meetus.adobeevents.com/attendease/networking/experience/5d4cd86f-a8f7-42b0-8a9e-755b4ab4e72b/ed0d3920-236c-474b-9a89-3304f294ddb7">Harnessing AI Superpowers in ColdFusion</a><br/>
+Adobe ColdFusion Online Summit 2026<br/>
+Online, January 26, 2026
+</p>
+
+<p>
+<a href="https://www.codestock.org">Generative AI in the Browser with Chrome AI and Intl is Your Superhero</a><br/>
+CodeStock<br/>
+Knoxville, TN, April 9-10, 2026
 </p>
 
 
@@ -36,6 +42,13 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://cfe.dev/events/pixelpalooza-2025/">Embedding PDFs</a><br/>
+PixelPalooza 2025<br/>
+Online, November 20, 2025
+</p>
+
+
 <p>
 <a href="https://www.meetup.com/techacademy/events/311363457/">Developer Relations and Advocacy: A Career in Explaining</a><br/>
 The Tech Academy<br/>
