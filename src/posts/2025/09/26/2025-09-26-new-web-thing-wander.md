@@ -290,4 +290,6 @@ And here's how it looks (and yes, I see the typo, I've fixed it):
 
 And that's basically it. I've got to say, I'm *really* happy I built this. As I said, it's weird, but I miss the old days of the web where you would often find things like this. We need more of that. 
 
+Oh, and the source code may be found here: <https://github.com/cfjedimaster/webdemos/tree/master/wander>
+
 Image by <a href="https://pixabay.com/users/dominikakukulka-16037370/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5284232">Dominika Kukułka</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5284232">Pixabay</a>
