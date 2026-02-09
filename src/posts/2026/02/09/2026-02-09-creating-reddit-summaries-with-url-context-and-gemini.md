@@ -125,7 +125,18 @@ That prompt made use of URL tools and the SDK does not allow you to create struc
     return response.text
 ```
 
-The prompt lets Gemini know that I had a previous prompt and couldn't get structured output. I then specify I *want* structured output, pass in the result from the previous call, and use a specific JSON schema in the call to get my precise response back. Here's the result (and as a quick note, I ran my script a few times between creating a PDF export of the initial response and now so if you see any differences, that's why):
+The prompt lets Gemini know that I had a previous prompt and couldn't get structured output. I then specify I *want* structured output, pass in the result from the previous call, and use a specific JSON schema in the call to get my precise response back. 
+
+The final part of the script simply calls the methods:
+
+```python
+if __name__ == "__main__":
+    summary = summarize()
+    json = turn_to_json(summary)
+    print(json)
+```
+
+Here's the result (and as a quick note, I ran my script a few times between creating a PDF export of the initial response and now so if you see any differences, that's why):
 
 ```json
 {
