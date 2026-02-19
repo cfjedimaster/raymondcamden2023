@@ -177,57 +177,89 @@ function generateMoonPhaseSVG(phase, size = 24, color = 'currentColor') {
     const cy = r; // Center y
 
     let pathD = '';
-    let fill = color;    // Use the provided color or default
-    let stroke = color;  // Use the provided color or default
-    let strokeWidth = size * 0.05; // 5% of size
+    let fill = color;
+    let stroke = color;
+    let strokeWidth = size * 0.05; // 5% of size.
+
+    // A consistent full circle path (used for Full Moon)
+    const fullCirclePath = `M ${cx},${cy - r} A ${r},${r} 0 1,1 ${cx},${cy + r} A ${r},${r} 0 1,1 ${cx},${cy - r} Z`;
+
+    // Coordinates for the top and bottom of the moon
+    const topY = cy - r;
+    const bottomY = cy + r;
 
     switch (phase) {
         case 'New Moon':
             // Outline circle for new moon
             pathD = `M ${cx} ${cy} m ${-r + strokeWidth / 2}, 0 a ${r - strokeWidth / 2},${r - strokeWidth / 2} 0 1,0 ${2 * (r - strokeWidth / 2)},0 a ${r - strokeWidth / 2},${r - strokeWidth / 2} 0 1,0 ${-2 * (r - strokeWidth / 2)},0`;
-            fill = 'none'; // New moon is an outline, so no fill
+            fill = 'none';
             break;
+
         case 'Waxing Crescent':
-            // This is a bit complex for a simple crescent. We'll use a full circle and cut out a dark crescent.
-            // Full circle, then subtract a crescent shape
-            pathD = `M ${cx},${cy - r} A ${r},${r} 0 0,1 ${cx},${cy + r} A ${r},${r} 0 0,1 ${cx},${cy - r} Z ` + // Full circle for the base
-                    `M ${cx + (r * 0.5)},${cy - r} A ${r},${r} 0 0,0 ${cx + (r * 0.5)},${cy + r} A ${r},${r} 0 0,0 ${cx + (r * 0.5)},${cy - r} Z`; // A slightly offset ellipse for the cutout
+            // Right side lit, thin crescent. Full radius r for a round right edge; viewBox padding prevents trimming.
+            const wcTerminatorOffset = r * 0.4; // Controls thickness. Smaller value = thicker crescent.
+            pathD = `M ${cx},${topY} ` + // Start at top center of moon
+                    `A ${r},${r} 0 0,1 ${cx},${bottomY} ` + // Outer arc: down to bottom center (right half of moon)
+                    `A ${r},${r} 0 0,0 ${cx + wcTerminatorOffset},${topY} ` + // Inner arc: up to top right (terminator curve).
+                    `Z`; // Close the path
             break;
+
         case 'First Quarter':
             // Right half of the moon is lit
-            pathD = `M ${cx},${cy - r} A ${r},${r} 0 0,1 ${cx},${cy + r} L ${cx},${cy + r} L ${cx},${cy - r} Z`;
+            pathD = `M ${cx},${topY} A ${r},${r} 0 0,1 ${cx},${bottomY} L ${cx},${bottomY} L ${cx},${topY} Z`;
             break;
+
         case 'Waxing Gibbous':
-            // Almost full, dark crescent on the left
-            pathD = `M ${cx},${cy - r} A ${r},${r} 0 1,1 ${cx},${cy + r} A ${r},${r} 0 1,1 ${cx},${cy - r} Z ` + // Full circle
-                    `M ${cx - (r * 0.5)},${cy - r} A ${r},${r} 0 0,0 ${cx - (r * 0.5)},${cy + r} L ${cx - (r * 0.5)},${cy + r} L ${cx - (r * 0.5)},${cy - r} Z`; // Left crescent cutout
+            // Mostly full, dark sliver on the left
+            // This path defines the large illuminated area directly.
+            // Starts at top of terminator, draws terminator arc, then outer arc of moon, then closes.
+            const wgTerminatorOffset = r * 0.7; // X-coordinate for the terminator line on the left side
+            pathD = `M ${cx - wgTerminatorOffset},${topY} ` + // Start at top of terminator line
+                    `A ${r},${r} 0 0,1 ${cx - wgTerminatorOffset},${bottomY} ` + // Draw terminator arc down (sweeps right)
+                    `A ${r},${r} 0 0,0 ${cx},${topY} ` + // Outer arc: draws entire right half of moon back up to top center
+                    `Z`; // Close the path
             break;
+
         case 'Full Moon':
-            // Full circle
-            pathD = `M ${cx},${cy - r} A ${r},${r} 0 1,1 ${cx},${cy + r} A ${r},${r} 0 1,1 ${cx},${cy - r} Z`;
+            pathD = fullCirclePath;
             break;
+
         case 'Waning Gibbous':
-            // Almost full, dark crescent on the right
-            pathD = `M ${cx},${cy - r} A ${r},${r} 0 1,1 ${cx},${cy + r} A ${r},${r} 0 1,1 ${cx},${cy - r} Z ` + // Full circle
-                    `M ${cx + (r * 0.5)},${cy - r} A ${r},${r} 0 0,1 ${cx + (r * 0.5)},${cy + r} L ${cx + (r * 0.5)},${cy + r} L ${cx + (r * 0.5)},${cy - r} Z`; // Right crescent cutout
+            // Mostly full, dark sliver on the right
+            // Mirrored Waxing Gibbous.
+            const wngTerminatorOffset = r * 0.7; // X-coordinate for the terminator line on the right side
+            pathD = `M ${cx + wngTerminatorOffset},${topY} ` + // Start at top of terminator line
+                    `A ${r},${r} 0 0,0 ${cx + wngTerminatorOffset},${bottomY} ` + // Draw terminator arc down (sweeps left)
+                    `A ${r},${r} 0 0,1 ${cx},${topY} ` + // Outer arc: draws entire left half of moon back up to top center
+                    `Z`; // Close the path
             break;
+
         case 'Last Quarter':
             // Left half of the moon is lit
-            pathD = `M ${cx},${cy - r} A ${r},${r} 0 0,0 ${cx},${cy + r} L ${cx},${cy + r} L ${cx},${cy - r} Z`;
+            pathD = `M ${cx},${topY} A ${r},${r} 0 0,0 ${cx},${bottomY} L ${cx},${bottomY} L ${cx},${topY} Z`;
             break;
+
         case 'Waning Crescent':
-            // Half moon + crescent on the left
-            pathD = `M ${cx},${cy - r} A ${r},${r} 0 0,0 ${cx},${cy + r} A ${r},${r} 0 0,0 ${cx},${cy - r} Z ` + // Full circle
-                    `M ${cx - (r * 0.5)},${cy - r} A ${r},${r} 0 0,1 ${cx - (r * 0.5)},${cy + r} A ${r},${r} 0 0,1 ${cx - (r * 0.5)},${cy - r} Z`; // Inner crescent cutout
+            // Left side lit, thin crescent. Full radius r for a round left edge; viewBox padding prevents trimming.
+            const wncTerminatorOffset = r * 0.4; // Controls thickness. Smaller value = thicker crescent.
+            pathD = `M ${cx},${topY} ` + // Start at top center of moon
+                    `A ${r},${r} 0 1,0 ${cx},${bottomY} ` + // Outer arc: down to bottom center (left half of moon)
+                    `A ${r},${r} 0 0,1 ${cx - wncTerminatorOffset},${topY} ` + // Inner arc: up to top left (terminator curve).
+                    `Z`; // Close the path
             break;
+
         default:
-            // Fallback to New Moon outline
             pathD = `M ${cx} ${cy} m ${-r + strokeWidth / 2}, 0 a ${r - strokeWidth / 2},${r - strokeWidth / 2} 0 1,0 ${2 * (r - strokeWidth / 2)},0 a ${r - strokeWidth / 2},${r - strokeWidth / 2} 0 1,0 ${-2 * (r - strokeWidth / 2)},0`;
             fill = 'none';
             break;
     }
 
-    return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}">
+    // Extra viewBox padding for crescents so the full-radius arc and stroke aren't clipped
+    const vbPadding = (phase === 'Waxing Crescent' || phase === 'Waning Crescent') ? 2 : 0;
+    const viewBox = vbPadding ? `-${vbPadding} -${vbPadding} ${size + 2 * vbPadding} ${size + 2 * vbPadding}` : `0 0 ${size} ${size}`;
+
+    // `fill-rule="nonzero"` is appropriate as we're defining the filled shape directly. overflow="visible" helps avoid clipping.
+    return `<svg width="${size}" height="${size}" viewBox="${viewBox}" overflow="visible" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}" fill-rule="nonzero">
                 <path d="${pathD}" />
             </svg>`;
 }
