@@ -19,6 +19,7 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({'src/assets/css/*.css':'css'});
 	eleventyConfig.addPassthroughCopy({'src/assets/js':'js'});
 	eleventyConfig.addPassthroughCopy({'src/assets/images':'images'});
+	eleventyConfig.addPassthroughCopy({'src/assets/*.ttf':'fonts'});
 
 	// These assets need to go to root
 	eleventyConfig.addPassthroughCopy({'src/assets/manifest.json':'manifest.json'});

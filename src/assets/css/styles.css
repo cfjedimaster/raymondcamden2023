@@ -1141,3 +1141,14 @@ div.callout {
         color: black;
     }
 }
+
+/* moon shit */
+@font-face {
+    font-family: 'Moon Phases CC';
+    src: url('/fonts/MoonPhases-cc.ttf') format('truetype');
+}
+
+.moon {
+    font-family: 'Moon Phases CC', sans-serif;
+    font-size: 12px;
+}
