@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dyanimically Adjusting Image Text for Contrast"
+title: "Dynamically Adjusting Image Text for Contrast"
 date: "2026-03-04T18:00:00"
 categories: ["development"]
 tags: ["javascript"]
