@@ -24,7 +24,6 @@ And that's it - literally. It doesn't show you latest posts and stats, it's just
 
 After setting up your authentication, you run the app, open it in your browser, and you're ready to go:
 
-
 <p>
 <img src="https://static.raymondcamden.com/images/2026/03/sb1.jpg" loading="lazy" alt="App view showing the form" class="imgborder imgcenter">
 </p>
