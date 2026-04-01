@@ -430,7 +430,7 @@ Post page specific styles */
 
 }
 
-.post-body p:first-of-type {
+.post-body > p:first-of-type {
     font-size: 1.25rem;
     color: var(--text-primary);
     font-weight: 500;
@@ -610,8 +610,6 @@ Post page specific styles */
 	font-style: italic;
 	font-weight: bold;
 }
-
-
 
 .footer-box {
     font-size: 1rem;
@@ -1139,6 +1137,10 @@ div.callout {
 
     a {
         color: black;
+    }
+
+    ul {
+        margin-left: 20px;
     }
 }
 
