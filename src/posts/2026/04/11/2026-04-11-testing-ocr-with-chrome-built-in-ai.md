@@ -255,7 +255,7 @@ const schema = {
 	type:"array", 
 	items: {
 		type:"string",
-		decription:"The extracted text."
+		description:"The extracted text."
 	}
 };
 ```
