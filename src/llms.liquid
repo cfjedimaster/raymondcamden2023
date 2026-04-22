@@ -1,0 +1,30 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+{{ site.author_bio }}
+
+## Author
+- Name: {{ site.author_name }}
+- Location: {{ site.author_location }}
+- Website: {{ site.author_url }}
+- GitHub: https://github.com/{{ site.github_username }}
+- LinkedIn: https://www.linkedin.com/in/{{ site.linkedin_username }}
+- YouTube: https://www.youtube.com/@{{ site.youtube_username }}
+
+## Important Links
+{% for nav in site.navigation -%}
+- [{{ nav.text }}]({{ site.url }}{{ nav.url }})
+{% endfor -%}
+- [RSS Feed]({{ site.url }}/feed.xml)
+- [Sitemap]({{ site.url }}/sitemap.xml)
+
+## Recent Posts
+{% assign posts = collections.posts | reverse -%}
+{% for post in posts limit:15 -%}
+- [{{ post.data.title }}]({{ site.url }}{{ post.url }}): {{ post.date | date_to_xmlschema }}
+{% endfor %}

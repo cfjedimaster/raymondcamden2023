@@ -12,6 +12,11 @@ import stoot from './config/shortcodes/stoot.js';
 
 import ejsPlugin from "@11ty/eleventy-plugin-ejs";
 
+import glob from 'glob';
+import path from 'path';
+import fs from 'fs';
+
+
 export default function(eleventyConfig) {
 	
 	// locally, it is blank, in prod, its development (https://docs.netlify.com/configure-builds/manage-dependencies/#node-js-environment)
@@ -100,6 +105,49 @@ export default function(eleventyConfig) {
 	});
 
 	eleventyConfig.addPlugin(ejsPlugin);
+
+	// Support a markdown version of my site as well
+	eleventyConfig.on("eleventy.after", async ({ dir }) => {
+		const inputDir = dir.input;   
+		const outputDir = dir.output; 
+
+		// blog posts only
+		const mdFiles = glob.sync("posts/**/*.md", {
+			cwd: inputDir,
+			ignore: ["node_modules/**"],
+		});
+
+		for (const file of mdFiles) {
+			const srcPath = path.join(inputDir, file);
+			/*
+			My input file looks like so:
+			src/posts/2026/03/04/2026-03-04-dyanimically-adjusting-image-text-for-contrast.md
+			I need to save to
+
+			outputdir/2026/03/04/dynamically etc
+			*/
+			let newFile = file.replace('posts', '');
+			newFile = newFile.replace(/[0-9]{4}-[0-9]{2}-[0-9]{2}-/,'');
+			newFile = newFile.replace('.md','/index.md');
+
+			const destPath = path.join(outputDir, newFile);
+
+			//console.log(`!!Copying ${srcPath} to ${destPath}`);
+
+			// Ensure destination directory exists
+			// this should not be needed, although it errors in dev due to .eleventyignore
+			// so... i'll allow it i guess?
+
+			/*
+			Before we copy, let's also strip front matter, but grab the title and
+			add it as a # TITLE to the bit
+			no - may revisit that decision though
+			*/
+			fs.mkdirSync(path.dirname(destPath), { recursive: true });
+			fs.copyFileSync(srcPath, destPath);
+		}
+	});
+	
 
 	return {
 		dir: {
