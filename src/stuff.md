@@ -10,6 +10,7 @@ Over the years, I've built many websites, tools, bots, utilities, and while I've
 
 As an avid gamer, I've enjoyed building my own web-based games over the years. Here are a few recent examples.
 
+* [My Little Mortal Combat](https://cfjedimaster.github.io/webdemos/my_little_mortal_combat/) - Exactly how it sounds.
 * [IdleFleet](https://idlefleet.netlify.app/) - an idle clicker game that has you build a space trading empire.
 * [Cat Herder](https://catherder.netlify.app/) - another idle clicker game, although this one requires a bit more attention as you attempt to manage an army of cats.
 
