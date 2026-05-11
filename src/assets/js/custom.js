@@ -4,29 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput = document.getElementById('search');
     let searchButton = document.querySelector('.search-box button');
-    
+
     if (searchInput && searchButton) {
         // Handle search button click
-        searchButton.addEventListener('click', function() {
+        searchButton.addEventListener('click', function () {
             performSearch();
         });
-        
+
         // Handle Enter key in search input
-        searchInput.addEventListener('keypress', function(e) {
+        searchInput.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 performSearch();
             }
         });
-        
+
     }
 
-    if(window.location.pathname.indexOf('/2') === 0) {
+    if (window.location.pathname.indexOf('/2') === 0) {
         doSubscriptionForm();
         //doRecommendations();
     }
 
     let moonPhaseSpan = document.getElementById('moonPhase');
-    if(!moonPhaseSpan) return;
+    if (!moonPhaseSpan) return;
 
     let currentPhase = getCurrentMoonPhase();
     /*
@@ -49,17 +49,18 @@ document.addEventListener('DOMContentLoaded', () => {
    
     */
     let letter = 'M';
-    if(currentPhase == 'Waxing Crescent') letter = 'Q';
-    if(currentPhase == 'First Quarter') letter = 'T';
-    if(currentPhase == 'Waxing Gibbous') letter = 'V';
-    if(currentPhase == 'Full Moon') letter = 'Z';
-    if(currentPhase == 'Waning Gibbous') letter = 'E';
-    if(currentPhase == 'Last Quarter') letter = 'G';
-    if(currentPhase == 'Waning Crescent') letter = 'J';
+    if (currentPhase == 'Waxing Crescent') letter = 'Q';
+    if (currentPhase == 'First Quarter') letter = 'T';
+    if (currentPhase == 'Waxing Gibbous') letter = 'V';
+    if (currentPhase == 'Full Moon') letter = 'Z';
+    if (currentPhase == 'Waning Gibbous') letter = 'E';
+    if (currentPhase == 'Last Quarter') letter = 'G';
+    if (currentPhase == 'Waning Crescent') letter = 'J';
 
     moonPhaseSpan.innerHTML = letter;
     moonPhaseSpan.title = `Current Lunar Phase ${currentPhase}`;
 
+    registerTools();
 
 });
 
@@ -71,10 +72,10 @@ function performSearch() {
 }
 
 if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+    });
 }
 
 function doSubscriptionForm() {
@@ -85,69 +86,69 @@ function doSubscriptionForm() {
 
     subButton.addEventListener('click', () => {
         const email = subEmail.value;
-        if(!email) return;
-        console.log('add '+email);
+        if (!email) return;
+        console.log('add ' + email);
         subButton.disabled = true;
         subStatus.innerHTML = 'Attempting to subscribe you...';
         fetch(SUBSCRIBE_API + email)
-        .then(res => {
-            return res.json()
-        })
-        .then(res => {
-            if(res.creation_date) {
-                subStatus.innerHTML = 'You have been subscribed!';
-            } else {
-                subStatus.innerHTML = `There was an error: ${res.detail}`;
-            }
-            subButton.disabled = false;
-        })
-        .catch(e => {
-            console.log('error result', e);
-        });
+            .then(res => {
+                return res.json()
+            })
+            .then(res => {
+                if (res.creation_date) {
+                    subStatus.innerHTML = 'You have been subscribed!';
+                } else {
+                    subStatus.innerHTML = `There was an error: ${res.detail}`;
+                }
+                subButton.disabled = false;
+            })
+            .catch(e => {
+                console.log('error result', e);
+            });
 
     });
 }
 
 async function doRecommendations() {
 
-  //let url = window.location.pathname.slice(0,-1);
-  let url = window.location.pathname;
-  /*
-  In order to stay under Algolia's free tier limits, going to limit
-  recommendations to items in 202*
-  */
-  if(url.indexOf('202') === -1) return; 
-  if(url.slice(-1) === '/') url = url.slice(0,-1);
-  let recommendationReq = await fetch('/api/get-recommendations?path=' + encodeURIComponent(url));
-  let recommendations = await recommendationReq.json();
+    //let url = window.location.pathname.slice(0,-1);
+    let url = window.location.pathname;
+    /*
+    In order to stay under Algolia's free tier limits, going to limit
+    recommendations to items in 202*
+    */
+    if (url.indexOf('202') === -1) return;
+    if (url.slice(-1) === '/') url = url.slice(0, -1);
+    let recommendationReq = await fetch('/api/get-recommendations?path=' + encodeURIComponent(url));
+    let recommendations = await recommendationReq.json();
 
-  console.log(`${recommendations.length} recommendations found`);
+    console.log(`${recommendations.length} recommendations found`);
 
-  if(recommendations.length === 0) return;
+    if (recommendations.length === 0) return;
 
-  let formatter = new Intl.DateTimeFormat('en-us', {
-    dateStyle:'long'
-  });
+    let formatter = new Intl.DateTimeFormat('en-us', {
+        dateStyle: 'long'
+    });
 
-  let reco = `
+    let reco = `
 		<div class="author-box">
 			<div class="author-info">
 				<h3>Related Content</h3>
         <ul>
   `;
 
-  recommendations.forEach(r => {
-    reco += `
+    recommendations.forEach(r => {
+        reco += `
       <li><a href="${r.url}">${r.title} (${formatter.format(new Date(r.date))})</a></li>
     `;
-  });
+    });
 
-  reco += `
+    reco += `
       </ul>
     </div>
   </div>`;
 
-  document.querySelector('div.author-box').insertAdjacentHTML('afterend',reco);
+    document.querySelector('div.author-box').insertAdjacentHTML('afterend', reco);
 }
 
 /**
@@ -188,3 +189,26 @@ function getCurrentMoonPhase() {
     return 'New Moon'; // Should loop back to new moon
 }
 
+async function registerTools() {
+    if (!('modelContext' in navigator)) return;
+    console.log('modelContext exists');
+
+    const listCategories = {
+        name: "listCategories",
+        description: "List categories available for blog posts",
+        inputSchema: {
+            type: "object",
+            properties: {},
+        },
+        execute: () => {
+            console.log('mcp tool running');
+            return ['ai', 'javascript', 'apis', 'web standards'];
+        },
+        annotations: { readOnlyHint: false, untrustedContentHint: true },
+    };
+
+    const controller = new AbortController();
+    navigator.modelContext.registerTool(listCategories, { signal: controller.signal });
+    console.log('mcp tool registered');
+
+}
