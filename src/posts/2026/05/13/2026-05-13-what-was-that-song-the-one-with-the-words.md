@@ -379,6 +379,8 @@ Here's an example:
 
 How well does this one work? Better! But myself, and my friends who tested, still see mistakes. That being said, it was kind of fun. Let me know what you find!
 
+Also, a big thank you (again!) to [Thomas Steiner](https://blog.tomayac.com/) from the Chrome team for help while I was building this out!
+
 I was going to embed the Val here, but apparently you can only embed one file so - instead, here's a simple link instead: <https://www.val.town/x/raymondcamden/voice-to-song>
 
 Photo by <a href="https://unsplash.com/@maykogob?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mayko Sousa</a> on <a href="https://unsplash.com/photos/a-cat-yawning-with-its-mouth-open-wvDs1EswZZk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
