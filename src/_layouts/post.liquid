@@ -36,7 +36,17 @@ body_class: post-template
 		</picture>
 		{% endif %}
 
-		{{content}}
+		{% capture bmc %}
+		<div style="border-left: 2px solid #ccc; padding: 0.5rem 0 0.5rem 1rem; margin: 1.5rem 0;">
+		<span style="font-size: 13px; color: #666; font-style: italic;">
+			I write these posts for free — if they're useful to you, you can
+			<a href="https://www.buymeacoffee.com/raymondcamden" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">buy me a coffee</a>.
+			It helps more than you'd think.
+		</span>
+		</div>
+		{% endcapture %}
+
+		{{ content | injectAfterParagraph: bmc, 4 }}
 
 	</div>
 

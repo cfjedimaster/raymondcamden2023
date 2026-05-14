@@ -106,6 +106,21 @@ export default function(eleventyConfig) {
 
 	eleventyConfig.addPlugin(ejsPlugin);
 
+eleventyConfig.addFilter("injectAfterParagraph", (content, snippet, position = 4) => {
+  const tag = "</p>";
+  let count = 0;
+  let index = 0;
+
+  while (count < position) {
+    const found = content.indexOf(tag, index);
+    if (found === -1) return content; // fewer paragraphs than position, bail
+    index = found + tag.length;
+    count++;
+  }
+
+  return content.slice(0, index) + snippet + content.slice(index);
+});
+	
 	// Support a markdown version of my site as well
 	eleventyConfig.on("eleventy.after", async ({ dir }) => {
 		const inputDir = dir.input;   
