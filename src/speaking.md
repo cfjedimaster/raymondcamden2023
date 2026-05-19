@@ -18,11 +18,10 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 <h3>My Next Events</h3>
 
 <p>
-<a href="https://www.codestock.org">Generative AI in the Browser with Chrome AI and Intl is Your Superhero</a><br/>
-CodeStock<br/>
-Knoxville, TN, April 9-10, 2026
+<a href="https://gdg.community.dev/events/details/google-gdg-salt-lake-city-presents-ai-innovations-night-with-google-developer-group-slc-learn-and-network/">Generative AI in the Browser with Chrome AI</a><br/>
+Google Developer Group SLC<br/>
+Online and in-person, June 11, 2026
 </p>
-
 
 
 <!--
@@ -36,6 +35,12 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+<p>
+<a href="https://www.codestock.org">Generative AI in the Browser with Chrome AI and Intl is Your Superhero</a><br/>
+CodeStock<br/>
+Knoxville, TN, April 9-10, 2026
+</p>
+
 <p>
 <a href="https://adobe-coldfusion-online-summit-2026.meetus.adobeevents.com/attendease/networking/experience/5d4cd86f-a8f7-42b0-8a9e-755b4ab4e72b/ed0d3920-236c-474b-9a89-3304f294ddb7">Harnessing AI Superpowers in ColdFusion</a><br/>
 Adobe ColdFusion Online Summit 2026<br/>
