@@ -34,6 +34,8 @@ Read the post end-to-end and give feedback focused on substance, not tone:
 
 Present feedback as a numbered list grouped by category. Keep each item to one or two sentences. Don't rewrite paragraphs — point at the issue and let the user decide.
 
+When you look at the front matter, if you see banner_image set to 'welcome2018.jpg', flag that as a mistake and suggest updating it to a more relevant image.
+
 ## Step 4 — Apply changes
 
 Ask which suggestions to act on. Apply only what's confirmed. Then stop — the user handles the actual publish/push.
