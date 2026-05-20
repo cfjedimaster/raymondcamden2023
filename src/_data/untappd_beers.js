@@ -1,9 +1,16 @@
-const CLIENT_ID = process.env.UNTAPPD_CLIENT_ID;
-const CLIENT_SECRET = process.env.UNTAPPD_CLIENT_SECRET;
 
 export default async function() {
 
     try {
+
+      if(!process.env.UNTAPPD_CLIENT_ID || !process.env.UNTAPPD_CLIENT_SECRET) {
+        console.log('Missing Untappd credentials, skipping beer data');
+        return [];
+      }
+
+      const CLIENT_ID = process.env.UNTAPPD_CLIENT_ID;
+      const CLIENT_SECRET = process.env.UNTAPPD_CLIENT_SECRET;
+
       // short circuit at home to make it quicker...
       if(process.env.ELEVENTY_ROOT.includes('/raymondcamden2023')) return [];
 
