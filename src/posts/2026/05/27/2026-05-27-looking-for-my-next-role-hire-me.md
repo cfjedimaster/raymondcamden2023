@@ -11,5 +11,5 @@ description: Seriously - again?
 
 Yep, I get to write this post again...
 
-Well, today I find myself in the same position I've been a few times over the past few years. Webflow went through a company-wide restructuring today and as part of that re-org, my role (and many others) were eliminated. So once again - I'm asking my faithful readers to help me find my next role. You can find my [resume](./resume) if you need the latest edition and feel free to contact me with any opportunities you may have!
+Well, today I find myself in the same position I've been a few times over the past few years. Webflow went through a company-wide restructuring today and as part of that re-org, my role (and many others) were eliminated. So once again - I'm asking my faithful readers to help me find my next role. You can find my [resume](/resume) if you need the latest edition and feel free to contact me with any opportunities you may have!
 
