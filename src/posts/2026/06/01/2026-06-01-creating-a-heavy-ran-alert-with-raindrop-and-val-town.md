@@ -19,7 +19,7 @@ A while back I discovered [RainDrop](https://www.raindrop.farm/), which is an ap
 
 When I discovered the site, I did some digging and discovered they had an API: <https://api.raindrop.farm/docs>. This API gives you *incredibly* detailed information about rainfall (and snow) and can even return historical data. 
 
-Given an API key, this gets the current precipitation for my location:
+Given an API key passed in an `Authorization` header, this gets the current precipitation for my location:
 
 ```
 https://api.raindrop.farm/v1/precipitation/current?lat=30.216667&lon=-92.033333
@@ -128,7 +128,7 @@ export default async function (interval: Interval) {
 <p>
 As of ${
       dtFormat(precip.timestamp)
-    }, we have detected ${rainInches} inches of rain per hour.
+    }, we have detected ${rainInches.toFixed(2)} inches of rain per hour.
 </p>
     `;
 
@@ -140,7 +140,7 @@ As of ${
 }
 ```
 
-On top our two utility functions with the interesting one being the simple wrapper to convert RainDrop's values to inches. 
+On top of my script are two utility functions with the interesting one being the simple wrapper to convert RainDrop's values to inches. 
 
 After that, I hit the API, check against a threshold (currently set to half an inch), and if it matches, I fire off an email. As a reminder, I'm using Val Town's built in "mail the owner" feature. I could also use a proper email API to have more control over the delivery, but this works well for now. 
 
