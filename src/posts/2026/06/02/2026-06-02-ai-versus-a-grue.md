@@ -15,7 +15,7 @@ description: Turning Chrome's Built-in AI to tackle Zork
 
 Before I could even begin trying to test AI's ability to play a 50 year old game (almost 50, Zork 1 launched in 1977), I first needed to find a JavaScript implementation. This turned out to be a bit tricky.
 
-I quickly found [ifvms.js](https://github.com/curiousdannii/ifvms.js), an interactive fiction virtual machine library, but it was tailored to running at the command line. Also, there was little to no documentation on how to make sure of the library. The repo mentions another repo, [parchment](https://github.com/curiousdannii/parchment) which lets you play games on the web, but I struggled to find documentation there as well, or documentation specific to my use case.
+I quickly found [ifvms.js](https://github.com/curiousdannii/ifvms.js), an interactive fiction virtual machine library, but it was tailored to running at the command line. Also, there was little to no documentation on how to make use of the library. The repo mentions another repo, [parchment](https://github.com/curiousdannii/parchment) which lets you play games on the web, but I struggled to find documentation there as well, or documentation specific to my use case.
 
 To help, I went to Claude, and had it load `ifvms.js` and create a 'stubbed' version that I could use via calls like so:
 
@@ -129,7 +129,7 @@ I'd also argue that we could help Chrome's model quite a bit by keeping track of
 
 All in all - this was a quick implementation and the results were... well what you would expect with a lightweight model and me just hacking quickly on it. ;)
 
-Here's a transcript from a text I just did.
+Here's a transcript from a test I just did.
 
 ```
 ZORK I: The Great Underground Empire
@@ -216,7 +216,7 @@ There's nothing special about the pile of leaves.
 
 In my tests, it never seems to get much further in the game than the outer area, but certainly tries hard, so I guess I'll give it a gold star for that.
 
-If you want to try this yourself, you can point Chrome at <https://cfjedimaster.github.io/webdemos/chrome_zork/>. Note that I provide no visual indicator that the model is downloading, you will need to open devtools if you want to see that in action. 
+If you want to try this yourself, you can point Chrome at <https://cfjedimaster.github.io/webdemos/chrome_zork/>. 
 
 If you want to peruse the code yourself, you can check it out here: <https://github.com/cfjedimaster/webdemos/tree/master/chrome_zork>
 
