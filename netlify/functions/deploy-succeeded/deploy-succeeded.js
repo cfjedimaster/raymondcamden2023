@@ -4,12 +4,9 @@ My code for successful deploys now consists of two main actions. Send me a nicer
 
 const algCredentials = { appId: process.env.ALG_APP_ID, apiKey: process.env.ALG_API_KEY, indexName: 'raymondcamden' };
 
-//const SG_KEY = process.env.SENDGRID;
 const PB_KEY = process.env.PUSHBULLET_TOKEN;
 const PB_DEVICE = process.env.PUSHBULLET_DEVICE;
 
-import { mail as helper } from 'sendgrid';
-//const helper = require('sendgrid').mail;
 
 import { algoliasearch as algoliaSearch } from 'algoliasearch';
 
@@ -104,7 +101,6 @@ Duration:    ${toMinutes(pubData.deploy_time)}
         });
       }
 
-      //await sendEmail(body, 'Netlify Build Succeeded', 'raymondcamden@gmail.com', 'raymondcamden@gmail.com');
       console.log('Send push notification');
       await sendPB(body, 'Netlify Build Succeeded', PB_DEVICE, PB_KEY);
     }
