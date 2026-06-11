@@ -50,7 +50,7 @@ export default async (req: Request, context: Context) => {
     (!bestHtml || bestPlainText.quality > bestHtml.quality);
 
   if (prefersPlainText) {
-    console.log('prefersPlainText true');
+    //console.log('prefersPlainText true');
     // Convert URL path to source content path
     // Remove trailing slash and convert to .md path
     const cleanPath = pathname.replace(/\/$/, '') || '/index';

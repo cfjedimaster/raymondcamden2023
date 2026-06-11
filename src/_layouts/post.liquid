@@ -46,7 +46,10 @@ body_class: post-template
 		</div>
 		{% endcapture %}
 
+		{% comment %}
 		{{ content | injectAfterParagraph: bmc, 4 }}
+		 {% endcomment %}
+		{{ content }}
 
 	</div>
 
