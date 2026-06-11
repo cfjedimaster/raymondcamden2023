@@ -58,7 +58,9 @@ export default async (req: Request, context: Context) => {
     console.log('sourcePath', sourcePath);
     try {
       // Create a new request for the markdown version
-      const sourceUrl = new URL(sourcePath, url.origin);
+      //const sourceUrl = new URL(sourcePath, url.origin);
+      // url.origin seems to confuse it. 
+      const sourceUrl = 'https://www.raymondcamden.com' + sourcePath;
       const sourceRequest = new Request(sourceUrl, {
         method: req.method,
         headers: req.headers,
