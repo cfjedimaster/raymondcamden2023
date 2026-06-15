@@ -62,7 +62,11 @@ const getByCategory = (posts, cat) => {
 };
 
 const myEscape = s => {
-    return s.replace(/ /g, '+');
+  /*
+  Modified June 15, 2026 - for some reason, Netlify stopped responding to /tags/generative+ai. Works 
+  locally, not in prod. So - switching to -.
+  */
+  return s.replace(/ /g, '-');
 };
 
 const my_xml_escape = s => {
