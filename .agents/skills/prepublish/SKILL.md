@@ -23,7 +23,7 @@ Present findings as a short list: `word → suggestion (line N)`. Don't auto-edi
 
 ## Step 3 — Content review
 
-Read the post end-to-end and give feedback focused on substance, not tone:
+Read the post end-to-end and give feedback focused on substance, not tone. Always include the line number(s) (e.g., `(line N)`) for each finding, quote, or suggestion.
 
 - **Things that sound stupid or unclear** — sentences that don't land, claims that need backing, awkward logic jumps.
 - **Gaps worth filling** — missing context a reader would want, an example that would help, a link the user usually includes (docs, repo, related post).
@@ -32,7 +32,7 @@ Read the post end-to-end and give feedback focused on substance, not tone:
 
 **Do NOT** comment on tone, voice, snark level, casual phrasing, or stylistic choices. The user likes their voice; leave it alone.
 
-When you look at the front matter, if you see banner_image set to 'welcome2018.jpg', flag that as a mistake and suggest updating it to a more relevant image.
+When you look at the front matter, if you see banner_image set to 'welcome2018.jpg', flag that as a mistake and suggest updating it to a more relevant image (on line 7).
 
 ## Step 4 — Apply changes
 
