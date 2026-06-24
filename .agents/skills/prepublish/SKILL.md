@@ -37,3 +37,7 @@ When you look at the front matter, if you see banner_image set to 'welcome2018.j
 ## Step 4 — Apply changes
 
 Ask which suggestions to act on. Apply only what's confirmed. Then stop — the user handles the actual publish/push.
+
+## Misc Things to Note
+
+Always, always, always show a line number for what you reference, except if I used the default front matter image.
