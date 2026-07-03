@@ -9,7 +9,7 @@ permalink: /2026/07/01/building-custom-form-selection-blocks-no-js-all-css
 description: How to use CSS to style form selects and create a selectable region.
 ---
 
-I apologize for what may be a slightly misleading title. The topic for this post is something I've had on my list of things to explore for some time now, and while I wait for the new job to start, I've found myself with time to kill. Let me explain what I'm talking about and hopefully it will make a bit more sense. You are, dear reader, familiar with form controls and how to build forms both big and small. One type of user interface I've seen from time to time is the ability to select an item where the "item" is an arbitrary block of code. What do I mean by that?
+**Edit on July 3 - See my [update](//2026/07/03/building-custom-form-selection-boxes-working-on-accessibility).** I apologize for what may be a slightly misleading title. The topic for this post is something I've had on my list of things to explore for some time now, and while I wait for the new job to start, I've found myself with time to kill. Let me explain what I'm talking about and hopefully it will make a bit more sense. You are, dear reader, familiar with form controls and how to build forms both big and small. One type of user interface I've seen from time to time is the ability to select an item where the "item" is an arbitrary block of code. What do I mean by that?
 
 Typically a choice element in a form is either a select, checkbox, or radio set. But I've seen some forms where you select something a bit more abstract. Consider the screen shot below:
 
