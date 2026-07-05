@@ -61,15 +61,7 @@ improve the demo?
 The response from this was pretty stellar, and I think a lot better than if I had simply said "work on accessibility". By bringing in Kevin's details, I think it really helped focus the agent's work when looking at my code. 
 
 Here's the response, and it's pretty extensive, you would be fine scrolling down to the Summary:
-{% comment %}
-<iframe 
-  srcdoc="<html><head><style>body{margin:0;}</style></head><body><script src='https://gist.github.com/cfjedimaster/e984c09a79ca4825d4376a51e3373a67.js'></script></body></html>"
-  width="100%" 
-  frameborder="0" 
-  scrolling="no"
-  onload="this.style.height=this.contentWindow.document.body.scrollHeight+'px';">
-</iframe>
-{% endcomment %}
+
 <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3?register"></script>
 <zero-md>
 <template data-append>

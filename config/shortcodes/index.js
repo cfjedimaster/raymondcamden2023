@@ -127,7 +127,25 @@ const callout = c => {
   `
 };
 
+const mdWrap = c => {
+  return `
+ <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3?register"></script>
+<zero-md>
+<template data-append>
+<style>
+.markdown-body {
+padding: 20px;
+}
+</style>
+</template>
+  <script type="text/markdown">
+${c}
+  </script>
+</zero-md>
+`
+};
+
 export {
-	extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube, darkGist, callout
+	extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube, darkGist, callout, mdWrap
 };
 
