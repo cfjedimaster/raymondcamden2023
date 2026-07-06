@@ -337,7 +337,7 @@ let resp = await fetch('https://botsin.space/api/v1/statuses', {
 
 And voila - magic:
 
-{% stoot "botsin.space", "110882198234133362" %}
+(Removed embedded toot as this is now broken.)
 
 This is Alex Power, part of Power Pack, a favorite of mine when I was a teenager, and unfortunately, the detail links to a 404. :( 
 

@@ -9,13 +9,13 @@ permalink: /2023/03/17/another-week-another-mastodon-bot-random-album-cover
 description: Using Pipedream and the Spotify API to share random album art.
 ---
 
-Last September, I blogged about how I used the Spotify API and [Pipedream](https://pipedream.com?via=raymond) to discover new music: [Discover New Music with the Spotify API and Pipedream](https://www.raymondcamden.com/2022/09/13/discover-new-music-with-the-spotify-api-and-pipedream). I used a Pipedream workflow to select a random track from Spotify and email me a track every morning. I've still got this process running and I enjoy seeing it every morning. More recently, I noticed a cool bit of album art in my Spotify client and it occurred to me that it would be kind of cool to see more. With that in mind, I present to you my latest Mastodon bot, [Random Album Cover](https://botsin.space/@randomalbumcover). You can see an example toot here:
+Last September, I blogged about how I used the Spotify API and [Pipedream](https://pipedream.com?via=raymond) to discover new music: [Discover New Music with the Spotify API and Pipedream](https://www.raymondcamden.com/2022/09/13/discover-new-music-with-the-spotify-api-and-pipedream). I used a Pipedream workflow to select a random track from Spotify and email me a track every morning. I've still got this process running and I enjoy seeing it every morning. More recently, I noticed a cool bit of album art in my Spotify client and it occurred to me that it would be kind of cool to see more. With that in mind, I present to you my latest Mastodon bot, [Random Album Cover](https://mastodon.social/@randomalbumcover). You can see an example toot here:
 
 {% capture "lasttoot_rac" %}
-{% lasttoot "botsin.space", "randomalbumcover" %}
+{% lasttoot "mastodon.social", "randomalbumcover" %}
 {% endcapture %}
 
-{% stoot "botsin.space", lasttoot_rac %}
+{% stoot "mastodon.social", lasttoot_rac %}
 
 I have no idea what you'll see when viewing this post as it will be generated during a build, but I'm looking at a striking album cover from an artist I've never heard of, NLE Choppa. So, how was it built?
 

@@ -36,7 +36,7 @@ export default async (instance, id) => {
     try {
         Json = await GetToot(urlToGet);
     } catch {
-        console.log('Error running getToot');
+        console.log('Error running getToot: ',urlToGet);
         return '';
     }
     if (Json.account) {

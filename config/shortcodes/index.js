@@ -1,5 +1,12 @@
 import Parser from 'rss-parser';
-let parser = new Parser();
+import https from 'https';
+
+let parser = new Parser({
+  requestOptions: {
+    timeout: 5000,
+    agent: new https.Agent({ keepAlive: false }),
+  },
+});
 
 import fs from 'fs';
 
