@@ -12,7 +12,6 @@ import stoot from './config/shortcodes/stoot.js';
 
 import ejsPlugin from "@11ty/eleventy-plugin-ejs";
 
-import glob from 'glob';
 import path from 'path';
 import fs from 'fs';
 
@@ -107,34 +106,35 @@ export default function(eleventyConfig) {
 
 	eleventyConfig.addPlugin(ejsPlugin);
 
-eleventyConfig.addFilter("injectAfterParagraph", (content, snippet, position = 4) => {
-  const tag = "</p>";
-  let count = 0;
-  let index = 0;
+	eleventyConfig.addFilter("injectAfterParagraph", (content, snippet, position = 4) => {
+		const tag = "</p>";
+		let count = 0;
+		let index = 0;
 
-  while (count < position) {
-    const found = content.indexOf(tag, index);
-    if (found === -1) return content; // fewer paragraphs than position, bail
-    index = found + tag.length;
-    count++;
-  }
+		while (count < position) {
+			const found = content.indexOf(tag, index);
+			if (found === -1) return content; // fewer paragraphs than position, bail
+			index = found + tag.length;
+			count++;
+		}
 
-  return content.slice(0, index) + snippet + content.slice(index);
-});
+		return content.slice(0, index) + snippet + content.slice(index);
+	});
 	
 	// Support a markdown version of my site as well
-	eleventyConfig.on("eleventy.after", async ({ dir }) => {
-		const inputDir = dir.input;   
-		const outputDir = dir.output; 
+	eleventyConfig.on("eleventy.after", async ({ directories, results }) => {
+		const inputDir = directories.input;
+		const outputDir = directories.output;
 
-		// blog posts only
-		const mdFiles = glob.sync("posts/**/*.md", {
-			cwd: inputDir,
-			ignore: ["node_modules/**"],
+		// Only copy posts Eleventy actually built (respects .eleventyignore)
+		const postResults = results.filter((r) => {
+			const rel = path.relative(inputDir, r.inputPath);
+			return rel.startsWith(`posts${path.sep}`) && rel.endsWith('.md');
 		});
 
-		for (const file of mdFiles) {
-			const srcPath = path.join(inputDir, file);
+		for (const { inputPath } of postResults) {
+			const file = path.relative(inputDir, inputPath);
+			const srcPath = inputPath;
 			/*
 			My input file looks like so:
 			src/posts/2026/03/04/2026-03-04-dyanimically-adjusting-image-text-for-contrast.md
@@ -151,8 +151,6 @@ eleventyConfig.addFilter("injectAfterParagraph", (content, snippet, position = 4
 			//console.log(`!!Copying ${srcPath} to ${destPath}`);
 
 			// Ensure destination directory exists
-			// this should not be needed, although it errors in dev due to .eleventyignore
-			// so... i'll allow it i guess?
 
 			/*
 			Before we copy, let's also strip front matter, but grab the title and

@@ -5,9 +5,9 @@
   "main": "eleventy.config.js",
   "type": "module",
   "scripts": {
-    "dev2": "eleventy --serve --quiet",
-    "dev": "netlify dev -c \"eleventy --serve --quiet\"",
-    "start": "netlify dev -c \"eleventy --serve --quiet\"",
+    "dev2": "SKIP_REMOTE_DATA=1 eleventy --serve --quiet",
+    "dev": "SKIP_REMOTE_DATA=1 netlify dev -c \"eleventy --serve --quiet\"",
+    "start": "SKIP_REMOTE_DATA=1 netlify dev -c \"eleventy --serve --quiet\"",
     "serve": "npm run start"
   },
   "repository": {

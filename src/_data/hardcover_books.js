@@ -2,6 +2,7 @@ const HARDCOVER_BOOKS = process.env.HARDCOVER_BOOKS;
 
 export default async function() {
 
+    if(process.env.SKIP_REMOTE_DATA) return [];
     if(!HARDCOVER_BOOKS) return [];
     let req;
 

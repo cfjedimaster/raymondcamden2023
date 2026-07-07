@@ -3,8 +3,7 @@ let parser = new Parser();
 
 export default async function() {
 	let feed;
-	// short circuit at home to make it quicker...
-	if(process.env.ELEVENTY_ROOT.includes('/home/ray')) return [];
+	if(process.env.SKIP_REMOTE_DATA) return [];
 	try {
 		feed = await parser.parseURL('https://medium.com/feed/@cfjedimaster');
 	} catch(e) {

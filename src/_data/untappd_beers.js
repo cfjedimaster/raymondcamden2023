@@ -11,8 +11,7 @@ export default async function() {
       const CLIENT_ID = process.env.UNTAPPD_CLIENT_ID;
       const CLIENT_SECRET = process.env.UNTAPPD_CLIENT_SECRET;
 
-      // short circuit at home to make it quicker...
-      if(process.env.ELEVENTY_ROOT.includes('/raymondcamden2023')) return [];
+      if(process.env.SKIP_REMOTE_DATA) return [];
 
       let resp = await fetch(`https://api.untappd.com/v4/user/checkins/cfjedimaster?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&limit=10`, {
         headers: {

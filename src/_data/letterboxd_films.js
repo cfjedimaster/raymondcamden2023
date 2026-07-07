@@ -3,8 +3,7 @@ let parser = new Parser();
 
 export default async function() {
 
-	// short circuit at home to make it quicker...
-	if(process.env.ELEVENTY_ROOT.includes('/home/ray')) return [];
+	if(process.env.SKIP_REMOTE_DATA) return [];
 
 	// letterboxd was down 3/28/2024, so for now, try/catch, later: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race#using_promise.race_to_implement_request_timeout
 	let feed = [];
