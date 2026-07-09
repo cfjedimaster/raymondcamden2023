@@ -57,8 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentPhase == 'Last Quarter') letter = 'G';
     if (currentPhase == 'Waning Crescent') letter = 'J';
 
-    moonPhaseSpan.innerHTML = letter;
-    moonPhaseSpan.title = `Current Lunar Phase ${currentPhase}`;
+    moonPhaseSpan.setAttribute('role', 'img');
+    moonPhaseSpan.setAttribute('aria-label', `Current lunar phase: ${currentPhase}`);
+    moonPhaseSpan.title = `Current lunar phase: ${currentPhase}`;
+    moonPhaseSpan.textContent = letter;
 
     registerTools();
 

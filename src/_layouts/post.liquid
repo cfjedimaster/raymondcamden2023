@@ -73,9 +73,10 @@ body_class: post-template
 			<p>
 			Want to get a copy of every new post? Use the form below to sign up for my newsletter.
 			</p>
-			<p id="subStatus"></p>
+			<p id="subStatus" aria-live="polite"></p>
 			<form>
 			<div class="input-group">
+				<label class="visually-hidden" for="subEmail">Your email address</label>
 				<input type="email" name="email" class="input" placeholder="Your email address" id="subEmail"> 
 				<button class="btn" id="subButton" type="submit">Subscribe</button>
 			</div>

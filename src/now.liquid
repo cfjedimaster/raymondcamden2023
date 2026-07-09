@@ -44,8 +44,8 @@ Ok, this is just movies, but here's what I've seen recently...
 <div class="films">
 {% for film in letterboxd_films limit:9 %}
 	<div class="film">
-	<a href="{{ film.link }}" target="_new"><img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_216/{{ film.image }}"></a>
-	<a href="{{ film.link }}" target="_new">{{ film.name }}</a>
+	<a href="{{ film.link }}" target="_blank" rel="noopener"><img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_216/{{ film.image }}" alt="Poster for {{ film.name }}"></a>
+	<a href="{{ film.link }}" target="_blank" rel="noopener">{{ film.name }}</a>
 	</div>
 {% endfor %}
 </div>
@@ -80,6 +80,20 @@ record *new* beers I've tried.
 	cursor: pointer;
 	max-width: 100%;
 }
+
+.track button.preview {
+	display: block;
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+	max-width: 100%;
+}
+
+.track button.preview:focus-visible {
+	outline: 2px solid var(--light-green);
+	outline-offset: 2px;
+}
 </style>
 
 <script>
@@ -101,8 +115,10 @@ async function init() {
 
 		let html = `
 <div class="track">
-<img src="${t.images[1].url}" data-preview="${t.preview_url}">
-<a href="${t.href}" target="_new">"${t.name}"</a> by ${artists}
+<button type="button" class="preview" data-preview="${t.preview_url}" aria-label="Play preview of ${t.name}">
+<img src="${t.images[1].url}" alt="">
+</button>
+<a href="${t.href}" target="_blank" rel="noopener">"${t.name}"</a> by ${artists}
 </div>
 		`;
 		s += html;
@@ -112,7 +128,7 @@ async function init() {
 	document.querySelector('.tracks').innerHTML = s;
 
 	// add event listener for music preview
-	let music = document.querySelectorAll('div.track img');
+	let music = document.querySelectorAll('div.track button.preview');
 	let audio = new Audio();
 	music.forEach(m => {
 		m.addEventListener('click', e => {

@@ -46,13 +46,14 @@ body_class: home-template
     
 </head>
 <body class="line-numbers">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="header">
         <div class="container">
             <div class="nav-brand">
-                <h1><a href="/">Raymond Camden</a></h1>
+                <p class="site-title"><a href="/">Raymond Camden</a></p>
                 <p class="tagline">Code and Cats</p>
             </div>
-            <nav class="nav">
+            <nav class="nav" aria-label="Primary">
                 <ul>
                     <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
                     <li><a href="/about" {% if page.url == "/about/" %}class="active"{% endif %}>About</a></li>
@@ -67,7 +68,7 @@ body_class: home-template
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content">
         <div class="container">
 
         {{ content }}

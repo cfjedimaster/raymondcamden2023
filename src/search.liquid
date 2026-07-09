@@ -12,28 +12,31 @@ description: Search this Site
 <div x-data="app" x-cloak>
 	<form style="margin-bottom: 15px">
 		<div class="input-group">
-			<input x-model="search" class="input input-sm" type="search"> 
-			<button @click.prevent="doSearch" class="btn btn-sm" x-text="searching?'Searching...':'Search'" ></button>
+			<label class="visually-hidden" for="site-search">Search</label>
+			<input id="site-search" x-model="search" class="input input-sm" type="search"> 
+			<button type="submit" @click.prevent="doSearch" class="btn btn-sm" x-text="searching?'Searching...':'Search'"></button>
 		</div>
 	</form>
 
-	<template x-if="noResults">
+	<div aria-live="polite" aria-atomic="true">
+		<template x-if="noResults">
+			<p>
+			Sorry, but there were no results.
+			</p>
+		</template>
+
+		<template x-if="numResults > 1">
 		<p>
-		Sorry, but there were no results.
+		There were <span x-text="numResults"></span> total results for this search.
 		</p>
-	</template>
+		</template>
 
-	<template x-if="numResults > 1">
-	<p>
-	There were <span x-text="numResults"></span> total results for this search.
-	</p>
-	</template>
-
-	<template x-if="numResults == 1">
-	<p>
-	There was one total result for this search.
-	</p>
-	</template>
+		<template x-if="numResults == 1">
+		<p>
+		There was one total result for this search.
+		</p>
+		</template>
+	</div>
 
 	<template x-if="numResults > 0">
 		<template x-for="(result,idx) in results" :key="idx">
@@ -49,7 +52,7 @@ description: Search this Site
 {% endraw %}
 
 <p>
- <img src="/images/algolia.webp" title="Search by Algolia">
+ <img src="/images/algolia.webp" alt="Search by Algolia">
 </p>
 
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
