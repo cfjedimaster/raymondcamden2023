@@ -67,20 +67,64 @@ const findExcerptEnd = function(content, skipLength = 0) {
 I support hasAnyComments and commentInclude. I take the logic of trying to load
 old comment html. I return either the html or a blank string
 */
+
+function stripCommentUrl(raw) {
+  if (!raw) return null;
+  return raw
+    .replace(/^https?:\/\/(www\.)?raymondcamden\.com/i, '')
+    .replace(/\/index\.html$/i, '')
+    .replace(/\.html$/i, '')
+    .replace(/\/$/, '');
+}
+
+/** BlogCFC / Disqus exports often used unpadded month/day (e.g. /2003/10/1/). */
+function commentPathCandidates(urlPath) {
+  const base = stripCommentUrl(urlPath);
+  if (!base) return [];
+
+  const candidates = [];
+  const add = (p) => {
+    if (p && !candidates.includes(p)) candidates.push(p);
+  };
+
+  add(base);
+
+  const m = base.match(/^(\/\d{4})\/(\d{1,2})\/(\d{1,2})(\/.*)$/);
+  if (m) {
+    const [, year, month, day, rest] = m;
+    const mi = parseInt(month, 10);
+    const di = parseInt(day, 10);
+    const monthPadded = String(mi).padStart(2, '0');
+    const dayPadded = String(di).padStart(2, '0');
+    const monthUnpadded = String(mi);
+    const dayUnpadded = String(di);
+
+    add(`${year}/${monthPadded}/${dayPadded}${rest}`);
+    add(`${year}/${monthUnpadded}/${dayUnpadded}${rest}`);
+    add(`${year}/${monthPadded}/${dayUnpadded}${rest}`);
+    add(`${year}/${monthUnpadded}/${dayPadded}${rest}`);
+  }
+
+  return candidates;
+}
+
+function readCommentInc(relPath) {
+  const file = './src/_includes/comments' + relPath + '.inc';
+  if (!fs.existsSync(file)) return null;
+
+  const s = fs.readFileSync(file, 'utf-8');
+  return s.replace(/<div>\s+<img src=".*?">\s+<\/div>/mg, '');
+}
+
 function getCommentText(path, old) {
-    path = './src/_includes/comments'+path+'.inc';
-    let oldpath = '';
-    if(old) oldpath = './src/_includes/comments' + old.replace('http://www.raymondcamden.com','') + '.inc';
-    if(fs.existsSync(path)) {
-
-      let s = fs.readFileSync(path, 'utf-8');
-      return s.replace(/<div>\s+<img src=".*?">\s+<\/div>/mg, '');
-
-    } else if(old && fs.existsSync(oldpath)) {
-      return fs.readFileSync(oldpath,'utf-8');
-    } else {
-      return '';
+  for (const source of [path, old]) {
+    if (!source) continue;
+    for (const candidate of commentPathCandidates(source)) {
+      const text = readCommentInc(candidate);
+      if (text) return text;
     }
+  }
+  return '';
 }
 
 const hasAnyComments = (e, old) => {
