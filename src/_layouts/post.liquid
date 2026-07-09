@@ -32,7 +32,7 @@ body_class: post-template
 		<picture>
 			<source media="(max-width: 799px)" srcset="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_360/{{ banner }}" width="360">
 			<source media="(min-width: 800px)" srcset="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_800/{{ banner }}" width="800">
-			<img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_800/{{banner}}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title | my_xml_escape}}{% endif %}" width="800">
+			<img src="https://res.cloudinary.com/raymondcamden/image/fetch/c_fit,w_800/{{banner}}" alt="{% if banner_image_alt %}{{ banner_image_alt }}{% else %}{{ title | my_xml_escape}}{% endif %}" width="800" fetchpriority="high">
 		</picture>
 		{% endif %}
 

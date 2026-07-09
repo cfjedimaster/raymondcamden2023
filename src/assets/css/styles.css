@@ -1194,6 +1194,7 @@ div.callout {
 @font-face {
     font-family: 'Moon Phases CC';
     src: url('/fonts/MoonPhases-cc.ttf') format('truetype');
+    font-display: swap;
 }
 
 .moon {
