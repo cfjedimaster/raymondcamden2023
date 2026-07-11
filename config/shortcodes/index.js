@@ -186,6 +186,7 @@ const mdWrap = c => {
 <style>
 .markdown-body {
 padding: 20px;
+margin-bottom: 30px;
 }
 </style>
 </template>
