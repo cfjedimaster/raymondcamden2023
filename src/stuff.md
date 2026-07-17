@@ -15,7 +15,7 @@ As an avid gamer, I've enjoyed building my own web-based games over the years. H
 * [Cat Herder](https://catherder.netlify.app/) - another idle clicker game, although this one requires a bit more attention as you attempt to manage an army of cats.
 
 ## Random Sites
-
+* [Oh Shit the Sun](https://oh-shit-the-sun.netlify.app/) - will there be more or less sun today?
 * [Scratching Post](https://cfjedimaster.github.io/webdemos/scratchingpost/) - Cat social network.
 * [DCC Achievement Generator](https://dcc.raymondcamden.com/) - Snark achievement messages.
 * [Random Dashboard](https://cfjedimaster.github.io/webdemos/randomdashboard/) - random dashboards.
