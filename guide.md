@@ -21,3 +21,7 @@ Example: https://www.raymondcamden.com//2025/05/22/multimodal-support-in-chromes
 ## Render PDFs
 
 I'll come back to this. Fuck no to Adobe or Foxit. Most likely: https://www.embedpdf.com/
+
+## Youtube
+
+Use {% liteyoutube "id" %}. It is important the id is quoted.
