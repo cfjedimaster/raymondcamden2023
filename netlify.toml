@@ -1,7 +1,7 @@
 [build]
 
 [dev]
-  watch-ignore = ["src/posts"]
+  watchIgnore = ["src/posts","_site","src/_includes/comments"]
 
 [[headers]]
   for = "/.well-known/webfinger"
