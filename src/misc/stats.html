@@ -6,318 +6,597 @@ permalink: /stats/index.html
 ---
 
 <style>
-[v-cloak] {display: none}
+[v-cloak] { display: none; }
 
-table tr td:first-child {
-    min-width: 300px;
+.basic-page:has(.stats-dashboard) {
+	max-width: 1100px;
 }
 
-select.cattagYear {
-    width: 100px;
-    float: right;
+.stats-dashboard {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.stats-loading {
+	color: var(--text-muted);
+	font-size: 1rem;
+	padding: 2rem 0;
+}
+
+.stats-kpi-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1rem;
+}
+
+.stats-card {
+	background-color: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	padding: 1.25rem 1.35rem;
+}
+
+.stats-kpi .stats-label {
+	display: block;
+	font-size: 0.85rem;
+	color: var(--text-muted);
+	margin-bottom: 0.5rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.stats-kpi .stats-value {
+	display: block;
+	font-size: 1.85rem;
+	font-weight: 700;
+	color: var(--text-primary);
+	font-variant-numeric: tabular-nums;
+	line-height: 1.2;
+}
+
+.stats-kpi .stats-sub {
+	display: block;
+	margin-top: 0.4rem;
+	font-size: 0.8rem;
+	color: var(--text-secondary);
+}
+
+.stats-status-pill {
+	display: inline-block;
+	padding: 0.2rem 0.65rem;
+	border-radius: 4px;
+	font-size: 0.95rem;
+	font-weight: 600;
+	background: rgba(75, 157, 111, 0.2);
+	color: var(--light-green);
+	border: 1px solid var(--accent-green);
+}
+
+.stats-status-pill.is-other {
+	background: rgba(136, 136, 136, 0.2);
+	color: var(--text-secondary);
+	border-color: var(--border-color);
+}
+
+.stats-timeline {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+.stats-timeline .stats-label {
+	display: block;
+	font-size: 0.85rem;
+	color: var(--text-muted);
+	margin-bottom: 0.65rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.stats-timeline a {
+	color: var(--light-green);
+	text-decoration: none;
+	font-size: 1.15rem;
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.stats-timeline a:hover {
+	text-decoration: underline;
+}
+
+.stats-timeline .stats-meta {
+	margin-top: 0.5rem;
+	font-size: 0.95rem;
+	color: var(--text-secondary);
+}
+
+.stats-section h3 {
+	color: var(--light-green);
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+.stats-section-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.stats-section-header h3 {
+	margin-bottom: 0;
+}
+
+.stats-year-select {
+	width: auto;
+	min-width: 100px;
+	padding: 0.4rem 0.6rem;
+	background: var(--darker-bg);
+	color: var(--text-primary);
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	font-size: 0.95rem;
+}
+
+.stats-bars {
+	display: flex;
+	flex-direction: column;
+	gap: 0.65rem;
+}
+
+.stats-bar-row {
+	display: grid;
+	grid-template-columns: minmax(140px, 200px) 1fr auto;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.stats-bar-label {
+	font-size: 0.9rem;
+	color: var(--text-secondary);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.stats-bar-label a {
+	color: var(--text-secondary);
+	text-decoration: none;
+}
+
+.stats-bar-label a:hover {
+	color: var(--light-green);
+}
+
+.stats-bar-track {
+	height: 10px;
+	background: var(--darker-bg);
+	border-radius: 4px;
+	overflow: hidden;
+	border: 1px solid var(--border-color);
+}
+
+.stats-bar-fill {
+	height: 100%;
+	background: linear-gradient(90deg, var(--primary-green), var(--accent-green));
+	border-radius: 3px;
+	min-width: 0;
+	transition: width 0.35s ease;
+}
+
+.stats-bar-count {
+	font-size: 0.9rem;
+	font-variant-numeric: tabular-nums;
+	color: var(--text-primary);
+	min-width: 3ch;
+	text-align: right;
+}
+
+.stats-taxonomy {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+}
+
+.stats-scroll {
+	max-height: 420px;
+	overflow-y: auto;
+	padding-right: 0.35rem;
+}
+
+@media (max-width: 960px) {
+	.stats-kpi-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.stats-kpi-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.stats-timeline,
+	.stats-taxonomy {
+		grid-template-columns: 1fr;
+	}
+
+	.stats-bar-row {
+		grid-template-columns: minmax(100px, 130px) 1fr auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.stats-kpi-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.stats-kpi .stats-value {
+		font-size: 1.5rem;
+	}
+
+	.stats-bar-row {
+		grid-template-columns: 1fr auto;
+		gap: 0.35rem 0.75rem;
+	}
+
+	.stats-bar-track {
+		grid-column: 1 / -1;
+		order: 3;
+	}
 }
 </style>
 
-<div id="app" v-cloak="" markdown="0">
-	<table>
-		<tr>
-			<td width="30%">Total Posts:</td>
-			<td width="70%">{{totalPosts | number}}</td>
-		</tr>
-		<tr>
-		<td>First Post:</td>
-		<td>
-		    <a :href="firstPost.url">{{firstPost.title}}</a> published {{firstPost.age}} on {{firstPost.date}}
-		</td>
-		</tr>
-		<tr>
-		<td>Last Post:</td>
-		<td>
-    		<a :href="lastPost.url">{{lastPost.title}}</a> published {{lastPost.age}} on {{lastPost.date}}
-		</td>
-		</tr>
-		<tr>
-		<td>Total Words Written:</td>
-		<td>{{totalWords | number}}</td>
-		</tr>
-		<tr>
-		<td>Average Words per Post:</td>
-		<td>{{avgWords | number}}</td>
-		</tr>
-        <tr>
-        <td>Current Build Status:</td>
-        <td>{{ buildStatus }}</td>
-        </tr>
-        <tr v-if="buildPublished">
-            <td>Build Time:</td>
-            <td>{{ buildTime }}</td>
-        </tr>
-        <tr>
-            <td>Total Email Subscribers:</td>
-            <td>{{ emailCount | number}}</td>
-        </tr>
-	</table>
+<div id="app" class="stats-dashboard" v-cloak markdown="0">
+	<p v-if="loading" class="stats-loading">Loading stats…</p>
 
-    <h3>Posts Per Week (Last 8 Weeks)</h3>
-    <table>
-        <tr>
-            <td>Week</td>
-            <td>Posts</td>
-        </tr>
-        <tr v-for="week in weekData">
-            <td>{{week.sunday | date}}-{{week.saturday | date}}</td>
-            <td>{{week.hits}}</td>
-        </tr>
-    </table>
-    
-    <h3>Posts Per Year</h3>
-    <table>
-        <tr>
-            <td>Year</td>
-            <td>Number of Posts</td>
-        </tr>
-        <tr v-for="year in sortedYears">
-            <td>{{year}}</td>
-            <td>{{years[year] | number}}</td>
-        </tr>
-    </table>
+	<template v-else>
+		<section class="stats-kpi-grid" aria-label="Key metrics">
+			<div class="stats-card stats-kpi">
+				<span class="stats-label">Total Posts</span>
+				<span class="stats-value">{{ totalPosts | number }}</span>
+			</div>
+			<div class="stats-card stats-kpi">
+				<span class="stats-label">Total Words</span>
+				<span class="stats-value">{{ totalWords | number }}</span>
+			</div>
+			<div class="stats-card stats-kpi">
+				<span class="stats-label">Avg Words/Post</span>
+				<span class="stats-value">{{ avgWords | number }}</span>
+			</div>
+			<div class="stats-card stats-kpi">
+				<span class="stats-label">Subscribers</span>
+				<span class="stats-value" v-if="emailCount != null">{{ emailCount | number }}</span>
+				<span class="stats-value" v-else>—</span>
+			</div>
+			<div class="stats-card stats-kpi">
+				<span class="stats-label">Build Status</span>
+				<span class="stats-value">
+					<span
+						class="stats-status-pill"
+						:class="{ 'is-other': buildStatus !== 'Published' }"
+					>{{ buildStatus || '—' }}</span>
+				</span>
+			<span v-if="buildPublished" class="stats-sub">Deployed {{ buildAge }}</span>
+			<span v-if="buildPublished" class="stats-sub">{{ buildTime }}</span>
+			<span v-if="buildPublished" class="stats-sub">Build duration: {{ buildDuration }}</span>
+			</div>
+		</section>
 
-    <h3>Posts Per Category</h3>
-    <table>
-        <tr>
-            <td>Category</td>
-            <td>Number of Posts</td>
-        </tr>
-        <tr v-for="cat in sortedCats">
-            <td><a :href="'/categories/'+cat.link">{{cat.name}}</a></td>
-            <td>{{cat.size | number}}</td>
-        </tr>
-    </table>
+		<section class="stats-timeline" aria-label="Post timeline">
+			<div class="stats-card">
+				<span class="stats-label">First Post</span>
+				<a :href="firstPost.url">{{ firstPost.title }}</a>
+				<p class="stats-meta">Published {{ firstPost.age }} on {{ firstPost.date }}</p>
+			</div>
+			<div class="stats-card">
+				<span class="stats-label">Latest Post</span>
+				<a :href="lastPost.url">{{ lastPost.title }}</a>
+				<p class="stats-meta">Published {{ lastPost.age }} on {{ lastPost.date }}</p>
+			</div>
+		</section>
 
-    <h3>Posts Per Tag</h3>
-    <table>
-        <tr>
-            <td>Tag</td>
-            <td>Number of Posts</td>
-        </tr>
-        <tr v-for="tag in sortedTags">
-            <td><a :href="'/tags/'+tag.link">{{tag.name}}</a></td>
-            <td>{{tag.size | number}}</td>
-        </tr>
-    </table>
+		<section class="stats-section">
+			<h3>Last 8 Weeks</h3>
+			<div class="stats-bars">
+				<div class="stats-bar-row" v-for="week in weekData" :key="week.sunday.getTime()">
+					<span class="stats-bar-label">{{ week.sunday | date }}–{{ week.saturday | date }}</span>
+					<div class="stats-bar-track">
+						<div
+							class="stats-bar-fill"
+							:style="{ width: barWidth(week.hits, maxWeekHits) }"
+						></div>
+					</div>
+					<span class="stats-bar-count">{{ week.hits }}</span>
+				</div>
+			</div>
+		</section>
 
-    <h3>Combined Categories/Tags Stats Per Year</h3>
-    <select v-if="cattagYears" v-model="selectedCatTagYear" class="cattagYear">
-        <option v-for="year in cattagYears" :value="year">{{ year }}</option>
-    </select>
-    <table v-if="selectedCatTagYear">
-        <tr>
-            <td>Category/Tag</td>
-            <td>Number of Posts</td>
-        </tr>
+		<section class="stats-section">
+			<h3>Posts Per Year</h3>
+			<div class="stats-bars">
+				<div class="stats-bar-row" v-for="year in sortedYears" :key="year">
+					<span class="stats-bar-label">{{ year }}</span>
+					<div class="stats-bar-track">
+						<div
+							class="stats-bar-fill"
+							:style="{ width: barWidth(years[year], maxYearHits) }"
+						></div>
+					</div>
+					<span class="stats-bar-count">{{ years[year] | number }}</span>
+				</div>
+			</div>
+		</section>
 
-        <tr v-for="item in sortedCatTagStats">
-            <td>{{item.name}}</td>
-            <td>{{item.size | number}}</td>
-        </tr>
-    </table>
+		<section class="stats-taxonomy">
+			<div class="stats-section">
+				<h3>Categories</h3>
+				<div class="stats-bars stats-scroll">
+					<div class="stats-bar-row" v-for="cat in sortedCats" :key="cat.name">
+						<span class="stats-bar-label">
+							<a :href="'/categories/' + cat.link">{{ cat.name }}</a>
+						</span>
+						<div class="stats-bar-track">
+							<div
+								class="stats-bar-fill"
+								:style="{ width: barWidth(cat.size, maxCatHits) }"
+							></div>
+						</div>
+						<span class="stats-bar-count">{{ cat.size | number }}</span>
+					</div>
+				</div>
+			</div>
+			<div class="stats-section">
+				<h3>Tags</h3>
+				<div class="stats-bars stats-scroll">
+					<div class="stats-bar-row" v-for="tag in sortedTags" :key="tag.name">
+						<span class="stats-bar-label">
+							<a :href="'/tags/' + tag.link">{{ tag.name }}</a>
+						</span>
+						<div class="stats-bar-track">
+							<div
+								class="stats-bar-fill"
+								:style="{ width: barWidth(tag.size, maxTagHits) }"
+							></div>
+						</div>
+						<span class="stats-bar-count">{{ tag.size | number }}</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="stats-section">
+			<div class="stats-section-header">
+				<h3>Year Explorer</h3>
+				<select
+					v-if="cattagYears.length"
+					v-model="selectedCatTagYear"
+					class="stats-year-select"
+					aria-label="Select year"
+				>
+					<option v-for="year in cattagYears" :value="year" :key="year">{{ year }}</option>
+				</select>
+			</div>
+			<div class="stats-bars stats-scroll" v-if="selectedCatTagYear">
+				<div class="stats-bar-row" v-for="item in sortedCatTagStats" :key="item.name">
+					<span class="stats-bar-label">{{ item.name }}</span>
+					<div class="stats-bar-track">
+						<div
+							class="stats-bar-fill"
+							:style="{ width: barWidth(item.size, maxCatTagHits) }"
+						></div>
+					</div>
+					<span class="stats-bar-count">{{ item.size | number }}</span>
+				</div>
+			</div>
+		</section>
+	</template>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <script>
-
-Vue.filter('number', s =>  {
-  if(!window.Intl) return s;
-  if(!s) return '';
-  return new Intl.NumberFormat().format(s);
+Vue.filter('number', s => {
+	if (!window.Intl) return s;
+	if (s === null || s === undefined || s === '') return '';
+	if (s === '—') return s;
+	return new Intl.NumberFormat().format(s);
 });
 
-
-Vue.filter('date', s =>  {
-  if(!window.Intl) return s;
-  return new Intl.DateTimeFormat('en-US', { dateStyle:'short'}).format(s);
+Vue.filter('date', s => {
+	if (!window.Intl) return s;
+	return new Intl.DateTimeFormat('en-US', { dateStyle: 'short' }).format(s);
 });
+
+function generateWeekData() {
+	let weeks = [];
+	for (let i = 0; i < 8; i++) {
+		let d = new Date();
+		d.setDate(d.getDate() - (d.getDay() + 6) % 7);
+		d.setDate(d.getDate() - (7 * (i + 1)));
+		let sunday = new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1);
+		let saturday = new Date(sunday.getFullYear(), sunday.getMonth(), sunday.getDate() + 6);
+		weeks.push({ sunday, saturday, hits: 0 });
+	}
+	return weeks;
+}
+
+async function safeJson(url) {
+	try {
+		let res = await fetch(url);
+		if (!res.ok) throw new Error(res.statusText);
+		return await res.json();
+	} catch (e) {
+		console.warn('Stats fetch failed:', url, e);
+		return null;
+	}
+}
 
 new Vue({
-	el:'#app',
-	data:{
-		totalPosts:0,
-		firstPost:{
-			title:"",
-			date:"",
-			url:""
-		},
-		lastPost:{
-			title:"",
-			date:"",
-			url:""
-		},
-		totalWords:0,
-		avgWords:0,
-        years:{},
-        cats:[], 
-        tags:[],
-        weekData:[],
-        buildStatus:'',
-        buildPublished:false,
-        buildTime:'',
-        postViewsRSS:[],
-        catTagYearData:null,
-        selectedCatTagYear:null,
-        cattagYears:[],
-        emailCount:null
+	el: '#app',
+	data: {
+		loading: true,
+		totalPosts: 0,
+		firstPost: { title: '', date: '', url: '', age: '' },
+		lastPost: { title: '', date: '', url: '', age: '' },
+		totalWords: 0,
+		avgWords: 0,
+		years: {},
+		cats: [],
+		tags: [],
+		weekData: [],
+		buildStatus: '',
+		buildPublished: false,
+		buildTime: '',
+		buildAge: '',
+		buildDuration: '',
+		catTagYearData: null,
+		selectedCatTagYear: null,
+		cattagYears: [],
+		emailCount: null
 	},
-	created:async function() {
+	created: async function() {
+		let res = await safeJson('/stats.json');
+		if (res) {
+			this.totalPosts = res.totalPosts;
 
-        let data = await fetch('/stats.json');
-        let res = await data.json();
+			this.firstPost = {
+				title: res.firstPost.title,
+				date: this.$options.filters.date(new Date(res.firstPost.published)),
+				url: res.firstPost.url,
+				age: moment(res.firstPost.published).fromNow()
+			};
 
-        this.totalPosts = res.totalPosts;
-        
-        this.firstPost = {
-            title:res.firstPost.title,
-            date:this.$options.filters.date(new Date(res.firstPost.published)),
-            url:res.firstPost.url,
-            age:moment(res.firstPost.published).fromNow()
-        };
+			this.lastPost = {
+				title: res.lastPost.title,
+				date: this.$options.filters.date(new Date(res.lastPost.published)),
+				url: res.lastPost.url,
+				age: moment(res.lastPost.published).fromNow()
+			};
 
-        this.lastPost = {
-            title:res.lastPost.title,
-            date:this.$options.filters.date(new Date(res.lastPost.published)),
-            url:res.lastPost.url,
-            age:moment(res.lastPost.published).fromNow()
-        };
+			this.totalWords = res.totalWords;
+			this.avgWords = res.averageWordsPerPost.toFixed();
 
-        this.totalWords = res.totalWords;
-        this.avgWords = res.averageWordsPerPost.toFixed();
+			let dates = res.dates.split(',');
+			dates.forEach(d => {
+				let year = new Date(d).getFullYear();
+				if (!this.years[year]) Vue.set(this.years, year, 0);
+				Vue.set(this.years, year, this.years[year] + 1);
+			});
 
-        let dates = res.dates.split(',');
-        // process res.dates on the client site
-        dates.forEach(d => {
-            let year = new Date(d).getFullYear();
-            if(!this.years[year]) Vue.set(this.years,year,0);
-            Vue.set(this.years,year, this.years[year]+1);
-        });
+			this.cats = res.postsPerCategory.map(c => {
+				c.link = c.name.replace(/ /g, '+');
+				return c;
+			});
+			this.tags = res.postsPerTag.map(t => {
+				t.link = t.name.replace(/ /g, '+');
+				return t;
+			});
 
-        this.cats = res.postsPerCategory.map(c => {
-            c.link = c.name.replace(/ /g, '+');
-            return c;
-        });
-        this.tags = res.postsPerTag.map(t => {
-            t.link = t.name.replace(/ /g, '+');
-            return t;
-        });;
+			let weekData = generateWeekData();
+			let earliest = weekData[weekData.length - 1].sunday;
+			let curr = dates.length - 1;
+			let thisDate = new Date(dates[curr]);
+			while (thisDate && curr >= 0 && thisDate.getTime() > earliest.getTime()) {
+				weekData.forEach(w => {
+					if (w.sunday.getTime() < thisDate.getTime() && thisDate.getTime() < w.saturday.getTime()) {
+						w.hits++;
+					}
+				});
+				thisDate = new Date(dates[--curr]);
+			}
+			this.weekData = weekData;
 
-        //generate 8 weeks of weeks
-        let weekData = generateWeekData();
-        // get the earliest day
-        let earliest = weekData[weekData.length-1].sunday;
-        // loop from last date until a post is before earliest
-        let curr = dates.length-1;
-        let thisDate = new Date(dates[curr]);
-        while(thisDate && thisDate.getTime() > earliest.getTime()) {
-            // loop over our weeks and if im inside, hits++
-            weekData.forEach(w => {
-                if(w.sunday.getTime() < thisDate.getTime() && thisDate.getTime() < w.saturday.getTime()) w.hits++;
-            });
+			for (let y in res.yearCatTagStats) {
+				this.cattagYears.push(y);
+			}
+			this.cattagYears.sort((a, b) => b - a);
+			this.catTagYearData = res.yearCatTagStats;
+			if (this.cattagYears.length) {
+				this.selectedCatTagYear = this.cattagYears[0];
+			}
+		}
 
-            thisDate = new Date(dates[--curr]);
-        }
-        //copy it over now that we're done with it, don't like this I think
-        this.weekData = weekData;
+		let [buildData, emailData] = await Promise.all([
+			safeJson('/.netlify/functions/deploy-status'),
+			safeJson('/api/get-stats')
+		]);
 
-        // new work to show build status
-        let buildReq = await fetch('/.netlify/functions/deploy-status');
-        let buildData = await buildReq.json();
-        if(buildData.state === 'ready') {
-            this.buildStatus = 'Published';
-            this.buildTime = buildData.published_at;
-            this.buildPublished = true;
-        } else this.buildStatus = buildData.state;
+		if (buildData) {
+			if (buildData.state === 'ready') {
+				this.buildStatus = 'Published';
+				this.buildTime = new Intl.DateTimeFormat('en-US', {
+					year: 'numeric',
+					month: 'short',
+					day: 'numeric',
+					hour: 'numeric',
+					minute: '2-digit',
+					timeZone: 'America/Chicago',
+					timeZoneName: 'short'
+				}).format(new Date(buildData.published_at));
+				this.buildAge = moment(buildData.published_at).fromNow();
+				let deployMinutes = Math.floor(buildData.deploy_time / 60);
+				let deploySeconds = Math.round(buildData.deploy_time % 60);
+				this.buildDuration = `${deployMinutes}m ${deploySeconds}s`;
+				this.buildPublished = true;
+			} else {
+				this.buildStatus = buildData.state || 'Unknown';
+			}
+		} else {
+			this.buildStatus = 'Unavailable';
+		}
 
-        for(let y in res.yearCatTagStats) {
-            this.cattagYears.push(y);
-        }
+		if (emailData && emailData.buttondownCount != null) {
+			this.emailCount = emailData.buttondownCount;
+		}
 
-        this.catTagYearData = res.yearCatTagStats;
-
-        this.emailCount = (await (await fetch('/api/get-stats')).json()).buttondownCount;
-
-        // new rss thing
-        /*
-        let rss = await (await fetch('/jsonfeed/index.json')).json();
-        for(item of rss.items) {
-            let url = item.id.replace('https://','');
-            let views = (await (await fetch(`/api/getPageViews?path=${url}`)).json()).views;
-            this.postViewsRSS.push({
-                url:item.id,
-                title:item.title,
-                views
-            })
-        }
-        */
-
+		this.loading = false;
 	},
-    computed:{
-        sortedCats:function() {
-            return this.cats.sort((a,b) => {
-                if(a.name < b.name) return -1;
-                if(a.name > b.name) return 1;
-                return 0;
-            });
-        },
-        sortedTags:function() {
-            return this.tags.sort((a,b) => {
-                if(a.name < b.name) return -1;
-                if(a.name > b.name) return 1;
-                return 0;
-            });
-        },
-        sortedYears:function() {
-            return Object.keys(this.years).sort();
-        },
-        sortedCatTagStats() {
-            let stats = this.catTagYearData[this.selectedCatTagYear];
-            // convert object of keys to an array
-            let result = [];
-            for(let key in stats) {
-                result.push({name:key, size: stats[key]});
-            }
-
-            return result.sort((a,b) => {
-                if(a.name < b.name) return -1;
-                if(a.name > b.name) return 1;            
-            });
-        }
-    }
+	computed: {
+		sortedCats: function() {
+			return this.cats.slice().sort((a, b) => b.size - a.size);
+		},
+		sortedTags: function() {
+			return this.tags.slice().sort((a, b) => b.size - a.size);
+		},
+		sortedYears: function() {
+			return Object.keys(this.years).sort((a, b) => b - a);
+		},
+		sortedCatTagStats: function() {
+			if (!this.catTagYearData || !this.selectedCatTagYear) return [];
+			let stats = this.catTagYearData[this.selectedCatTagYear];
+			let result = [];
+			for (let key in stats) {
+				result.push({ name: key, size: stats[key] });
+			}
+			return result.sort((a, b) => b.size - a.size);
+		},
+		maxWeekHits: function() {
+			return Math.max(1, ...this.weekData.map(w => w.hits));
+		},
+		maxYearHits: function() {
+			let vals = Object.values(this.years);
+			return vals.length ? Math.max(1, ...vals) : 1;
+		},
+		maxCatHits: function() {
+			return this.cats.length ? Math.max(1, ...this.cats.map(c => c.size)) : 1;
+		},
+		maxTagHits: function() {
+			return this.tags.length ? Math.max(1, ...this.tags.map(t => t.size)) : 1;
+		},
+		maxCatTagHits: function() {
+			let stats = this.sortedCatTagStats;
+			return stats.length ? Math.max(1, ...stats.map(s => s.size)) : 1;
+		}
+	},
+	methods: {
+		barWidth: function(value, max) {
+			if (!max) return '0%';
+			return Math.max(0, Math.min(100, (value / max) * 100)) + '%';
+		}
+	}
 });
-
-/*
-I just create an array where [0].start is the Sunday of last week, [0].end is the Saturday.
-I generate 8 of these with 0 being last week, 1 the week before, and so forth. 
-My solution uses code from: https://stackoverflow.com/a/13682133/52160
-Also https://stackoverflow.com/a/13682065/52160
-*/
-function generateWeekData() {
-    let weeks = [];
-    for(let i=0;i<8;i++) {
-
-        let d = new Date();
-
-        // set to Monday of this week
-        d.setDate(d.getDate() - (d.getDay() + 6) % 7);
-
-        // set to previous Monday
-        d.setDate(d.getDate() - (7*(i+1)));
-
-        // create new date of day before
-        let sunday = new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1);
-        let saturday = new Date(sunday.getFullYear(), sunday.getMonth(), sunday.getDate()+6);
-
-        weeks.push({sunday, saturday, hits:0});
-    }
-    return weeks;
-}
 </script>
