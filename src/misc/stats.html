@@ -155,6 +155,12 @@ permalink: /stats/index.html
 	gap: 0.75rem;
 }
 
+@media (min-width: 769px) {
+	.stats-bars-wide-label .stats-bar-row {
+		grid-template-columns: minmax(240px, 420px) 1fr auto;
+	}
+}
+
 .stats-bar-label {
 	font-size: 0.9rem;
 	color: var(--text-secondary);
@@ -296,6 +302,24 @@ permalink: /stats/index.html
 				<span class="stats-label">Latest Post</span>
 				<a :href="lastPost.url">{{ lastPost.title }}</a>
 				<p class="stats-meta">Published {{ lastPost.age }} on {{ lastPost.date }}</p>
+			</div>
+		</section>
+
+		<section class="stats-section" v-if="topPages.length">
+			<h3>Top Pages (Last 7 Days)</h3>
+			<div class="stats-bars stats-bars-wide-label">
+				<div class="stats-bar-row" v-for="page in topPages" :key="page.path">
+					<span class="stats-bar-label">
+						<a :href="page.path" :title="page.title">{{ page.title }}</a>
+					</span>
+					<div class="stats-bar-track">
+						<div
+							class="stats-bar-fill"
+							:style="{ width: barWidth(page.count, maxPageHits) }"
+						></div>
+					</div>
+					<span class="stats-bar-count">{{ page.count | number }}</span>
+				</div>
 			</div>
 		</section>
 
@@ -456,7 +480,8 @@ new Vue({
 		catTagYearData: null,
 		selectedCatTagYear: null,
 		cattagYears: [],
-		emailCount: null
+		emailCount: null,
+		topPages: []
 	},
 	created: async function() {
 		let res = await safeJson('/stats.json');
@@ -552,6 +577,9 @@ new Vue({
 		if (emailData && emailData.buttondownCount != null) {
 			this.emailCount = emailData.buttondownCount;
 		}
+		if (emailData && Array.isArray(emailData.topPages)) {
+			this.topPages = emailData.topPages;
+		}
 
 		this.loading = false;
 	},
@@ -586,6 +614,9 @@ new Vue({
 		},
 		maxTagHits: function() {
 			return this.tags.length ? Math.max(1, ...this.tags.map(t => t.size)) : 1;
+		},
+		maxPageHits: function() {
+			return this.topPages.length ? Math.max(1, ...this.topPages.map(page => page.count)) : 1;
 		},
 		maxCatTagHits: function() {
 			let stats = this.sortedCatTagStats;
