@@ -23,6 +23,9 @@ As an avid gamer, I've enjoyed building my own web-based games over the years. H
 * [Cat Facts](https://codepen.io/cfjedimaster/full/jEbGKpV) - a collection of random cat facts.
 * [Dad Joke](https://mydadjoke.netlify.app/) - a simple PWA for showing dad jokes.
 
+## Software
+
+* [lego-screensaver](https://github.com/cfjedimaster/lego-screensaver) - an OSX screensaver that shows a random LEGO set.
 
 ## To Do
 
