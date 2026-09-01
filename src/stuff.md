@@ -26,6 +26,7 @@ As an avid gamer, I've enjoyed building my own web-based games over the years. H
 ## Software
 
 * [lego-screensaver](https://github.com/cfjedimaster/lego-screensaver) - an OSX screensaver that shows a random LEGO set.
+* [precipradar](https://github.com/cfjedimaster/precipradar) - an OSX weather radar widget.
 
 ## To Do
 
