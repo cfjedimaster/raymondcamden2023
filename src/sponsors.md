@@ -40,5 +40,3 @@ If that sounds strict, good. That's the point.
 ## Let's talk
 
 Email me at raymondcamden@gmail.com and tell me a bit about what you have in mind.
-
-You can also find me on Mastodon at [@raymondcamden](https://mastodon.social/@raymondcamden) and on Bluesky at [@raymondcamden](https://bsky.app/profile/raymondcamden.com).
