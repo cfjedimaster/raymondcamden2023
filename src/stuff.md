@@ -28,6 +28,90 @@ As an avid gamer, I've enjoyed building my own web-based games over the years. H
 * [lego-screensaver](https://github.com/cfjedimaster/lego-screensaver) - an OSX screensaver that shows a random LEGO set.
 * [precipradar](https://github.com/cfjedimaster/precipradar) - an OSX weather radar widget.
 
+## My Recent CodePens
+
+<div id="pens"></div>
+
+<style>
+#pens {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+	gap: 1.25rem;
+	margin-block: 1.5rem;
+}
+
+#pens .penBox {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border: 1px solid #d8dce2;
+	border-radius: 0.75rem;
+	background: #fff;
+	color: inherit;
+	text-decoration: none;
+	box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+	transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+#pens .penBox:hover,
+#pens .penBox:focus-visible {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 18px rgb(0 0 0 / 14%);
+}
+
+#pens .penBox img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+}
+
+#pens .penBox h3 {
+	margin: 0;
+	padding: 1rem;
+	font-size: 1.1rem;
+	line-height: 1.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#pens .penBox {
+		transition: none;
+	}
+}
+</style>
+
 ## To Do
 
 Add more stuff!
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+
+    let $pens = document.querySelector('#pens');
+
+	let pens = await fetch('/.netlify/functions/get-codepens').then(r => r.json());
+    pens.forEach(p => {
+		let pen = document.createElement('a');
+		pen.className = 'penBox';
+		pen.href = p.url;
+		pen.target = '_blank';
+		pen.rel = 'noopener noreferrer';
+
+		let screenshot = document.createElement('img');
+		screenshot.src = p.screenshot;
+		screenshot.alt = '';
+		screenshot.loading = 'lazy';
+
+		let title = document.createElement('h3');
+		title.textContent = p.title;
+
+		pen.append(screenshot, title);
+		$pens.append(pen);
+    });
+
+});
+/*
+	// now do CP
+
+*/
+</script>
