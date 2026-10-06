@@ -25,9 +25,6 @@ export default async (request: Request, context: Context) => {
       }
     });
 
-//    const url = new URL(request.url)
-  //  const subject = url.searchParams.get('name') || 'World'
-
     return new Response(JSON.stringify(data), {
       headers: {
         'Content-Type': 'application/json'

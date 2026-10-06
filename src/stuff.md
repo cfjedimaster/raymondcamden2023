@@ -30,7 +30,7 @@ As an avid gamer, I've enjoyed building my own web-based games over the years. H
 
 ## My Recent CodePens
 
-<div id="pens"></div>
+<div id="pens"><i>Loading...</i></div>
 
 <style>
 #pens {
@@ -88,9 +88,11 @@ Add more stuff!
 document.addEventListener('DOMContentLoaded', async () => {
 
     let $pens = document.querySelector('#pens');
-
+	
 	let pens = await fetch('/.netlify/functions/get-codepens').then(r => r.json());
-    pens.forEach(p => {
+    $pens.innerHTML = '';
+
+	pens.forEach(p => {
 		let pen = document.createElement('a');
 		pen.className = 'penBox';
 		pen.href = p.url;
@@ -110,8 +112,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
 });
-/*
-	// now do CP
-
-*/
 </script>
