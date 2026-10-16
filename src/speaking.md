@@ -17,22 +17,7 @@ just <a href="/contact">drop me a line</a>, and I'll get back to you as soon as 
 
 <h3>My Next Events</h3>
 
-<p>
-<a href="https://www.sqlsatbr.com/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
-Day of Data<br/>
-Baton Rouge, LA, July 17-18, 2026
-</p>
-
-<p>
-<a href="https://www.renderatl.com/">Generative AI in the Browser with Chrome AI</a><br/>
-RenderATL<br/>
-Atlanta, GA, August 12-13, 2026
-</p>
-
-
-<!--
 Nothing planned currently. Invite me to speak at your event! 
--->
 
 <h3>My Past Events</h3>
 
@@ -41,6 +26,21 @@ Here are my past events, the most recent first, in a nice scrollable list no one
 </p>
 
 <div style="height: 400px; overflow:scroll">
+
+<p>
+<a href="https://www.renderatl.com/">Generative AI in the Browser with Chrome AI</a><br/>
+RenderATL<br/>
+Atlanta, GA, August 12-13, 2026
+</p>
+
+
+<p>
+<a href="https://www.sqlsatbr.com/">A Beginner's Guide to Wrangling Asynchronicity in JavaScript</a><br/>
+Day of Data<br/>
+Baton Rouge, LA, July 17-18, 2026
+</p>
+
+
 <p>
 <a href="https://gdg.community.dev/events/details/google-gdg-salt-lake-city-presents-ai-innovations-night-with-google-developer-group-slc-learn-and-network/">Generative AI in the Browser with Chrome AI</a><br/>
 Google Developer Group SLC<br/>
