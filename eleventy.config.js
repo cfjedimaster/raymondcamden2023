@@ -1,5 +1,5 @@
 import { categories, getPosts } from './config/collections/index.js';
-import { extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube, darkGist, callout, mdWrap } from './config/shortcodes/index.js';
+import { extractExcerpt, hasAnyComments, commentInclude, lastToot, liteYouTube, darkGist, callout, mdWrap, embedPDF } from './config/shortcodes/index.js';
 import { ageInDays, algExcerpt, catTagList, cssmin, fixcattag, getByCategory, myEscape, my_xml_escape, titlecase, toTitle } from './config/filters/index.js';
 
 import markdownIt from 'markdown-it';
@@ -47,6 +47,7 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPairedShortcode('callout', callout);
 	eleventyConfig.addPairedShortcode('mdwrap', mdWrap);
 	eleventyConfig.addAsyncShortcode('stoot',stoot);
+	eleventyConfig.addAsyncShortcode('embedPDF', embedPDF);
 
 	eleventyConfig.addAsyncShortcode('lasttoot', lastToot);
 	eleventyConfig.addAsyncShortcode('liteyoutube', liteYouTube);
