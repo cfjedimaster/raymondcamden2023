@@ -197,9 +197,9 @@ ${c}
 `
 };
 
-const embedPDF = (id, url) => {
+const embedPDF = (id, url, height="500px") => {
   return `
-<div id="${id}" style="width: 100%; height: 500px; margin-bottom: 30px"></div>
+<div id="${id}" style="width: 100%; height: ${height}; margin-bottom: 30px"></div>
  
 <script type="module">
 import EmbedPDF, { ZoomMode } from 'https://cdn.jsdelivr.net/npm/@embedpdf/snippet@2/dist/embedpdf.js';

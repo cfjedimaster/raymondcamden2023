@@ -28,3 +28,11 @@ first value is dom id, must be unique
 ## Youtube
 
 Use {% liteyoutube "id" %}. It is important the id is quoted.
+
+## Images
+
+
+<p>
+<img src="https://static.raymondcamden.com/images/2026/10/tj1.png" loading="lazy" alt="App running" class="imgborder imgcenter">
+</p>
+
