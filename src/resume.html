@@ -10,23 +10,7 @@
 		margin-top: 50px;
 	}
 
-	@media print {
-		@page {
-			size: A4;
-			margin: 2cm;
-		}
-
-		main {
-			width: 210mm;
-		}
-
-		p.experienceHeader {
-			break-inside: avoid;
-		}
-
-	}
-
-	main {	
+	main {
 		width: 70%;
 		min-width: 500px;
 		margin: auto;
@@ -37,17 +21,82 @@
 		text-transform: uppercase;
 	}
 
+	h2 {
+		margin-bottom: 4px;
+	}
+
+	h3 {
+		border-bottom: 1px solid #999;
+		padding-bottom: 3px;
+		margin-bottom: 8px;
+		break-after: avoid;
+	}
+
+	p.headline {
+		font-size: 1.05em;
+		font-weight: bold;
+		margin: 0 0 6px 0;
+	}
+
 	p.byline {
 		font-size: 0.8em;
-		margin-bottom: 50px;
+		margin-top: 0;
+		margin-bottom: 30px;
 		white-space: nowrap;
 	}
 
 	p.experienceHeader {
-		display: flex; 
+		display: flex;
 		justify-content: space-between;
 		gap: 1em;
 		font-weight: bold;
+		margin-bottom: 4px;
+		break-after: avoid;
+	}
+
+	ul {
+		margin-top: 4px;
+	}
+
+	li {
+		margin-bottom: 3px;
+	}
+
+	ul.earlier {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	ul.earlier li {
+		display: flex;
+		justify-content: space-between;
+		gap: 1em;
+	}
+
+	@media print {
+		@page {
+			size: Letter;
+			margin: 0.7in;
+		}
+
+		body {
+			margin: 0;
+			font-size: 10pt;
+		}
+
+		main {
+			width: auto;
+			min-width: 0;
+			margin: 0;
+		}
+
+		p.byline {
+			margin-bottom: 14px;
+		}
+
+		li, p.experienceHeader {
+			break-inside: avoid;
+		}
 	}
 	</style>
 </head>
@@ -55,6 +104,7 @@
 
 <main>
 <h2>Raymond Camden</h2>
+<p class="headline">Developer Educator &amp; AI Adoption Engineer | 30 Years in Developer Relations | Enterprise AI Workshops, Curriculum, and MCP/API Adoption</p>
 
 <p class="byline">
 Lafayette, Louisiana | (337) 412-8987 | raymondcamden@gmail.com | www.raymondcamden.com
@@ -63,13 +113,15 @@ Lafayette, Louisiana | (337) 412-8987 | raymondcamden@gmail.com | www.raymondcam
 <h3>Professional Summary</h3>
 
 <p>
-Developer educator and AI adoption engineer with three decades in developer relations, known for clear writing, engaging talks, and hands-on teaching. 
-Most recently, I helped enterprise teams, including a Big Four consultancy, a global media company, a hospitality leader, and an enterprise software company, 
-move from buying an AI coding tool to changing how they work: delivering more than a dozen live workshops to audiences of up to 250+ 
-and building the 101-through-401 curriculum behind them. Before that, I grew a platform's MCP adoption from 400 to over 15,000 monthly users. 
-I've published multiple books, written over six thousand blog posts, and spoken to audiences around the globe 
-about the web platform, APIs, and AI.
+Developer educator and AI adoption engineer known for clear writing, engaging talks, and hands-on teaching.
+I help enterprise teams move from buying an AI coding tool to changing how they work.
 </p>
+
+<ul>
+<li>Delivered 14+ live workshops to enterprise teams at a Big Four consultancy, a global media company, a hospitality leader, and an enterprise software company, with audiences up to 250+, and built the 101-through-401 curriculum behind them.</li>
+<li>Grew a platform's MCP adoption from 400 to over 15,000 monthly users, and API usage 70%.</li>
+<li>Author of 15+ books and over 6,000 blog posts; speaker around the globe on the web platform, APIs, and AI.</li>
+</ul>
 
 <h3>Skills</h3>
 
@@ -80,31 +132,26 @@ Developer evangelism and advocacy, Generative AI (LLMs, Prompt Engineering, Gemi
 <h3>Experience</h3>
 
 <p class="experienceHeader">
-	<span>SpaceXSI, Senior AI Adoption Engineer</span>
+	<span>SpaceXSI (Cursor), Senior AI Adoption Engineer</span>
 	<span>Jul 2026-Oct 2026</span>
 </p>
 
 <ul>
 <li>
-	Customer Education at Scale: Delivered 14+ live Cursor workshops (101, 201, 301) across enterprise accounts in consulting, media, hospitality, and enterprise software, 
-	with audiences up to 250+ (4.1/5 at a global media company). Stepped in on four days' notice to deliver a 201 for a media customer when a colleague was out.
+	<strong>Customer Education at Scale:</strong> Delivered 14+ live Cursor workshops (101, 201, 301) across enterprise accounts in consulting, media, hospitality, and enterprise software,
+	with audiences up to 250+ (4.1/5 at a global media company). Stepped in on four days' notice to deliver a 201 when a colleague was out.
 </li>
 <li>
-	Curriculum Design: Co-built the team's Cursor 201 and 301 curriculum and authored the 401 on cloud agents and automations (decks, demo tracks, and talk tracks). 
-	Tested demos ahead of delivery, and traced a demo-breaking product bug to its root cause so the whole team could present reliably.
+	<strong>Curriculum Design:</strong> Co-built the team's Cursor 201 and 301 curriculum and authored the 401 on cloud agents and automations (decks, demo tracks, and talk tracks).
+	Traced a demo-breaking product bug to its root cause so the whole team could present reliably.
 </li>
 <li>
-	Account Strategy: Planned multi-quarter enablement with a Big Four consultancy (a train-the-trainer path toward a Center of Excellence), an entertainment company, 
-	a rental car company, a real estate platform, and an enterprise software company. A first-time 301 delivery led the consultancy's Canadian practice to request a follow-on 302.
+	<strong>Account Strategy:</strong> Planned multi-quarter enablement with a Big Four consultancy (a train-the-trainer path toward a Center of Excellence) and four other enterprise accounts.
+	A first-time 301 delivery led the consultancy's Canadian practice to request a follow-on 302.
 </li>
 <li>
-	Reusable Assets: Produced one-page session summaries that a customer now circulates to its practitioners, plus session reports and discovery questions that became repeatable account playbooks.
-</li>
-<li>
-	Adoption Programs: Designed challenge content for a financial software company's skill-game launch (about 17 missions). Supported agentic SDLC roadmap work for a global automaker's leadership.
-</li>
-<li>
-	Product Feedback: Filed and drove product issues from field delivery back to engineering, including bugs found while presenting live.
+	<strong>Reusable Assets and Programs:</strong> Produced one-page session summaries a customer now circulates to its practitioners, plus session reports and discovery questions that became account playbooks.
+	Designed challenge content (about 17 missions) for a financial software company's skill-game launch, and filed and drove field-found product issues back to engineering.
 </li>
 </ul>
 
@@ -115,27 +162,18 @@ Developer evangelism and advocacy, Generative AI (LLMs, Prompt Engineering, Gemi
 
 <ul>
 <li>
-	Developer Advocacy: Worked with a team of developer relations experts to improve and extend our developer offerings.
-	This included working with our documentation, sample apps, testing and providing feedback to our engineers, and more.
+	<strong>AI and MCP Adoption:</strong> Grew MCP adoption to over 60% of customers, including more than a third of enterprise customers,
+	scaling usage from 400 MAUs at launch to over 15,000 by May of 2026. Built demos and workflows with Gemini and Claude and authored content showing how AI tooling integrates with Webflow.
 </li>
 <li>
-	Developer Evangelism: Presented at conferences and met with developers to introduce Webflow and support the web platform.
-	Created blog posts, tutorials, demos, and video content demonstrating what was possible with our platform.
-	During my time at Webflow, API usage grew 70%.
+	<strong>Developer Evangelism:</strong> Presented at conferences and created blog posts, tutorials, demos, and video content. During my time at Webflow, API usage grew 70%.
 </li>
 <li>
-	Spearheaded AI integration and evangelism by building demos and workflows using cutting-edge Generative AI tools
-	(including Gemini and Claude).
-	Authored technical content demonstrating how AI tooling effectively integrates with the Webflow platform,
-	and used AI to accelerate code review and content creation.
+	<strong>Developer Advocacy:</strong> Worked with a team of developer relations experts to improve documentation and sample apps, and tested and gave feedback to engineering.
 </li>
 <li>
-	Grew MCP adoption to over 60% of customers, including more than a third of enterprise customers,
-	scaling usage from 400 MAUs at launch to over 15,000 by May of 2026.
-</li>
-<li>
-	Supported our partnership organization in landing major deals with Google Ads, LinkedIn Ads, Slack, and Microsoft Teams.
-	Dev Rel served as the point of contact on the integrations and the daily drivers of managing the technical relationships.
+	<strong>Partnerships:</strong> Supported our partnership organization in landing major deals with Google Ads, LinkedIn Ads, Slack, and Microsoft Teams.
+	Dev Rel was the point of contact on the integrations and the daily driver of the technical relationships.
 </li>
 </ul>
 
@@ -145,8 +183,8 @@ Developer evangelism and advocacy, Generative AI (LLMs, Prompt Engineering, Gemi
 </p>
 
 <ul>
-<li>Developer Evangelism and Advocacy: Helped launch a new set of API offerings. This included working on documentation, sample apps, and providing feedback to engineering in regard to API design and the developer onboarding process. Created content to prepare for the launch including blog posts and videos.</li>
-<li>Marketing Support: Worked with our marketing team to help create ad campaigns as well as an email onboarding campaign for developers.</li>
+<li>Helped launch a new set of API offerings: documentation, sample apps, launch blog posts and videos, and feedback to engineering on API design and developer onboarding.</li>
+<li>Worked with marketing on ad campaigns and an email onboarding campaign for developers.</li>
 </ul>
 
 <p class="experienceHeader">
@@ -155,12 +193,9 @@ Developer evangelism and advocacy, Generative AI (LLMs, Prompt Engineering, Gemi
 </p>
 
 <ul>
-<li>Developer Evangelism: Increased developer signups by 33% through new documentation and revamped resources to 
-	help our developers onboard to our APIs and services. Launched an Office Hours program for Acrobat Services APIs 
-	to connect developers with evangelists. Created examples, demos and presentations for Adobe Firefly.</li>
-<li>Thought Leadership: Introduced over 100,000 developers to our APIs via blog posts (60+), presentations and workshops (30+). Created demo content to inspire and educate developers on the capabilities of our offerings.</li>
-<li>Developer Advocacy: Over the course of creating a completely revamped API framework and the addition of over 10 new API features, worked with engineering to provide feedback from our developers and help guide new releases to be more successful and developer-friendly. Helped create new processes for the publication of new releases and updates.</li>
-<li>Team Collaboration: Mentored fellow evangelists and helped my team deliver projects that directly helped both our developers and sales teams better demonstrate our APIs.</li>
+<li>Increased developer signups by 33% through new documentation and revamped onboarding resources. Launched an Office Hours program for Acrobat Services APIs.</li>
+<li>Introduced over 100,000 developers to our APIs via blog posts (60+), presentations and workshops (30+). Created examples, demos, and presentations for Adobe Firefly.</li>
+<li>Worked with engineering on a completely revamped API framework and 10+ new API features, bringing developer feedback into releases. Mentored fellow evangelists.</li>
 </ul>
 
 <p class="experienceHeader">
@@ -169,74 +204,30 @@ Developer evangelism and advocacy, Generative AI (LLMs, Prompt Engineering, Gemi
 </p>
 
 <ul>
-<li>Developer Evangelism: Created multiple blog posts (30+), presentations (20+), and demonstrations for the HERE Platform.</li>
-<li>Developer Advocacy: Engaged with our developer community and gathered critical feedback which was used to evolve our offerings.</li>
-<li>Competitive Analysis: Conducted research into competitors' products and services to identify gaps in our offering and opportunities for growth. Created documentation for our developers to more easily migrate to HERE.</li>
-<li>Team Collaboration: Helped mentor new developer evangelists on the team. Provided suggestions, feedback, and advice to help them be more successful.</li>
+<li>Created 30+ blog posts, 20+ presentations, and demonstrations for the HERE Platform, and gathered community feedback that helped evolve the offerings.</li>
+<li>Researched competitors to identify gaps and opportunities, and created migration documentation for developers moving to HERE. Mentored new evangelists.</li>
 </ul>
 
-<p class="experienceHeader">
-	<span>American Express, Senior Engineer, Dev Experience</span>
-	<span>2018-2019</span>
-</p>
+<h3>Earlier Experience</h3>
 
-<ul>
-<li>Developer Evangelism: Worked with engineering and product management to define onboarding and user-education processes for new APIs and offerings.</li>
-<li>Developer Advocacy: Reviewed existing offerings and worked on documentation improvements to help new developers.</li>
-<li>Engineering: Worked on both code and documentation (in both Java and Node.js) for existing APIs to make them easier to use.</li>
-</ul>
-
-<p class="experienceHeader">
-	<span>Auth0, Senior Developer Advocate</span>
-	<span>Feb-Sep 2018</span>
-</p>
-
-<ul>
-<li>Developer Evangelism: Hired as the first evangelist to promote a new offering, Auth0 Extend, a new SaaS offering, by creating documentation, demos, and blog posts, introducing the offering to existing and new Auth0 developers.</li>
-<li>Team Collaboration: As a team member working on a new product, I helped with product direction and development. This included testing additions and providing feedback in terms of ease of use as well as inclusivity.</li>
-</ul>
-
-<p class="experienceHeader">
-	<span>IBM, Developer Advocate</span>
-	<span>2015-2018</span>
-</p>
-
-<ul>
-<li>Developer Evangelism: Helped evangelize both IBM products and open source offerings, including LoopBack, Node.js, and the serverless platform, OpenWhisk. Wrote the book on OpenWhisk and helped developers use serverless technologies. </li>
-<li>Thought Leadership: Presented at conferences around the world, both on our offerings as well as open source solutions.</li> 
-<li>Team Leadership: Helped expand our team with interviewing and mentoring new hires.</li>
-</ul>
-
-<p class="experienceHeader">
-	<span>Adobe, Senior Developer Evangelist</span>
-	<span>2011-2015</span>
-</p>
-
-<ul>
-<li>Developer Evangelism: Helped promote new offerings to the web platform, including HTML5 tools as well as mobile development technologies.</li>
-<li>Thought Leadership: Helped introduce developers to new capabilities of the web platform and embrace standards-based mobile development with the open source Apache Cordova project.</li>
-<li>Team Collaboration: Helped with Creative Cloud Learn team with documentation and back-end development.</li>
-<li>Community Engagement: Helped build and manage the tool used by hundreds of Adobe User Groups world-wide.</li>
+<ul class="earlier">
+<li><span><strong>American Express</strong>, Senior Engineer, Dev Experience</span><span>2018-2019</span></li>
+<li><span><strong>Auth0</strong>, Senior Developer Advocate (first evangelist for Auth0 Extend)</span><span>Feb-Sep 2018</span></li>
+<li><span><strong>IBM</strong>, Developer Advocate (LoopBack, Node.js, OpenWhisk)</span><span>2015-2018</span></li>
+<li><span><strong>Adobe</strong>, Senior Developer Evangelist (HTML5, Apache Cordova)</span><span>2011-2015</span></li>
 </ul>
 
 <h3>Education</h3>
 
 <p>
-<strong>University of Louisiana at Lafayette</strong>, Bachelor's degree in English with a minor in Computer Science.  
+<strong>University of Louisiana at Lafayette</strong>, Bachelor's degree in English with a minor in Computer Science.
 </p>
 
 <h3>Publications</h3>
 
 <ul>
-<li>Over six thousand blog posts on raymondcamden.com</li>
-<li>Extensive portfolio of technical articles, demos, and open-source projects focused on Generative AI, LLM APIs, and on-device AI integration.</li>
-<li>"Frontend Developer Projects with Vue.js 3" (and previous edition), published by Packt</li>
-<li>"Developing Serverless Applications", published by O'Reilly</li>
-<li>"Working with Static Sites", published by O'Reilly</li>
-<li>"Client-Side Data Storage", published by O'Reilly</li>
-<li>"Apache Cordova in Action", published by Manning</li>
-<li>"jQuery Mobile Web Development Essentials" (and previous editions), published by Packt</li> 
-<li>Over ten books on the ColdFusion platform, published by various publishers</li>
+<li>Author of 15+ books, including "Developing Serverless Applications" and "Working with Static Sites" (O'Reilly), "Apache Cordova in Action" (Manning), and "Frontend Developer Projects with Vue.js 3" (Packt).</li>
+<li>Extensive portfolio of technical articles, demos, and open-source projects on Generative AI, LLM APIs, and on-device AI, at raymondcamden.com.</li>
 </ul>
 
 </main>
