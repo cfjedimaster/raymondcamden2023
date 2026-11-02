@@ -1201,3 +1201,35 @@ div.callout {
     font-family: 'Moon Phases CC', sans-serif;
     font-size: 12px;
 }
+
+/* Temporary Christmas lights strand */
+.header::before,
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    height: 36px;
+    pointer-events: none;
+    z-index: 20;
+    background-repeat: repeat-x;
+    background-size: 140px 36px;
+}
+
+.header::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='36' viewBox='0 0 140 36'%3E%3Cdefs%3E%3CradialGradient id='gR' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23ff4d4d' stop-opacity='0.85'/%3E%3Cstop offset='100%25' stop-color='%23ff4d4d' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='gY' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23ffca3a' stop-opacity='0.85'/%3E%3Cstop offset='100%25' stop-color='%23ffca3a' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cpath d='M0,2 Q17.5,14 35,2 Q52.5,14 70,2 Q87.5,14 105,2 Q122.5,14 140,2' fill='none' stroke='%2323422e' stroke-width='2'/%3E%3Cg transform='translate(17.5,8) rotate(-5)'%3E%3Ccircle cx='0' cy='11' r='13' fill='url(%23gR)'/%3E%3Crect x='-2.5' y='-1' width='5' height='4.5' rx='1' fill='%231b3b28'/%3E%3Cellipse cx='0' cy='10.5' rx='4.2' ry='7.2' fill='%23ff3b3b'/%3E%3Cellipse cx='-1.3' cy='8.5' rx='1.3' ry='2.8' fill='white' fill-opacity='0.55'/%3E%3C/g%3E%3Cg transform='translate(52.5,8) rotate(5)'%3E%3Crect x='-2.5' y='-1' width='5' height='4.5' rx='1' fill='%231b3b28'/%3E%3Cellipse cx='0' cy='10.5' rx='4.2' ry='7.2' fill='%23196f3d' fill-opacity='0.55'/%3E%3C/g%3E%3Cg transform='translate(87.5,8) rotate(-4)'%3E%3Ccircle cx='0' cy='11' r='13' fill='url(%23gY)'/%3E%3Crect x='-2.5' y='-1' width='5' height='4.5' rx='1' fill='%231b3b28'/%3E%3Cellipse cx='0' cy='10.5' rx='4.2' ry='7.2' fill='%23ffbe2e'/%3E%3Cellipse cx='-1.3' cy='8.5' rx='1.3' ry='2.8' fill='white' fill-opacity='0.55'/%3E%3C/g%3E%3Cg transform='translate(122.5,8) rotate(6)'%3E%3Crect x='-2.5' y='-1' width='5' height='4.5' rx='1' fill='%231b3b28'/%3E%3Cellipse cx='0' cy='10.5' rx='4.2' ry='7.2' fill='%231e6091' fill-opacity='0.55'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.header::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='36' viewBox='0 0 140 36'%3E%3Cdefs%3E%3CradialGradient id='gG' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%232ecc71' stop-opacity='0.9'/%3E%3Cstop offset='100%25' stop-color='%232ecc71' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='gB' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%2338bdf8' stop-opacity='0.9'/%3E%3Cstop offset='100%25' stop-color='%2338bdf8' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cg transform='translate(52.5,8) rotate(5)'%3E%3Ccircle cx='0' cy='11' r='13' fill='url(%23gG)'/%3E%3Cellipse cx='0' cy='10.5' rx='4.2' ry='7.2' fill='%232ecc71'/%3E%3Cellipse cx='-1.3' cy='8.5' rx='1.3' ry='2.8' fill='white' fill-opacity='0.55'/%3E%3C/g%3E%3Cg transform='translate(122.5,8) rotate(6)'%3E%3Ccircle cx='0' cy='11' r='13' fill='url(%23gB)'/%3E%3Cellipse cx='0' cy='10.5' rx='4.2' ry='7.2' fill='%2338bdf8'/%3E%3Cellipse cx='-1.3' cy='8.5' rx='1.3' ry='2.8' fill='white' fill-opacity='0.55'/%3E%3C/g%3E%3C/svg%3E");
+    animation: xmas-twinkle 2.4s ease-in-out infinite alternate;
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+        opacity: 0.95;
+    }
+}
+
+@keyframes xmas-twinkle {
+    0% { opacity: 0.25; }
+    100% { opacity: 1; }
+}
