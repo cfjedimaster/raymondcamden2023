@@ -25,7 +25,7 @@ Nothing planned currently. Invite me to speak at your event!
 Here are my past events, the most recent first, in a nice scrollable list no one will probably ever read. ;)
 </p>
 
-<div style="height: 400px; overflow:scroll">
+<div style="height: 400px; overflow-y: auto">
 
 <p>
 <a href="https://www.renderatl.com/">Generative AI in the Browser with Chrome AI</a><br/>
