@@ -10,6 +10,9 @@ Over the years, I've built many websites, tools, bots, utilities, and while I've
 
 As an avid gamer, I've enjoyed building my own web-based games over the years. Here are a few recent examples.
 
+* [NAGEL // GRID '84](https://cfjedimaster.github.io/webdemos/lightcycle1980/) - a remix of the classic Tron lightcycle game.
+* [Chronicles of the Triad](https://cfjedimaster.github.io/GenericUltimaClone/) - a game based on Ultima 3/Bard's Tale. This is still in development and the name is definitely changing.
+* [Precipitation Radar](https://cfjedimaster.github.io/webdemos/precipradar/index.html) - just a radar. No ads, no cruft. :) 
 * [My Little Mortal Combat](https://cfjedimaster.github.io/webdemos/my_little_mortal_combat/) - Exactly how it sounds.
 * [IdleFleet](https://idlefleet.netlify.app/) - an idle clicker game that has you build a space trading empire.
 * [Cat Herder](https://catherder.netlify.app/) - another idle clicker game, although this one requires a bit more attention as you attempt to manage an army of cats.
