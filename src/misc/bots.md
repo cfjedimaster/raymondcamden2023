@@ -16,6 +16,10 @@ most recent toot at the time I built the site. Just click on the username to fol
 I've got a few bots on Bluesky, right now just <a href="https://bsky.app/profile/randomcomicbook.bsky.social">Random Comic Book</a> and <a href="https://bsky.app/profile/dragonhoards.bsky.social">Dragon Hoards</a>, but may add more later.
 </p>
 
+<p>
+As a final note, all my Marvel bots died when Marvel killed the API. Sorry.
+</p>
+
 <div id="status"></div>
 
 <template id="tootDisplay">
