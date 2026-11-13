@@ -513,11 +513,11 @@ new Vue({
 			});
 
 			this.cats = res.postsPerCategory.map(c => {
-				c.link = c.name.replace(/ /g, '+');
+				c.link = c.name.replace(/ /g, '-');
 				return c;
 			});
 			this.tags = res.postsPerTag.map(t => {
-				t.link = t.name.replace(/ /g, '+');
+				t.link = t.name.replace(/ /g, '-');
 				return t;
 			});
 

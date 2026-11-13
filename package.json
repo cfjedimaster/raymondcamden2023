@@ -8,7 +8,8 @@
     "dev2": "SKIP_REMOTE_DATA=1 eleventy --serve --quiet",
     "dev": "SKIP_REMOTE_DATA=1 netlify dev -c \"eleventy --serve --quiet\"",
     "start": "SKIP_REMOTE_DATA=1 netlify dev -c \"eleventy --serve --quiet\"",
-    "serve": "npm run start"
+    "serve": "npm run start",
+    "checkproderrors": "netlify logs --source functions --source edge-functions --source deploy --since 24h -l error fatal"
   },
   "repository": {
     "type": "git",

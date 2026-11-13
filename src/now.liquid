@@ -98,7 +98,7 @@ record *new* beers I've tried.
 
 <script>
 // Endpoint to get my tracks
-var TRACKS_API = 'https://eos6dxqdanfnilh.m.pipedream.net/';
+const TRACKS_API = '/.netlify/functions/get-spotify';
 
 document.addEventListener('DOMContentLoaded', init, false);
 
@@ -111,14 +111,14 @@ async function init() {
 	let s = '';
 	tracks.forEach(t => {
 
-		let artists = t.artists.map(a => a.name).join(', ');
+		let artists = t.artist ?? t.artists.map(a => a.name).join(', ');
 
 		let html = `
 <div class="track">
 <button type="button" class="preview" data-preview="${t.preview_url}" aria-label="Play preview of ${t.name}">
 <img src="${t.images[1].url}" alt="">
 </button>
-<a href="${t.href}" target="_blank" rel="noopener">"${t.name}"</a> by ${artists}
+<a href="${t.url ?? t.href}" target="_blank" rel="noopener">"${t.name}"</a> by ${artists}
 </div>
 		`;
 		s += html;
