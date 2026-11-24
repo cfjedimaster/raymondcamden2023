@@ -101,7 +101,7 @@ if not pdfs:
 print(f"Found {len(pdfs)} PDF file(s) to upload")
 ```
 
-And finally, I upload each one. For this, the [documentation](https://ai.google.dev/gemini-api/docs/file-search) was super useful. Document processing is async, so for each upload I wait until it's done. This is also I do something import - add metadata.
+And finally, I upload each one. For this, the [documentation](https://ai.google.dev/gemini-api/docs/file-search) was super useful. Document processing is async, so for each upload I wait until it's done. Another important thing I do is - add metadata.
 
 In general, you will probably ask questions about your file store as a whole, but what if you want to work with a specific document, or set of documents? For example, an e-commerce store that sells products may want to put their manuals online in one store, and use metadata to separate products into categories, or perhaps price ranges. You can use *any* logic you want here. In my case, I want to allow a search against a specific piece of work so I'm going to store the filename in metadata. Another option would be to use a PDF parsing library to get the PDF's document title instead, but the filename is enough for now.
 
