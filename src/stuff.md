@@ -12,12 +12,14 @@ As an avid gamer, I've enjoyed building my own web-based games over the years. H
 
 * [NAGEL // GRID '84](https://cfjedimaster.github.io/webdemos/lightcycle1980/) - a remix of the classic Tron lightcycle game.
 * [Chronicles of the Triad](https://cfjedimaster.github.io/GenericUltimaClone/) - a game based on Ultima 3/Bard's Tale. This is still in development and the name is definitely changing.
-* [Precipitation Radar](https://cfjedimaster.github.io/webdemos/precipradar/index.html) - just a radar. No ads, no cruft. :) 
 * [My Little Mortal Combat](https://cfjedimaster.github.io/webdemos/my_little_mortal_combat/) - Exactly how it sounds.
 * [IdleFleet](https://idlefleet.netlify.app/) - an idle clicker game that has you build a space trading empire.
 * [Cat Herder](https://catherder.netlify.app/) - another idle clicker game, although this one requires a bit more attention as you attempt to manage an army of cats.
 
 ## Random Sites
+* [Precipitation Radar](https://cfjedimaster.github.io/webdemos/precipradar/index.html) - just a radar. No ads, no cruft. :) 
+* [Uninote](https://uninotes-web.netlify.app/) - a note taking application.
+* [Icelandic Song or Warcraft?](https://iceland-or-wow.netlify.app/) - fun little game asking you to place a name.
 * [My To Do](https://mytodo.raymondcamden.com) - a web-based replacement for MS To Do.
 * [Microsoft To Do Exporter](https://todoexport.netlify.app/) - lets you export your MS To Do data as JSON or HTML.
 * [Oh Shit the Sun](https://oh-shit-the-sun.netlify.app/) - will there be more or less sun today?
